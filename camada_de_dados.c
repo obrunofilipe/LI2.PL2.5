@@ -38,12 +38,12 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){ // retorna o estado de uma casa
 }
 
 ESTADO *inicializar_estado(){
-    CASA tabuleiro[8][8]; // declarar o tabuleiro
-    ESTADO estadoJogo;    // declarar o estado
+    CASA tabuleiro[8][8]; 			   // declarar o tabuleiro
+    ESTADO estadoJogo;    			   // declarar o estado
     inicializar_tabuleiro(tabuleiro);  // modifica a matriz  tabuleiro
 	estadoJogo.jogador_atual = 1;      // inicializa o jogador_atual
 	estadoJogo.num_jogadas = 0;        // inicializa o número de jogadas
-	strcpy(estadoJogo.tab, tabuleiro); // copia a matris modificada para a matriz do estado
+	strcpy(estadoJogo.tab, tabuleiro); // copia a matriz modificada para a matriz do estado
 	estadoJogo.ultima_jogada = {5,4};
 return estadoJogo;
 }
