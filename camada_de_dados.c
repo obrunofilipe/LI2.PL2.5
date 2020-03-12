@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "camada_de_dados.h"
 
-void inicializar_tabuleiro(CASA *tab){
+void inicializar_tabuleiro(CASA *tab){ //incializa o tabuleiro
     int linha,coluna;
     for(linha = 0; linha < 8 ; linha++){
         if(linha == 3){
@@ -20,7 +20,22 @@ void inicializar_tabuleiro(CASA *tab){
 }
 
 
+int obter_jogador_atual(ESTADO *estado){
+    return estado->jogador_atual;
+}
 
+int obter_numero_de_jogadas(ESTADO *estado){
+    return estado->num_jogadas;
+}
+
+CASA obter_estado_casa(ESTADO *e, COORDENADA c){
+    int coluna, linha;
+    CASA estadoCasa;
+    coluna = c.coluna;
+    linha = c.linha;
+    estadoCasa = e->tab[linha][coluna];
+    return estadoCasa;
+}
 
 ESTADO *inicializar_estado(){
     CASA tabuleiro[8][8]; // declarar o tabuleiro
@@ -30,8 +45,6 @@ ESTADO *inicializar_estado(){
 	estadoJogo.num_jogadas = 0;        // inicializa o número de jogadas
 	strcpy(estadoJogo.tab, tabuleiro); // copia a matris modificada para a matriz do estado
 	estadoJogo.ultima_jogada = {5,4};
-
-
-
+return estadoJogo;
 }
 
