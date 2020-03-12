@@ -1,7 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "camada_de_dados.h"
 
-c{ //incializa o tabuleiro
+void copiaTabuleiro (CASA tab[8][8] ,CASA tabuleiro[8][8]){
+    for(int linhas = 0; linhas < 8 ;linhas++){
+        for(int colunas = 0; colunas < 8 ; colunas++){
+            tab[linhas][colunas] = tabuleiro[linhas][colunas];
+        }
+    }
+}
+
+void inicializar_tabuleiro(CASA *tab[8]){ //incializa o tabuleiro
     int linha,coluna;
     for(linha = 0; linha < 8 ; linha++){
         if(linha == 3){
@@ -14,7 +23,7 @@ c{ //incializa o tabuleiro
         }
         else {
             for(coluna = 0; coluna < 8 ; coluna++)
-                tabuleiro [linha] [coluna] = VAZIO;
+                tab [linha] [coluna] = VAZIO;
         }
     }
 }
@@ -39,12 +48,13 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){ // retorna o estado de uma casa
 
 ESTADO *inicializar_estado(){
     CASA tabuleiro[8][8];              // declarar o tabuleiro
-    ESTADO estadoJogo;                 // declarar o estado
+    ESTADO *estadoJogo = (ESTADO *) malloc(sizeof(ESTADO));                 // declarar o estado
     inicializar_tabuleiro(tabuleiro);  // modifica a matriz  tabuleiro
-	estadoJogo.jogador_atual = 1;      // inicializa o jogador_atual
-	estadoJogo.num_jogadas = 0;        // inicializa o número de jogadas
-	strcpy(estadoJogo.tab, tabuleiro); // copia a matris modificada para a matriz do estado
-	estadoJogo.ultima_jogada = {5,4};
+	estadoJogo->jogador_atual = 1;      // inicializa o jogador_atual
+	estadoJogo->num_jogadas = 0;        // inicializa o número de jogadas
+	copiaTabuleiro(estadoJogo->tab,tabuleiro); // copia a matris modificada para a matriz do estado
+	estadoJogo->ultima_jogada.coluna = 5;      //incializa a coordenada coluna da ultima jogada
+	estadoJogo->ultima_jogada.linha = 4;       //incializa a coordenada linha da ultima jogada
 return estadoJogo;
 }
 

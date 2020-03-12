@@ -38,9 +38,9 @@ int interpretador(ESTADO *e) {
 }
 
 
-
+/*
 void main(){
-	/* int i, j;
+	 int i, j;
 	for (i = 0; i < 8; i++){
 		if (i == 0){
 			for (j = 0; j < 8; j++){
@@ -76,5 +76,6 @@ void main(){
 			printf("\n");
 		}
 	}
-*/
+
 }
+ */
