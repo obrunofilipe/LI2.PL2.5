@@ -20,15 +20,15 @@ void inicializar_tabuleiro(CASA *tab){ //incializa o tabuleiro
 }
 
 
-int obter_jogador_atual(ESTADO *estado){
+int obter_jogador_atual(ESTADO *estado){ // retorna o numero do jogador atual
     return estado->jogador_atual;
 }
 
-int obter_numero_de_jogadas(ESTADO *estado){
+int obter_numero_de_jogadas(ESTADO *estado){ // retorna o numero de jogadas que esta armazenado no estado
     return estado->num_jogadas;
 }
 
-CASA obter_estado_casa(ESTADO *e, COORDENADA c){
+CASA obter_estado_casa(ESTADO *e, COORDENADA c){ // retorna o estado de uma casa do tabuleiro (VAZIO , BRANCA , PRETA)
     int coluna, linha;
     CASA estadoCasa;
     coluna = c.coluna;
