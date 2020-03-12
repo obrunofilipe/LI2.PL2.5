@@ -30,7 +30,7 @@ typedef struct {
 } ESTADO;
 
 
-ESTADO *inicializar_estado();                    //Esta função deverá criar um estado vazio (com o tabuleiroinicializado
+ESTADO *inicializar_estado();                    //Esta função deverá criar um estado vazio (com o tabuleiro inicializado)
 
 int obter_jogador_atual(ESTADO *estado);		 //Esta função permite obter o número do jogador atual
 
