@@ -35,6 +35,5 @@ void inicializar_tabuleiro(CASA tab[8][8]);      //Função que inicializa o tab
 int obter_jogador_atual(ESTADO *estado);		 //Esta função permite obter o número do jogador atual
 int obter_numero_de_jogadas(ESTADO *estado);	 //Esta função permite obter quantas jogadas foram efetuadas (cada jogada tem o movimento de dois jogadores)
 CASA obter_estado_casa(ESTADO *e, COORDENADA c); //Esta função permite obter o estado atual da casa
-void atualiza_estado_casa (ESTADO *e, COORDENADA c); //Esta função atualiza o estado da casa fornecida
-
+void atualiza_estado_jogo (ESTADO *e, COORDENADA c);//Esta função atualiza o estado do jogo apos a jogada
 #endif

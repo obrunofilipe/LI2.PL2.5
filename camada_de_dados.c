@@ -66,3 +66,13 @@ ESTADO *inicializar_estado(){
     estadoJogo->ultima_jogada.linha = 4;                    //incializa a coordenada linha da ultima jogada
     return estadoJogo;
 }
+
+void atualiza_estado_jogo (ESTADO *e, COORDENADA c){
+    int coluna, linha;
+    coluna = c.coluna;
+    linha = c.linha;
+    e->tab[linha][coluna] = BRANCA;
+    e->ultima_jogada.coluna = coluna;
+    e->ultima_jogada.linha = linha;
+    e->num_jogadas++;
+}
