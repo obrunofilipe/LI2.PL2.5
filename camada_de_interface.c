@@ -6,11 +6,11 @@
 
 
 void mostrar_tabuleiro(ESTADO *e) { // desenha o tabuleiro que esta declarado no estado
-    for(int linhas = 0; linhas < 8 ; linhas++){
+    for(int linhas = 7; linhas >= 0 ; linhas--){
         for(int colunas = 0; colunas < 8 ; colunas++){
-            if(linhas == 0 && colunas == 7)
+            if(linhas == 7 && colunas == 7)
                 printf(" 2 ");
-            else if (linhas == 7 && colunas == 0)
+            else if (linhas == 0 && colunas == 0)
                 printf(" 1 ");
 
             else {
