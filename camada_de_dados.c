@@ -37,6 +37,15 @@ int obter_numero_de_jogadas(ESTADO *estado){ // retorna o numero de jogadas que 
     return estado->num_jogadas;
 }
 
+void atualiza_estado_casa (ESTADO *e, COORDENADA c){ // atualiza a casa para a qual foi jogada para BRANCA
+    int coluna, linha;
+    coluna = c.coluna;
+    linha = c.linha;
+    e->tab[linha][coluna] = BRANCA;
+}
+
+void atualiza_estado_jogo
+
 CASA obter_estado_casa(ESTADO *e, COORDENADA c){ // retorna o estado de uma casa do tabuleiro (VAZIO , BRANCA , PRETA)
     int coluna, linha;
     CASA estadoCasa;

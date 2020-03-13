@@ -31,9 +31,10 @@ typedef struct {
 
 
 ESTADO *inicializar_estado();                    //Esta função deverá criar um estado vazio (com o tabuleiro inicializado)
-void inicializar_tabuleiro(CASA tab[8][8]);           //Função que inicializa o tabuleiro
+void inicializar_tabuleiro(CASA tab[8][8]);      //Função que inicializa o tabuleiro
 int obter_jogador_atual(ESTADO *estado);		 //Esta função permite obter o número do jogador atual
-int obter_numero_de_jogadas(ESTADO *estado);	 //Esta função permite obter o estado atual da casa
-CASA obter_estado_casa(ESTADO *e, COORDENADA c); //Esta função permite obter quantas jogadasforam efetuadas (cada jogada tem o movimento de dois jogadores)
+int obter_numero_de_jogadas(ESTADO *estado);	 //Esta função permite obter quantas jogadas foram efetuadas (cada jogada tem o movimento de dois jogadores)
+CASA obter_estado_casa(ESTADO *e, COORDENADA c); //Esta função permite obter o estado atual da casa
+void atualiza_estado_casa (ESTADO *e, COORDENADA c); //Esta função atualiza o estado da casa fornecida
 
 #endif
