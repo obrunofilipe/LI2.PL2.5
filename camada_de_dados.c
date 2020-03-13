@@ -63,6 +63,7 @@ void atualiza_estado_jogo (ESTADO *e, COORDENADA c){
     coluna = c.coluna;
     linha = c.linha;
     jogadorAtual = obter_jogador_atual(e);
+    JOGADAS[e->num_jogadas-1].jogador1 = c;
     e->tab[e->ultima_jogada.linha][e->ultima_jogada.coluna] = VAZIO;
     e->tab[linha][coluna] = BRANCA;
     e->ultima_jogada.coluna = coluna;
