@@ -59,9 +59,11 @@ ESTADO *inicializar_estado(){
 }
 
 void atualiza_estado_jogo (ESTADO *e, COORDENADA c){
-    int coluna, linha;
+    int coluna, linha, jogadorAtual;
     coluna = c.coluna;
     linha = c.linha;
+    jogadorAtual = obter_jogador_atual(e);
+    e->tab[e->ultima_jogada.linha][e->ultima_jogada.coluna] = VAZIO;
     e->tab[linha][coluna] = BRANCA;
     e->ultima_jogada.coluna = coluna;
     e->ultima_jogada.linha = linha;
