@@ -59,11 +59,10 @@ ESTADO *inicializar_estado(){
     CASA tabuleiro[8][8];                                   // declarar o tabuleiro
     ESTADO *estadoJogo = (ESTADO *) malloc(sizeof(ESTADO)); // declarar o estado
     inicializar_tabuleiro(tabuleiro);                       // modifica a matriz  tabuleiro
-	estadoJogo->jogador_atual = 1;                          // inicializa o jogador_atual
-	estadoJogo->num_jogadas = 0;                            // inicializa o número de jogadas
-	copiaTabuleiro(estadoJogo->tab,tabuleiro);              // copia a matris modificada para a matriz do estado
-	estadoJogo->ultima_jogada.coluna = 5;                   //incializa a coordenada coluna da ultima jogada
-	estadoJogo->ultima_jogada.linha = 4;                    //incializa a coordenada linha da ultima jogada
-return estadoJogo;
+    estadoJogo->jogador_atual = 1;                          // inicializa o jogador_atual
+    estadoJogo->num_jogadas = 0;                            // inicializa o número de jogadas
+    copiaTabuleiro(estadoJogo->tab,tabuleiro);              // copia a matris modificada para a matriz do estado
+    estadoJogo->ultima_jogada.coluna = 5;                   //incializa a coordenada coluna da ultima jogada
+    estadoJogo->ultima_jogada.linha = 4;                    //incializa a coordenada linha da ultima jogada
+    return estadoJogo;
 }
-
