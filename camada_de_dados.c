@@ -57,6 +57,10 @@ void atualiza_estado_jogo (ESTADO *e, COORDENADA c){
     coluna = c.coluna;
     linha = c.linha;
     jogadorAtual = obter_jogador_atual(e);
+    e->tab[e->ultima_jogada.linha - 1][e->ultima_jogada.coluna - 1] = VAZIO; // muda a peca anterior para vazio
+    e->tab[linha][coluna] = BRANCA; // muda a peça em que o jogador pretende jogar
+    e->ultima_jogada = c;           // altera a ultima jogada
+    e->num_jogadas++;               // aumenta o numero de jogadas
     if(jogadorAtual == 1 ) { // armazena a jogada no array JOGADAS
         e->jogadas[e->num_jogadas - 1].jogador1 = c;
         e->jogador_atual = 2;
@@ -65,8 +69,4 @@ void atualiza_estado_jogo (ESTADO *e, COORDENADA c){
         e->jogadas[e->num_jogadas - 1].jogador2 = c;
         e->jogador_atual = 1 ;
     }
-    e->tab[e->ultima_jogada.linha - 1][e->ultima_jogada.coluna - 1] = VAZIO; // muda a peca anterior para vazio
-    e->tab[linha][coluna] = BRANCA; // muda a peça em que o jogador pretende jogar
-    e->ultima_jogada = c;           // altera a ultima jogada
-    e->num_jogadas++;               // aumenta o numero de jogadas
 }
