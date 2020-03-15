@@ -6,15 +6,18 @@
 
 
 void mostrar_tabuleiro(ESTADO *e) { // desenha o tabuleiro que esta declarado no estado
+    COORDENADA c;
     for(int linhas = 7; linhas >= 0 ; linhas--){
+        c.linha = linhas;
         for(int colunas = 0; colunas < 8 ; colunas++){
+            c.coluna = colunas;
             if(linhas == 7 && colunas == 7)
                 printf(" 2 ");
             else if (linhas == 0 && colunas == 0)
                 printf(" 1 ");
 
             else {
-                switch (e->tab[linhas][colunas]) {
+                switch (obter_estado_casa(e,c)) {
                     case VAZIO:
                         printf(" . ");
                         break;
