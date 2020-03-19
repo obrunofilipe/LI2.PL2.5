@@ -43,7 +43,7 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c){ // retorna o estado de uma casa
 ESTADO *inicializar_estado(){
     CASA tabuleiro[8][8];                                   // declarar o tabuleiro
     ESTADO *estadoJogo = (ESTADO *) malloc(sizeof(ESTADO)); // declarar o estado
-    inicializar_tabuleiro(estadoJogo->tab);                       // modifica a matriz  tabuleiro
+    inicializar_tabuleiro(estadoJogo->tab);                 // modifica a matriz  tabuleiro
     estadoJogo->jogador_atual = 1;                          // inicializa o jogador_atual
     estadoJogo->num_jogadas = 0;                            // inicializa o número de jogadas
     estadoJogo->ultima_jogada.coluna = 4;                   //incializa a coordenada coluna da ultima jogada
@@ -69,4 +69,12 @@ void atualiza_estado_jogo (ESTADO *e, COORDENADA c){
         e->jogadas[e->num_jogadas - 1].jogador2 = c;
         e->jogador_atual = 1 ;
     }
+}
+
+void incrementa_num_comandos(ESTADO *e){
+    e->num_comandos++;
+}
+
+int obter_num_comandos(ESTADO *e){
+    return e->num_comandos;
 }

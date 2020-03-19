@@ -41,9 +41,18 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     if(fgets(linha, BUF_SIZE, stdin) == NULL)
         return 0;
     if(strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
+        incrementa_num_comandos(e);
         COORDENADA coord = {*col - 'a', *lin - '1'};
         jogar(e, coord);
         mostrar_tabuleiro(e);
     }
     return 1;
+}
+
+void showPrompt (ESTADO *e){
+    int num_comandos,jogadorAtual, num_jogadas;
+    num_comandos = obter_num_comandos(e);
+    jogadorAtual = obter_jogador_atual(e);
+    num_jogadas = obter_numero_de_jogadas(e);
+    printf("# nº comandos: %d  JOGADOR: %d  (%d) $ ",num_comandos,jogadorAtual,num_jogadas);
 }
