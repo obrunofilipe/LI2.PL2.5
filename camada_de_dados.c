@@ -57,7 +57,7 @@ void atualiza_estado_jogo (ESTADO *e, COORDENADA c){
     coluna = c.coluna;
     linha = c.linha;
     jogadorAtual = obter_jogador_atual(e);
-    e->tab[e->ultima_jogada.linha][e->ultima_jogada.coluna] = VAZIO; // muda a peca anterior para vazio
+    e->tab[e->ultima_jogada.linha][e->ultima_jogada.coluna] = PRETA; // muda a peca anterior para vazio
     e->tab[linha][coluna] = BRANCA; // muda a peça em que o jogador pretende jogar
     e->ultima_jogada = c;           // altera a ultima jogada
     e->num_jogadas++;               // aumenta o numero de jogadas
