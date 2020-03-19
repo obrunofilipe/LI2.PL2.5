@@ -43,4 +43,5 @@ CASA obter_estado_casa(ESTADO *e, COORDENADA c); //Esta função permite obter o
 void atualiza_estado_jogo (ESTADO *e, COORDENADA c);//Esta função atualiza o estado do jogo apos a jogada
 void incrementa_num_comandos(ESTADO *e);            // Funcao que altera o numero de comandos na camada de dados
 int obter_num_comandos(ESTADO *e);                  // Retorna o número atual de comandos;
+void modifica_num_jogadas (ESTADO *e , int numJogadas); // ultilizada para alterar o valor do numero de jogadas atual para quebrar o loop no main e terminar o programa
 #endif

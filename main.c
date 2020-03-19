@@ -6,6 +6,7 @@ int main()
     int jogadas;
     ESTADO *e = inicializar_estado();
     jogadas = 0;
+    mostrar_tabuleiro(e);
     while (jogadas < 32){
         showPrompt(e);      //showprompt que irá colocar o prompt no ecra
         interpretador(e);

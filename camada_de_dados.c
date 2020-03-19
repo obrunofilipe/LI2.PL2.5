@@ -7,19 +7,11 @@
 void inicializar_tabuleiro(CASA tab[8][8]){ //incializa o tabuleiro
     int linha,coluna;
     for(linha = 7; linha > 0 ; linha--){
-        if(linha == 4){
             for(coluna = 0 ; coluna < 8 ; coluna++){
-                if(coluna == 4)
-                    tab [linha] [coluna] = BRANCA;
-                else
                     tab [linha] [coluna] = VAZIO;
             }
-        }
-        else {
-            for(coluna = 8; coluna > 0 ; coluna--)
-                tab [linha] [coluna] = VAZIO;
-        }
     }
+    tab [4][4] = BRANCA;
 }
 
 
@@ -77,4 +69,7 @@ void incrementa_num_comandos(ESTADO *e){
 
 int obter_num_comandos(ESTADO *e){
     return e->num_comandos;
+}
+void modifica_num_jogadas (ESTADO *e , int numJogadas){
+    e->num_jogadas = numJogadas;
 }
