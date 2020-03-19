@@ -1,6 +1,10 @@
 #ifndef ___CAMADA_DE_DADOS_H___
 #define ___CAMADA_DE_DADOS_H___
 
+/**
+ * ... text ...
+*/
+
 //Aqui dentro aparece o código correspondente aos protótipos
 //CASA
 typedef enum {VAZIO, BRANCA, PRETA} CASA;
