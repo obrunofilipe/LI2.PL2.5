@@ -31,6 +31,7 @@ typedef struct {
 	JOGADAS jogadas;			//armazena informação sobre as jogadas
 	int num_jogadas;			//indica quantas jogadas foram efetuadas
 	int jogador_atual;			//indica qual é o jogador a jogar
+	int num_comandos;           //aramzena o número total de comandos
 } ESTADO;
 
 
@@ -40,4 +41,6 @@ int obter_jogador_atual(ESTADO *estado);		 //Esta função permite obter o núme
 int obter_numero_de_jogadas(ESTADO *estado);	 //Esta função permite obter quantas jogadas foram efetuadas (cada jogada tem o movimento de dois jogadores)
 CASA obter_estado_casa(ESTADO *e, COORDENADA c); //Esta função permite obter o estado atual da casa
 void atualiza_estado_jogo (ESTADO *e, COORDENADA c);//Esta função atualiza o estado do jogo apos a jogada
+void incrementa_num_comandos(ESTADO *e);            // Funcao que altera o numero de comandos na camada de dados
+int obter_num_comandos(ESTADO *e);                  // Retorna o número atual de comandos;
 #endif
