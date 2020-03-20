@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "camada_de_dados.h"
+#include "camada_de_interface.h"
 
 
 
@@ -76,4 +77,11 @@ void modifica_num_jogadas (ESTADO *e , int numJogadas){
 
 COORDENADA obter_ultima_jogada(ESTADO *e ){
     return e->ultima_jogada;
+}
+
+void grava_dados(ESTADO *e , * file_name ){
+    FILE * f_pointer;
+    f_pointer = fopen(file_name,"w");
+    mostrar_tabuleiro(e,f_pointer);
+    fclose(f_pointer);
 }

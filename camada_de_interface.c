@@ -48,7 +48,7 @@ void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer) { // desenha o tabuleiro que 
 int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     char linha[BUF_SIZE];
     char col[2], lin[2],file_name[64];
-    FILE * f_pointer;
+
 
     if(fgets(linha, BUF_SIZE, stdin) == NULL)
         return 0;
@@ -73,9 +73,7 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         return  0;
     }
     if(sscanf(linha,"gr %s",file_name) == 1){            // implementação do comando gr que cria um ficheiro e guarda o estado do tabuleiro
-        f_pointer = fopen(file_name,"w");
-        mostrar_tabuleiro(e,f_pointer);
-        fclose(f_pointer);
+        grava_dados(e,file_name);                        // grava o estado do tabuleiro num ficheiro
     }
     return 1;
 }

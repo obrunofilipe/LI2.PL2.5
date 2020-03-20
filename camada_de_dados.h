@@ -124,4 +124,6 @@ void modifica_num_jogadas (ESTADO *e , int numJogadas);
  * @return A última jogada efetuada
  */
 COORDENADA obter_ultima_jogada(ESTADO *e );
+
+void grava_dados(ESTADO *e , *file_name );
 #endif
