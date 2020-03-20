@@ -69,7 +69,7 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         }
         else printf("A jogada introduzida é invalida. Jogue novamente.\n");
     }
-    if(sscanf(linha , "Q") == 0){                        // termina o programa invocando uma funçao que altera o numero de jogadas na estrutura de dados
+    if(strlen(linha) == 2 && sscanf(linha , "Q") == 0){                        // termina o programa invocando uma funçao que altera o numero de jogadas na estrutura de dados
         return  0;
     }
     if(sscanf(linha,"gr %s",file_name) == 1){            // implementação do comando gr que cria um ficheiro e guarda o estado do tabuleiro
