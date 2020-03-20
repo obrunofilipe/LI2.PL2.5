@@ -88,30 +88,34 @@ void grava_dados(ESTADO *e , char * file_name ){
 
 void ler_dados(ESTADO *e , char * file_name){
     FILE * f_pointer;
-    char armazena_linha[26];
-    int coluna, i_armazena_linha;
+    char caracter;
+    int linha,coluna;
+    linha = 7;
+    coluna = 0;
     f_pointer = fopen(file_name, "r");
     if(f_pointer != NULL){
-        for(int linha = 0 ; linha < 8 ; linha++){
-            fscanf(f_pointer, "%s",armazena_linha);
-            coluna = 0;
-            i_armazena_linha = 0;
-            while(coluna < 8 ){
-                if(armazena_linha[coluna] == '1' || armazena_linha[coluna] == '2' || armazena_linha[coluna] == '*' || armazena_linha[coluna] == '#' || armazena_linha[coluna] == '.' ){
-                    switch(armazena_linha[coluna]){
-                        case '#':
-                            e->tab[linha][coluna] = PRETA;
-                            break;
-                        case '*':
-                            e->tab[linha][coluna] = BRANCA;
-                            break;
-                        default:
-                            e->tab[linha][coluna] = VAZIO;
-                            break;
-                    }
+        while((caracter = fgetc(f_pointer)) != EOF){
+            switch(caracter){
+                case '.':
+                    e->tab[linha][coluna] = VAZIO;
                     coluna++;
-                }
-                i_armazena_linha++;
+                    break;
+                case '#':
+                    e->tab[linha][coluna] = PRETA;
+                    coluna++;
+                    break;
+                case '*':
+                    e->tab[linha][coluna] = BRANCA;
+                    coluna++;
+                    break;
+                case '1':
+                    e->tab[linha][coluna] = VAZIO;
+                    coluna++;
+                    break;
+            }
+            if(caracter == '\n') {
+                linha--;
+                coluna = 0;
             }
         }
     }
