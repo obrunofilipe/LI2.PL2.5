@@ -1,4 +1,4 @@
 # file: ~/.gitignore_global
 .DS_Store
 .idea
-cmake-build-debug
+dir_to_ignore/cmake-build-debug
