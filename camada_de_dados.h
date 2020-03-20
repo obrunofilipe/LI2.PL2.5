@@ -2,11 +2,15 @@
 #define ___CAMADA_DE_DADOS_H___
 
 /**
- * ... text ...
+@file camada_de_dados.h
+Definição do estado e das funções que o manipulam
 */
 
 //Aqui dentro aparece o código correspondente aos protótipos
 //CASA
+/**
+\brief Tipo de dados para a casa
+*/
 typedef enum {VAZIO, BRANCA, PRETA} CASA;
 
 //COORDENADA

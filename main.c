@@ -1,7 +1,7 @@
 #include "camada_de_dados.h"
 #include "camada_de_interface.h"
 #include <string.h>
-#include <_stdio.h>
+#include <stdio.h>
 
 int main()
 {
