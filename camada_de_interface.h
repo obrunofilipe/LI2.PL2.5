@@ -8,7 +8,7 @@
 /**
 \brief Função para mostrar o tabuleiro
 @param e Apontador para o Estado atual
-@param f_pointer
+@param f_pointer Apontador de memória para a criação de um ficheiro
  */
 void mostrar_tabuleiro(ESTADO *e, FILE * f_pointer);
 
