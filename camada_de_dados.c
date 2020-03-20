@@ -79,30 +79,25 @@ COORDENADA obter_ultima_jogada(ESTADO *e ){
     return e->ultima_jogada;
 }
 
-void grava_dados(ESTADO *e , * file_name ){
+void grava_dados(ESTADO *e , char * file_name ){
     FILE * f_pointer;
     f_pointer = fopen(file_name,"w");
     mostrar_tabuleiro(e,f_pointer);
     fclose(f_pointer);
 }
 
-void ler_dados(ESTADO *e , * file_name){
+void ler_dados(ESTADO *e , char * file_name){
     FILE * f_pointer;
-    char armazena_linha[25];
+    char armazena_linha[26];
     int coluna, i_armazena_linha;
-    printf("ler dados");
     f_pointer = fopen(file_name, "r");
-    if(f_pointer == NULL)
-        printf("ERRO: Ficheiro não encontrado!\n");
-    else {
-        printf("loop");
+    if(f_pointer != NULL){
         for(int linha = 0 ; linha < 8 ; linha++){
             fscanf(f_pointer, "%s",armazena_linha);
             coluna = 0;
             i_armazena_linha = 0;
             while(coluna < 8 ){
-                if(armazena_linha[coluna] == '1' || armazena_linha[coluna] == '2' || armazena_linha[coluna] == '*' ||
-                   armazena_linha[coluna] == '#' || armazena_linha[coluna] == '.' ){
+                if(armazena_linha[coluna] == '1' || armazena_linha[coluna] == '2' || armazena_linha[coluna] == '*' || armazena_linha[coluna] == '#' || armazena_linha[coluna] == '.' ){
                     switch(armazena_linha[coluna]){
                         case '#':
                             e->tab[linha][coluna] = PRETA;
@@ -119,6 +114,9 @@ void ler_dados(ESTADO *e , * file_name){
                 i_armazena_linha++;
             }
         }
+    }
+    else {
+        printf("ERRO: Ficheiro desconhecido!\n");
     }
     fclose(f_pointer);
     mostrar_tabuleiro(e,NULL);
