@@ -9,17 +9,28 @@
 void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer) { // desenha o tabuleiro que esta declarado no estado
     COORDENADA c;
     char letras = 'a';
-    if (f_pointer == NULL)
+    int print_in_stdout = 0;      // indica se estamos a fazer print num ficheiro ou no stdout, utilizado para restringir o que é armazenado no ficheiro
+    if (f_pointer == NULL) {      // verifica que se existe algum  ficheiro aberto caso contrario o f_pointer passa a ser stdout
         f_pointer = stdout;
+        print_in_stdout = 1;
+    }
     for(int linhas = 7; linhas >= 0 ; linhas--){
-        fprintf(f_pointer ,"%d ",linhas + 1 );                  // da print aos numeros que se encontram do lado esquerdo do tabuleiro que correspondem à linha da coordenada da peça
+        if(print_in_stdout)
+            printf("%d ",linhas + 1 );                  // da print aos numeros que se encontram do lado esquerdo do tabuleiro que correspondem à linha da coordenada da peça
         c.linha = linhas;
         for(int colunas = 0; colunas < 8 ; colunas++){
             c.coluna = colunas;
-            if(linhas == 7 && colunas == 7)
-                fprintf(f_pointer ," 2 ");
+            if(linhas == 7 && colunas == 7) {
+                if(obter_estado_casa(e,c) == BRANCA)
+                    fprintf(f_pointer, " * " );
+                else
+                    fprintf(f_pointer, " 2 ");
+            }
             else if (linhas == 0 && colunas == 0)
-                fprintf(f_pointer ," 1 ");
+                if(obter_estado_casa(e,c) == BRANCA)
+                    fprintf(f_pointer, " * " );
+                else
+                    fprintf(f_pointer, " 1 ");
             else {
                 switch (obter_estado_casa(e,c)) {
                     case VAZIO:
@@ -36,9 +47,10 @@ void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer) { // desenha o tabuleiro que 
         }
         fprintf(f_pointer ,"\n");
     }
-    fprintf(f_pointer,"  ");                   // este loop escreve em baixo do tabuleiro as letras que identificam a coluna das coordenadas do tabuleiro
-    for(int i = 0 ; i < 8 ; i++){
-        fprintf(f_pointer ," %c ",letras);
+    if(print_in_stdout)
+        printf("  ");                   // este loop escreve em baixo do tabuleiro as letras que identificam a coluna das coordenadas do tabuleiro
+    for(int i = 0 ; i < 8 && print_in_stdout ; i++){
+        printf(" %c ",letras);
         letras++;
     }
     fprintf(f_pointer ,"\n");
@@ -48,8 +60,6 @@ void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer) { // desenha o tabuleiro que 
 int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     char linha[BUF_SIZE];
     char col[2], lin[2],file_name[64];
-
-
     if(fgets(linha, BUF_SIZE, stdin) == NULL)
         return 0;
     if(strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
@@ -75,6 +85,8 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     if(sscanf(linha,"gr %s",file_name) == 1){            // implementação do comando gr que cria um ficheiro e guarda o estado do tabuleiro
         grava_dados(e,file_name);                        // grava o estado do tabuleiro num ficheiro
     }
+    if(sscanf(linha,"ler %s",file_name) == 1)
+        ler_dados(e,file_name);
     return 1;
 }
 

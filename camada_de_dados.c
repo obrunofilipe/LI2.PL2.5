@@ -85,3 +85,41 @@ void grava_dados(ESTADO *e , * file_name ){
     mostrar_tabuleiro(e,f_pointer);
     fclose(f_pointer);
 }
+
+void ler_dados(ESTADO *e , * file_name){
+    FILE * f_pointer;
+    char armazena_linha[25];
+    int coluna, i_armazena_linha;
+    printf("ler dados");
+    f_pointer = fopen(file_name, "r");
+    if(f_pointer == NULL)
+        printf("ERRO: Ficheiro não encontrado!\n");
+    else {
+        printf("loop");
+        for(int linha = 0 ; linha < 8 ; linha++){
+            fscanf(f_pointer, "%s",armazena_linha);
+            coluna = 0;
+            i_armazena_linha = 0;
+            while(coluna < 8 ){
+                if(armazena_linha[coluna] == '1' || armazena_linha[coluna] == '2' || armazena_linha[coluna] == '*' ||
+                   armazena_linha[coluna] == '#' || armazena_linha[coluna] == '.' ){
+                    switch(armazena_linha[coluna]){
+                        case '#':
+                            e->tab[linha][coluna] = PRETA;
+                            break;
+                        case '*':
+                            e->tab[linha][coluna] = BRANCA;
+                            break;
+                        default:
+                            e->tab[linha][coluna] = VAZIO;
+                            break;
+                    }
+                    coluna++;
+                }
+                i_armazena_linha++;
+            }
+        }
+    }
+    fclose(f_pointer);
+    mostrar_tabuleiro(e,NULL);
+}
