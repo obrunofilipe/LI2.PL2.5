@@ -47,7 +47,7 @@ void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer) { // desenha o tabuleiro que 
 
 int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     char linha[BUF_SIZE];
-    char col[2], lin[2], quit[2],g[2],r[2];
+    char col[2], lin[2],file_name[64];
     FILE * f_pointer;
 
     if(fgets(linha, BUF_SIZE, stdin) == NULL)
@@ -69,11 +69,11 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         }
         else printf("A jogada introduzida é invalida. Jogue novamente.\n");
     }
-    if(strlen(linha) == 2 && sscanf(linha, "%[Q]",quit) == 1){              // termina o programa invocando uma funçao que altera o numero de jogadas na estrutura de dados
-        modifica_num_jogadas(e,32);
+    if(sscanf(linha , "Q") == 0){                        // termina o programa invocando uma funçao que altera o numero de jogadas na estrutura de dados
+        return  0;
     }
-    if(strlen(linha) == 3 && sscanf(linha,"%[g]%[r]",g,r) == 2){            // implementação do comando gr que cria um ficheiro e guarda o estado do tabuleiro
-        f_pointer = fopen("tabuleiro.txt","w");
+    if(sscanf(linha,"gr %s",file_name) == 1){            // implementação do comando gr que cria um ficheiro e guarda o estado do tabuleiro
+        f_pointer = fopen(file_name,"w");
         mostrar_tabuleiro(e,f_pointer);
         fclose(f_pointer);
     }
