@@ -1,0 +1,52 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_dados.c
+stdio.h
+-
+stdlib.h
+-
+camada_de_dados.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_dados.h
+camada_de_interface.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_interface.h
+
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_dados.h
+
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_interface.c
+stdio.h
+-
+string.h
+-
+camada_de_dados.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_dados.h
+logica_do_programa.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/logica_do_programa.h
+
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_interface.h
+stdio.h
+-
+
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/logica_do_programa.c
+stdio.h
+-
+camada_de_dados.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_dados.h
+
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/logica_do_programa.h
+
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/main.c
+camada_de_dados.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_dados.h
+camada_de_interface.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_interface.h
+string.h
+-
+stdio.h
+-
+

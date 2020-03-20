@@ -2,7 +2,7 @@
 #define ___CAMADA_DE_DADOS_H___
 
 /**
- @file dados,h
+ @file camada_de_dados.h
  Definições dos dados presentes no estado e das funções que o alteram
 */
 
