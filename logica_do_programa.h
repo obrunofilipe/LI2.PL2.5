@@ -1,5 +1,11 @@
 #ifndef ___LOGICA_DO_PROGRAMA_H___
 #define ___LOGICA_DO_PROGRAMA_H___
+
+/**
+ @file logica_do_programa.h
+ Definições dos dados presentes no estado e das funções que o alteram
+*/
+
 /**
 \brief Funções relacionadas à lógica do programa
 */

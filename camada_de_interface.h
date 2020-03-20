@@ -1,6 +1,12 @@
 #include <stdio.h>
 #ifndef ___CAMADA_DE_INTERFACE_H___
 #define ___CAMADA_DE_INTERFACE_H___
+
+/**
+ @file camada_de_interface.h
+ Definições dos dados presentes no estado e das funções que o alteram
+*/
+
 /**
 \brief Funções para alterarem a interface
 */

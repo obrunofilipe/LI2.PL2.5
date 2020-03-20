@@ -1,0 +1,102 @@
+\hypertarget{logica__do__programa_8h}{}\section{logica\+\_\+do\+\_\+programa.\+h File Reference}
+\label{logica__do__programa_8h}\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{logica__do__programa_8h_a53472e75f056ceb02b5387193021838a}{jogar} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$estado, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Funções relacionadas à lógica do programa. \end{DoxyCompactList}\item 
+int \hyperlink{logica__do__programa_8h_a1a37a3c530ad08eb3f6f5bb0674caa32}{verifica\+Jogada} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Função para verificar se uma jogada é possível. \end{DoxyCompactList}\item 
+int \hyperlink{logica__do__programa_8h_a57a5d6492df5d5e9b16b2fa0926d5431}{verifica\+\_\+\+Vitoria\+\_\+\+Jog1} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Função que verifica se o jogador 1 venceu. \end{DoxyCompactList}\item 
+int \hyperlink{logica__do__programa_8h_a197b9b465c281c748c81e1a20a08d8db}{verifica\+\_\+\+Vitoria\+\_\+\+Jog2} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Função que verifica se o jogador 2 venceu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{logica__do__programa_8h_a8b341510d646820c85b1935d939bd94d}\label{logica__do__programa_8h_a8b341510d646820c85b1935d939bd94d}} 
+int {\bfseries verifica\+\_\+\+Bloqueio} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definições dos dados presentes no estado e das funções que o alteram 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{logica__do__programa_8h_a53472e75f056ceb02b5387193021838a}\label{logica__do__programa_8h_a53472e75f056ceb02b5387193021838a}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!jogar@{jogar}}
+\index{jogar@{jogar}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{jogar()}{jogar()}}
+{\footnotesize\ttfamily int jogar (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{estado,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Funções relacionadas à lógica do programa. 
+
+Função para jogar 
+\begin{DoxyParams}{Parameters}
+{\em estado} & Apontador para o Estado atual \\
+\hline
+{\em c} & Coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O inteiro 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a57a5d6492df5d5e9b16b2fa0926d5431}\label{logica__do__programa_8h_a57a5d6492df5d5e9b16b2fa0926d5431}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!verifica\+\_\+\+Vitoria\+\_\+\+Jog1@{verifica\+\_\+\+Vitoria\+\_\+\+Jog1}}
+\index{verifica\+\_\+\+Vitoria\+\_\+\+Jog1@{verifica\+\_\+\+Vitoria\+\_\+\+Jog1}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{verifica\+\_\+\+Vitoria\+\_\+\+Jog1()}{verifica\_Vitoria\_Jog1()}}
+{\footnotesize\ttfamily int verifica\+\_\+\+Vitoria\+\_\+\+Jog1 (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se o jogador 1 venceu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontado para o Estado atual \\
+\hline
+{\em c} & Coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O inteiro 1 se venceu, 0 em caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a197b9b465c281c748c81e1a20a08d8db}\label{logica__do__programa_8h_a197b9b465c281c748c81e1a20a08d8db}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!verifica\+\_\+\+Vitoria\+\_\+\+Jog2@{verifica\+\_\+\+Vitoria\+\_\+\+Jog2}}
+\index{verifica\+\_\+\+Vitoria\+\_\+\+Jog2@{verifica\+\_\+\+Vitoria\+\_\+\+Jog2}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{verifica\+\_\+\+Vitoria\+\_\+\+Jog2()}{verifica\_Vitoria\_Jog2()}}
+{\footnotesize\ttfamily int verifica\+\_\+\+Vitoria\+\_\+\+Jog2 (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se o jogador 2 venceu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontado para o Estado atual \\
+\hline
+{\em c} & Coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O inteiro 1 se venceu, 0 em caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a1a37a3c530ad08eb3f6f5bb0674caa32}\label{logica__do__programa_8h_a1a37a3c530ad08eb3f6f5bb0674caa32}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!verifica\+Jogada@{verifica\+Jogada}}
+\index{verifica\+Jogada@{verifica\+Jogada}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{verifica\+Jogada()}{verificaJogada()}}
+{\footnotesize\ttfamily int verifica\+Jogada (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Função para verificar se uma jogada é possível. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o Estado atual \\
+\hline
+{\em c} & Coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O inteiro 1 se a jogada for possível, 0 em caso contrário 
+\end{DoxyReturn}
