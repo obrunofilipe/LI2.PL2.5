@@ -54,6 +54,7 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         return 0;
     if(strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
         COORDENADA coord = {*col - 'a', *lin - '1'};
+        int jogadorAnterior = obter_jogador_atual(e);
         if (verificaJogada(e, coord)){
             incrementa_num_comandos(e);
             if (verifica_Vitoria_Jog1(e, coord) == 1){
@@ -68,6 +69,10 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
             mostrar_tabuleiro(e,NULL);
         }
         else printf("A jogada introduzida é invalida. Jogue novamente.\n");
+        if (verifica_Bloqueio(e, coord)){
+            printf("O Jogador %d ficou bloqueado... O Jogador %d é o vencedor!", obter_jogador_atual(e), jogadorAnterior);
+            modifica_num_jogadas(e, 32);
+        }
     }
     if(strlen(linha) == 2 && sscanf(linha , "Q") == 0){                        // termina o programa retornando 0 que quebra o ciclo do main
         return  0;
