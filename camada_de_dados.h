@@ -42,17 +42,17 @@ typedef JOGADA JOGADAS[32];
 //ESTADO
 typedef struct {
     /** O tabuleiro */
-    CASA tab[8][8];             //armazena informação sobre o tabuleiro
+    CASA tab[8][8];
     /** A coordenada da última jogada */
-    COORDENADA ultima_jogada;	//a coordenada da última jogada
+    COORDENADA ultima_jogada;
     /** Armazena a informação sobre as jogadas */
-    JOGADAS jogadas;			//armazena informação sobre as jogadas
+    JOGADAS jogadas;
     /** Número de jogadas, utilizado no prompt */
-    int num_jogadas;			//indica quantas jogadas foram efetuadas
+    int num_jogadas;
     /**Número do jogador atual */
-    int jogador_atual;			//indica qual é o jogador a jogar
+    int jogador_atual;
     /** Número do comando atual, utilizado no prompt */
-    int num_comandos;           //aramzena o número total de comandos
+    int num_comandos;
 } ESTADO;
 
 
@@ -117,8 +117,7 @@ int obter_num_comandos(ESTADO *e);
  * @param e Apontador para o estado atual
  * @param numJogadas O número de jogads atuais
  */
-void modifica_num_jogadas (ESTADO *e , int numJogadas); // ultilizada para alterar o valor do numero de jogadas atual para quebrar o loop no main e terminar o programa
-
+void modifica_num_jogadas (ESTADO *e , int numJogadas);
 /**
 \brief Função para obter a última jogada efetuada
  * @param e Apontador para o estado atual
