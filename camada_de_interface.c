@@ -56,8 +56,6 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         COORDENADA coord = {*col - 'a', *lin - '1'};
         if (verificaJogada(e, coord)){
             incrementa_num_comandos(e);
-            jogar(e, coord);
-            mostrar_tabuleiro(e,NULL);
             if (verifica_Vitoria_Jog1(e, coord) == 1){
                 printf("O Jogador 1 ganhou!");
                 modifica_num_jogadas(e, 32);
@@ -66,6 +64,8 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
                 printf ("O Jogador 2 ganhou!");
                 modifica_num_jogadas(e, 32);
             }
+            jogar(e, coord);
+            mostrar_tabuleiro(e,NULL);
         }
         else printf("A jogada introduzida é invalida. Jogue novamente.\n");
     }
