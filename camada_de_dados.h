@@ -44,4 +44,5 @@ void atualiza_estado_jogo (ESTADO *e, COORDENADA c);//Esta função atualiza o e
 void incrementa_num_comandos(ESTADO *e);            // Funcao que altera o numero de comandos na camada de dados
 int obter_num_comandos(ESTADO *e);                  // Retorna o número atual de comandos;
 void modifica_num_jogadas (ESTADO *e , int numJogadas); // ultilizada para alterar o valor do numero de jogadas atual para quebrar o loop no main e terminar o programa
+COORDENADA obter_ultima_jogada(ESTADO *e );             // retorna a ultima jogada
 #endif

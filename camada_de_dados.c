@@ -73,3 +73,7 @@ int obter_num_comandos(ESTADO *e){
 void modifica_num_jogadas (ESTADO *e , int numJogadas){
     e->num_jogadas = numJogadas;
 }
+
+COORDENADA obter_ultima_jogada(ESTADO *e ){
+    return e->ultima_jogada;
+}

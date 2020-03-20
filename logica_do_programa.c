@@ -8,15 +8,15 @@ int jogar(ESTADO *e, COORDENADA c) {
 
 int verificaJogada (ESTADO *e, COORDENADA c) {
     int r;
-    COORDENADA cooord_anterior = e->ultima_jogada;
-    int l_anterior = e->ultima_jogada.linha;
-    int c_anterior = e->ultima_jogada.coluna;
-    if ((c.coluna == c_anterior + 1 || c.coluna == c_anterior - 1 || c.coluna == c_anterior) && (c.linha == l_anterior + 1 || c.linha == l_anterior - 1 || c.linha == l_anterior)){
+    int l_anterior = obter_ultima_jogada(e).linha;
+    int c_anterior = obter_ultima_jogada(e).coluna;
+    if ((c.coluna == c_anterior + 1 || c.coluna == c_anterior - 1 || c.coluna == c_anterior)
+    && (c.linha == l_anterior + 1 || c.linha == l_anterior - 1 || c.linha == l_anterior)){
         r = 1;
     }
-    else r = 0;
+    else
+        r = 0;
+
     return r;
 }
 
-//(coord.coluna == e->ultima_jogada.coluna + 1 || coord.coluna == e->ultima_jogada.coluna - 1 || coord.coluna == e->ultima_jogada.coluna)
-// && (coord.linha == e->ultima_jogada.linha + 1 || coord.linha == e->ultima_jogada.linha - 1 || coord.linha == e->ultima_jogada.linha))
