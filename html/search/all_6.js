@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['modifica_5fnum_5fjogadas',['modifica_num_jogadas',['../camada__de__dados_8h.html#a1d0036d2753e8f2d79221be69106c62c',1,'camada_de_dados.c']]],
-  ['mostrar_5ftabuleiro',['mostrar_tabuleiro',['../camada__de__interface_8h.html#afe2a53fa312818f465ccd3f4a37b9a40',1,'camada_de_interface.c']]]
+  ['ler_5fdados',['ler_dados',['../camada__de__dados_8h.html#a329ca4ca6a4ac95a0bcbbf4e09500dc7',1,'camada_de_dados.c']]],
+  ['logica_5fdo_5fprograma_2eh',['logica_do_programa.h',['../logica__do__programa_8h.html',1,'']]]
 ];

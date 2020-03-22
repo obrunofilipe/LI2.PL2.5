@@ -47,12 +47,10 @@ void \hyperlink{camada__de__dados_8h_a1d0036d2753e8f2d79221be69106c62c}{modifica
 \begin{DoxyCompactList}\small\item\em Função para alterar o valor do número de jogadas, para quebrar o loop no main e para terminar o programa. \end{DoxyCompactList}\item 
 \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} \hyperlink{camada__de__dados_8h_a40555aff97afc67bd1866f2785111310}{obter\+\_\+ultima\+\_\+jogada} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e)
 \begin{DoxyCompactList}\small\item\em Função para obter a última jogada efetuada. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{camada__de__dados_8h_ae0d7061c4156a335fb19d754f9e777d9}\label{camada__de__dados_8h_ae0d7061c4156a335fb19d754f9e777d9}} 
-void {\bfseries grava\+\_\+dados} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, char $\ast$file\+\_\+name)
-\item 
-\mbox{\Hypertarget{camada__de__dados_8h_a329ca4ca6a4ac95a0bcbbf4e09500dc7}\label{camada__de__dados_8h_a329ca4ca6a4ac95a0bcbbf4e09500dc7}} 
-void {\bfseries ler\+\_\+dados} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, char $\ast$file\+\_\+name)
-\end{DoxyCompactItemize}
+void \hyperlink{camada__de__dados_8h_ae0d7061c4156a335fb19d754f9e777d9}{grava\+\_\+dados} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, char $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Função para gravar os dados atuais do tabuleiro (quando utilizado o comando gr) \end{DoxyCompactList}\item 
+void \hyperlink{camada__de__dados_8h_a329ca4ca6a4ac95a0bcbbf4e09500dc7}{ler\+\_\+dados} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, char $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Função para ler um ficheiro e alterar o estado consoante esse ficheiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -74,6 +72,23 @@ Função que atualiza o estado de jogo após cada jogada.
 {\em e} & Apontador para o estado atual \\
 \hline
 {\em c} & A coordenada \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{camada__de__dados_8h_ae0d7061c4156a335fb19d754f9e777d9}\label{camada__de__dados_8h_ae0d7061c4156a335fb19d754f9e777d9}} 
+\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!grava\+\_\+dados@{grava\+\_\+dados}}
+\index{grava\+\_\+dados@{grava\+\_\+dados}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
+\subsubsection{\texorpdfstring{grava\+\_\+dados()}{grava\_dados()}}
+{\footnotesize\ttfamily void grava\+\_\+dados (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Função para gravar os dados atuais do tabuleiro (quando utilizado o comando gr) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado atual \\
+\hline
+{\em file\+\_\+name} & Nome do ficheiro que vai ser criado \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{camada__de__dados_8h_ade5d6f16f7840c944079b80da9ad5b10}\label{camada__de__dados_8h_ade5d6f16f7840c944079b80da9ad5b10}} 
@@ -122,6 +137,23 @@ Função para inicializar o tabuleiro.
 \begin{DoxyReturn}{Returns}
 O Tabuleiro inicial 
 \end{DoxyReturn}
+\mbox{\Hypertarget{camada__de__dados_8h_a329ca4ca6a4ac95a0bcbbf4e09500dc7}\label{camada__de__dados_8h_a329ca4ca6a4ac95a0bcbbf4e09500dc7}} 
+\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!ler\+\_\+dados@{ler\+\_\+dados}}
+\index{ler\+\_\+dados@{ler\+\_\+dados}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
+\subsubsection{\texorpdfstring{ler\+\_\+dados()}{ler\_dados()}}
+{\footnotesize\ttfamily void ler\+\_\+dados (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Função para ler um ficheiro e alterar o estado consoante esse ficheiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado atual \\
+\hline
+{\em file\+\_\+name} & Nome do ficheiro para ser lido \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{camada__de__dados_8h_a1d0036d2753e8f2d79221be69106c62c}\label{camada__de__dados_8h_a1d0036d2753e8f2d79221be69106c62c}} 
 \index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!modifica\+\_\+num\+\_\+jogadas@{modifica\+\_\+num\+\_\+jogadas}}
 \index{modifica\+\_\+num\+\_\+jogadas@{modifica\+\_\+num\+\_\+jogadas}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
@@ -136,7 +168,7 @@ Função para alterar o valor do número de jogadas, para quebrar o loop no main
 \begin{DoxyParams}{Parameters}
 {\em e} & Apontador para o estado atual \\
 \hline
-{\em num\+Jogadas} & O número de jogads atuais \\
+{\em num\+Jogadas} & O número de jogadas atuais \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{camada__de__dados_8h_a6faa68373203923729ed38657aa0f768}\label{camada__de__dados_8h_a6faa68373203923729ed38657aa0f768}} 

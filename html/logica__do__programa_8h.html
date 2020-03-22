@@ -81,8 +81,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a197b9b465c281c748c81e1a20a08d8db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a197b9b465c281c748c81e1a20a08d8db">verifica_Vitoria_Jog2</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, <a class="el" href="structCOORDENADA.html">COORDENADA</a> c)</td></tr>
 <tr class="memdesc:a197b9b465c281c748c81e1a20a08d8db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que verifica se o jogador 2 venceu.  <a href="#a197b9b465c281c748c81e1a20a08d8db">More...</a><br /></td></tr>
 <tr class="separator:a197b9b465c281c748c81e1a20a08d8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b341510d646820c85b1935d939bd94d"><td class="memItemLeft" align="right" valign="top"><a id="a8b341510d646820c85b1935d939bd94d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>verifica_Bloqueio</b> (<a class="el" href="structESTADO.html">ESTADO</a> *e, <a class="el" href="structCOORDENADA.html">COORDENADA</a> c)</td></tr>
+<tr class="memitem:a8b341510d646820c85b1935d939bd94d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a8b341510d646820c85b1935d939bd94d">verifica_Bloqueio</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, <a class="el" href="structCOORDENADA.html">COORDENADA</a> c)</td></tr>
+<tr class="memdesc:a8b341510d646820c85b1935d939bd94d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que verifica se um jogador está bloqueado, ou seja, não existe nenhuma possibilidade de efetuar uma jogada válida.  <a href="#a8b341510d646820c85b1935d939bd94d">More...</a><br /></td></tr>
 <tr class="separator:a8b341510d646820c85b1935d939bd94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -126,6 +126,44 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>verifica_Bloqueio</b> 
 
 </div>
 </div>
+<a id="a8b341510d646820c85b1935d939bd94d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b341510d646820c85b1935d939bd94d">&#9670;&nbsp;</a></span>verifica_Bloqueio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verifica_Bloqueio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structESTADO.html">ESTADO</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structCOORDENADA.html">COORDENADA</a>&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que verifica se um jogador está bloqueado, ou seja, não existe nenhuma possibilidade de efetuar uma jogada válida. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>Apontador para o estado atual </td></tr>
+    <tr><td class="paramname">c</td><td>Coordenada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O inteiro 1 caso esteja bloqueado, 0 caso contrário </dd></dl>
+
+</div>
+</div>
 <a id="a57a5d6492df5d5e9b16b2fa0926d5431"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a57a5d6492df5d5e9b16b2fa0926d5431">&#9670;&nbsp;</a></span>verifica_Vitoria_Jog1()</h2>
 
@@ -155,7 +193,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>verifica_Bloqueio</b> 
 <p>Função que verifica se o jogador 1 venceu. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">e</td><td>Apontado para o Estado atual </td></tr>
+    <tr><td class="paramname">e</td><td>Apontador para o Estado atual </td></tr>
     <tr><td class="paramname">c</td><td>Coordenada </td></tr>
   </table>
   </dd>
@@ -193,7 +231,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>verifica_Bloqueio</b> 
 <p>Função que verifica se o jogador 2 venceu. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">e</td><td>Apontado para o Estado atual </td></tr>
+    <tr><td class="paramname">e</td><td>Apontador para o Estado atual </td></tr>
     <tr><td class="paramname">c</td><td>Coordenada </td></tr>
   </table>
   </dd>

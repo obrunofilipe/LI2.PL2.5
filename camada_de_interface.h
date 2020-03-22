@@ -26,9 +26,9 @@ void mostrar_tabuleiro(ESTADO *e, FILE * f_pointer);
 int interpretador(ESTADO *e);
 
 /**
-\brief
+\brief Função para colocar o prompt no ecrã
 @param e Apontador para o Estado atual
 */
-void showPrompt (ESTADO *e); // coloca o prompt no ecra
+void showPrompt (ESTADO *e);
 
 #endif

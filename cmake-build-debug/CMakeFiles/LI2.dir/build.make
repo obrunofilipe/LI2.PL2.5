@@ -43,10 +43,10 @@ RM = /snap/clion/107/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5"
+CMAKE_SOURCE_DIR = /home/francisconeves/Desktop/LI2.PL2.5
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LI2.dir/depend.make
@@ -59,55 +59,55 @@ include CMakeFiles/LI2.dir/flags.make
 
 CMakeFiles/LI2.dir/main.c.o: CMakeFiles/LI2.dir/flags.make
 CMakeFiles/LI2.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/LI2.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LI2.dir/main.c.o   -c "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/LI2.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LI2.dir/main.c.o   -c /home/francisconeves/Desktop/LI2.PL2.5/main.c
 
 CMakeFiles/LI2.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LI2.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/main.c" > CMakeFiles/LI2.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/francisconeves/Desktop/LI2.PL2.5/main.c > CMakeFiles/LI2.dir/main.c.i
 
 CMakeFiles/LI2.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LI2.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/main.c" -o CMakeFiles/LI2.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/francisconeves/Desktop/LI2.PL2.5/main.c -o CMakeFiles/LI2.dir/main.c.s
 
 CMakeFiles/LI2.dir/camada_de_dados.c.o: CMakeFiles/LI2.dir/flags.make
 CMakeFiles/LI2.dir/camada_de_dados.c.o: ../camada_de_dados.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/LI2.dir/camada_de_dados.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LI2.dir/camada_de_dados.c.o   -c "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_dados.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/LI2.dir/camada_de_dados.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LI2.dir/camada_de_dados.c.o   -c /home/francisconeves/Desktop/LI2.PL2.5/camada_de_dados.c
 
 CMakeFiles/LI2.dir/camada_de_dados.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LI2.dir/camada_de_dados.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_dados.c" > CMakeFiles/LI2.dir/camada_de_dados.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/francisconeves/Desktop/LI2.PL2.5/camada_de_dados.c > CMakeFiles/LI2.dir/camada_de_dados.c.i
 
 CMakeFiles/LI2.dir/camada_de_dados.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LI2.dir/camada_de_dados.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_dados.c" -o CMakeFiles/LI2.dir/camada_de_dados.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/francisconeves/Desktop/LI2.PL2.5/camada_de_dados.c -o CMakeFiles/LI2.dir/camada_de_dados.c.s
 
 CMakeFiles/LI2.dir/camada_de_interface.c.o: CMakeFiles/LI2.dir/flags.make
 CMakeFiles/LI2.dir/camada_de_interface.c.o: ../camada_de_interface.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/LI2.dir/camada_de_interface.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LI2.dir/camada_de_interface.c.o   -c "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_interface.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/LI2.dir/camada_de_interface.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LI2.dir/camada_de_interface.c.o   -c /home/francisconeves/Desktop/LI2.PL2.5/camada_de_interface.c
 
 CMakeFiles/LI2.dir/camada_de_interface.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LI2.dir/camada_de_interface.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_interface.c" > CMakeFiles/LI2.dir/camada_de_interface.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/francisconeves/Desktop/LI2.PL2.5/camada_de_interface.c > CMakeFiles/LI2.dir/camada_de_interface.c.i
 
 CMakeFiles/LI2.dir/camada_de_interface.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LI2.dir/camada_de_interface.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_interface.c" -o CMakeFiles/LI2.dir/camada_de_interface.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/francisconeves/Desktop/LI2.PL2.5/camada_de_interface.c -o CMakeFiles/LI2.dir/camada_de_interface.c.s
 
 CMakeFiles/LI2.dir/logica_do_programa.c.o: CMakeFiles/LI2.dir/flags.make
 CMakeFiles/LI2.dir/logica_do_programa.c.o: ../logica_do_programa.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/LI2.dir/logica_do_programa.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LI2.dir/logica_do_programa.c.o   -c "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/logica_do_programa.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/LI2.dir/logica_do_programa.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LI2.dir/logica_do_programa.c.o   -c /home/francisconeves/Desktop/LI2.PL2.5/logica_do_programa.c
 
 CMakeFiles/LI2.dir/logica_do_programa.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LI2.dir/logica_do_programa.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/logica_do_programa.c" > CMakeFiles/LI2.dir/logica_do_programa.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/francisconeves/Desktop/LI2.PL2.5/logica_do_programa.c > CMakeFiles/LI2.dir/logica_do_programa.c.i
 
 CMakeFiles/LI2.dir/logica_do_programa.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LI2.dir/logica_do_programa.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/logica_do_programa.c" -o CMakeFiles/LI2.dir/logica_do_programa.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/francisconeves/Desktop/LI2.PL2.5/logica_do_programa.c -o CMakeFiles/LI2.dir/logica_do_programa.c.s
 
 # Object files for target LI2
 LI2_OBJECTS = \
@@ -125,7 +125,7 @@ LI2: CMakeFiles/LI2.dir/camada_de_interface.c.o
 LI2: CMakeFiles/LI2.dir/logica_do_programa.c.o
 LI2: CMakeFiles/LI2.dir/build.make
 LI2: CMakeFiles/LI2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable LI2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable LI2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LI2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +138,6 @@ CMakeFiles/LI2.dir/clean:
 .PHONY : CMakeFiles/LI2.dir/clean
 
 CMakeFiles/LI2.dir/depend:
-	cd "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug/CMakeFiles/LI2.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/francisconeves/Desktop/LI2.PL2.5 /home/francisconeves/Desktop/LI2.PL2.5 /home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug /home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug /home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles/LI2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/LI2.dir/depend
 

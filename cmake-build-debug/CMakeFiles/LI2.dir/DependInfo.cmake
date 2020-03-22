@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_dados.c" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug/CMakeFiles/LI2.dir/camada_de_dados.c.o"
-  "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/camada_de_interface.c" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug/CMakeFiles/LI2.dir/camada_de_interface.c.o"
-  "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/logica_do_programa.c" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug/CMakeFiles/LI2.dir/logica_do_programa.c.o"
-  "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/main.c" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/cmake-build-debug/CMakeFiles/LI2.dir/main.c.o"
+  "/home/francisconeves/Desktop/LI2.PL2.5/camada_de_dados.c" "/home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles/LI2.dir/camada_de_dados.c.o"
+  "/home/francisconeves/Desktop/LI2.PL2.5/camada_de_interface.c" "/home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles/LI2.dir/camada_de_interface.c.o"
+  "/home/francisconeves/Desktop/LI2.PL2.5/logica_do_programa.c" "/home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles/LI2.dir/logica_do_programa.c.o"
+  "/home/francisconeves/Desktop/LI2.PL2.5/main.c" "/home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles/LI2.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

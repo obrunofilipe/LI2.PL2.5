@@ -28,7 +28,7 @@ int verificaJogada (ESTADO *e, COORDENADA c);
 
 /**
 \brief Função que verifica se o jogador 1 venceu
-@param e Apontado para o Estado atual
+@param e Apontador para o Estado atual
 @param c Coordenada
 @return O inteiro 1 se venceu, 0 em caso contrário
 */
@@ -36,11 +36,18 @@ int verifica_Vitoria_Jog1 (ESTADO *e, COORDENADA c);
 
 /**
 \brief Função que verifica se o jogador 2 venceu
-@param e Apontado para o Estado atual
+@param e Apontador para o Estado atual
 @param c Coordenada
 @return O inteiro 1 se venceu, 0 em caso contrário
 */
 int verifica_Vitoria_Jog2 (ESTADO *e, COORDENADA c);
+
+/**
+\brief Função que verifica se um jogador está bloqueado, ou seja, não existe nenhuma possibilidade de efetuar uma jogada válida
+@param e Apontador para o estado atual
+@param c Coordenada
+@return O inteiro 1 caso esteja bloqueado, 0 caso contrário
+ */
 int verifica_Bloqueio (ESTADO *e, COORDENADA c);
 
 #endif

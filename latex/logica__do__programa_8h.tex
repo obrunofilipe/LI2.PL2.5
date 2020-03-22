@@ -11,9 +11,8 @@ int \hyperlink{logica__do__programa_8h_a57a5d6492df5d5e9b16b2fa0926d5431}{verifi
 \begin{DoxyCompactList}\small\item\em Função que verifica se o jogador 1 venceu. \end{DoxyCompactList}\item 
 int \hyperlink{logica__do__programa_8h_a197b9b465c281c748c81e1a20a08d8db}{verifica\+\_\+\+Vitoria\+\_\+\+Jog2} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
 \begin{DoxyCompactList}\small\item\em Função que verifica se o jogador 2 venceu. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{logica__do__programa_8h_a8b341510d646820c85b1935d939bd94d}\label{logica__do__programa_8h_a8b341510d646820c85b1935d939bd94d}} 
-int {\bfseries verifica\+\_\+\+Bloqueio} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
-\end{DoxyCompactItemize}
+int \hyperlink{logica__do__programa_8h_a8b341510d646820c85b1935d939bd94d}{verifica\+\_\+\+Bloqueio} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Função que verifica se um jogador está bloqueado, ou seja, não existe nenhuma possibilidade de efetuar uma jogada válida. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -40,6 +39,26 @@ Função para jogar
 \begin{DoxyReturn}{Returns}
 O inteiro 1 
 \end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a8b341510d646820c85b1935d939bd94d}\label{logica__do__programa_8h_a8b341510d646820c85b1935d939bd94d}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!verifica\+\_\+\+Bloqueio@{verifica\+\_\+\+Bloqueio}}
+\index{verifica\+\_\+\+Bloqueio@{verifica\+\_\+\+Bloqueio}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{verifica\+\_\+\+Bloqueio()}{verifica\_Bloqueio()}}
+{\footnotesize\ttfamily int verifica\+\_\+\+Bloqueio (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se um jogador está bloqueado, ou seja, não existe nenhuma possibilidade de efetuar uma jogada válida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado atual \\
+\hline
+{\em c} & Coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O inteiro 1 caso esteja bloqueado, 0 caso contrário 
+\end{DoxyReturn}
 \mbox{\Hypertarget{logica__do__programa_8h_a57a5d6492df5d5e9b16b2fa0926d5431}\label{logica__do__programa_8h_a57a5d6492df5d5e9b16b2fa0926d5431}} 
 \index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!verifica\+\_\+\+Vitoria\+\_\+\+Jog1@{verifica\+\_\+\+Vitoria\+\_\+\+Jog1}}
 \index{verifica\+\_\+\+Vitoria\+\_\+\+Jog1@{verifica\+\_\+\+Vitoria\+\_\+\+Jog1}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
@@ -52,7 +71,7 @@ Função que verifica se o jogador 1 venceu.
 
 
 \begin{DoxyParams}{Parameters}
-{\em e} & Apontado para o Estado atual \\
+{\em e} & Apontador para o Estado atual \\
 \hline
 {\em c} & Coordenada \\
 \hline
@@ -72,7 +91,7 @@ Função que verifica se o jogador 2 venceu.
 
 
 \begin{DoxyParams}{Parameters}
-{\em e} & Apontado para o Estado atual \\
+{\em e} & Apontador para o Estado atual \\
 \hline
 {\em c} & Coordenada \\
 \hline

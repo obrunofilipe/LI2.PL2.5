@@ -130,11 +130,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a40555aff97afc67bd1866f2785111310"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCOORDENADA.html">COORDENADA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#a40555aff97afc67bd1866f2785111310">obter_ultima_jogada</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e)</td></tr>
 <tr class="memdesc:a40555aff97afc67bd1866f2785111310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para obter a última jogada efetuada.  <a href="#a40555aff97afc67bd1866f2785111310">More...</a><br /></td></tr>
 <tr class="separator:a40555aff97afc67bd1866f2785111310"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0d7061c4156a335fb19d754f9e777d9"><td class="memItemLeft" align="right" valign="top"><a id="ae0d7061c4156a335fb19d754f9e777d9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>grava_dados</b> (<a class="el" href="structESTADO.html">ESTADO</a> *e, char *file_name)</td></tr>
+<tr class="memitem:ae0d7061c4156a335fb19d754f9e777d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#ae0d7061c4156a335fb19d754f9e777d9">grava_dados</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, char *file_name)</td></tr>
+<tr class="memdesc:ae0d7061c4156a335fb19d754f9e777d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para gravar os dados atuais do tabuleiro (quando utilizado o comando gr)  <a href="#ae0d7061c4156a335fb19d754f9e777d9">More...</a><br /></td></tr>
 <tr class="separator:ae0d7061c4156a335fb19d754f9e777d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a329ca4ca6a4ac95a0bcbbf4e09500dc7"><td class="memItemLeft" align="right" valign="top"><a id="a329ca4ca6a4ac95a0bcbbf4e09500dc7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ler_dados</b> (<a class="el" href="structESTADO.html">ESTADO</a> *e, char *file_name)</td></tr>
+<tr class="memitem:a329ca4ca6a4ac95a0bcbbf4e09500dc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#a329ca4ca6a4ac95a0bcbbf4e09500dc7">ler_dados</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, char *file_name)</td></tr>
+<tr class="memdesc:a329ca4ca6a4ac95a0bcbbf4e09500dc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para ler um ficheiro e alterar o estado consoante esse ficheiro.  <a href="#a329ca4ca6a4ac95a0bcbbf4e09500dc7">More...</a><br /></td></tr>
 <tr class="separator:a329ca4ca6a4ac95a0bcbbf4e09500dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -171,6 +171,43 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ler_dados</b> (<a cla
   <table class="params">
     <tr><td class="paramname">e</td><td>Apontador para o estado atual </td></tr>
     <tr><td class="paramname">c</td><td>A coordenada </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae0d7061c4156a335fb19d754f9e777d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d7061c4156a335fb19d754f9e777d9">&#9670;&nbsp;</a></span>grava_dados()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void grava_dados </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structESTADO.html">ESTADO</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função para gravar os dados atuais do tabuleiro (quando utilizado o comando gr) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>Apontador para o estado atual </td></tr>
+    <tr><td class="paramname">file_name</td><td>Nome do ficheiro que vai ser criado </td></tr>
   </table>
   </dd>
 </dl>
@@ -250,6 +287,43 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ler_dados</b> (<a cla
 
 </div>
 </div>
+<a id="a329ca4ca6a4ac95a0bcbbf4e09500dc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a329ca4ca6a4ac95a0bcbbf4e09500dc7">&#9670;&nbsp;</a></span>ler_dados()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ler_dados </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structESTADO.html">ESTADO</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função para ler um ficheiro e alterar o estado consoante esse ficheiro. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>Apontador para o estado atual </td></tr>
+    <tr><td class="paramname">file_name</td><td>Nome do ficheiro para ser lido </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a1d0036d2753e8f2d79221be69106c62c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d0036d2753e8f2d79221be69106c62c">&#9670;&nbsp;</a></span>modifica_num_jogadas()</h2>
 
@@ -280,7 +354,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ler_dados</b> (<a cla
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">e</td><td>Apontador para o estado atual </td></tr>
-    <tr><td class="paramname">numJogadas</td><td>O número de jogads atuais </td></tr>
+    <tr><td class="paramname">numJogadas</td><td>O número de jogadas atuais </td></tr>
   </table>
   </dd>
 </dl>

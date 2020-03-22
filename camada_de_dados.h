@@ -6,7 +6,6 @@
  Definições dos dados presentes no estado e das funções que o alteram
 */
 
-//Aqui dentro aparece o código correspondente aos protótipos
 /**
 \brief Tipos de dados que uma casa pode assumir
  Uma casa na qual esteja um jogador é BRANCA, na qual já tenha passsado um jogador é PRETA, se não reunir nenhuma das condições anteriores é VAZIA.
@@ -109,22 +108,33 @@ void incrementa_num_comandos(ESTADO *e);
 \brief Função para obter o número atual de comandos, utilizado no prompt
 @param e Apontador para o estado atual
 @return O número de comandos atual
- */
+*/
 int obter_num_comandos(ESTADO *e);
 
 /**
 \brief Função para alterar o valor do número de jogadas, para quebrar o loop no main e para terminar o programa
- * @param e Apontador para o estado atual
- * @param numJogadas O número de jogads atuais
- */
+@param e Apontador para o estado atual
+@param numJogadas O número de jogadas atuais
+*/
 void modifica_num_jogadas (ESTADO *e , int numJogadas);
 /**
 \brief Função para obter a última jogada efetuada
- * @param e Apontador para o estado atual
- * @return A última jogada efetuada
- */
+@param e Apontador para o estado atual
+@return A última jogada efetuada
+*/
 COORDENADA obter_ultima_jogada(ESTADO *e );
 
+/**
+\brief Função para gravar os dados atuais do tabuleiro (quando utilizado o comando gr)
+@param e Apontador para o estado atual
+@param file_name Nome do ficheiro que vai ser criado
+*/
 void grava_dados(ESTADO *e ,char  *file_name );
+
+/**
+\brief Função para ler um ficheiro e alterar o estado consoante esse ficheiro
+@param e Apontador para o estado atual
+@param file_name Nome do ficheiro para ser lido
+*/
 void ler_dados(ESTADO *e , char * file_name);
 #endif
