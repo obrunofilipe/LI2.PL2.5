@@ -1,3 +1,0 @@
-/home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles/LI2.dir
-/home/francisconeves/Desktop/LI2.PL2.5/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -106,6 +106,8 @@ void ler_dados(ESTADO *e , char * file_name){
                     break;
                 case '*':
                     e->tab[linha][coluna] = BRANCA;
+                    e->ultima_jogada.coluna = coluna;
+                    e->ultima_jogada.linha = linha;
                     coluna++;
                     break;
                 case '1':
@@ -118,6 +120,7 @@ void ler_dados(ESTADO *e , char * file_name){
                 coluna = 0;
             }
         }
+
     }
     else {
         printf("ERRO: Ficheiro desconhecido!\n");
