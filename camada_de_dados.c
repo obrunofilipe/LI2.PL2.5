@@ -84,6 +84,7 @@ void grava_dados(ESTADO *e , char * file_name ){
     f_pointer = fopen(file_name,"w");
     mostrar_tabuleiro(e,f_pointer);
     fclose(f_pointer);
+    incrementa_num_comandos(e);
 }
 
 void ler_dados(ESTADO *e , char * file_name){
@@ -127,4 +128,5 @@ void ler_dados(ESTADO *e , char * file_name){
     }
     fclose(f_pointer);
     mostrar_tabuleiro(e,NULL);
+    incrementa_num_comandos(e);
 }
