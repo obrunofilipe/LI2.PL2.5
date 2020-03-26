@@ -66,7 +66,10 @@ void printMOVS(ESTADO *e){
         jogada_j1_Coluna = jogada.jogador1.coluna + 'a';
         jogada_j2_Linha = jogada.jogador2.linha + '1';
         jogada_j2_Coluna = jogada.jogador2.coluna + 'a';
-        printf("%2d: %c%c %c%c \n", i + 1,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha);
+        if (i < 9){
+            printf("0%d: %c%c %c%c \n", i + 1,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha);
+        }
+        else printf("%d: %c%c %c%c \n", i + 1,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha);
     }
 }
 
