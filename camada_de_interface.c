@@ -56,6 +56,19 @@ void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer) { // desenha o tabuleiro que 
     fprintf(f_pointer ,"\n");
 
 }
+void printMOVS(ESTADO *e){
+    int num_jogadas = obter_numero_de_jogadas(e);
+    JOGADA jogada;
+    char jogada_j1_Coluna, jogada_j1_Linha, jogada_j2_Coluna, jogada_j2_Linha;
+    for(int i = 0 ; i < num_jogadas - 1 ; i++ ){
+        jogada = obter_estado_jogada(e,i);
+        jogada_j1_Linha = jogada.jogador1.linha + '1';
+        jogada_j1_Coluna = jogada.jogador1.coluna + 'a';
+        jogada_j2_Linha = jogada.jogador2.linha + '1';
+        jogada_j2_Coluna = jogada.jogador2.coluna + 'a';
+        printf("%2d: %c%c %c%c \n", i + 1,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha);
+    }
+}
 
 int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     char linha[BUF_SIZE];
@@ -92,6 +105,8 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     }
     if(sscanf(linha,"ler %s",file_name) == 1)
         ler_dados(e,file_name);
+    if(strlen(linha) == 5 && sscanf(linha,"movs") == 0)
+        printMOVS(e);
     return 1;
 }
 

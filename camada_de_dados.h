@@ -137,4 +137,5 @@ void grava_dados(ESTADO *e ,char  *file_name );
 @param file_name Nome do ficheiro para ser lido
 */
 void ler_dados(ESTADO *e , char * file_name);
+JOGADA obter_estado_jogada(ESTADO *e , int num_jogadas);
 #endif

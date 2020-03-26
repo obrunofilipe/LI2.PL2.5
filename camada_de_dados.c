@@ -14,7 +14,10 @@ void inicializar_tabuleiro(CASA tab[8][8]){ //incializa o tabuleiro
     }
     tab [4][4] = BRANCA;
 }
-
+// retorna a jogada selecionada no array pelo num_jogadas
+JOGADA obter_estado_jogada(ESTADO *e , int num_jogadas){
+    return e->jogadas[num_jogadas];
+}
 
 int obter_jogador_atual(ESTADO *estado){ // retorna o numero do jogador atual
     return estado->jogador_atual;
@@ -23,6 +26,7 @@ int obter_jogador_atual(ESTADO *estado){ // retorna o numero do jogador atual
 int obter_numero_de_jogadas(ESTADO *estado){ // retorna o numero de jogadas que esta armazenado no estado
     return estado->num_jogadas;
 }
+
 
 CASA obter_estado_casa(ESTADO *e, COORDENADA c){ // retorna o estado de uma casa do tabuleiro (VAZIO , BRANCA , PRETA)
     int coluna, linha;
@@ -38,7 +42,7 @@ ESTADO *inicializar_estado(){
     ESTADO *estadoJogo = (ESTADO *) malloc(sizeof(ESTADO)); // declarar o estado
     inicializar_tabuleiro(estadoJogo->tab);                 // modifica a matriz  tabuleiro
     estadoJogo->jogador_atual = 1;                          // inicializa o jogador_atual
-    estadoJogo->num_jogadas = 0;                            // inicializa o número de jogadas
+    estadoJogo->num_jogadas = 1;                            // inicializa o número de jogadas
     estadoJogo->ultima_jogada.coluna = 4;                   //incializa a coordenada coluna da ultima jogada
     estadoJogo->ultima_jogada.linha = 4;                    //incializa a coordenada linha da ultima jogada
     return estadoJogo;
@@ -53,7 +57,6 @@ void atualiza_estado_jogo (ESTADO *e, COORDENADA c){
     e->tab[e->ultima_jogada.linha][e->ultima_jogada.coluna] = PRETA; // muda a peca anterior para vazio
     e->tab[linha][coluna] = BRANCA; // muda a peça em que o jogador pretende jogar
     e->ultima_jogada = c;           // altera a ultima jogada
-    e->num_jogadas++;               // aumenta o numero de jogadas
     if(jogadorAtual == 1 ) {        // armazena a jogada no array JOGADAS
         e->jogadas[e->num_jogadas - 1].jogador1 = c;
         e->jogador_atual = 2;
@@ -61,6 +64,7 @@ void atualiza_estado_jogo (ESTADO *e, COORDENADA c){
     else { // armazena a jogada no array JOGADAS
         e->jogadas[e->num_jogadas - 1].jogador2 = c;
         e->jogador_atual = 1 ;
+        e->num_jogadas++;               // aumenta o numero de jogadas
     }
 }
 
