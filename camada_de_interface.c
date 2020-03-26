@@ -81,7 +81,7 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         else printf("A jogada introduzida é invalida. Jogue novamente.\n");
         if (verifica_Bloqueio(e, coord)){
             printf("O Jogador %d ficou bloqueado... O Jogador %d é o vencedor!", obter_jogador_atual(e), jogadorAnterior);
-            modifica_num_jogadas(e, 32);
+            return 0;
         }
     }
     if(strlen(linha) == 2 && sscanf(linha , "Q") == 0){                        // termina o programa retornando 0 que quebra o ciclo do main
