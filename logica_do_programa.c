@@ -34,14 +34,23 @@ int verifica_Vitoria_Jog2 (ESTADO *e, COORDENADA c){
 }
 
 int verifica_Bloqueio (ESTADO *e, COORDENADA c){
-    CASA baixo = e->tab[c.linha-1][c.coluna];
-    CASA cima = e->tab[c.linha+1][c.coluna];
-    CASA direita = e->tab[c.linha][c.coluna+1];
-    CASA esquerda = e->tab[c.linha][c.coluna-1];
-    CASA direita_baixo = e->tab[c.linha-1][c.coluna+1];
-    CASA direita_cima = e->tab[c.linha+1][c.coluna+1];
-    CASA esquerda_baixo = e->tab[c.linha-1][c.coluna-1];
-    CASA esquerda_cima = e->tab[c.linha+1][c.coluna-1];
+    COORDENADA c_baixo = {c.coluna, c.linha-1};
+    COORDENADA c_cima = {c.coluna, c.linha+1};
+    COORDENADA c_direita = {c.coluna+1, c.linha};
+    COORDENADA c_esquerda = {c.coluna-1, c.linha};
+    COORDENADA c_direita_baixo = {c.coluna+1, c.linha-1};
+    COORDENADA c_direita_cima = {c.coluna+1, c.linha+1};
+    COORDENADA c_esquerda_baixo = {c.coluna-1, c.linha-1};
+    COORDENADA c_esquerda_cima = {c.coluna-1, c.linha+1};
+
+    CASA baixo = obter_estado_casa(e, c_baixo);
+    CASA cima = obter_estado_casa(e, c_cima);
+    CASA direita = obter_estado_casa(e, c_direita);
+    CASA esquerda = obter_estado_casa(e, c_esquerda);
+    CASA direita_baixo = obter_estado_casa(e, c_direita_baixo);
+    CASA direita_cima = obter_estado_casa(e, c_direita_cima);
+    CASA esquerda_baixo = obter_estado_casa(e, c_esquerda_baixo);
+    CASA esquerda_cima = obter_estado_casa(e, c_esquerda_cima);
 
     if (c.linha == 7 && c.coluna == 0){
         if (direita == PRETA && direita_baixo == PRETA && baixo == PRETA)
@@ -49,7 +58,7 @@ int verifica_Bloqueio (ESTADO *e, COORDENADA c){
         else return 0;
     }
     else if (c.linha == 0 && c.coluna == 7){
-        if (e->tab[c.linha][c.coluna-1] == PRETA && e->tab[c.linha+1][c.coluna-1] == PRETA && e->tab[c.linha+1][c.coluna] == PRETA)
+        if (esquerda == PRETA && esquerda_cima == PRETA && cima == PRETA)
             return 1;
         else return 0;
     }
