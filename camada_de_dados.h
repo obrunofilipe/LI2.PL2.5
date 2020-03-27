@@ -1,6 +1,7 @@
 #ifndef ___CAMADA_DE_DADOS_H___
 #define ___CAMADA_DE_DADOS_H___
 
+#include <stdio.h>
 /**
  @file camada_de_dados.h
  Definições dos dados presentes no estado e das funções que o alteram
@@ -145,4 +146,6 @@ void ler_dados(ESTADO *e , char * file_name);
 @return Jogada desejada
 */
 JOGADA obter_estado_jogada(ESTADO *e , int num_jogadas);
+int ler_tabuleiro(ESTADO *e , FILE * f_pointer);
+void ler_movs(ESTADO * e, FILE * f_pointer);
 #endif

@@ -22,25 +22,25 @@ void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer) { // desenha o tabuleiro que 
             c.coluna = colunas;
             if(linhas == 7 && colunas == 7) {
                 if(obter_estado_casa(e,c) == BRANCA)
-                    fprintf(f_pointer, " * " );
+                    fprintf(f_pointer, "* " );
                 else
-                    fprintf(f_pointer, " 2 ");
+                    fprintf(f_pointer, "2 ");
             }
             else if (linhas == 0 && colunas == 0)
                 if(obter_estado_casa(e,c) == BRANCA)
-                    fprintf(f_pointer, " * " );
+                    fprintf(f_pointer, "* " );
                 else
-                    fprintf(f_pointer, " 1 ");
+                    fprintf(f_pointer, "1 ");
             else {
                 switch (obter_estado_casa(e,c)) {
                     case VAZIO:
-                        fprintf(f_pointer ," . ");
+                        fprintf(f_pointer ,". ");
                         break;
                     case BRANCA:
-                        fprintf(f_pointer ," * ");
+                        fprintf(f_pointer ,"* ");
                         break;
                     case PRETA:
-                        fprintf(f_pointer ," # ");
+                        fprintf(f_pointer ,"# ");
                         break;
                 }
             }
@@ -50,7 +50,7 @@ void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer) { // desenha o tabuleiro que 
     if(print_in_stdout)
         printf("  ");                   // este loop escreve em baixo do tabuleiro as letras que identificam a coluna das coordenadas do tabuleiro
     for(int i = 0 ; i < 8 && print_in_stdout ; i++){
-        printf(" %c ",letras);
+        printf("%c ",letras);
         letras++;
     }
     fprintf(f_pointer ,"\n");
@@ -71,14 +71,13 @@ void printMOVS(ESTADO *e, FILE * f_pointer){
         jogada_j2_Linha = jogada.jogador2.linha + '1';
         jogada_j2_Coluna = jogada.jogador2.coluna + 'a';
         fprintf(f_pointer,"%02d: %c%c %c%c \n", i + 1,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha); // print dos movimentos no formato pretendido
-
     }
     if(ultimajogada.linha != jogada.jogador2.linha || ultimajogada.coluna != jogada.jogador2.coluna) { // No caso de na ultima nogada apenas o jogador 1 ter feito um movimento
         ultimaJogada_linha = ultimajogada.linha + '1';                                                 //    imprimir apenas o ultimo movimento deito pelo jogador 1
         ultimaJogada_coluna = ultimajogada.coluna + 'a';
         fprintf(f_pointer,"%02d: %c%c \n", i + 1,ultimaJogada_coluna,ultimaJogada_linha);
-
     }
+    incrementa_num_comandos(e);
 
 }
 
@@ -115,8 +114,19 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     if(sscanf(linha,"gr %s",file_name) == 1){            // implementação do comando gr que cria um ficheiro e guarda o estado do tabuleiro
         grava_dados(e,file_name);                        // grava o estado do tabuleiro num ficheiro
     }
-    if(sscanf(linha,"ler %s",file_name) == 1)
-        ler_dados(e,file_name);
+    if(sscanf(linha,"ler %s",file_name) == 1) {
+        FILE * f_pointer;
+        f_pointer = fopen(file_name,"r");
+        if(f_pointer == NULL)
+            printf("Erro ao ler ficheiro!");
+        else {
+            ler_tabuleiro(e,f_pointer);
+            ler_movs(e,f_pointer);
+        }
+        fclose(f_pointer);
+        mostrar_tabuleiro(e,NULL);
+
+    }
     if(strlen(linha) == 5 && sscanf(linha,"movs") == 0)
         printMOVS(e,NULL);
     return 1;

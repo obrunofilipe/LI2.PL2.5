@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "camada_de_dados.h"
 #include "camada_de_interface.h"
+#define BUF_SIZE 1024
 
 
 
@@ -82,6 +84,28 @@ void modifica_num_jogadas (ESTADO *e , int numJogadas){
 COORDENADA obter_ultima_jogada(ESTADO *e ){
     return e->ultima_jogada;
 }
+void altera_estado_casa(ESTADO *e, COORDENADA posicao, char estado){
+    CASA casa_alterada;
+    switch(estado){
+        case '.':
+            casa_alterada = VAZIO;
+            break;
+        case '*':
+            casa_alterada = BRANCA;
+            break;
+        case '#':
+            casa_alterada = PRETA;
+            break;
+    }
+    e->tab[posicao.linha][posicao.coluna] = casa_alterada;
+}
+void altera_array_jogadas(ESTADO * e , COORDENADA mov, int jogada , int  jogador ){
+    if(jogador == 1)
+        e->jogadas[jogada].jogador1 = mov;
+    else
+        e->jogadas[jogada].jogador2 = mov;
+    printf("%d%d\n",e->jogadas[jogada].jogador1.coluna,e->jogadas[jogada].jogador1.linha);
+}
 
 void grava_dados(ESTADO *e , char * file_name ){
     FILE * f_pointer;
@@ -91,7 +115,42 @@ void grava_dados(ESTADO *e , char * file_name ){
     fclose(f_pointer);
     incrementa_num_comandos(e);
 }
-
+int ler_tabuleiro(ESTADO *e , FILE * f_pointer){
+    for(int l = 7; l >= 0 ; l--){
+        char linha[BUF_SIZE];
+        fgets(linha,BUF_SIZE,f_pointer);
+        for(int c = 0 ; c < 15 ; c++) {
+            COORDENADA posicao = {c/2, l};
+            if (c % 2 == 0) {
+                altera_estado_casa(e, posicao, linha[c]);
+            }
+        }
+    }
+    return 1;
+}
+void ler_movs(ESTADO * e, FILE * f_pointer){
+    char linha[BUF_SIZE];
+    int numjogadas = 0;
+    int jogada = 0;
+    char movJ1[3],movJ2[3];
+    while(fgets(linha,BUF_SIZE,f_pointer) != NULL){
+        if(strlen(linha) == 11 && sscanf(linha,"%d: %s %s",&jogada,movJ1,movJ2) == 3) {
+            COORDENADA jogada_j1 = {movJ1[0] - 'a', movJ1[1] - '1'};
+            COORDENADA jogada_j2 = {movJ2[0] - 'a', movJ2[1] - '1'};
+            altera_array_jogadas(e,jogada_j1,jogada - 1 ,1);
+            altera_array_jogadas(e,jogada_j2,jogada - 1, 2);
+            ++numjogadas;
+        }
+        if(strlen(linha) < 11 && sscanf(linha,"%02d: %s",&jogada,movJ1) == 2){
+            COORDENADA jogada_j1 = {movJ1[0] - 'a', movJ1[1] - '1'};
+            altera_array_jogadas(e,jogada_j1,jogada - 1 ,1);
+            printf("%s\n",movJ1);
+            ++numjogadas;
+        }
+    }
+    modifica_num_jogadas(e,numjogadas);
+}
+/*
 void ler_dados(ESTADO *e , char * file_name){
     FILE * f_pointer;
     char caracter;
@@ -126,7 +185,6 @@ void ler_dados(ESTADO *e , char * file_name){
                 coluna = 0;
             }
         }
-
     }
     else {
         printf("ERRO: Ficheiro desconhecido!\n");
@@ -135,3 +193,4 @@ void ler_dados(ESTADO *e , char * file_name){
     mostrar_tabuleiro(e,NULL);
     incrementa_num_comandos(e);
 }
+ */
