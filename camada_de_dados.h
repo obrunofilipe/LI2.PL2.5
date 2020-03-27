@@ -53,6 +53,8 @@ typedef struct {
     int jogador_atual;
     /** Número do comando atual, utilizado no prompt */
     int num_comandos;
+    int movimentos_j1;
+    int movimentos_j2;
 } ESTADO;
 
 
@@ -148,4 +150,5 @@ void ler_dados(ESTADO *e , char * file_name);
 JOGADA obter_estado_jogada(ESTADO *e , int num_jogadas);
 int ler_tabuleiro(ESTADO *e , FILE * f_pointer);
 void ler_movs(ESTADO * e, FILE * f_pointer);
+int obter_numero_movimentos(ESTADO *e , int jogador);
 #endif
