@@ -137,5 +137,12 @@ void grava_dados(ESTADO *e ,char  *file_name );
 @param file_name Nome do ficheiro para ser lido
 */
 void ler_dados(ESTADO *e , char * file_name);
+
+/**
+\brief Função para obter uma jogada do Array
+@param e Apontador para o estado atual
+@param num_jogadas Número atual de jogadas
+@return Jogada desejada
+*/
 JOGADA obter_estado_jogada(ESTADO *e , int num_jogadas);
 #endif
