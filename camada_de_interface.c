@@ -56,21 +56,35 @@ void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer) { // desenha o tabuleiro que 
     fprintf(f_pointer ,"\n");
 
 }
-void printMOVS(ESTADO *e){
-    int num_jogadas = obter_numero_de_jogadas(e);
+void printMOVS(ESTADO *e, FILE * f_pointer){
+    int i ; // varivel utilizada no ciclo
+    int num_jogadas = obter_numero_de_jogadas(e); // numero total de jogadas efetuadas
+    COORDENADA ultimajogada = obter_ultima_jogada(e); // ultimo movimento efetuado
     JOGADA jogada;
-    char jogada_j1_Coluna, jogada_j1_Linha, jogada_j2_Coluna, jogada_j2_Linha;
-    for(int i = 0 ; i < num_jogadas - 1 ; i++ ){
-        jogada = obter_estado_jogada(e,i);
-        jogada_j1_Linha = jogada.jogador1.linha + '1';
+    char jogada_j1_Coluna, jogada_j1_Linha, jogada_j2_Coluna, jogada_j2_Linha, ultimaJogada_linha,ultimaJogada_coluna;
+    if(f_pointer == NULL)
+        f_pointer = stdout;
+    for( i = 0 ; i < num_jogadas - 1 ; i++ ){
+        jogada = obter_estado_jogada(e,i); // obter a jogada correspondente ao indice i do array que armazena as jogadas no estado e
+        jogada_j1_Linha = jogada.jogador1.linha + '1'; // converter as coordenadas da jogada que esta armazenada no array no indice i em caracteres
         jogada_j1_Coluna = jogada.jogador1.coluna + 'a';
         jogada_j2_Linha = jogada.jogador2.linha + '1';
         jogada_j2_Coluna = jogada.jogador2.coluna + 'a';
         if (i < 9){
-            printf("0%d: %c%c %c%c \n", i + 1,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha);
+            fprintf(f_pointer,"0%d: %c%c %c%c \n", i + 1,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha); // print dos movimentos no formato pretendido
         }
-        else printf("%d: %c%c %c%c \n", i + 1,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha);
+        else
+            fprintf(f_pointer,"%d: %c%c %c%c \n", i + 1,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha);
     }
+    if(ultimajogada.linha != jogada.jogador2.linha || ultimajogada.coluna != jogada.jogador2.coluna) { // No caso de na ultima nogada apenas o jogador 1 ter feito um movimento
+        ultimaJogada_linha = ultimajogada.linha + '1';                                                 //    imprimir apenas o ultimo movimento deito pelo jogador 1
+        ultimaJogada_coluna = ultimajogada.coluna + 'a';
+        if(i < 9)
+            fprintf(f_pointer,"0%d: %c%c \n", i + 1,ultimaJogada_coluna,ultimaJogada_linha);
+        else
+            printf(f_pointer,"%d: %c%c \n", i + 1,ultimaJogada_coluna,ultimaJogada_linha);
+    }
+
 }
 
 int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
@@ -109,7 +123,7 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     if(sscanf(linha,"ler %s",file_name) == 1)
         ler_dados(e,file_name);
     if(strlen(linha) == 5 && sscanf(linha,"movs") == 0)
-        printMOVS(e);
+        printMOVS(e,NULL);
     return 1;
 }
 

@@ -31,6 +31,6 @@ int interpretador(ESTADO *e);
 */
 void showPrompt (ESTADO *e);
 
-void printMOVS(ESTADO *e);
+void printMOVS(ESTADO *e,FILE * f_pointer);
 
 #endif
