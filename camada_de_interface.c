@@ -120,6 +120,3 @@ void showPrompt (ESTADO *e){
     num_jogadas = obter_numero_de_jogadas(e);
     printf("# nº comandos: %d  JOGADOR: %d  (%d) $ ",num_comandos, jogadorAtual, num_jogadas);
 }
-
-
-

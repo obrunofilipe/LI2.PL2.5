@@ -8,9 +8,9 @@
 void inicializar_tabuleiro(CASA tab[8][8]){ //incializa o tabuleiro
     int linha,coluna;
     for(linha = 7; linha > 0 ; linha--){
-            for(coluna = 0 ; coluna < 8 ; coluna++){
-                    tab [linha] [coluna] = VAZIO;
-            }
+        for(coluna = 0 ; coluna < 8 ; coluna++){
+            tab [linha] [coluna] = VAZIO;
+        }
     }
     tab [4][4] = BRANCA;
 }
