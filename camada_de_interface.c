@@ -126,7 +126,6 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         else {
             ler_tabuleiro(e,f_pointer);
             ler_movs(e,f_pointer);
-            printMOVS(e, NULL);
         }
         fclose(f_pointer);
         mostrar_tabuleiro(e,NULL);
