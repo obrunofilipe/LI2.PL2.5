@@ -70,19 +70,14 @@ void printMOVS(ESTADO *e, FILE * f_pointer){
         jogada_j1_Coluna = jogada.jogador1.coluna + 'a';
         jogada_j2_Linha = jogada.jogador2.linha + '1';
         jogada_j2_Coluna = jogada.jogador2.coluna + 'a';
-        if (i < 9){
-            fprintf(f_pointer,"0%d: %c%c %c%c \n", i + 1,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha); // print dos movimentos no formato pretendido
-        }
-        else
-            fprintf(f_pointer,"%d: %c%c %c%c \n", i + 1,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha);
+        fprintf(f_pointer,"%02d: %c%c %c%c \n", i + 1,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha); // print dos movimentos no formato pretendido
+
     }
     if(ultimajogada.linha != jogada.jogador2.linha || ultimajogada.coluna != jogada.jogador2.coluna) { // No caso de na ultima nogada apenas o jogador 1 ter feito um movimento
         ultimaJogada_linha = ultimajogada.linha + '1';                                                 //    imprimir apenas o ultimo movimento deito pelo jogador 1
         ultimaJogada_coluna = ultimajogada.coluna + 'a';
-        if(i < 9)
-            fprintf(f_pointer,"0%d: %c%c \n", i + 1,ultimaJogada_coluna,ultimaJogada_linha);
-        else
-            printf(f_pointer,"%d: %c%c \n", i + 1,ultimaJogada_coluna,ultimaJogada_linha);
+        fprintf(f_pointer,"%02d: %c%c \n", i + 1,ultimaJogada_coluna,ultimaJogada_linha);
+
     }
 
 }
