@@ -66,7 +66,7 @@ void printMOVS(ESTADO *e, FILE * f_pointer){
     movimentos_j2 = obter_numero_movimentos(e,2);
     if(f_pointer == NULL)
         f_pointer = stdout;
-    for( i = 0 ; i <  num_jogadas   ; i++ ){
+    for( i = 0; i < num_jogadas; i++ ){
         jogada = obter_estado_jogada(e,i); // obter a jogada correspondente ao indice i do array que armazena as jogadas no estado e
         jogada_j1_Linha = jogada.jogador1.linha + '1'; // converter as coordenadas da jogada que esta armazenada no array no indice i em caracteres
         jogada_j1_Coluna = jogada.jogador1.coluna + 'a';

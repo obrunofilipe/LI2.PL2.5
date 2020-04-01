@@ -80,6 +80,10 @@ int obter_numero_movimentos(ESTADO *e , int jogador){
         return  e->movimentos_j2;
 }
 
+JOGADA mudar_jogador_atual (ESTADO *e, int jogador){
+    e->jogador_atual = jogador;
+}
+
 void incrementa_num_comandos(ESTADO *e){
     e->num_comandos++;
 }
@@ -87,6 +91,7 @@ void incrementa_num_comandos(ESTADO *e){
 int obter_num_comandos(ESTADO *e){
     return e->num_comandos;
 }
+
 void modifica_num_jogadas (ESTADO *e , int numJogadas){
     e->num_jogadas = numJogadas;
 }
@@ -94,9 +99,19 @@ void modifica_num_jogadas (ESTADO *e , int numJogadas){
 COORDENADA obter_ultima_jogada(ESTADO *e ){
     return e->ultima_jogada;
 }
+
 void altera_ultima_jogada(ESTADO * e , COORDENADA c){
     e->ultima_jogada = c;
 }
+
+void altera_movimentos_j1 (ESTADO *e, int mov_j1){
+    e->movimentos_j1 = mov_j1;
+}
+
+void altera_movimentos_j2 (ESTADO *e, int mov_j2){
+    e->movimentos_j2 = mov_j2;
+}
+
 void altera_estado_casa(ESTADO *e, COORDENADA posicao, char estado){
     CASA casa_alterada;
     switch(estado){
@@ -127,6 +142,7 @@ void grava_dados(ESTADO *e , char * file_name ){
     fclose(f_pointer);
     incrementa_num_comandos(e);
 }
+
 int ler_tabuleiro(ESTADO *e , FILE * f_pointer){
     for(int l = 7; l >= 0 ; l--){
         char linha[BUF_SIZE];
@@ -140,6 +156,7 @@ int ler_tabuleiro(ESTADO *e , FILE * f_pointer){
     }
     return 1;
 }
+
 void ler_movs(ESTADO * e, FILE * f_pointer){
     char linha[BUF_SIZE];
     int numjogadas ,jogada,movimentos_j1,movimentos_j2;
@@ -158,16 +175,18 @@ void ler_movs(ESTADO * e, FILE * f_pointer){
             ++numjogadas;
             ++movimentos_j1;
             ++movimentos_j2;
+            mudar_jogador_atual(e, 1);
         }
         if(strlen(linha) < 11 && sscanf(linha,"%02d: %s",&jogada,movJ1) == 2){
             COORDENADA jogada_j1 = {movJ1[0] - 'a', movJ1[1] - '1'};
             altera_array_jogadas(e,jogada_j1,jogada  ,1);
             altera_ultima_jogada(e,jogada_j1);
             ++movimentos_j1;
+            mudar_jogador_atual(e, 2);
         }
     }
     modifica_num_jogadas(e,numjogadas);
-    e->movimentos_j1 = movimentos_j1;
-    e->movimentos_j2 = movimentos_j2;
-
+    altera_movimentos_j1 (e, movimentos_j1);
+    altera_movimentos_j2 (e, movimentos_j2);
 }
+

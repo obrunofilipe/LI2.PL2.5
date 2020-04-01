@@ -147,7 +147,14 @@ void ler_dados(ESTADO *e , char * file_name);
 @param num_jogadas Número atual de jogadas
 @return Jogada desejada
 */
+int obter_numero_movimentos(ESTADO *e , int jogador);
 JOGADA obter_estado_jogada(ESTADO *e , int num_jogadas);
+JOGADA mudar_jogador_atual (ESTADO *e, int jogador);
+void altera_ultima_jogada(ESTADO * e , COORDENADA c);
+void altera_movimentos_j1 (ESTADO *e, int mov_j1);
+void altera_movimentos_j2 (ESTADO *e, int mov_j2);
+void altera_estado_casa(ESTADO *e, COORDENADA posicao, char estado);
+void altera_array_jogadas(ESTADO * e, COORDENADA mov, int jogada, int jogador);
 int ler_tabuleiro(ESTADO *e , FILE * f_pointer);
 void ler_movs(ESTADO * e, FILE * f_pointer);
 int obter_numero_movimentos(ESTADO *e , int jogador);
