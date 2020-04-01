@@ -152,7 +152,6 @@ void ler_movs(ESTADO * e, FILE * f_pointer){
         if(strlen(linha) == 11 && sscanf(linha,"%02d: %s %s",&jogada,movJ1,movJ2) == 3) {
             COORDENADA jogada_j1 = {movJ1[0] - 'a', movJ1[1] - '1'};
             COORDENADA jogada_j2 = {movJ2[0] - 'a', movJ2[1] - '1'};
-            printf("%d \n",jogada);
             altera_array_jogadas(e,jogada_j1,jogada  ,1);
             altera_array_jogadas(e,jogada_j2,jogada , 2);
             altera_ultima_jogada(e,jogada_j2);
@@ -172,47 +171,3 @@ void ler_movs(ESTADO * e, FILE * f_pointer){
     e->movimentos_j2 = movimentos_j2;
 
 }
-/*
-void ler_dados(ESTADO *e , char * file_name){
-    FILE * f_pointer;
-    char caracter;
-    int linha,coluna;
-    linha = 7;
-    coluna = 0;
-    f_pointer = fopen(file_name, "r");
-    if(f_pointer != NULL){
-        while((caracter = fgetc(f_pointer)) != EOF){
-            switch(caracter){
-                case '.':
-                    e->tab[linha][coluna] = VAZIO;
-                    coluna++;
-                    break;
-                case '#':
-                    e->tab[linha][coluna] = PRETA;
-                    coluna++;
-                    break;
-                case '*':
-                    e->tab[linha][coluna] = BRANCA;
-                    e->ultima_jogada.coluna = coluna;
-                    e->ultima_jogada.linha = linha;
-                    coluna++;
-                    break;
-                case '1':
-                    e->tab[linha][coluna] = VAZIO;
-                    coluna++;
-                    break;
-            }
-            if(caracter == '\n') {
-                linha--;
-                coluna = 0;
-            }
-        }
-    }
-    else {
-        printf("ERRO: Ficheiro desconhecido!\n");
-    }
-    fclose(f_pointer);
-    mostrar_tabuleiro(e,NULL);
-    incrementa_num_comandos(e);
-}
- */
