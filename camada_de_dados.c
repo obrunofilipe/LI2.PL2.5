@@ -45,8 +45,8 @@ ESTADO *inicializar_estado(){
     inicializar_tabuleiro(estadoJogo->tab);                 // modifica a matriz  tabuleiro
     estadoJogo->jogador_atual = 1;                          // inicializa o jogador_atual
     estadoJogo->num_jogadas = 0;                            // inicializa o número de jogadas
-    estadoJogo->ultima_jogada.coluna = 4;                   //incializa a coordenada coluna da ultima jogada
-    estadoJogo->ultima_jogada.linha = 4;                    //incializa a coordenada linha da ultima jogada
+    estadoJogo->ultima_jogada.coluna = 4;                   // incializa a coordenada coluna da ultima jogada
+    estadoJogo->ultima_jogada.linha = 4;                    // incializa a coordenada linha da ultima jogada
     estadoJogo->movimentos_j2 = 0;
     estadoJogo->movimentos_j1 = 0;
     return estadoJogo;
@@ -61,13 +61,13 @@ void atualiza_estado_jogo (ESTADO *e, COORDENADA c){
     e->tab[e->ultima_jogada.linha][e->ultima_jogada.coluna] = PRETA; // muda a peca anterior para vazio
     e->tab[linha][coluna] = BRANCA; // muda a peça em que o jogador pretende jogar
     e->ultima_jogada = c;           // altera a ultima jogada
-    if(jogadorAtual == 1 ) {        // armazena a jogada no array JOGADAS
-        e->jogadas[e->num_jogadas ].jogador1 = c;
+    if(jogadorAtual == 1) {         // armazena a jogada no array JOGADAS
+        e->jogadas[e->num_jogadas].jogador1 = c;
         e->jogador_atual = 2;
         e->movimentos_j1++;
     }
     else { // armazena a jogada no array JOGADAS
-        e->jogadas[e->num_jogadas ].jogador2 = c;
+        e->jogadas[e->num_jogadas].jogador2 = c;
         e->jogador_atual = 1 ;
         e->num_jogadas++;               // aumenta o numero de jogadas
         e->movimentos_j2++;
@@ -190,3 +190,18 @@ void ler_movs(ESTADO * e, FILE * f_pointer){
     altera_movimentos_j2 (e, movimentos_j2);
 }
 
+
+ESTADO *reinicia_pos (ESTADO *e, int pos, JOGADA *jog){
+    int i;
+    for (i = 0; i < pos; i++) {
+        COORDENADA c_atual_jog1 = {jog[i].jogador1.coluna, jog[i].jogador1.linha};
+        COORDENADA c_atual_jog2 = {jog[i].jogador2.coluna, jog[i].jogador2.linha};
+        altera_estado_casa (e, c_atual_jog1, '#');
+        altera_estado_casa (e, c_atual_jog2, '#');
+    }
+    return e;
+}
+
+JOGADA *obter_array_jogadas (ESTADO *e){
+    return e->jogadas;
+}

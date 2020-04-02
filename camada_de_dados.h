@@ -158,4 +158,6 @@ void altera_array_jogadas(ESTADO * e, COORDENADA mov, int jogada, int jogador);
 int ler_tabuleiro(ESTADO *e , FILE * f_pointer);
 void ler_movs(ESTADO * e, FILE * f_pointer);
 int obter_numero_movimentos(ESTADO *e , int jogador);
+ESTADO* reinicia_pos (ESTADO *e, int pos, JOGADA *jog);
+JOGADA *obter_array_jogadas (ESTADO *e);
 #endif

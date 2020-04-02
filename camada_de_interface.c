@@ -86,6 +86,7 @@ void printMOVS(ESTADO *e, FILE * f_pointer){
 }
 
 int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
+    CASA tab[8][8];
     char linha[BUF_SIZE];
     char col[2], lin[2],file_name[64];
     int numero_jogada;
@@ -135,7 +136,9 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     if(strlen(linha) == 5 && sscanf(linha,"movs") == 0)
         printMOVS(e,NULL);
     if(sscanf(linha,"pos %d",&numero_jogada) == 1){
-        
+        JOGADA *array_jog = obter_array_jogadas(e);
+        ESTADO *novo = reinicia_pos(inicializar_estado(), numero_jogada, array_jog);
+        mostrar_tabuleiro(novo, NULL);
     }
     return 1;
 }
