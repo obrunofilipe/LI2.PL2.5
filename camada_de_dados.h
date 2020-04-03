@@ -120,6 +120,7 @@ int obter_num_comandos(ESTADO *e);
 @param numJogadas O número de jogadas atuais
 */
 void modifica_num_jogadas (ESTADO *e , int numJogadas);
+
 /**
 \brief Função para obter a última jogada efetuada
 @param e Apontador para o estado atual
@@ -144,20 +145,93 @@ void ler_dados(ESTADO *e , char * file_name);
 /**
 \brief Função para obter uma jogada do Array
 @param e Apontador para o estado atual
+@param jogador Número do jogador
+@return O número de movimentos do jogador
+*/
+int obter_numero_movimentos(ESTADO *e , int jogador);
+
+/**
+\brief Função para obter uma jogada do Array
+@param e Apontador para o estado atual
 @param num_jogadas Número atual de jogadas
 @return Jogada desejada
 */
-int obter_numero_movimentos(ESTADO *e , int jogador);
 JOGADA obter_estado_jogada(ESTADO *e , int num_jogadas);
-JOGADA mudar_jogador_atual (ESTADO *e, int jogador);
+
+/**
+\brief Função para mudar para o outro jogador
+@param e Apontador para o estado atual
+@param jogador Número do jogador
+@return
+*/
+void mudar_jogador_atual (ESTADO *e, int jogador);
+
+/**
+\brief Função para alterar a última jogada
+@param e Apontador para o estado atual
+@param c Coordenada
+*/
 void altera_ultima_jogada(ESTADO * e , COORDENADA c);
+
+/**
+\brief Função para alterar o número de movimentos do jogador 1
+@param e Apontador para o estado atual
+@param mov_j1 Novo número de movimentos do jogador 1
+*/
 void altera_movimentos_j1 (ESTADO *e, int mov_j1);
+
+/**
+\brief Função para alterar o número de movimentos do jogador 2
+@param e Apontador para o estado atual
+@param mov_j1 Novo número de movimentos do jogador 2
+*/
 void altera_movimentos_j2 (ESTADO *e, int mov_j2);
+
+/**
+\brief Função para alterar o estado que uma determinada casa está
+@param e Apontador para o estado atual
+@param posicao Casa a ser alterada
+@param estado
+ */
 void altera_estado_casa(ESTADO *e, COORDENADA posicao, char estado);
+
+/**
+\brief Função para alterar uma jogada no array jogadas
+@param e Apontador para o estado atual
+@param mov Coordenada da jogada
+@param jogada Número da jogada para ser alterada
+@param jogador Número do jogador
+*/
 void altera_array_jogadas(ESTADO * e, COORDENADA mov, int jogada, int jogador);
+
+/**
+\brief Função para ler o tabuleiro de um ficheiro
+@param e Apontador para o estado atual
+@param f_pointer Nome do ficheiro para ler o tabuleiro
+@return O inteiro 1
+*/
 int ler_tabuleiro(ESTADO *e , FILE * f_pointer);
+
+/**
+\brief Função para ler os movs de um ficheiro
+@param e Apontador para o estado atual
+@param f_pointer Nome do ficheiro para ler os movs
+*/
 void ler_movs(ESTADO * e, FILE * f_pointer);
-int obter_numero_movimentos(ESTADO *e , int jogador);
+
+/**
+\brief Função para reinicir o pos
+@param e Apontador para o estado atual
+@param pos Número fornecido ao pos
+@param jog Array das Jogadas
+@return O estado depois de aplicado o comando pos
+*/
 ESTADO* reinicia_pos (ESTADO *e, int pos, JOGADA *jog);
+
+/**
+\brief Função para obter o array das jogadas
+@param e Apontador para o estado atual
+@return O array das Jogadas
+ */
 JOGADA *obter_array_jogadas (ESTADO *e);
 #endif

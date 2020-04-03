@@ -80,7 +80,7 @@ int obter_numero_movimentos(ESTADO *e , int jogador){
         return  e->movimentos_j2;
 }
 
-JOGADA mudar_jogador_atual (ESTADO *e, int jogador){
+void mudar_jogador_atual (ESTADO *e, int jogador){
     e->jogador_atual = jogador;
 }
 

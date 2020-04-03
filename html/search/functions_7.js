@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['showprompt',['showPrompt',['../camada__de__interface_8h.html#a8c57caa56734ce0b34dcb34f430d39ec',1,'camada_de_interface.c']]]
+  ['printmovs',['printMOVS',['../camada__de__interface_8h.html#ad2eff303f36ebe7d504e7225227c5b34',1,'camada_de_interface.c']]]
 ];

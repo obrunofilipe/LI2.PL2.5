@@ -31,6 +31,11 @@ int interpretador(ESTADO *e);
 */
 void showPrompt (ESTADO *e);
 
+/**
+\brief Função para colocar os movs de um ficheiro
+@param e Apontador para o estado atual
+@param f_pointer Nome do ficheiro
+*/
 void printMOVS(ESTADO *e,FILE * f_pointer);
 
 #endif
