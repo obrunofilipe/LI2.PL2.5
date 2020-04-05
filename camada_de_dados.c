@@ -9,7 +9,7 @@
 
 void inicializar_tabuleiro(CASA tab[8][8]){ //incializa o tabuleiro
     int linha,coluna;
-    for(linha = 7; linha > 0 ; linha--){
+    for(linha = 7; linha >= 0 ; linha--){
         for(coluna = 0 ; coluna < 8 ; coluna++){
             tab [linha] [coluna] = VAZIO;
         }
@@ -190,30 +190,29 @@ void ler_movs(ESTADO * e, FILE * f_pointer){
     altera_movimentos_j2 (e, movimentos_j2);
 }
 
-
 void reinicia_pos (ESTADO *e, int pos, JOGADA *jog){
-    int i,movs_j1,movs_j2,n_jogadas;
+    int i, movs_j1, movs_j2, n_jogadas;
     movs_j1 = 0;
     movs_j2 = 0;
     n_jogadas = 0;
-    COORDENADA Pos_inicial = {4,4};
     inicializar_tabuleiro(e->tab);
-    altera_estado_casa(e,Pos_inicial,'#');
-    for (i = 0; i <= pos  ; i++){
-        altera_estado_casa(e,jog[i].jogador1,'#');
-        altera_estado_casa(e,jog[i].jogador2,'#');
+    mostrar_tabuleiro(e, NULL);
+    for (i = 0; i < pos; i++) {
+        altera_estado_casa(e, jog[i].jogador1, '#');
+        altera_estado_casa(e, jog[i].jogador2, '#');
         movs_j1++;
         movs_j2++;
         n_jogadas++;
     }
-    altera_estado_casa(e,jog[i-1].jogador2,'*');
-    altera_ultima_jogada(e,jog[i-1].jogador2);
+    if (pos != 0){
+        altera_estado_casa(e, jog[i-1].jogador2, '*');
+    }
+    altera_ultima_jogada(e, jog[i-1].jogador2);
+    modifica_num_jogadas(e, n_jogadas);
     altera_movimentos_j1(e,movs_j1);
     altera_movimentos_j2(e,movs_j2);
-    modifica_num_jogadas(e,pos);
-
-
 }
+
 
 JOGADA *obter_array_jogadas (ESTADO *e){
     return e->jogadas;

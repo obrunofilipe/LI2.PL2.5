@@ -136,9 +136,21 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     if(strlen(linha) == 5 && sscanf(linha,"movs") == 0)
         printMOVS(e,NULL);
     if(sscanf(linha,"pos %d",&numero_jogada) == 1){
-        JOGADA *array_jog = obter_array_jogadas(e);
-        reinicia_pos(e, numero_jogada, array_jog);
-        mostrar_tabuleiro(e, NULL);
+        altera_estado_casa(e, obter_ultima_jogada(e), '.');
+        if (numero_jogada == 0){
+            COORDENADA c_inicial = {4, 4};
+            JOGADA *array_jog = obter_array_jogadas(e);
+            reinicia_pos(e, numero_jogada, array_jog);
+            altera_ultima_jogada(e, c_inicial);
+            mostrar_tabuleiro(e, NULL);
+        }
+        else {
+            COORDENADA c_inicial = {4, 4};
+            JOGADA *array_jog = obter_array_jogadas(e);
+            reinicia_pos(e, numero_jogada, array_jog);
+            altera_estado_casa(e, c_inicial, '#');
+            mostrar_tabuleiro(e, NULL);
+        }
     }
     return 1;
 }
