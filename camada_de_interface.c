@@ -137,8 +137,8 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         printMOVS(e,NULL);
     if(sscanf(linha,"pos %d",&numero_jogada) == 1){
         JOGADA *array_jog = obter_array_jogadas(e);
-        ESTADO *novo = reinicia_pos(inicializar_estado(), numero_jogada, array_jog);
-        mostrar_tabuleiro(novo, NULL);
+        reinicia_pos(e, numero_jogada, array_jog);
+        mostrar_tabuleiro(e, NULL);
     }
     return 1;
 }

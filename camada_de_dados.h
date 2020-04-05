@@ -226,7 +226,7 @@ void ler_movs(ESTADO * e, FILE * f_pointer);
 @param jog Array das Jogadas
 @return O estado depois de aplicado o comando pos
 */
-ESTADO* reinicia_pos (ESTADO *e, int pos, JOGADA *jog);
+void reinicia_pos (ESTADO *e, int pos, JOGADA *jog);
 
 /**
 \brief Função para obter o array das jogadas
