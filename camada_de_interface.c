@@ -124,7 +124,7 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         FILE * f_pointer;
         f_pointer = fopen(file_name,"r");
         if(f_pointer == NULL)
-            printf("Erro ao ler ficheiro!");
+            printf("Erro ao ler ficheiro!\n");
         else {
             ler_tabuleiro(e,f_pointer);
             ler_movs(e,f_pointer);
@@ -136,9 +136,10 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     if(strlen(linha) == 5 && sscanf(linha,"movs") == 0)
         printMOVS(e,NULL);
     if(sscanf(linha,"pos %d",&numero_jogada) == 1){
-        JOGADA *array_jog = obter_array_jogadas(e);
-        reinicia_pos(e, numero_jogada, array_jog);
-        mostrar_tabuleiro(e, NULL);
+        altera_estado_casa(e, obter_ultima_jogada(e), '.');
+            JOGADA *array_jog = obter_array_jogadas(e);
+            reinicia_pos(e, numero_jogada, array_jog);
+            mostrar_tabuleiro(e, NULL);
     }
     return 1;
 }
