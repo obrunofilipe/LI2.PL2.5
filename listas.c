@@ -10,10 +10,17 @@ LISTA criar_lista(){
 
 LISTA insere_cabeca(LISTA L, void *valor){
     LISTA  nodo_novo;
-    nodo_novo = criar_lista();
-    nodo_novo->valor   = valor;
-    nodo_novo->proximo = L;
-
+    if(L != NULL){
+        nodo_novo = criar_lista();
+        nodo_novo->valor   = valor;
+        nodo_novo->proximo = L;
+    }
+    else {
+        L = criar_lista(L);
+        L->valor = valor;
+        L->proximo = NULL;
+    }
+    return L;
 }
 
 void *devolve_cabeca(LISTA L){
