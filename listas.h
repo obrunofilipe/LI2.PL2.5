@@ -1,9 +1,11 @@
 #ifndef _LISTAS_H
 #define _LISTAS_H
+
 typedef struct nodo {
     void *valor;
     struct nodo *proximo;
 } NODO, *LISTA;
+
 //cria uma lista
 LISTA criar_lista();
 //insere um novo elemento à cabeça
@@ -16,4 +18,5 @@ LISTA proximo(LISTA L);
 LISTA remove_cabeca(LISTA L);
 //Devolve verdadeiro se a lista é vazia
 int lista_esta_vazia(LISTA L);
+
 #endif
