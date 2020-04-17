@@ -14,14 +14,14 @@ LISTA insere_cabeca(LISTA L, void *valor){
         nodo_novo = criar_lista();
         nodo_novo->valor   = valor;
         nodo_novo->proximo = L;
+        return nodo_novo;
     }
     else {
-        L = criar_lista(L);
+        L = criar_lista();
         L->valor = valor;
         L->proximo = NULL;
+        return L;
     }
-    return L;
-
 }
 
 void *devolve_cabeca(LISTA L){

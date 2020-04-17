@@ -50,4 +50,6 @@ int verifica_Vitoria_Jog2 (ESTADO *e, COORDENADA c);
  */
 int verifica_Bloqueio (ESTADO *e, COORDENADA c);
 
+COORDENADA jog (ESTADO  *e, COORDENADA pos);
+
 #endif

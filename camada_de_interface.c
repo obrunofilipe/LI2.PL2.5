@@ -94,15 +94,12 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         return 0;
     if(strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
         COORDENADA coord = {*col - 'a', *lin - '1'};
-        int jogadorAnterior = obter_jogador_atual(e);
         if (verificaJogada(e, coord)){
             incrementa_num_comandos(e);
             if (verifica_Vitoria_Jog1(e, coord) == 1){
-                printf("O Jogador 1 ganhou!");
                 return 0;
             }
-            else if (verifica_Vitoria_Jog2 (e, coord) == 1){
-                printf ("O Jogador 2 ganhou!");
+            else if (verifica_Vitoria_Jog2 (e, coord)){
                 return 0;
             }
             jogar(e, coord);
@@ -110,11 +107,10 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         }
         else printf("A jogada introduzida é invalida. Jogue novamente.\n");
         if (verifica_Bloqueio(e, coord)){
-            printf("O Jogador %d ficou bloqueado... O Jogador %d é o vencedor!", obter_jogador_atual(e), jogadorAnterior);
             return 0;
         }
     }
-    if(strlen(linha) == 2 && sscanf(linha , "Q") == 0){                        // termina o programa retornando 0 que quebra o ciclo do main
+    if(strlen(linha) == 2 && strcmp(linha , "Q\n") == 0){                        // termina o programa retornando 0 que quebra o ciclo do main
         return  0;
     }
     if(sscanf(linha,"gr %s",file_name) == 1){            // implementação do comando gr que cria um ficheiro e guarda o estado do tabuleiro
@@ -133,13 +129,27 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         mostrar_tabuleiro(e,NULL);
 
     }
-    if(strlen(linha) == 5 && sscanf(linha,"movs") == 0)
+    if(strlen(linha) == 5 && strcmp(linha,"movs\n") == 0)
         printMOVS(e,NULL);
     if(sscanf(linha,"pos %d",&numero_jogada) == 1){
         altera_estado_casa(e, obter_ultima_jogada(e), '.');
             JOGADA *array_jog = obter_array_jogadas(e);
             reinicia_pos(e, numero_jogada, array_jog);
             mostrar_tabuleiro(e, NULL);
+    }
+    if(strlen(linha) == 4 && strcmp(linha,"jog\n") == 0){
+        COORDENADA jogada;
+        jogada = jog(e,obter_ultima_jogada(e));
+        jogar(e, jogada);
+        mostrar_tabuleiro(e,NULL);
+        if (verifica_Vitoria_Jog1(e,jogada))
+            return 0;
+        if(verifica_Vitoria_Jog2(e,jogada))
+            return  0;
+        if(verifica_Bloqueio(e,jogada))
+            return 0;
+
+        //printf("%d%d",jogada.coluna,jogada.linha);
     }
     return 1;
 }
