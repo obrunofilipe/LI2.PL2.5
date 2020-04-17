@@ -74,7 +74,7 @@ int \hyperlink{camada__de__dados_8h_ae2ba0aa85a3e065ef292e1f666ece8b6}{ler\+\_\+
 \begin{DoxyCompactList}\small\item\em Função para ler o tabuleiro de um ficheiro. \end{DoxyCompactList}\item 
 void \hyperlink{camada__de__dados_8h_aed53970f98d13646eb42b86536acd582}{ler\+\_\+movs} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, F\+I\+LE $\ast$f\+\_\+pointer)
 \begin{DoxyCompactList}\small\item\em Função para ler os movs de um ficheiro. \end{DoxyCompactList}\item 
-\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$ \hyperlink{camada__de__dados_8h_a8a23cc2dfa4f648b5c68406726de6b80}{reinicia\+\_\+pos} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, int pos, \hyperlink{structJOGADA}{J\+O\+G\+A\+DA} $\ast$jog)
+void \hyperlink{camada__de__dados_8h_aaf81766175bc061ea1deb4b4d5bcf016}{reinicia\+\_\+pos} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, int pos, \hyperlink{structJOGADA}{J\+O\+G\+A\+DA} $\ast$jog)
 \begin{DoxyCompactList}\small\item\em Função para reinicir o pos. \end{DoxyCompactList}\item 
 \hyperlink{structJOGADA}{J\+O\+G\+A\+DA} $\ast$ \hyperlink{camada__de__dados_8h_a2362774c3566a31762c24b44a56b598c}{obter\+\_\+array\+\_\+jogadas} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e)
 \begin{DoxyCompactList}\small\item\em Função para obter o array das jogadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -496,11 +496,11 @@ Função para obter a última jogada efetuada.
 \begin{DoxyReturn}{Returns}
 A última jogada efetuada 
 \end{DoxyReturn}
-\mbox{\Hypertarget{camada__de__dados_8h_a8a23cc2dfa4f648b5c68406726de6b80}\label{camada__de__dados_8h_a8a23cc2dfa4f648b5c68406726de6b80}} 
+\mbox{\Hypertarget{camada__de__dados_8h_aaf81766175bc061ea1deb4b4d5bcf016}\label{camada__de__dados_8h_aaf81766175bc061ea1deb4b4d5bcf016}} 
 \index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!reinicia\+\_\+pos@{reinicia\+\_\+pos}}
 \index{reinicia\+\_\+pos@{reinicia\+\_\+pos}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
 \subsubsection{\texorpdfstring{reinicia\+\_\+pos()}{reinicia\_pos()}}
-{\footnotesize\ttfamily \hyperlink{structESTADO}{E\+S\+T\+A\+DO}$\ast$ reinicia\+\_\+pos (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{int}]{pos,  }\item[{\hyperlink{structJOGADA}{J\+O\+G\+A\+DA} $\ast$}]{jog }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void reinicia\+\_\+pos (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{int}]{pos,  }\item[{\hyperlink{structJOGADA}{J\+O\+G\+A\+DA} $\ast$}]{jog }\end{DoxyParamCaption})}
 
 
 

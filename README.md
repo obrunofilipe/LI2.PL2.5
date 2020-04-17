@@ -7,3 +7,8 @@ Concluindo, apesar das dificuldades, esta 1ª fase decorreu, no nosso ponto de v
 Mais uma vez, nesta fase, tudo decorreu dentro da normalidade, ou seja, o nosso grupo conseguiu implementar todas as funcionalidades que o Guião 6 propunha.
 Desta vez, as maiores dificuldades sentidas foram em como se guardava/lia um ficheiro, visto que, não estavamos, ainda, por dentro de tal assunto, o que nos fez, pesquisar e estudar sobre a matéria. Além disso, também achamos um pouco estranho a quantidade de condições que tivemos de colocar para verificar se um jogador poderia continuar a jogar, ou, se estaria bloqueado, pois, não vimos qualquer maneira de compactar o código.
 Em suma, apesar de terem surgido algumas dificuldades, a 2ª Fase, a nosso ver, correu bem, pois, tudo aquilo que nos foi proposto, nós fomos capazes de implementar.
+
+3ª Fase do Projeto (Guião 7):
+Nesta fase, apesar de alguns problemas iniciais, tudo decorreu dentro da normalidade, isto é, o nosso grupo foi capaz de implementar todas as funções propostas.
+As dificuldades surgidas foram, sobretudo, devido à diferente formatação dos ficheiros, pois, ao contrário da equipa docente, ao implementar o comando gr e o ler utilizamos os ficheiros com espaços entre os diversos pontos do tabuleiro.
+Concluindo, apesar da preocupação por não compreendermos onde estaria o erro, a 3ª fase, na nossa opinião, correu bem.
