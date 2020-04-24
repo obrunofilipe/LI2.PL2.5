@@ -110,15 +110,15 @@ int verifica_Bloqueio (ESTADO *e, COORDENADA c){
     }
 }
 
-float distancia_a_1 (COORDENADA *c){
-    float dist;
-    dist = sqrt ((c->coluna * c->coluna) + (c->linha * c->linha));
+int distancia_a_1 (COORDENADA *c){
+    int dist;
+    dist = ((c->coluna * c->coluna) + (c->linha * c->linha));
     return dist;
 }
 
-float distancia_a_2 (COORDENADA *c){
-    float dist;
-    dist = sqrt (((c->coluna - 7)*(c->coluna - 7)) + ((c->linha - 7)*(c->linha - 7)));
+int distancia_a_2 (COORDENADA *c){
+    int dist;
+    dist = (((c->coluna - 7)*(c->coluna - 7)) + ((c->linha - 7)*(c->linha - 7)));
     return dist;
 }
 
@@ -156,7 +156,7 @@ void print_LISTA(LISTA L){
     while(L != NULL){
         c = L->valor;
         printf("%d%d",c->coluna,c->linha);
-        printf("(%f) ",distancia_a_1(c));
+        printf("(%d) ",distancia_a_1(c));
         L = L->proximo;
     }
     printf("\n");
@@ -195,5 +195,6 @@ COORDENADA jog (ESTADO  *e, COORDENADA pos){
    JOGADAS_POSSIVEIS = armazena_posicoes(e,JOGADAS_POSSIVEIS,posicoes);
    melhor = euristica(e,JOGADAS_POSSIVEIS);
    print_LISTA(JOGADAS_POSSIVEIS);
+   incrementa_num_comandos(e);
    return *melhor;
 }

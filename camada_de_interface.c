@@ -6,7 +6,7 @@
 
 
 
-void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer) { // desenha o tabuleiro que esta declarado no estado
+void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer){ // desenha o tabuleiro que esta declarado no estado
     COORDENADA c;
     char letras = 'a';
     int print_in_stdout = 0;      // indica se estamos a fazer print num ficheiro ou no stdout, utilizado para restringir o que é armazenado no ficheiro
