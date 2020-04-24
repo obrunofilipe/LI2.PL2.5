@@ -162,6 +162,13 @@ void print_LISTA(LISTA L){
     printf("\n");
 }
 
+LISTA liberta_lista (LISTA L){
+    while (L != NULL){
+        L = remove_cabeca(L);
+    }
+    return L;
+}
+
 COORDENADA jog (ESTADO  *e, COORDENADA pos){
     COORDENADA posicoes[8];
     COORDENADA *melhor;
@@ -196,5 +203,6 @@ COORDENADA jog (ESTADO  *e, COORDENADA pos){
    melhor = euristica(e,JOGADAS_POSSIVEIS);
    print_LISTA(JOGADAS_POSSIVEIS);
    incrementa_num_comandos(e);
+   JOGADAS_POSSIVEIS = liberta_lista(JOGADAS_POSSIVEIS);
    return *melhor;
 }
