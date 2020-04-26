@@ -32,7 +32,7 @@ LISTA proximo(LISTA L){
     return L->proximo;
 }
 
-LISTA remove_cabeca(LISTA L){
+LISTA remove_cabeca (LISTA L){
     LISTA C = L;
     L = L->proximo;
     free(C);
@@ -43,4 +43,14 @@ int lista_esta_vazia(LISTA L){
         return 1;
     else
         return 0;
+}
+
+LISTA liberta_lista (LISTA L){
+    LISTA aux;
+    while (L!=NULL){
+        aux = L;
+        L = L->proximo;
+        free(aux);
+    }
+    return L;
 }

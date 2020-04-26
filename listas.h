@@ -55,4 +55,6 @@ LISTA remove_cabeca(LISTA L);
 */
 int lista_esta_vazia(LISTA L);
 
+LISTA liberta_lista (LISTA L);
+
 #endif

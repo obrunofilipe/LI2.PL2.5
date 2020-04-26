@@ -2,6 +2,7 @@
 #include <math.h>
 #include "camada_de_dados.h"
 #include "listas.h"
+#include <stdlib.h>
 
 int jogar(ESTADO *e, COORDENADA c) {
         atualiza_estado_jogo (e, c);
@@ -123,9 +124,8 @@ int distancia_a_2 (COORDENADA *c){
 }
 
 COORDENADA* euristica (ESTADO *e, LISTA L){
-    COORDENADA *menor,atual;
-    atual = obter_ultima_jogada(e);
-    menor = &atual;
+    COORDENADA *menor;
+    menor = L->valor;
     while (!lista_esta_vazia (L)){
         if (obter_jogador_atual(e) == 1){
             if (distancia_a_1 (L->valor) < distancia_a_1(menor)){
@@ -162,13 +162,6 @@ void print_LISTA(LISTA L){
     printf("\n");
 }
 
-LISTA liberta_lista (LISTA L){
-    while (L != NULL){
-        L = remove_cabeca(L);
-    }
-    return L;
-}
-
 COORDENADA jog (ESTADO  *e, COORDENADA pos){
     COORDENADA posicoes[8];
     COORDENADA *melhor;
@@ -202,7 +195,8 @@ COORDENADA jog (ESTADO  *e, COORDENADA pos){
    JOGADAS_POSSIVEIS = armazena_posicoes(e,JOGADAS_POSSIVEIS,posicoes);
    melhor = euristica(e,JOGADAS_POSSIVEIS);
    print_LISTA(JOGADAS_POSSIVEIS);
+   printf("jogar %d %d\n", melhor->coluna, melhor->linha);
    incrementa_num_comandos(e);
-   JOGADAS_POSSIVEIS = liberta_lista(JOGADAS_POSSIVEIS);
+   liberta_lista(JOGADAS_POSSIVEIS);
    return *melhor;
 }

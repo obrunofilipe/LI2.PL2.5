@@ -148,8 +148,6 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
             return  0;
         if(verifica_Bloqueio(e,jogada))
             return 0;
-
-        //printf("%d%d",jogada.coluna,jogada.linha);
     }
     return 1;
 }
