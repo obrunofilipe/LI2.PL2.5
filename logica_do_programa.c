@@ -162,35 +162,33 @@ void print_LISTA(LISTA L){
     printf("\n");
 }
 
+void criaArray_posicoes(COORDENADA a, COORDENADA* array){
+    int offset_linha, //usado para calcular as coordenadas à volta de a
+    offset_coluna,//usado para calcular as coordenadas à volta de a
+    linha,        //nova coordenada
+    coluna,       //nova coordenada
+    index;        //indice para percorrer o array
+    index = 0;
+    for(offset_linha = -1 ; offset_linha <= 1 ; offset_linha++){
+        linha = a.linha + offset_linha;
+        for(offset_coluna = -1 ; offset_coluna <= 1; offset_coluna++){
+            coluna = a.coluna + offset_coluna;
+            if (a.linha != linha || a.coluna != coluna){
+                array[index].linha = linha;
+                array[index].coluna = coluna;
+                index++;
+            }
+        }
+    }
+}
+
+
 COORDENADA jog (ESTADO  *e, COORDENADA pos){
     COORDENADA posicoes[8];
     COORDENADA *melhor;
     LISTA JOGADAS_POSSIVEIS;
     JOGADAS_POSSIVEIS = NULL;
-    //A
-    posicoes[0].coluna = pos.coluna - 1;
-    posicoes[0].linha  = pos.linha + 1;
-    //B
-    posicoes[1].coluna = pos.coluna;
-    posicoes[1].linha  = pos.linha + 1;
-    //C
-    posicoes[2].coluna = pos.coluna + 1;
-    posicoes[2].linha  = pos.linha + 1;
-    //D
-    posicoes[3].coluna = pos.coluna - 1;
-    posicoes[3].linha  = pos.linha ;
-    //E
-    posicoes[4].coluna = pos.coluna + 1;
-    posicoes[4].linha  = pos.linha;
-    //F
-    posicoes[5].coluna = pos.coluna - 1 ;
-    posicoes[5].linha  = pos.linha - 1;
-    //G
-    posicoes[6].coluna = pos.coluna;
-    posicoes[6].linha  = pos.linha - 1;
-    //H
-    posicoes[7].coluna = pos.coluna + 1;
-    posicoes[7].linha  = pos.linha - 1;
+    criaArray_posicoes(pos, posicoes);
 
    JOGADAS_POSSIVEIS = armazena_posicoes(e,JOGADAS_POSSIVEIS,posicoes);
    melhor = euristica(e,JOGADAS_POSSIVEIS);
@@ -199,4 +197,62 @@ COORDENADA jog (ESTADO  *e, COORDENADA pos){
    incrementa_num_comandos(e);
    liberta_lista(JOGADAS_POSSIVEIS);
    return *melhor;
+}
+
+int minimax (ESTADO *e, COORDENADA *c, int depth, int jogador){
+    LISTA JOGADAS_POSSIVEIS;
+    int valor;
+
+    if (depth == 0){
+        return (distancia_a_1(c) - distancia_a_2(c));
+    }
+
+    if (jogador == 1){
+        COORDENADA posicoes[8];
+        criaArray_posicoes(*c, posicoes);
+        JOGADAS_POSSIVEIS = armazena_posicoes(e, JOGADAS_POSSIVEIS, posicoes);
+        int menor = 10000;
+        while (JOGADAS_POSSIVEIS != NULL){
+            valor = minimax (e, JOGADAS_POSSIVEIS->valor, depth - 1, 2);
+            if (valor < menor){
+                menor = valor;
+            }
+        }
+        liberta_lista(JOGADAS_POSSIVEIS);
+        return menor;
+    }
+    else {
+        COORDENADA posicoes[8];
+        criaArray_posicoes(*c, posicoes);
+        JOGADAS_POSSIVEIS = armazena_posicoes(e, JOGADAS_POSSIVEIS, posicoes);
+        int maior = -10000;
+        while (JOGADAS_POSSIVEIS != NULL){
+            valor = minimax (e, JOGADAS_POSSIVEIS->valor, depth - 1, 1);
+            if (valor > maior)
+                maior = valor;
+        }
+        liberta_lista(JOGADAS_POSSIVEIS);
+        return maior;
+    }
+}
+
+COORDENADA jog2 (ESTADO *e, COORDENADA *c){
+    LISTA JOGADAS_POSSIVEIS;
+    COORDENADA posicoes[8];
+    criaArray_posicoes(*c, posicoes);
+    JOGADAS_POSSIVEIS = armazena_posicoes(e, JOGADAS_POSSIVEIS, posicoes);
+
+    COORDENADA *melhor;
+    int valor_menor = 10000;
+    int atual;
+
+    while (JOGADAS_POSSIVEIS != NULL){
+        atual = minimax (e, c, 1, 1);
+        if (atual < valor_menor){
+            valor_menor = atual;
+            melhor = JOGADAS_POSSIVEIS->valor;
+        }
+        JOGADAS_POSSIVEIS = JOGADAS_POSSIVEIS->proximo;
+    }
+    return *melhor;
 }

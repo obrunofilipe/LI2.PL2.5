@@ -142,12 +142,19 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         jogada = jog(e,obter_ultima_jogada(e));
         jogar(e, jogada);
         mostrar_tabuleiro(e,NULL);
+
         if (verifica_Vitoria_Jog1(e,jogada))
             return 0;
         if(verifica_Vitoria_Jog2(e,jogada))
             return  0;
         if(verifica_Bloqueio(e,jogada))
             return 0;
+    }
+    if(strlen(linha) == 5 && strcmp(linha,"jog2\n") == 0){
+        COORDENADA jogada;
+        jogada = jog2(e, &jogada);
+        jogar(e, jogada);
+        mostrar_tabuleiro(e,NULL);
     }
     return 1;
 }

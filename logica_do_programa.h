@@ -95,5 +95,6 @@ void print_LISTA(LISTA L);
 @return A melhor jogada possível de forma a aproximar-se do objetivo
 */
 COORDENADA jog (ESTADO  *e, COORDENADA pos);
+COORDENADA jog2 (ESTADO *e, COORDENADA *c);
 
 #endif
