@@ -152,7 +152,7 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
     }
     if(strlen(linha) == 5 && strcmp(linha,"jog2\n") == 0){
         COORDENADA jogada;
-        jogada = jog2(e, &jogada);
+        jogada = jog2(e, obter_ultima_jogada(e));
         jogar(e, jogada);
         mostrar_tabuleiro(e,NULL);
     }

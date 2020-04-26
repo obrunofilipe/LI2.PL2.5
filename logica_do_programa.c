@@ -189,65 +189,84 @@ COORDENADA jog (ESTADO  *e, COORDENADA pos){
     LISTA JOGADAS_POSSIVEIS;
     JOGADAS_POSSIVEIS = NULL;
     criaArray_posicoes(pos, posicoes);
+    JOGADAS_POSSIVEIS = armazena_posicoes(e,JOGADAS_POSSIVEIS,posicoes);
 
-   JOGADAS_POSSIVEIS = armazena_posicoes(e,JOGADAS_POSSIVEIS,posicoes);
-   melhor = euristica(e,JOGADAS_POSSIVEIS);
-   print_LISTA(JOGADAS_POSSIVEIS);
-   printf("jogar %d %d\n", melhor->coluna, melhor->linha);
-   incrementa_num_comandos(e);
-   liberta_lista(JOGADAS_POSSIVEIS);
-   return *melhor;
+    melhor = euristica(e,JOGADAS_POSSIVEIS);
+    print_LISTA(JOGADAS_POSSIVEIS);
+    printf("jogar %d %d\n", melhor->coluna, melhor->linha);
+    incrementa_num_comandos(e);
+    liberta_lista(JOGADAS_POSSIVEIS);
+    return *melhor;
 }
 
-int minimax (ESTADO *e, COORDENADA *c, int depth, int jogador){
+int minimax (ESTADO *e, COORDENADA *c, int depth, int maximizingPlayer){
     LISTA JOGADAS_POSSIVEIS;
+    JOGADAS_POSSIVEIS = NULL;
     int valor;
 
     if (depth == 0){
         return (distancia_a_1(c) - distancia_a_2(c));
     }
 
-    if (jogador == 1){
+    if (maximizingPlayer == 1){
         COORDENADA posicoes[8];
         criaArray_posicoes(*c, posicoes);
         JOGADAS_POSSIVEIS = armazena_posicoes(e, JOGADAS_POSSIVEIS, posicoes);
-        int menor = 10000;
-        while (JOGADAS_POSSIVEIS != NULL){
+        int menor = 1000000;
+        int maior = -1000000;
+        while (JOGADAS_POSSIVEIS->proximo != NULL){
             valor = minimax (e, JOGADAS_POSSIVEIS->valor, depth - 1, 2);
-            if (valor < menor){
-                menor = valor;
+            if (obter_jogador_atual(e) == 1){
+                if (valor < menor)
+                    menor = valor;
             }
+            else {
+                if (valor > maior)
+                    maior = valor;
+            }
+            JOGADAS_POSSIVEIS = JOGADAS_POSSIVEIS->proximo;
         }
-        liberta_lista(JOGADAS_POSSIVEIS);
-        return menor;
+        if (obter_jogador_atual(e) == 1)
+            return menor;
+        else return maior;
     }
     else {
         COORDENADA posicoes[8];
         criaArray_posicoes(*c, posicoes);
         JOGADAS_POSSIVEIS = armazena_posicoes(e, JOGADAS_POSSIVEIS, posicoes);
-        int maior = -10000;
-        while (JOGADAS_POSSIVEIS != NULL){
+        int maior = -10000000;
+        int menor = 10000000;
+        while (JOGADAS_POSSIVEIS->proximo != NULL){
             valor = minimax (e, JOGADAS_POSSIVEIS->valor, depth - 1, 1);
-            if (valor > maior)
-                maior = valor;
+            if (obter_jogador_atual(e) == 1){
+                if (valor < menor)
+                    menor = valor;
+            }
+            else {
+                if (valor > maior)
+                    maior = valor;
+            }
+            JOGADAS_POSSIVEIS = JOGADAS_POSSIVEIS->proximo;
         }
-        liberta_lista(JOGADAS_POSSIVEIS);
-        return maior;
+        if (obter_jogador_atual(e) == 1)
+            return menor;
+        else return maior;
     }
 }
 
-COORDENADA jog2 (ESTADO *e, COORDENADA *c){
+COORDENADA jog2 (ESTADO *e, COORDENADA c){
     LISTA JOGADAS_POSSIVEIS;
     COORDENADA posicoes[8];
-    criaArray_posicoes(*c, posicoes);
+    criaArray_posicoes(c, posicoes);
     JOGADAS_POSSIVEIS = armazena_posicoes(e, JOGADAS_POSSIVEIS, posicoes);
 
+
     COORDENADA *melhor;
-    int valor_menor = 10000;
+    int valor_menor = 100000000;
     int atual;
 
-    while (JOGADAS_POSSIVEIS != NULL){
-        atual = minimax (e, c, 1, 1);
+    while (JOGADAS_POSSIVEIS->proximo != NULL){
+        atual = minimax (e, JOGADAS_POSSIVEIS->valor, 5, e->jogador_atual);
         if (atual < valor_menor){
             valor_menor = atual;
             melhor = JOGADAS_POSSIVEIS->valor;
