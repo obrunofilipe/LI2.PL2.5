@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdio.h>
 
+
 int main()
 {
     int jogadas,quit;
@@ -15,5 +16,6 @@ int main()
         quit = interpretador(e);
         jogadas = obter_numero_de_jogadas(e);
     }
+
     return 0;
 }
