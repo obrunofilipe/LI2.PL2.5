@@ -21,14 +21,22 @@ int main(int argc, char *f_name[]) {
         ler_movs(e,f_in);
     }
     fclose(f_in);
-    mostrar_tabuleiro(e,NULL);
 
     //jogada do bot
 
-    COORDENADA jogada;
-    jogada = jog2(e, obter_ultima_jogada(e));
+    COORDENADA jogada, c;
+    c = obter_ultima_jogada(e);
+
+    if (obter_jogador_atual(e) == 1 && (distancia_a_1(&c) == 1 || distancia_a_1(&c) == 2)){
+        jogada = jog(e, c);
+    }
+    else if (obter_jogador_atual(e) == 2 && (distancia_a_2(&c) == 1 || distancia_a_2(&c) == 2)){
+        jogada = jog(e, c);
+    }
+    else {
+        jogada = jog2(e, c);
+    }
     jogar(e, jogada);
-    mostrar_tabuleiro(e,NULL);
     if (verifica_Vitoria_Jog1(jogada,0))
         return 0;
     if(verifica_Vitoria_Jog2(jogada,0))
@@ -37,5 +45,7 @@ int main(int argc, char *f_name[]) {
         return 0;
 
     grava_dados(e, f_name[2]);
+
+    return 0;
 
 }

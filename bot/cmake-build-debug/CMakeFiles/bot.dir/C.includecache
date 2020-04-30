@@ -6,53 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/joao/CLionProjects/LI2/bot/camada_de_dados.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/camada_de_dados.h
 stdio.h
 -
 
-/home/joao/CLionProjects/LI2/bot/camada_de_interface.c
-stdio.h
--
-string.h
--
-camada_de_dados.h
-/home/joao/CLionProjects/LI2/bot/camada_de_dados.h
-logica_do_programa.h
-/home/joao/CLionProjects/LI2/bot/logica_do_programa.h
-
-/home/joao/CLionProjects/LI2/bot/camada_de_interface.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/camada_de_interface.h
 stdio.h
 -
 
-/home/joao/CLionProjects/LI2/bot/listas.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/listas.h
 
-/home/joao/CLionProjects/LI2/bot/logica_do_programa.c
-stdio.h
--
-math.h
--
-camada_de_dados.h
-/home/joao/CLionProjects/LI2/bot/camada_de_dados.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/logica_do_programa.h
 listas.h
-/home/joao/CLionProjects/LI2/bot/listas.h
-logica_do_programa.h
-/home/joao/CLionProjects/LI2/bot/logica_do_programa.h
-stdlib.h
--
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/listas.h
 
-/home/joao/CLionProjects/LI2/bot/logica_do_programa.h
-listas.h
-/home/joao/CLionProjects/LI2/bot/listas.h
-
-/home/joao/CLionProjects/LI2/bot/main.c
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/main.c
 stdio.h
 -
 camada_de_dados.h
-/home/joao/CLionProjects/LI2/bot/camada_de_dados.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/camada_de_dados.h
 camada_de_interface.h
-/home/joao/CLionProjects/LI2/bot/camada_de_interface.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/camada_de_interface.h
 logica_do_programa.h
-/home/joao/CLionProjects/LI2/bot/logica_do_programa.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/logica_do_programa.h
 listas.h
-/home/joao/CLionProjects/LI2/bot/listas.h
+/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/listas.h
 

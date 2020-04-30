@@ -1,4 +1,4 @@
-# Install script for directory: /home/joao/CLionProjects/LI2/bot
+# Install script for directory: /home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/joao/CLionProjects/LI2/bot/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
