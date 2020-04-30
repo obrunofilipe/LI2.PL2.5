@@ -21,18 +21,18 @@ void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer){ // desenha o tabuleiro que e
         for(int colunas = 0; colunas < 8 ; colunas++){
             c.coluna = colunas;
             if(linhas == 7 && colunas == 7) {
-                if(obter_estado_casa(e,c) == BRANCA)
+                if(obter_estado_casa(e->tab,c) == BRANCA)
                     fprintf(f_pointer, "* " );
                 else
                     fprintf(f_pointer, "2 ");
             }
             else if (linhas == 0 && colunas == 0)
-                if(obter_estado_casa(e,c) == BRANCA)
+                if(obter_estado_casa(e->tab,c) == BRANCA)
                     fprintf(f_pointer, "* " );
                 else
                     fprintf(f_pointer, "1 ");
             else {
-                switch (obter_estado_casa(e,c)) {
+                switch (obter_estado_casa(e->tab,c)) {
                     case VAZIO:
                         fprintf(f_pointer ,". ");
                         break;
@@ -96,10 +96,10 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         COORDENADA coord = {*col - 'a', *lin - '1'};
         if (verificaJogada(e, coord)){
             incrementa_num_comandos(e);
-            if (verifica_Vitoria_Jog1(e, coord) == 1){
+            if (verifica_Vitoria_Jog1(coord) == 1){
                 return 0;
             }
-            else if (verifica_Vitoria_Jog2 (e, coord)){
+            else if (verifica_Vitoria_Jog2 (coord)){
                 return 0;
             }
             jogar(e, coord);
@@ -143,9 +143,9 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         jogar(e, jogada);
         mostrar_tabuleiro(e,NULL);
 
-        if (verifica_Vitoria_Jog1(e,jogada))
+        if (verifica_Vitoria_Jog1(jogada))
             return 0;
-        if(verifica_Vitoria_Jog2(e,jogada))
+        if(verifica_Vitoria_Jog2(jogada))
             return  0;
         if(verifica_Bloqueio(e,jogada))
             return 0;

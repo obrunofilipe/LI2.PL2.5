@@ -30,12 +30,12 @@ int obter_numero_de_jogadas(ESTADO *estado){ // retorna o numero de jogadas que 
 }
 
 
-CASA obter_estado_casa(ESTADO *e, COORDENADA c){ // retorna o estado de uma casa do tabuleiro (VAZIO , BRANCA , PRETA)
+CASA obter_estado_casa(CASA tab[8][8], COORDENADA c){ // retorna o estado de uma casa do tabuleiro (VAZIO , BRANCA , PRETA)
     int coluna, linha;
     CASA estadoCasa;
     coluna = c.coluna;
     linha = c.linha;
-    estadoCasa = e->tab[linha][coluna];
+    estadoCasa = tab[linha][coluna];
     return estadoCasa;
 }
 
@@ -222,3 +222,15 @@ void reinicia_pos (ESTADO *e, int pos, JOGADA *jog){
 JOGADA *obter_array_jogadas (ESTADO *e){
     return e->jogadas;
 }
+int switch_player(int jogador ){
+    switch(jogador){
+        case 1:
+            return 2;
+            break;
+        case 2:
+            return 1;
+            break;
+    }
+}
+
+//void copia_tab(ESTADO *e1 )

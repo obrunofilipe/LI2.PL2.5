@@ -2,7 +2,10 @@
 #include <math.h>
 #include "camada_de_dados.h"
 #include "listas.h"
+#include "logica_do_programa.h"
 #include <stdlib.h>
+#define MENOS_INFINITO -10000000
+#define MAIS_INFINITO 10000000
 
 int jogar(ESTADO *e, COORDENADA c) {
         atualiza_estado_jogo (e, c);
@@ -16,7 +19,7 @@ int verificaJogada (ESTADO *e, COORDENADA c) {
     int c_anterior = obter_ultima_jogada(e).coluna;
     if ((c.coluna == c_anterior + 1 || c.coluna == c_anterior - 1 || c.coluna == c_anterior)
     && (c.linha == l_anterior + 1 || c.linha == l_anterior - 1 || c.linha == l_anterior)
-    && obter_estado_casa(e, c) == VAZIO){
+    && obter_estado_casa(e->tab, c) == VAZIO){
         r = 1;
     }
     else
@@ -25,7 +28,7 @@ int verificaJogada (ESTADO *e, COORDENADA c) {
     return r;
 }
 
-int verifica_Vitoria_Jog1 (ESTADO *e, COORDENADA c){
+int verifica_Vitoria_Jog1 (COORDENADA c){
     if (c.linha == 0 && c.coluna == 0){
         printf("JOGADOR 1 GANHOU");
         return 1;
@@ -33,7 +36,7 @@ int verifica_Vitoria_Jog1 (ESTADO *e, COORDENADA c){
     else return 0;
 }
 
-int verifica_Vitoria_Jog2 (ESTADO *e, COORDENADA c){
+int verifica_Vitoria_Jog2 (COORDENADA c){
     if (c.linha == 7 && c.coluna == 7) {
         printf("JOGADOR 2 GANHOU");
         return 1;
@@ -51,14 +54,14 @@ int verifica_Bloqueio (ESTADO *e, COORDENADA c){
     COORDENADA c_esquerda_baixo = {c.coluna-1, c.linha-1};
     COORDENADA c_esquerda_cima = {c.coluna-1, c.linha+1};
 
-    CASA baixo = obter_estado_casa(e, c_baixo);
-    CASA cima = obter_estado_casa(e, c_cima);
-    CASA direita = obter_estado_casa(e, c_direita);
-    CASA esquerda = obter_estado_casa(e, c_esquerda);
-    CASA direita_baixo = obter_estado_casa(e, c_direita_baixo);
-    CASA direita_cima = obter_estado_casa(e, c_direita_cima);
-    CASA esquerda_baixo = obter_estado_casa(e, c_esquerda_baixo);
-    CASA esquerda_cima = obter_estado_casa(e, c_esquerda_cima);
+    CASA baixo = obter_estado_casa(e->tab, c_baixo);
+    CASA cima = obter_estado_casa(e->tab, c_cima);
+    CASA direita = obter_estado_casa(e->tab, c_direita);
+    CASA esquerda = obter_estado_casa(e->tab, c_esquerda);
+    CASA direita_baixo = obter_estado_casa(e->tab, c_direita_baixo);
+    CASA direita_cima = obter_estado_casa(e->tab, c_direita_cima);
+    CASA esquerda_baixo = obter_estado_casa(e->tab, c_esquerda_baixo);
+    CASA esquerda_cima = obter_estado_casa(e->tab, c_esquerda_cima);
 
     if (c.linha == 7 && c.coluna == 0){
         if (direita == PRETA && direita_baixo == PRETA && baixo == PRETA) {
@@ -111,13 +114,13 @@ int verifica_Bloqueio (ESTADO *e, COORDENADA c){
     }
 }
 
-int distancia_a_1 (COORDENADA *c){
+float distancia_a_1 (COORDENADA *c){
     int dist;
     dist = ((c->coluna * c->coluna) + (c->linha * c->linha));
     return dist;
 }
 
-int distancia_a_2 (COORDENADA *c){
+float distancia_a_2 (COORDENADA *c){
     int dist;
     dist = (((c->coluna - 7)*(c->coluna - 7)) + ((c->linha - 7)*(c->linha - 7)));
     return dist;
@@ -142,10 +145,10 @@ COORDENADA* euristica (ESTADO *e, LISTA L){
     return menor;
 }
 
-LISTA armazena_posicoes(ESTADO *e,LISTA L, COORDENADA *posicoes){
+LISTA armazena_posicoes(CASA tab[8][8] ,LISTA L, COORDENADA *posicoes){
     for(int i = 0; i < 8 ; i++){
-        if(obter_estado_casa(e,posicoes[i]) != PRETA && posicoes[i].coluna >= 0 && posicoes[i].coluna <= 7
-                                                     && posicoes[i].linha  >= 0 && posicoes[i].linha  <= 7 )
+        if( (tab[posicoes[i].linha][posicoes[i].coluna]) != PRETA && posicoes[i].coluna >= 0 && posicoes[i].coluna <= 7
+                                                                  && posicoes[i].linha  >= 0 && posicoes[i].linha  <= 7 )
         L = insere_cabeca(L,posicoes + i);
     }
     return L;
@@ -189,89 +192,122 @@ COORDENADA jog (ESTADO  *e, COORDENADA pos){
     LISTA JOGADAS_POSSIVEIS;
     JOGADAS_POSSIVEIS = NULL;
     criaArray_posicoes(pos, posicoes);
-    JOGADAS_POSSIVEIS = armazena_posicoes(e,JOGADAS_POSSIVEIS,posicoes);
+    JOGADAS_POSSIVEIS = armazena_posicoes(e->tab,JOGADAS_POSSIVEIS,posicoes);
 
     melhor = euristica(e,JOGADAS_POSSIVEIS);
     print_LISTA(JOGADAS_POSSIVEIS);
-    printf("jogar %d %d\n", melhor->coluna, melhor->linha);
     incrementa_num_comandos(e);
     liberta_lista(JOGADAS_POSSIVEIS);
     return *melhor;
 }
-
-int minimax (ESTADO *e, COORDENADA *c, int depth, int maximizingPlayer){
-    LISTA JOGADAS_POSSIVEIS;
-    JOGADAS_POSSIVEIS = NULL;
-    int valor;
-
-    if (depth == 0){
-        return (distancia_a_1(c) - distancia_a_2(c));
-    }
-
-    if (maximizingPlayer == 1){
-        COORDENADA posicoes[8];
-        criaArray_posicoes(*c, posicoes);
-        JOGADAS_POSSIVEIS = armazena_posicoes(e, JOGADAS_POSSIVEIS, posicoes);
-        int menor = 1000000;
-        int maior = -1000000;
-        while (JOGADAS_POSSIVEIS->proximo != NULL){
-            valor = minimax (e, JOGADAS_POSSIVEIS->valor, depth - 1, 2);
-            if (obter_jogador_atual(e) == 1){
-                if (valor < menor)
-                    menor = valor;
-            }
-            else {
-                if (valor > maior)
-                    maior = valor;
-            }
-            JOGADAS_POSSIVEIS = JOGADAS_POSSIVEIS->proximo;
-        }
-        if (obter_jogador_atual(e) == 1)
-            return menor;
-        else return maior;
-    }
-    else {
-        COORDENADA posicoes[8];
-        criaArray_posicoes(*c, posicoes);
-        JOGADAS_POSSIVEIS = armazena_posicoes(e, JOGADAS_POSSIVEIS, posicoes);
-        int maior = -10000000;
-        int menor = 10000000;
-        while (JOGADAS_POSSIVEIS->proximo != NULL){
-            valor = minimax (e, JOGADAS_POSSIVEIS->valor, depth - 1, 1);
-            if (obter_jogador_atual(e) == 1){
-                if (valor < menor)
-                    menor = valor;
-            }
-            else {
-                if (valor > maior)
-                    maior = valor;
-            }
-            JOGADAS_POSSIVEIS = JOGADAS_POSSIVEIS->proximo;
-        }
-        if (obter_jogador_atual(e) == 1)
-            return menor;
-        else return maior;
-    }
+int score_minimax (COORDENADA *c , int maximizingPlayer ){
+   int score;
+    if(maximizingPlayer == 1)
+        score = distancia_a_2(c) - distancia_a_1(c);
+    else
+        score = distancia_a_1(c) - distancia_a_2(c);
+    return score;
 }
 
-COORDENADA jog2 (ESTADO *e, COORDENADA c){
-    LISTA JOGADAS_POSSIVEIS;
-    COORDENADA posicoes[8];
-    criaArray_posicoes(c, posicoes);
-    JOGADAS_POSSIVEIS = armazena_posicoes(e, JOGADAS_POSSIVEIS, posicoes);
+int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, int player){
+    int Score, bestScore;
+    LISTA  JOGADAS_POSSIVEIS = NULL;
+    COORDENADA posicoes[8],*cf,copia_tab[8][8];
+    criaArray_posicoes(*c,posicoes);
+    JOGADAS_POSSIVEIS = armazena_posicoes(tab,JOGADAS_POSSIVEIS,posicoes);
+
+    if (depth == 0)
+        return score_minimax(c, maximizingPlayer);
+    //verifica vitoria
+    if(verifica_Vitoria_Jog1(*c) && maximizingPlayer == 1 )
+        return Score = MAIS_INFINITO;
+    else if (verifica_Vitoria_Jog1(*c) && maximizingPlayer != 1)
+        return Score = MENOS_INFINITO;
+    if(verifica_Vitoria_Jog2(*c) && maximizingPlayer == 2)
+        return Score = MAIS_INFINITO;
+    else if(verifica_Vitoria_Jog2(*c) && maximizingPlayer != 2)
+        return Score = MENOS_INFINITO;
+
+    if(player == maximizingPlayer){
+        bestScore = MENOS_INFINITO;
+       //verificar bloqueio
+       if(lista_esta_vazia(JOGADAS_POSSIVEIS))
+           return Score = MENOS_INFINITO;
+       //verificar vitoria
 
 
-    COORDENADA *melhor;
-    int valor_menor = 100000000;
-    int atual;
+       //maximizar o score
+       while(JOGADAS_POSSIVEIS != NULL){
+           cf = JOGADAS_POSSIVEIS->valor;
+           tab[c->linha][c->coluna] = PRETA;
+           tab[cf->linha][cf->coluna] = BRANCA;
+           Score = minimax(tab,JOGADAS_POSSIVEIS->valor, depth - 1 , maximizingPlayer , switch_player(player));
+           tab[c->linha][c->coluna] = BRANCA;
+           tab[cf->linha][cf->coluna] = VAZIO;
+           if(Score > bestScore)
+               bestScore = Score;
+           JOGADAS_POSSIVEIS = remove_cabeca(JOGADAS_POSSIVEIS);
+       }
+       return bestScore;
+   }
+   else{
+        bestScore = MAIS_INFINITO;
+       //verificar bloqueio
+       if(lista_esta_vazia(JOGADAS_POSSIVEIS))
+           return Score = MAIS_INFINITO;
+        if (depth == 0)
+            score_minimax(JOGADAS_POSSIVEIS->valor, maximizingPlayer);
+       //minimizar o score
+       while(JOGADAS_POSSIVEIS != NULL){
+           cf = JOGADAS_POSSIVEIS->valor;
+           tab[c->linha][c->coluna] = PRETA;
+           tab[cf->linha][cf->coluna] = BRANCA;
+           Score = minimax(tab,JOGADAS_POSSIVEIS->valor, depth - 1 , maximizingPlayer , switch_player(player));
+           tab[c->linha][c->coluna] = BRANCA;
+           tab[cf->linha][cf->coluna] = VAZIO;
+           if(Score < bestScore)
+               bestScore = Score;
+           JOGADAS_POSSIVEIS = remove_cabeca(JOGADAS_POSSIVEIS);
+       }
+       return bestScore;
+   }
+}
 
-    while (JOGADAS_POSSIVEIS->proximo != NULL){
-        atual = minimax (e, JOGADAS_POSSIVEIS->valor, 5, e->jogador_atual);
-        if (atual < valor_menor){
-            valor_menor = atual;
-            melhor = JOGADAS_POSSIVEIS->valor;
-        }
-        JOGADAS_POSSIVEIS = JOGADAS_POSSIVEIS->proximo;
+int bloqueio_minimax(CASA tab[8][8], LISTA CASAS_DISPONIVEIS){
+    COORDENADA *c;
+    int result = 1;
+    while(!lista_esta_vazia(CASAS_DISPONIVEIS)){
+        c = CASAS_DISPONIVEIS->valor;
+        if(obter_estado_casa(tab,*c) != PRETA)
+            result = 0;
+        CASAS_DISPONIVEIS = remove_cabeca(CASAS_DISPONIVEIS);
     }
-    return *melhor;
+    return result;
+}
+
+//int verificaVitoria(int maximizingPlayer,)
+
+COORDENADA jog2 (ESTADO *e, COORDENADA last_mov){
+    LISTA JOGADAS_POSSIVEIS;
+    COORDENADA posicoes[8], *mov,*bestMov;
+    int score, bestScore,jogador;
+    bestScore = MENOS_INFINITO;
+    JOGADAS_POSSIVEIS = NULL;
+    criaArray_posicoes(last_mov,posicoes);
+    JOGADAS_POSSIVEIS = armazena_posicoes(e->tab,JOGADAS_POSSIVEIS,posicoes);
+    while(JOGADAS_POSSIVEIS != NULL){
+        mov = JOGADAS_POSSIVEIS->valor;
+        altera_estado_casa(e,last_mov,'#');
+        altera_estado_casa(e,*mov,'*');
+        jogador = obter_jogador_atual(e);
+        score = minimax(e->tab,mov,8,obter_jogador_atual(e),switch_player(obter_jogador_atual(e)));  //calcular o score de cada uma das opçoes disponiveis
+        altera_estado_casa(e,last_mov,'*');
+        altera_estado_casa(e,*mov,'.');
+        if(score > bestScore){
+           bestScore = score;
+           bestMov = JOGADAS_POSSIVEIS->valor;
+        }
+        JOGADAS_POSSIVEIS = remove_cabeca(JOGADAS_POSSIVEIS);
+    }
+    return *bestMov;
 }

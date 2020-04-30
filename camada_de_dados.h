@@ -92,7 +92,8 @@ int obter_numero_de_jogadas(ESTADO *estado);
 @param c A coordenada
 @return Se a casa está VAZIA, BRANCA ou PRETA
  */
-CASA obter_estado_casa(ESTADO *e, COORDENADA c);
+//alterei esta funçao
+CASA obter_estado_casa(CASA tab[8][8], COORDENADA c);
 
 /**
 \brief Função que atualiza o estado de jogo após cada jogada
@@ -234,4 +235,5 @@ void reinicia_pos (ESTADO *e, int pos, JOGADA *jog);
 @return O array das Jogadas
  */
 JOGADA *obter_array_jogadas (ESTADO *e);
+int switch_player(int jogador );
 #endif

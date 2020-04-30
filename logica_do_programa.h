@@ -33,7 +33,8 @@ int verificaJogada (ESTADO *e, COORDENADA c);
 @param c Coordenada
 @return O inteiro 1 se venceu, 0 em caso contrário
 */
-int verifica_Vitoria_Jog1 (ESTADO *e, COORDENADA c);
+//alterei esta funçao
+int verifica_Vitoria_Jog1 (COORDENADA c);
 
 /**
 \brief Função que verifica se o jogador 2 venceu
@@ -41,7 +42,8 @@ int verifica_Vitoria_Jog1 (ESTADO *e, COORDENADA c);
 @param c Coordenada
 @return O inteiro 1 se venceu, 0 em caso contrário
 */
-int verifica_Vitoria_Jog2 (ESTADO *e, COORDENADA c);
+//alterei esta funçao
+int verifica_Vitoria_Jog2 (COORDENADA c);
 
 /**
 \brief Função que verifica se um jogador está bloqueado, ou seja, não existe nenhuma possibilidade de efetuar uma jogada válida
@@ -80,7 +82,7 @@ COORDENADA* euristica (ESTADO *e, LISTA L);
 @param posicoes Array de posições a avaliar
 @return A lista L com todas as posições possíveis
 */
-LISTA armazena_posicoes(ESTADO *e,LISTA L, COORDENADA *posicoes);
+LISTA armazena_posicoes(CASA tab[8][8],LISTA L, COORDENADA *posicoes);
 
 /**
 \brief Função para colocar no ecrã as diversas componentes de uma lista
@@ -96,5 +98,5 @@ void print_LISTA(LISTA L);
 */
 COORDENADA jog (ESTADO  *e, COORDENADA pos);
 COORDENADA jog2 (ESTADO *e, COORDENADA c);
-
+int bloqueio_minimax(CASA tab[8][8], LISTA CASAS_DISPONIVEIS);
 #endif
