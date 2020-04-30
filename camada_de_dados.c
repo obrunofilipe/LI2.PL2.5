@@ -147,11 +147,9 @@ int ler_tabuleiro(ESTADO *e , FILE * f_pointer){
     for(int l = 7; l >= 0 ; l--){
         char linha[BUF_SIZE];
         fgets(linha,BUF_SIZE,f_pointer);
-        for(int c = 0 ; c < 15 ; c++) {
-            COORDENADA posicao = {c/2, l};
-            if (c % 2 == 0) {
-                altera_estado_casa(e, posicao, linha[c]);
-            }
+        for(int c = 0 ; c < 7 ; c++) {
+            COORDENADA posicao = {c , l};
+            altera_estado_casa(e, posicao, linha[c]);
         }
     }
     return 1;

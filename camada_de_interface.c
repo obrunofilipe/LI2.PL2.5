@@ -22,25 +22,25 @@ void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer){ // desenha o tabuleiro que e
             c.coluna = colunas;
             if(linhas == 7 && colunas == 7) {
                 if(obter_estado_casa(e->tab,c) == BRANCA)
-                    fprintf(f_pointer, "* " );
+                    fprintf(f_pointer, "*" );
                 else
-                    fprintf(f_pointer, "2 ");
+                    fprintf(f_pointer, "2");
             }
             else if (linhas == 0 && colunas == 0)
                 if(obter_estado_casa(e->tab,c) == BRANCA)
-                    fprintf(f_pointer, "* " );
+                    fprintf(f_pointer, "*" );
                 else
-                    fprintf(f_pointer, "1 ");
+                    fprintf(f_pointer, "1");
             else {
                 switch (obter_estado_casa(e->tab,c)) {
                     case VAZIO:
-                        fprintf(f_pointer ,". ");
+                        fprintf(f_pointer ,".");
                         break;
                     case BRANCA:
-                        fprintf(f_pointer ,"* ");
+                        fprintf(f_pointer ,"*");
                         break;
                     case PRETA:
-                        fprintf(f_pointer ,"# ");
+                        fprintf(f_pointer ,"#");
                         break;
                 }
             }

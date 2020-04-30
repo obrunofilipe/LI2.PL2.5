@@ -218,7 +218,7 @@ int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, in
     criaArray_posicoes(*c,posicoes);
     JOGADAS_POSSIVEIS = armazena_posicoes(tab,JOGADAS_POSSIVEIS,posicoes);
 
-    if (depth == 0)
+    if (depth <= 0)
         return score_minimax(c, maximizingPlayer);
     //verifica vitoria
     if(verifica_Vitoria_Jog1(*c,1) && maximizingPlayer == 1 )
@@ -249,7 +249,7 @@ int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, in
            if(Score > bestScore)
                bestScore = Score;
            if(Score >= beta)
-               return Score;
+               return bestScore;
            if(Score > alpha)
                alpha = Score;
            JOGADAS_POSSIVEIS = remove_cabeca(JOGADAS_POSSIVEIS);
@@ -261,7 +261,7 @@ int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, in
        //verificar bloqueio
        if(lista_esta_vazia(JOGADAS_POSSIVEIS))
            return Score = MAIS_INFINITO;
-        if (depth == 0)
+        if (depth <= 0)
             score_minimax(JOGADAS_POSSIVEIS->valor, maximizingPlayer);
        //minimizar o score
        while(JOGADAS_POSSIVEIS != NULL){
@@ -274,7 +274,7 @@ int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, in
            if(Score < bestScore)
                bestScore = Score;
            if(Score <= alpha)
-               return Score;
+               return bestScore;
            if(Score < beta)
                beta = Score;
            JOGADAS_POSSIVEIS = remove_cabeca(JOGADAS_POSSIVEIS);
