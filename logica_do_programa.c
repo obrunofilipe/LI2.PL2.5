@@ -307,6 +307,7 @@ COORDENADA jog2 (ESTADO *e, COORDENADA last_mov){
     JOGADAS_POSSIVEIS = NULL;
     criaArray_posicoes(last_mov,posicoes);
     JOGADAS_POSSIVEIS = armazena_posicoes(e->tab,JOGADAS_POSSIVEIS,posicoes);
+    bestMov = JOGADAS_POSSIVEIS->valor;
     while(JOGADAS_POSSIVEIS != NULL){
         mov = JOGADAS_POSSIVEIS->valor;
         altera_estado_casa(e,last_mov,'#');
