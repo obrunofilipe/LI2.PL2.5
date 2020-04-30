@@ -58,14 +58,14 @@ int verifica_Bloqueio (ESTADO *e, COORDENADA c);
 @param c Coordenada
 @return
 */
-float distancia_a_1 (COORDENADA *c);
+int distancia_a_1 (COORDENADA *c);
 
 /**
 \brief
 @param c Coordenada
 @return
 */
-float distancia_a_2 (COORDENADA *c);
+int distancia_a_2 (COORDENADA *c);
 
 /**
 \brief

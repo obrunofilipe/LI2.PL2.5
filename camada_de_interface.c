@@ -151,8 +151,17 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
             return 0;
     }
     if(strlen(linha) == 5 && strcmp(linha,"jog2\n") == 0){
-        COORDENADA jogada;
-        jogada = jog2(e, obter_ultima_jogada(e));
+        COORDENADA jogada, c;
+        c = obter_ultima_jogada(e);
+        if (obter_jogador_atual(e) == 1 && (distancia_a_1(&c) == 1 || distancia_a_1(&c) == 2)){
+            jogada = jog(e, c);
+        }
+        else if (obter_jogador_atual(e) == 2 && (distancia_a_2(&c) == 1 || distancia_a_2(&c) == 2)){
+            jogada = jog(e, c);
+        }
+        else {
+            jogada = jog2(e, c);
+        }
         jogar(e, jogada);
         mostrar_tabuleiro(e,NULL);
         if (verifica_Vitoria_Jog1(jogada,0))

@@ -116,13 +116,13 @@ int verifica_Bloqueio (ESTADO *e, COORDENADA c){
     }
 }
 
-float distancia_a_1 (COORDENADA *c){
+int distancia_a_1 (COORDENADA *c){
     int dist;
     dist = ((c->coluna * c->coluna) + (c->linha * c->linha));
     return dist;
 }
 
-float distancia_a_2 (COORDENADA *c){
+int distancia_a_2 (COORDENADA *c){
     int dist;
     dist = (((c->coluna - 7)*(c->coluna - 7)) + ((c->linha - 7)*(c->linha - 7)));
     return dist;
@@ -255,8 +255,8 @@ int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, in
            JOGADAS_POSSIVEIS = remove_cabeca(JOGADAS_POSSIVEIS);
        }
        return bestScore;
-   }
-   else{
+    }
+    else{
         bestScore = MAIS_INFINITO;
        //verificar bloqueio
        if(lista_esta_vazia(JOGADAS_POSSIVEIS))
@@ -280,7 +280,7 @@ int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, in
            JOGADAS_POSSIVEIS = remove_cabeca(JOGADAS_POSSIVEIS);
        }
        return bestScore;
-   }
+    }
 }
 
 int bloqueio_minimax(CASA tab[8][8], LISTA CASAS_DISPONIVEIS){
