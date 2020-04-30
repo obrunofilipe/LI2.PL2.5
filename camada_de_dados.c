@@ -164,7 +164,7 @@ void ler_movs(ESTADO * e, FILE * f_pointer){
     movimentos_j1 = 0;
     movimentos_j2 = 0;
     while(fgets(linha,BUF_SIZE,f_pointer) != NULL){
-        if(strlen(linha) == 11 && sscanf(linha,"%02d: %s %s",&jogada,movJ1,movJ2) == 3) {
+        if(strlen(linha) == 10 && sscanf(linha,"%02d: %s %s",&jogada,movJ1,movJ2) == 3) {
             COORDENADA jogada_j1 = {movJ1[0] - 'a', movJ1[1] - '1'};
             COORDENADA jogada_j2 = {movJ2[0] - 'a', movJ2[1] - '1'};
             altera_array_jogadas(e,jogada_j1,jogada  ,1);
@@ -175,7 +175,7 @@ void ler_movs(ESTADO * e, FILE * f_pointer){
             ++movimentos_j2;
             mudar_jogador_atual(e, 1);
         }
-        if(strlen(linha) < 11 && sscanf(linha,"%02d: %s",&jogada,movJ1) == 2){
+        else if(strlen(linha) < 11 && sscanf(linha,"%02d: %s",&jogada,movJ1) == 2){
             COORDENADA jogada_j1 = {movJ1[0] - 'a', movJ1[1] - '1'};
             altera_array_jogadas(e,jogada_j1,jogada  ,1);
             altera_ultima_jogada(e,jogada_j1);
@@ -231,4 +231,3 @@ int switch_player(int jogador ){
     }
 }
 
-//void copia_tab(ESTADO *e1 )
