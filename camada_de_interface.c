@@ -96,10 +96,10 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         COORDENADA coord = {*col - 'a', *lin - '1'};
         if (verificaJogada(e, coord)){
             incrementa_num_comandos(e);
-            if (verifica_Vitoria_Jog1(coord) == 1){
+            if (verifica_Vitoria_Jog1(coord,0) == 1){
                 return 0;
             }
-            else if (verifica_Vitoria_Jog2 (coord)){
+            else if (verifica_Vitoria_Jog2 (coord,0)){
                 return 0;
             }
             jogar(e, coord);
@@ -143,9 +143,9 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         jogar(e, jogada);
         mostrar_tabuleiro(e,NULL);
 
-        if (verifica_Vitoria_Jog1(jogada))
+        if (verifica_Vitoria_Jog1(jogada,0))
             return 0;
-        if(verifica_Vitoria_Jog2(jogada))
+        if(verifica_Vitoria_Jog2(jogada,0))
             return  0;
         if(verifica_Bloqueio(e,jogada))
             return 0;
@@ -155,6 +155,12 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         jogada = jog2(e, obter_ultima_jogada(e));
         jogar(e, jogada);
         mostrar_tabuleiro(e,NULL);
+        if (verifica_Vitoria_Jog1(jogada,0))
+            return 0;
+        if(verifica_Vitoria_Jog2(jogada,0))
+            return  0;
+        if(verifica_Bloqueio(e,jogada))
+            return 0;
     }
     return 1;
 }
