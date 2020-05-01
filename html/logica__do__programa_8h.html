@@ -117,8 +117,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a9fa14d48bd047750d95ae690394726db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a9fa14d48bd047750d95ae690394726db">minimax</a> (<a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a> tab[8][8], <a class="el" href="structCOORDENADA.html">COORDENADA</a> *c, int depth, int maximizingPlayer, int player, int alpha, int beta)</td></tr>
 <tr class="memdesc:a9fa14d48bd047750d95ae690394726db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para aplicar a heurística minmax.  <a href="#a9fa14d48bd047750d95ae690394726db">More...</a><br /></td></tr>
 <tr class="separator:a9fa14d48bd047750d95ae690394726db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6493ff38d42c0006357854fd67a0f2b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a6493ff38d42c0006357854fd67a0f2b7">bloqueio_minimax</a> (<a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a> tab[8][8], <a class="el" href="structnodo.html">LISTA</a> CASAS_DISPONIVEIS)</td></tr>
-<tr class="separator:a6493ff38d42c0006357854fd67a0f2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4203eda4416534176ea72b0b5fd69c88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCOORDENADA.html">COORDENADA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a4203eda4416534176ea72b0b5fd69c88">jog2</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, <a class="el" href="structCOORDENADA.html">COORDENADA</a> c)</td></tr>
 <tr class="memdesc:a4203eda4416534176ea72b0b5fd69c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para executar o comando jog2.  <a href="#a4203eda4416534176ea72b0b5fd69c88">More...</a><br /></td></tr>
 <tr class="separator:a4203eda4416534176ea72b0b5fd69c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,42 +166,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A lista L com todas as posições possíveis </dd></dl>
-
-</div>
-</div>
-<a id="a6493ff38d42c0006357854fd67a0f2b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6493ff38d42c0006357854fd67a0f2b7">&#9670;&nbsp;</a></span>bloqueio_minimax()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int bloqueio_minimax </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a>&#160;</td>
-          <td class="paramname"><em>tab</em>[8][8], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structnodo.html">LISTA</a>&#160;</td>
-          <td class="paramname"><em>CASAS_DISPONIVEIS</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">tab</td><td>O tabuleiro </td></tr>
-    <tr><td class="paramname">CASAS_DISPONIVEIS</td><td>A lista de casas disponíveis </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -652,8 +614,8 @@ Functions</h2></td></tr>
 <p>Função que verifica se o jogador 1 venceu. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">e</td><td>Apontador para o Estado atual </td></tr>
     <tr><td class="paramname">c</td><td>Coordenada </td></tr>
+    <tr><td class="paramname">minimax</td><td>0 ou 1 dependendo se é necessário dar print </td></tr>
   </table>
   </dd>
 </dl>
@@ -691,7 +653,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">c</td><td>Coordenada </td></tr>
-    <tr><td class="paramname">minimax</td><td>O valor calculado em minimax </td></tr>
+    <tr><td class="paramname">minimax</td><td>0 ou 1 dependendo se é necessário dar print </td></tr>
   </table>
   </dd>
 </dl>

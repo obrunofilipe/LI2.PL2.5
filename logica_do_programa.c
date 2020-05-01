@@ -283,18 +283,6 @@ int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, in
     }
 }
 
-int bloqueio_minimax(CASA tab[8][8], LISTA CASAS_DISPONIVEIS){
-    COORDENADA *c;
-    int result = 1;
-    while(!lista_esta_vazia(CASAS_DISPONIVEIS)){
-        c = CASAS_DISPONIVEIS->valor;
-        if(obter_estado_casa(tab,*c) != PRETA)
-            result = 0;
-        CASAS_DISPONIVEIS = remove_cabeca(CASAS_DISPONIVEIS);
-    }
-    return result;
-}
-
 
 COORDENADA jog2 (ESTADO *e, COORDENADA last_mov){
     LISTA JOGADAS_POSSIVEIS;

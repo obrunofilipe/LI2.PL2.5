@@ -29,17 +29,18 @@ int verificaJogada (ESTADO *e, COORDENADA c);
 
 /**
 \brief Função que verifica se o jogador 1 venceu
-@param e Apontador para o Estado atual
 @param c Coordenada
+@param minimax 0 ou 1 dependendo se é necessário dar print
 @return O inteiro 1 se venceu, 0 em caso contrário
-*/
-//alterei esta funçao
+ */
+//alter
+
 int verifica_Vitoria_Jog1 (COORDENADA c, int minimax);
 
 /**
 \brief Função que verifica se o jogador 2 venceu
 @param c Coordenada
-@param minimax O valor calculado em minimax
+@param minimax 0 ou 1 dependendo se é necessário dar print
 @return O inteiro 1 se venceu, 0 em caso contrário
  */
 //alterei esta funçao
@@ -126,13 +127,6 @@ int score_minimax (COORDENADA *c , int maximizingPlayer );
  */
 int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, int player, int alpha, int beta);
 
-/**
-\brief
-@param tab O tabuleiro
-@param CASAS_DISPONIVEIS A lista de casas disponíveis
-@return
- */
-int bloqueio_minimax(CASA tab[8][8], LISTA CASAS_DISPONIVEIS);
 
 /**
 \brief Função para executar o comando jog2
@@ -141,8 +135,5 @@ int bloqueio_minimax(CASA tab[8][8], LISTA CASAS_DISPONIVEIS);
 @return A jogada que traz mais benefícios ao jogador atual e menos ao adversário segundo a heurística minmax
 */
 COORDENADA jog2 (ESTADO *e, COORDENADA c);
-
-
-
 
 #endif

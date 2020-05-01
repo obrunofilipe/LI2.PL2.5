@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['jog',['jog',['../logica__do__programa_8h.html#a44cb151933c38edce62b91de8f1eb03d',1,'logica_do_programa.c']]],
-  ['jog2',['jog2',['../logica__do__programa_8h.html#a4203eda4416534176ea72b0b5fd69c88',1,'logica_do_programa.c']]],
-  ['jogar',['jogar',['../logica__do__programa_8h.html#a53472e75f056ceb02b5387193021838a',1,'logica_do_programa.c']]]
+  ['ler_5fdados',['ler_dados',['../camada__de__dados_8h.html#a329ca4ca6a4ac95a0bcbbf4e09500dc7',1,'camada_de_dados.h']]],
+  ['ler_5fmovs',['ler_movs',['../camada__de__dados_8h.html#aed53970f98d13646eb42b86536acd582',1,'camada_de_dados.c']]],
+  ['ler_5ftabuleiro',['ler_tabuleiro',['../camada__de__dados_8h.html#ae2ba0aa85a3e065ef292e1f666ece8b6',1,'camada_de_dados.c']]],
+  ['liberta_5flista',['liberta_lista',['../listas_8h.html#afd9ab83176ab73a7104b5ef0e23c9d29',1,'listas.c']]],
+  ['lista_5festa_5fvazia',['lista_esta_vazia',['../listas_8h.html#a4c10928f7acaa4e3de3760cea0dfd9c0',1,'listas.c']]]
 ];

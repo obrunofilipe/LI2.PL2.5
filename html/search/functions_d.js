@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['score_5fminimax',['score_minimax',['../logica__do__programa_8h.html#ae3af156fcfb85bf6a7fdbe830d9f1cc5',1,'logica_do_programa.c']]],
-  ['showprompt',['showPrompt',['../camada__de__interface_8h.html#a8c57caa56734ce0b34dcb34f430d39ec',1,'camada_de_interface.c']]],
-  ['switch_5fplayer',['switch_player',['../camada__de__dados_8h.html#ae3a752a6ca926f49ceaeb54c96478aa1',1,'camada_de_dados.c']]]
+  ['verifica_5fbloqueio',['verifica_Bloqueio',['../logica__do__programa_8h.html#a8b341510d646820c85b1935d939bd94d',1,'logica_do_programa.c']]],
+  ['verifica_5fvitoria_5fjog1',['verifica_Vitoria_Jog1',['../logica__do__programa_8h.html#a316e652f244df13f941c813ae7b4940f',1,'logica_do_programa.c']]],
+  ['verifica_5fvitoria_5fjog2',['verifica_Vitoria_Jog2',['../logica__do__programa_8h.html#a9283caa7dbdcd81622412d09151babf1',1,'logica_do_programa.c']]],
+  ['verificajogada',['verificaJogada',['../logica__do__programa_8h.html#a1a37a3c530ad08eb3f6f5bb0674caa32',1,'logica_do_programa.c']]]
 ];

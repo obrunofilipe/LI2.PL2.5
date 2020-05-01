@@ -34,8 +34,6 @@ int \hyperlink{logica__do__programa_8h_ae3af156fcfb85bf6a7fdbe830d9f1cc5}{score\
 \begin{DoxyCompactList}\small\item\em Função para calcular a maximização do jogador segundo o minmax. \end{DoxyCompactList}\item 
 int \hyperlink{logica__do__programa_8h_a9fa14d48bd047750d95ae690394726db}{minimax} (\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$c, int depth, int maximizing\+Player, int player, int alpha, int beta)
 \begin{DoxyCompactList}\small\item\em Função para aplicar a heurística minmax. \end{DoxyCompactList}\item 
-int \hyperlink{logica__do__programa_8h_a6493ff38d42c0006357854fd67a0f2b7}{bloqueio\+\_\+minimax} (\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}, \hyperlink{structnodo}{L\+I\+S\+TA} C\+A\+S\+A\+S\+\_\+\+D\+I\+S\+P\+O\+N\+I\+V\+E\+IS)
-\item 
 \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} \hyperlink{logica__do__programa_8h_a4203eda4416534176ea72b0b5fd69c88}{jog2} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
 \begin{DoxyCompactList}\small\item\em Função para executar o comando jog2. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -65,22 +63,6 @@ Função para armazenar as posições possíveis de jogar.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 A lista L com todas as posições possíveis 
-\end{DoxyReturn}
-\mbox{\Hypertarget{logica__do__programa_8h_a6493ff38d42c0006357854fd67a0f2b7}\label{logica__do__programa_8h_a6493ff38d42c0006357854fd67a0f2b7}} 
-\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!bloqueio\+\_\+minimax@{bloqueio\+\_\+minimax}}
-\index{bloqueio\+\_\+minimax@{bloqueio\+\_\+minimax}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
-\subsubsection{\texorpdfstring{bloqueio\+\_\+minimax()}{bloqueio\_minimax()}}
-{\footnotesize\ttfamily int bloqueio\+\_\+minimax (\begin{DoxyParamCaption}\item[{\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA}}]{tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]},  }\item[{\hyperlink{structnodo}{L\+I\+S\+TA}}]{C\+A\+S\+A\+S\+\_\+\+D\+I\+S\+P\+O\+N\+I\+V\+E\+IS }\end{DoxyParamCaption})}
-
-
-\begin{DoxyParams}{Parameters}
-{\em tab} & O tabuleiro \\
-\hline
-{\em C\+A\+S\+A\+S\+\_\+\+D\+I\+S\+P\+O\+N\+I\+V\+E\+IS} & A lista de casas disponíveis \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-
 \end{DoxyReturn}
 \mbox{\Hypertarget{logica__do__programa_8h_a131a18f3cc23681587fa4344ee1e6f40}\label{logica__do__programa_8h_a131a18f3cc23681587fa4344ee1e6f40}} 
 \index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!cria\+Array\+\_\+posicoes@{cria\+Array\+\_\+posicoes}}
@@ -308,9 +290,9 @@ Função que verifica se o jogador 1 venceu.
 
 
 \begin{DoxyParams}{Parameters}
-{\em e} & Apontador para o Estado atual \\
-\hline
 {\em c} & Coordenada \\
+\hline
+{\em minimax} & 0 ou 1 dependendo se é necessário dar print \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -330,7 +312,7 @@ Função que verifica se o jogador 2 venceu.
 \begin{DoxyParams}{Parameters}
 {\em c} & Coordenada \\
 \hline
-{\em minimax} & O valor calculado em minimax \\
+{\em minimax} & 0 ou 1 dependendo se é necessário dar print \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
