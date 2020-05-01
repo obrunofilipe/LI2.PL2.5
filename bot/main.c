@@ -6,8 +6,6 @@
 
 int main(int argc, char *f_name[]) {
 
-    if (argc == 0) return 0;
-
     FILE *f_in;
 
     ESTADO *e = inicializar_estado();
@@ -46,7 +44,6 @@ int main(int argc, char *f_name[]) {
         return 0;
 
     grava_dados(e, f_name[2]);
-
 
     return 0;
 

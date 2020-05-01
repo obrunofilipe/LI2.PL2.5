@@ -181,7 +181,6 @@ COORDENADA jog (ESTADO  *e, COORDENADA pos){
     JOGADAS_POSSIVEIS = armazena_posicoes(e->tab,JOGADAS_POSSIVEIS,posicoes);
 
     melhor = euristica(e,JOGADAS_POSSIVEIS);
-    print_LISTA(JOGADAS_POSSIVEIS);
     incrementa_num_comandos(e);
     liberta_lista(JOGADAS_POSSIVEIS);
     return *melhor;
