@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/bot.dir/main.c.o CMakeFiles/bot.dir/camada_de_dados.c.o CMakeFiles/bot.dir/camada_de_interface.c.o CMakeFiles/bot.dir/logica_do_programa.c.o CMakeFiles/bot.dir/listas.c.o  -o bot 
