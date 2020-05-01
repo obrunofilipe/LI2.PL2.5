@@ -71,7 +71,7 @@ void printMOVS(ESTADO *e, FILE * f_pointer){
         jogada_j1_Coluna = jogada.jogador1.coluna + 'a';
         jogada_j2_Linha = jogada.jogador2.linha + '1';
         jogada_j2_Coluna = jogada.jogador2.coluna + 'a';
-        fprintf(f_pointer,"%02d: %c%c %c%c \n", i + 1 ,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha); // print dos movimentos no formato pretendido
+        fprintf(f_pointer,"%02d: %c%c %c%c\n", i + 1 ,jogada_j1_Coluna,jogada_j1_Linha,jogada_j2_Coluna,jogada_j2_Linha); // print dos movimentos no formato pretendido
     }
     if(movimentos_j1 > movimentos_j2){
         jogada = obter_estado_jogada(e,i);
