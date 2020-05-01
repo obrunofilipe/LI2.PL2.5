@@ -59,7 +59,6 @@ void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer){ // desenha o tabuleiro que e
 void printMOVS(ESTADO *e, FILE * f_pointer){
     int i ,movimentos_j1,movimentos_j2; // varivel utilizada no ciclo
     int num_jogadas = obter_numero_de_jogadas(e); // numero total de jogadas efetuadas
-    COORDENADA ultimajogada = obter_ultima_jogada(e); // ultimo movimento efetuado
     JOGADA jogada;
     char jogada_j1_Coluna, jogada_j1_Linha, jogada_j2_Coluna, jogada_j2_Linha;
     movimentos_j1 = obter_numero_movimentos(e,1);
