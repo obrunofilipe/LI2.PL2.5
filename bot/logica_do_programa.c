@@ -198,7 +198,7 @@ int score_minimax (COORDENADA *c , int maximizingPlayer ){
 int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, int player, int alpha, int beta){
     int Score, bestScore;
     LISTA  JOGADAS_POSSIVEIS = NULL;
-    COORDENADA posicoes[8],*cf,copia_tab[8][8];
+    COORDENADA posicoes[8],*cf;
     criaArray_posicoes(*c,posicoes);
     JOGADAS_POSSIVEIS = armazena_posicoes(tab,JOGADAS_POSSIVEIS,posicoes);
 
@@ -287,7 +287,7 @@ COORDENADA jog2 (ESTADO *e, COORDENADA last_mov){
         altera_estado_casa(e,last_mov,'#');
         altera_estado_casa(e,*mov,'*');
         jogador = obter_jogador_atual(e);
-        score = minimax(e->tab,mov,14,obter_jogador_atual(e),switch_player(obter_jogador_atual(e)), alpha,beta);  //calcular o score de cada uma das opçoes disponiveis
+        score = minimax(e->tab,mov,14,obter_jogador_atual(e),switch_player(jogador), alpha,beta);  //calcular o score de cada uma das opçoes disponiveis
         altera_estado_casa(e,last_mov,'*');
         altera_estado_casa(e,*mov,'.');
         if(score > bestScore){

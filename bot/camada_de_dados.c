@@ -40,7 +40,6 @@ CASA obter_estado_casa(CASA tab[8][8], COORDENADA c){ // retorna o estado de uma
 }
 
 ESTADO *inicializar_estado(){
-    CASA tabuleiro[8][8];                                   // declarar o tabuleiro
     ESTADO *estadoJogo = (ESTADO *) malloc(sizeof(ESTADO)); // declarar o estado
     inicializar_tabuleiro(estadoJogo->tab);                 // modifica a matriz  tabuleiro
     estadoJogo->jogador_atual = 1;                          // inicializa o jogador_atual
@@ -109,7 +108,7 @@ void altera_movimentos_j2 (ESTADO *e, int mov_j2){
 }
 
 void altera_estado_casa(ESTADO *e, COORDENADA posicao, char estado){
-    CASA casa_alterada;
+    CASA casa_alterada = VAZIO;
     switch(estado){
         case '.':
             casa_alterada = VAZIO;
@@ -142,7 +141,8 @@ void grava_dados(ESTADO *e , char * file_name ){
 int ler_tabuleiro(ESTADO *e , FILE * f_pointer){
     for(int l = 7; l >= 0 ; l--){
         char linha[BUF_SIZE];
-        fgets(linha,BUF_SIZE,f_pointer);
+        if(fgets(linha,BUF_SIZE,f_pointer) == NULL)
+            return 0;
         for(int c = 0 ; c < 7 ; c++) {
             COORDENADA posicao = {c , l};
             altera_estado_casa(e, posicao, linha[c]);
@@ -193,4 +193,5 @@ int switch_player(int jogador ){
             return 1;
             break;
     }
+    return 0;
 }
