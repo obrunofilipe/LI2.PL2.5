@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['criar_5flista',['criar_lista',['../listas_8h.html#ae3b99323b6f8f35d80bb69ff1a27985e',1,'listas.c']]]
+  ['bloqueio_5fminimax',['bloqueio_minimax',['../logica__do__programa_8h.html#a6493ff38d42c0006357854fd67a0f2b7',1,'logica_do_programa.c']]]
 ];

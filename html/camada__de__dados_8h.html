@@ -120,9 +120,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a6cd0b387bdee9e18003c78852394aa63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#a6cd0b387bdee9e18003c78852394aa63">obter_numero_de_jogadas</a> (<a class="el" href="structESTADO.html">ESTADO</a> *estado)</td></tr>
 <tr class="memdesc:a6cd0b387bdee9e18003c78852394aa63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para obter o número de jogadas efetuadas (cada jogada tem o movimento de dois jogadores)  <a href="#a6cd0b387bdee9e18003c78852394aa63">More...</a><br /></td></tr>
 <tr class="separator:a6cd0b387bdee9e18003c78852394aa63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6faa68373203923729ed38657aa0f768"><td class="memItemLeft" align="right" valign="top"><a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#a6faa68373203923729ed38657aa0f768">obter_estado_casa</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, <a class="el" href="structCOORDENADA.html">COORDENADA</a> c)</td></tr>
-<tr class="memdesc:a6faa68373203923729ed38657aa0f768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para obter o estado de uma casa do tabuleiro.  <a href="#a6faa68373203923729ed38657aa0f768">More...</a><br /></td></tr>
-<tr class="separator:a6faa68373203923729ed38657aa0f768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed6b059967a9235fa62c7691203606a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#a0ed6b059967a9235fa62c7691203606a">obter_estado_casa</a> (<a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a> tab[8][8], <a class="el" href="structCOORDENADA.html">COORDENADA</a> c)</td></tr>
+<tr class="memdesc:a0ed6b059967a9235fa62c7691203606a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para obter o estado de uma casa do tabuleiro.  <a href="#a0ed6b059967a9235fa62c7691203606a">More...</a><br /></td></tr>
+<tr class="separator:a0ed6b059967a9235fa62c7691203606a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37422da20c66c350333f92bae973a3f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#a37422da20c66c350333f92bae973a3f2">atualiza_estado_jogo</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, <a class="el" href="structCOORDENADA.html">COORDENADA</a> c)</td></tr>
 <tr class="memdesc:a37422da20c66c350333f92bae973a3f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que atualiza o estado de jogo após cada jogada.  <a href="#a37422da20c66c350333f92bae973a3f2">More...</a><br /></td></tr>
 <tr class="separator:a37422da20c66c350333f92bae973a3f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,12 +174,15 @@ Functions</h2></td></tr>
 <tr class="memitem:aed53970f98d13646eb42b86536acd582"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#aed53970f98d13646eb42b86536acd582">ler_movs</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, FILE *f_pointer)</td></tr>
 <tr class="memdesc:aed53970f98d13646eb42b86536acd582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para ler os movs de um ficheiro.  <a href="#aed53970f98d13646eb42b86536acd582">More...</a><br /></td></tr>
 <tr class="separator:aed53970f98d13646eb42b86536acd582"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf81766175bc061ea1deb4b4d5bcf016"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#aaf81766175bc061ea1deb4b4d5bcf016">reinicia_pos</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, int pos, <a class="el" href="structJOGADA.html">JOGADA</a> *jog)</td></tr>
+<tr class="memitem:aaf81766175bc061ea1deb4b4d5bcf016"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#aaf81766175bc061ea1deb4b4d5bcf016">reinicia_pos</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, int pos, <a class="el" href="structJOGADA.html">JOGADA</a> *<a class="el" href="logica__do__programa_8h.html#a44cb151933c38edce62b91de8f1eb03d">jog</a>)</td></tr>
 <tr class="memdesc:aaf81766175bc061ea1deb4b4d5bcf016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para reinicir o pos.  <a href="#aaf81766175bc061ea1deb4b4d5bcf016">More...</a><br /></td></tr>
 <tr class="separator:aaf81766175bc061ea1deb4b4d5bcf016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2362774c3566a31762c24b44a56b598c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJOGADA.html">JOGADA</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#a2362774c3566a31762c24b44a56b598c">obter_array_jogadas</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e)</td></tr>
 <tr class="memdesc:a2362774c3566a31762c24b44a56b598c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para obter o array das jogadas.  <a href="#a2362774c3566a31762c24b44a56b598c">More...</a><br /></td></tr>
 <tr class="separator:a2362774c3566a31762c24b44a56b598c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3a752a6ca926f49ceaeb54c96478aa1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#ae3a752a6ca926f49ceaeb54c96478aa1">switch_player</a> (int jogador)</td></tr>
+<tr class="memdesc:ae3a752a6ca926f49ceaeb54c96478aa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para alterar o jogador para o próximo.  <a href="#ae3a752a6ca926f49ceaeb54c96478aa1">More...</a><br /></td></tr>
+<tr class="separator:ae3a752a6ca926f49ceaeb54c96478aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Definições dos dados presentes no estado e das funções que o alteram </p>
@@ -751,8 +754,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6faa68373203923729ed38657aa0f768"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6faa68373203923729ed38657aa0f768">&#9670;&nbsp;</a></span>obter_estado_casa()</h2>
+<a id="a0ed6b059967a9235fa62c7691203606a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed6b059967a9235fa62c7691203606a">&#9670;&nbsp;</a></span>obter_estado_casa()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -760,8 +763,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a> obter_estado_casa </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structESTADO.html">ESTADO</a> *&#160;</td>
-          <td class="paramname"><em>e</em>, </td>
+          <td class="paramtype"><a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a>&#160;</td>
+          <td class="paramname"><em>tab</em>[8][8], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1015,6 +1018,33 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>O estado depois de aplicado o comando pos </dd></dl>
+
+</div>
+</div>
+<a id="ae3a752a6ca926f49ceaeb54c96478aa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a752a6ca926f49ceaeb54c96478aa1">&#9670;&nbsp;</a></span>switch_player()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int switch_player </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>jogador</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função para alterar o jogador para o próximo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jogador</td><td>O número do jogador atual </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número do próximo jogador </dd></dl>
 
 </div>
 </div>

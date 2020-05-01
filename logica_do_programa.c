@@ -295,7 +295,6 @@ int bloqueio_minimax(CASA tab[8][8], LISTA CASAS_DISPONIVEIS){
     return result;
 }
 
-//int verificaVitoria(int maximizingPlayer,)
 
 COORDENADA jog2 (ESTADO *e, COORDENADA last_mov){
     LISTA JOGADAS_POSSIVEIS;

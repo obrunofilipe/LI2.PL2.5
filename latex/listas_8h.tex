@@ -1,5 +1,7 @@
 \hypertarget{listas_8h}{}\section{listas.\+h File Reference}
 \label{listas_8h}\index{listas.\+h@{listas.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -28,7 +30,9 @@ void $\ast$ \hyperlink{listas_8h_abfcb205f3eb670157be0d1221021714b}{devolve\+\_\
 \hyperlink{structnodo}{L\+I\+S\+TA} \hyperlink{listas_8h_a9026a681a68322b5ec7f07137b864cbd}{remove\+\_\+cabeca} (\hyperlink{structnodo}{L\+I\+S\+TA} L)
 \begin{DoxyCompactList}\small\item\em Função para retirar a cabeça de uma lista e esvaziar o espaço previamente ocupado pela cabeça. \end{DoxyCompactList}\item 
 int \hyperlink{listas_8h_a4c10928f7acaa4e3de3760cea0dfd9c0}{lista\+\_\+esta\+\_\+vazia} (\hyperlink{structnodo}{L\+I\+S\+TA} L)
-\begin{DoxyCompactList}\small\item\em Função para verificar se uma lista é vazia, isto é, não tem nenhum elemento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Função para verificar se uma lista é vazia, isto é, não tem nenhum elemento. \end{DoxyCompactList}\item 
+\hyperlink{structnodo}{L\+I\+S\+TA} \hyperlink{listas_8h_afd9ab83176ab73a7104b5ef0e23c9d29}{liberta\+\_\+lista} (\hyperlink{structnodo}{L\+I\+S\+TA} L)
+\begin{DoxyCompactList}\small\item\em Função para libertar a memória alocada para uma lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -85,6 +89,24 @@ Função para adicionar elementos à cabeça de uma lista.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 A lista com o valor adicionado à cabeça 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8h_afd9ab83176ab73a7104b5ef0e23c9d29}\label{listas_8h_afd9ab83176ab73a7104b5ef0e23c9d29}} 
+\index{listas.\+h@{listas.\+h}!liberta\+\_\+lista@{liberta\+\_\+lista}}
+\index{liberta\+\_\+lista@{liberta\+\_\+lista}!listas.\+h@{listas.\+h}}
+\subsubsection{\texorpdfstring{liberta\+\_\+lista()}{liberta\_lista()}}
+{\footnotesize\ttfamily \hyperlink{structnodo}{L\+I\+S\+TA} liberta\+\_\+lista (\begin{DoxyParamCaption}\item[{\hyperlink{structnodo}{L\+I\+S\+TA}}]{L }\end{DoxyParamCaption})}
+
+
+
+Função para libertar a memória alocada para uma lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & A lista para se libertar a memória \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uma lista vazia 
 \end{DoxyReturn}
 \mbox{\Hypertarget{listas_8h_a4c10928f7acaa4e3de3760cea0dfd9c0}\label{listas_8h_a4c10928f7acaa4e3de3760cea0dfd9c0}} 
 \index{listas.\+h@{listas.\+h}!lista\+\_\+esta\+\_\+vazia@{lista\+\_\+esta\+\_\+vazia}}

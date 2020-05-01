@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jogar',['jogar',['../logica__do__programa_8h.html#a53472e75f056ceb02b5387193021838a',1,'logica_do_programa.c']]]
+  ['grava_5fdados',['grava_dados',['../camada__de__dados_8h.html#ae0d7061c4156a335fb19d754f9e777d9',1,'camada_de_dados.c']]]
 ];

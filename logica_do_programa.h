@@ -38,10 +38,10 @@ int verifica_Vitoria_Jog1 (COORDENADA c, int minimax);
 
 /**
 \brief Função que verifica se o jogador 2 venceu
-@param e Apontador para o Estado atual
 @param c Coordenada
+@param minimax O valor calculado em minimax
 @return O inteiro 1 se venceu, 0 em caso contrário
-*/
+ */
 //alterei esta funçao
 int verifica_Vitoria_Jog2 (COORDENADA c, int minimax);
 
@@ -54,16 +54,16 @@ int verifica_Vitoria_Jog2 (COORDENADA c, int minimax);
 int verifica_Bloqueio (ESTADO *e, COORDENADA c);
 
 /**
-\brief
+\brief Função auxiliar para calcular a distância euclidiana até à posição 1
 @param c Coordenada
-@return
+@return A distância à posição 1
 */
 int distancia_a_1 (COORDENADA *c);
 
 /**
-\brief
+\brief Função auxiliar para calcular a distância euclidiana até à posição 2
 @param c Coordenada
-@return
+@return A distância à posição 2
 */
 int distancia_a_2 (COORDENADA *c);
 
@@ -91,12 +91,58 @@ LISTA armazena_posicoes(CASA tab[8][8],LISTA L, COORDENADA *posicoes);
 void print_LISTA(LISTA L);
 
 /**
+\brief Função para criar um array com as posições à volta da posição atual
+@param a A coordenada atual
+@param array Array a ser preenchido
+ */
+void criaArray_posicoes(COORDENADA a, COORDENADA* array);
+
+/**
 \brief Função para executar o comando jog
-@param e O estado atual
+@param e Apontador para o estado atual
 @param pos A posição atual
-@return A melhor jogada possível de forma a aproximar-se do objetivo
+@return A melhor jogada possível de forma a aproximar-se do objetivo segundo o algoritmo da distância euclidiana
 */
 COORDENADA jog (ESTADO  *e, COORDENADA pos);
-COORDENADA jog2 (ESTADO *e, COORDENADA c);
+
+/**
+\brief Função para calcular a maximização do jogador segundo o minmax
+@param c A coordenada atual
+@param maximizingPlayer O jogador a ser maximizado
+@return O valor da maximização
+*/
+int score_minimax (COORDENADA *c , int maximizingPlayer );
+
+/**
+\brief Função para aplicar a heurística minmax
+@param tab O tabuleiro
+@param c A coordenada atual
+@param depth Número de camadas a analisar
+@param maximizingPlayer Jogador a maximizar, ou seja, o jogador que vai utilizar a heurística
+@param player Jogador adversário
+@param alpha A melhor maximização até ao moment
+@param beta A melhor minimização até ao momento
+@return O melhor resultado obtido na heurística
+ */
+int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, int player, int alpha, int beta);
+
+/**
+\brief
+@param tab O tabuleiro
+@param CASAS_DISPONIVEIS A lista de casas disponíveis
+@return
+ */
 int bloqueio_minimax(CASA tab[8][8], LISTA CASAS_DISPONIVEIS);
+
+/**
+\brief Função para executar o comando jog2
+@param e Apontador para o estado atual
+@param c Coordenada atual
+@return A jogada que traz mais benefícios ao jogador atual e menos ao adversário segundo a heurística minmax
+*/
+COORDENADA jog2 (ESTADO *e, COORDENADA c);
+
+
+
+
 #endif

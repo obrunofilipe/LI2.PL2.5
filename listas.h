@@ -55,6 +55,11 @@ LISTA remove_cabeca(LISTA L);
 */
 int lista_esta_vazia(LISTA L);
 
+/**
+\brief Função para libertar a memória alocada para uma lista
+@param L A lista para se libertar a memória
+@return Uma lista vazia
+*/
 LISTA liberta_lista (LISTA L);
 
 #endif

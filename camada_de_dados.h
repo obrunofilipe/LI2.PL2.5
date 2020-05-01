@@ -235,5 +235,11 @@ void reinicia_pos (ESTADO *e, int pos, JOGADA *jog);
 @return O array das Jogadas
  */
 JOGADA *obter_array_jogadas (ESTADO *e);
+
+/**
+\brief Função para alterar o jogador para o próximo
+@param jogador O número do jogador atual
+@return O número do próximo jogador
+*/
 int switch_player(int jogador );
 #endif

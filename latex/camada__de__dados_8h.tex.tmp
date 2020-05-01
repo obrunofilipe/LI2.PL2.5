@@ -38,7 +38,7 @@ int \hyperlink{camada__de__dados_8h_ad6e326e4ffa57ca1ae0c75377ecefc8c}{obter\+\_
 \begin{DoxyCompactList}\small\item\em Função para obter o número do jogador atual. \end{DoxyCompactList}\item 
 int \hyperlink{camada__de__dados_8h_a6cd0b387bdee9e18003c78852394aa63}{obter\+\_\+numero\+\_\+de\+\_\+jogadas} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$estado)
 \begin{DoxyCompactList}\small\item\em Função para obter o número de jogadas efetuadas (cada jogada tem o movimento de dois jogadores) \end{DoxyCompactList}\item 
-\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} \hyperlink{camada__de__dados_8h_a6faa68373203923729ed38657aa0f768}{obter\+\_\+estado\+\_\+casa} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} \hyperlink{camada__de__dados_8h_a0ed6b059967a9235fa62c7691203606a}{obter\+\_\+estado\+\_\+casa} (\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
 \begin{DoxyCompactList}\small\item\em Função para obter o estado de uma casa do tabuleiro. \end{DoxyCompactList}\item 
 void \hyperlink{camada__de__dados_8h_a37422da20c66c350333f92bae973a3f2}{atualiza\+\_\+estado\+\_\+jogo} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
 \begin{DoxyCompactList}\small\item\em Função que atualiza o estado de jogo após cada jogada. \end{DoxyCompactList}\item 
@@ -74,10 +74,12 @@ int \hyperlink{camada__de__dados_8h_ae2ba0aa85a3e065ef292e1f666ece8b6}{ler\+\_\+
 \begin{DoxyCompactList}\small\item\em Função para ler o tabuleiro de um ficheiro. \end{DoxyCompactList}\item 
 void \hyperlink{camada__de__dados_8h_aed53970f98d13646eb42b86536acd582}{ler\+\_\+movs} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, F\+I\+LE $\ast$f\+\_\+pointer)
 \begin{DoxyCompactList}\small\item\em Função para ler os movs de um ficheiro. \end{DoxyCompactList}\item 
-void \hyperlink{camada__de__dados_8h_aaf81766175bc061ea1deb4b4d5bcf016}{reinicia\+\_\+pos} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, int pos, \hyperlink{structJOGADA}{J\+O\+G\+A\+DA} $\ast$jog)
+void \hyperlink{camada__de__dados_8h_aaf81766175bc061ea1deb4b4d5bcf016}{reinicia\+\_\+pos} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, int pos, \hyperlink{structJOGADA}{J\+O\+G\+A\+DA} $\ast$\hyperlink{logica__do__programa_8h_a44cb151933c38edce62b91de8f1eb03d}{jog})
 \begin{DoxyCompactList}\small\item\em Função para reinicir o pos. \end{DoxyCompactList}\item 
 \hyperlink{structJOGADA}{J\+O\+G\+A\+DA} $\ast$ \hyperlink{camada__de__dados_8h_a2362774c3566a31762c24b44a56b598c}{obter\+\_\+array\+\_\+jogadas} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e)
-\begin{DoxyCompactList}\small\item\em Função para obter o array das jogadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Função para obter o array das jogadas. \end{DoxyCompactList}\item 
+int \hyperlink{camada__de__dados_8h_ae3a752a6ca926f49ceaeb54c96478aa1}{switch\+\_\+player} (int jogador)
+\begin{DoxyCompactList}\small\item\em Função para alterar o jogador para o próximo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -364,11 +366,11 @@ Função para obter o array das jogadas.
 \begin{DoxyReturn}{Returns}
 O array das Jogadas 
 \end{DoxyReturn}
-\mbox{\Hypertarget{camada__de__dados_8h_a6faa68373203923729ed38657aa0f768}\label{camada__de__dados_8h_a6faa68373203923729ed38657aa0f768}} 
+\mbox{\Hypertarget{camada__de__dados_8h_a0ed6b059967a9235fa62c7691203606a}\label{camada__de__dados_8h_a0ed6b059967a9235fa62c7691203606a}} 
 \index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!obter\+\_\+estado\+\_\+casa@{obter\+\_\+estado\+\_\+casa}}
 \index{obter\+\_\+estado\+\_\+casa@{obter\+\_\+estado\+\_\+casa}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
 \subsubsection{\texorpdfstring{obter\+\_\+estado\+\_\+casa()}{obter\_estado\_casa()}}
-{\footnotesize\ttfamily \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} obter\+\_\+estado\+\_\+casa (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} obter\+\_\+estado\+\_\+casa (\begin{DoxyParamCaption}\item[{\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA}}]{tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]},  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
 
 
 
@@ -517,4 +519,22 @@ Função para reinicir o pos.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 O estado depois de aplicado o comando pos 
+\end{DoxyReturn}
+\mbox{\Hypertarget{camada__de__dados_8h_ae3a752a6ca926f49ceaeb54c96478aa1}\label{camada__de__dados_8h_ae3a752a6ca926f49ceaeb54c96478aa1}} 
+\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!switch\+\_\+player@{switch\+\_\+player}}
+\index{switch\+\_\+player@{switch\+\_\+player}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
+\subsubsection{\texorpdfstring{switch\+\_\+player()}{switch\_player()}}
+{\footnotesize\ttfamily int switch\+\_\+player (\begin{DoxyParamCaption}\item[{int}]{jogador }\end{DoxyParamCaption})}
+
+
+
+Função para alterar o jogador para o próximo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jogador} & O número do jogador atual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número do próximo jogador 
 \end{DoxyReturn}

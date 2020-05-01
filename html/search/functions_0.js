@@ -5,5 +5,6 @@ var searchData=
   ['altera_5fmovimentos_5fj1',['altera_movimentos_j1',['../camada__de__dados_8h.html#a3cef1ce5bce2aac553882339c0f742cb',1,'camada_de_dados.c']]],
   ['altera_5fmovimentos_5fj2',['altera_movimentos_j2',['../camada__de__dados_8h.html#a2c11be2891bb52a9b920415bbc4fbd36',1,'camada_de_dados.c']]],
   ['altera_5fultima_5fjogada',['altera_ultima_jogada',['../camada__de__dados_8h.html#ac513714cdb4fb130ad6115e4cf4f6564',1,'camada_de_dados.c']]],
+  ['armazena_5fposicoes',['armazena_posicoes',['../logica__do__programa_8h.html#aa09f509bec3d879dd425ef1ce9fd47fd',1,'logica_do_programa.c']]],
   ['atualiza_5festado_5fjogo',['atualiza_estado_jogo',['../camada__de__dados_8h.html#a37422da20c66c350333f92bae973a3f2',1,'camada_de_dados.c']]]
 ];
