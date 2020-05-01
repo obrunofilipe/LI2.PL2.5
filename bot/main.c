@@ -43,6 +43,8 @@ int main(int argc, char *f_name[]) {
     if(verifica_Bloqueio(e,jogada))
         return 0;
 
+    //gravar novo ficheiro
+
     grava_dados(e, f_name[2]);
 
     return 0;

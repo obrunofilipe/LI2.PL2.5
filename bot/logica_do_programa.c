@@ -12,6 +12,21 @@ int jogar(ESTADO *e, COORDENADA c) {
     return 1;
 }
 
+int verificaJogada (ESTADO *e, COORDENADA c) {
+    int r;
+    int l_anterior = obter_ultima_jogada(e).linha;
+    int c_anterior = obter_ultima_jogada(e).coluna;
+    if ((c.coluna == c_anterior + 1 || c.coluna == c_anterior - 1 || c.coluna == c_anterior)
+        && (c.linha == l_anterior + 1 || c.linha == l_anterior - 1 || c.linha == l_anterior)
+        && obter_estado_casa(e->tab, c) == VAZIO){
+        r = 1;
+    }
+    else
+        r = 0;
+
+    return r;
+}
+
 int verifica_Vitoria_Jog1 (COORDENADA c, int minimax){
     if (c.linha == 0 && c.coluna == 0){
         if(!minimax)
@@ -197,7 +212,7 @@ int score_minimax (COORDENADA *c , int maximizingPlayer ){
 int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, int player, int alpha, int beta){
     int Score, bestScore;
     LISTA  JOGADAS_POSSIVEIS = NULL;
-    COORDENADA posicoes[8],*cf;
+    COORDENADA posicoes[8],*cf,copia_tab[8][8];
     criaArray_posicoes(*c,posicoes);
     JOGADAS_POSSIVEIS = armazena_posicoes(tab,JOGADAS_POSSIVEIS,posicoes);
 
@@ -266,6 +281,17 @@ int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, in
     }
 }
 
+int bloqueio_minimax(CASA tab[8][8], LISTA CASAS_DISPONIVEIS){
+    COORDENADA *c;
+    int result = 1;
+    while(!lista_esta_vazia(CASAS_DISPONIVEIS)){
+        c = CASAS_DISPONIVEIS->valor;
+        if(obter_estado_casa(tab,*c) != PRETA)
+            result = 0;
+        CASAS_DISPONIVEIS = remove_cabeca(CASAS_DISPONIVEIS);
+    }
+    return result;
+}
 
 //int verificaVitoria(int maximizingPlayer,)
 
@@ -286,7 +312,7 @@ COORDENADA jog2 (ESTADO *e, COORDENADA last_mov){
         altera_estado_casa(e,last_mov,'#');
         altera_estado_casa(e,*mov,'*');
         jogador = obter_jogador_atual(e);
-        score = minimax(e->tab,mov,14,obter_jogador_atual(e),switch_player(jogador), alpha,beta);  //calcular o score de cada uma das opçoes disponiveis
+        score = minimax(e->tab,mov,14,obter_jogador_atual(e),switch_player(obter_jogador_atual(e)), alpha,beta);  //calcular o score de cada uma das opçoes disponiveis
         altera_estado_casa(e,last_mov,'*');
         altera_estado_casa(e,*mov,'.');
         if(score > bestScore){
