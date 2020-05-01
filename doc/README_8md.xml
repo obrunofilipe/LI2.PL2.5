@@ -7,10 +7,11 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline><highlight class="normal">MIEI<sp/>-<sp/>PL02</highlight></codeline>
-<codeline><highlight class="normal">a9....<sp/>-<sp/>Bruno</highlight></codeline>
+<codeline><highlight class="normal">MIEI<sp/></highlight></codeline>
+<codeline><highlight class="normal">PL02</highlight></codeline>
+<codeline><highlight class="normal">a93298<sp/>-<sp/>Bruno<sp/>Filipe<sp/>Miranda<sp/>Pereira</highlight></codeline>
 <codeline><highlight class="normal">a93202<sp/>-<sp/>Francisco<sp/>Alexandre<sp/>Pinto<sp/>Neves</highlight></codeline>
-<codeline><highlight class="normal">a9----<sp/>-<sp/>João<sp/>Delgado</highlight></codeline>
+<codeline><highlight class="normal">a93240<sp/>-<sp/>João<sp/>Pedro<sp/>Fontes<sp/>Delgado</highlight></codeline>
     </programlisting>
     <location file="README.md"/>
   </compounddef>

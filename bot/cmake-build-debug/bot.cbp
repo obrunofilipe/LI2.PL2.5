@@ -105,6 +105,9 @@
 		<Unit filename="/home/francisconeves/Desktop/LI2.PL2.5/bot/main.c">
 			<Option target="bot"/>
 		</Unit>
+		<Unit filename="/home/francisconeves/Desktop/LI2.PL2.5/bot/main.h">
+			<Option target="bot"/>
+		</Unit>
 		<Unit filename="/home/francisconeves/Desktop/LI2.PL2.5/bot/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

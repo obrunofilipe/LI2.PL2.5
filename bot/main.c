@@ -2,18 +2,11 @@
 #include "camada_de_dados.h"
 #include "camada_de_interface.h"
 #include "logica_do_programa.h"
-#include "listas.h"
-#include <time.h>
 
-clock_t start, end;
-double cpu_time_used;
 
 int main(int argc, char *f_name[]) {
 
-    start = clock();
-
     FILE *f_in;
-    FILE *f_out;
 
     ESTADO *e = inicializar_estado();
 

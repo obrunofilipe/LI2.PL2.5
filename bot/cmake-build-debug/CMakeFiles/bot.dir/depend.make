@@ -7,8 +7,6 @@ CMakeFiles/bot.dir/camada_de_dados.c.o: ../camada_de_interface.h
 
 CMakeFiles/bot.dir/camada_de_interface.c.o: ../camada_de_dados.h
 CMakeFiles/bot.dir/camada_de_interface.c.o: ../camada_de_interface.c
-CMakeFiles/bot.dir/camada_de_interface.c.o: ../listas.h
-CMakeFiles/bot.dir/camada_de_interface.c.o: ../logica_do_programa.h
 
 CMakeFiles/bot.dir/listas.c.o: ../listas.c
 CMakeFiles/bot.dir/listas.c.o: ../listas.h

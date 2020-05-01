@@ -24,10 +24,6 @@ LISTA insere_cabeca(LISTA L, void *valor){
     }
 }
 
-void *devolve_cabeca(LISTA L){
-    return L->valor;
-}
-
 LISTA proximo(LISTA L){
     return L->proximo;
 }

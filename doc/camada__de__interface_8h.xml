@@ -144,7 +144,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>Definições dos dados presentes no estado e das funções que o alteram </para>    </detaileddescription>
+<para>Definições dos dados presentes na interface e das funções que a alteram </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>___CAMADA_DE_INTERFACE_H___</highlight><highlight class="normal"></highlight></codeline>

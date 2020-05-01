@@ -4,7 +4,7 @@
 
 /**
  @file camada_de_interface.h
- Definições dos dados presentes no estado e das funções que o alteram
+ Definições dos dados presentes na interface e das funções que a alteram
 */
 
 /**

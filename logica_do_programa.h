@@ -3,7 +3,7 @@
 #include "listas.h"
 /**
  @file logica_do_programa.h
- Definições dos dados presentes no estado e das funções que o alteram
+ Definições da lógica do programa e das funções que a alteram
 */
 
 /**

@@ -88,10 +88,6 @@ void incrementa_num_comandos(ESTADO *e){
     e->num_comandos++;
 }
 
-int obter_num_comandos(ESTADO *e){
-    return e->num_comandos;
-}
-
 void modifica_num_jogadas (ESTADO *e , int numJogadas){
     e->num_jogadas = numJogadas;
 }
@@ -188,38 +184,6 @@ void ler_movs(ESTADO * e, FILE * f_pointer){
     altera_movimentos_j2 (e, movimentos_j2);
 }
 
-void reinicia_pos (ESTADO *e, int pos, JOGADA *jog){
-    int i, movs_j1, movs_j2, n_jogadas;
-    movs_j1 = 0;
-    movs_j2 = 0;
-    n_jogadas = 0;
-    COORDENADA pos_inicial = {4,4};
-    inicializar_tabuleiro(e->tab);
-    for (i = 0; i < pos; i++){
-        altera_estado_casa(e,jog[i].jogador1,'#');
-        altera_estado_casa(e,jog[i].jogador2,'#');
-        movs_j1++;
-        movs_j2++;
-        n_jogadas++;
-        altera_ultima_jogada(e,jog[i].jogador2);
-    }
-    if(pos != 0) {
-        altera_estado_casa(e, pos_inicial, '#');
-        altera_estado_casa(e, jog[i-1].jogador2, '*');
-    }
-    else {
-        altera_ultima_jogada(e, pos_inicial);
-    }
-    altera_movimentos_j1(e,movs_j1);
-    altera_movimentos_j2(e,movs_j2);
-    modifica_num_jogadas(e,n_jogadas);
-
-}
-
-
-JOGADA *obter_array_jogadas (ESTADO *e){
-    return e->jogadas;
-}
 int switch_player(int jogador ){
     switch(jogador){
         case 1:
@@ -230,6 +194,3 @@ int switch_player(int jogador ){
             break;
     }
 }
-
-//void copia_tab(ESTADO *e1 )
-

@@ -1,14 +1,8 @@
-//
-// Created by joao on 30/04/20.
-//
-
-#ifndef BOT_CAMADA_DE_DADOS_H
-#define BOT_CAMADA_DE_DADOS_H
-
-
+#ifndef BOT_CAMADA_DE_DADOS_H_
+#define BOT_CAMADA_DE_DADOS_H_
 #include <stdio.h>
 /**
- @file camada_de_dados.h
+ @file bot_camada_de_dados.h
  Definições dos dados presentes no estado e das funções que o alteram
 */
 
@@ -97,7 +91,6 @@ int obter_numero_de_jogadas(ESTADO *estado);
 @param c A coordenada
 @return Se a casa está VAZIA, BRANCA ou PRETA
  */
-//alterei esta funçao
 CASA obter_estado_casa(CASA tab[8][8], COORDENADA c);
 
 /**
@@ -113,12 +106,6 @@ void atualiza_estado_jogo (ESTADO *e, COORDENADA c);
 */
 void incrementa_num_comandos(ESTADO *e);
 
-/**
-\brief Função para obter o número atual de comandos, utilizado no prompt
-@param e Apontador para o estado atual
-@return O número de comandos atual
-*/
-int obter_num_comandos(ESTADO *e);
 
 /**
 \brief Função para alterar o valor do número de jogadas, para quebrar o loop no main e para terminar o programa
@@ -141,12 +128,6 @@ COORDENADA obter_ultima_jogada(ESTADO *e );
 */
 void grava_dados(ESTADO *e ,char  *file_name );
 
-/**
-\brief Função para ler um ficheiro e alterar o estado consoante esse ficheiro
-@param e Apontador para o estado atual
-@param file_name Nome do ficheiro para ser lido
-*/
-void ler_dados(ESTADO *e , char * file_name);
 
 /**
 \brief Função para obter uma jogada do Array
@@ -226,20 +207,9 @@ int ler_tabuleiro(ESTADO *e , FILE * f_pointer);
 void ler_movs(ESTADO * e, FILE * f_pointer);
 
 /**
-\brief Função para reinicir o pos
-@param e Apontador para o estado atual
-@param pos Número fornecido ao pos
-@param jog Array das Jogadas
-@return O estado depois de aplicado o comando pos
+\brief Função para alterar o jogador para o próximo
+@param jogador O número do jogador atual
+@return O número do próximo jogador
 */
-void reinicia_pos (ESTADO *e, int pos, JOGADA *jog);
-
-/**
-\brief Função para obter o array das jogadas
-@param e Apontador para o estado atual
-@return O array das Jogadas
- */
-JOGADA *obter_array_jogadas (ESTADO *e);
 int switch_player(int jogador );
-
-#endif //BOT_CAMADA_DE_DADOS_H
+#endif

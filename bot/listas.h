@@ -1,10 +1,5 @@
-//
-// Created by joao on 30/04/20.
-//
-
 #ifndef BOT_LISTAS_H
 #define BOT_LISTAS_H
-
 /**
  @file listas.h
  Definições das listas e das funções que trabalham com elas
@@ -33,13 +28,6 @@ LISTA criar_lista();
 LISTA insere_cabeca(LISTA L, void *valor);
 
 /**
-\brief Função que devolve a cabeça de uma lista
-@param L A lista
-@return A cabeça da lista, ou seja, o primeiro elemento da lista
-*/
-void *devolve_cabeca(LISTA L);
-
-/**
 \brief Função que devolve a cauda de uma lista, ou seja, que devolve a lista sem o seu primeiro elemento
 @param L A lista
 @return A lista sem o seu o primeiro elemento
@@ -60,6 +48,11 @@ LISTA remove_cabeca(LISTA L);
 */
 int lista_esta_vazia(LISTA L);
 
+/**
+\brief Função para libertar a memória alocada para uma lista
+@param L A lista para se libertar a memória
+@return Uma lista vazia
+*/
 LISTA liberta_lista (LISTA L);
 
-#endif //BOT_LISTAS_H
+#endif
