@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/camada_de_dados.c" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/cmake-build-debug/CMakeFiles/bot.dir/camada_de_dados.c.o"
-  "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/camada_de_interface.c" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/cmake-build-debug/CMakeFiles/bot.dir/camada_de_interface.c.o"
-  "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/listas.c" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/cmake-build-debug/CMakeFiles/bot.dir/listas.c.o"
-  "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/logica_do_programa.c" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/cmake-build-debug/CMakeFiles/bot.dir/logica_do_programa.c.o"
-  "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/main.c" "/home/joao/Uni/2 Semestre/LI2/LI2.PL2.5/bot/cmake-build-debug/CMakeFiles/bot.dir/main.c.o"
+  "/home/francisconeves/Desktop/LI2.PL2.5/bot/camada_de_dados.c" "/home/francisconeves/Desktop/LI2.PL2.5/bot/cmake-build-debug/CMakeFiles/bot.dir/camada_de_dados.c.o"
+  "/home/francisconeves/Desktop/LI2.PL2.5/bot/camada_de_interface.c" "/home/francisconeves/Desktop/LI2.PL2.5/bot/cmake-build-debug/CMakeFiles/bot.dir/camada_de_interface.c.o"
+  "/home/francisconeves/Desktop/LI2.PL2.5/bot/listas.c" "/home/francisconeves/Desktop/LI2.PL2.5/bot/cmake-build-debug/CMakeFiles/bot.dir/listas.c.o"
+  "/home/francisconeves/Desktop/LI2.PL2.5/bot/logica_do_programa.c" "/home/francisconeves/Desktop/LI2.PL2.5/bot/cmake-build-debug/CMakeFiles/bot.dir/logica_do_programa.c.o"
+  "/home/francisconeves/Desktop/LI2.PL2.5/bot/main.c" "/home/francisconeves/Desktop/LI2.PL2.5/bot/cmake-build-debug/CMakeFiles/bot.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
