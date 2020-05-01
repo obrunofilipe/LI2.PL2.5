@@ -156,17 +156,6 @@ LISTA armazena_posicoes(CASA tab[8][8] ,LISTA L, COORDENADA *posicoes){
     return L;
 }
 
-void print_LISTA(LISTA L){
-    COORDENADA *c;
-    while(L != NULL){
-        c = L->valor;
-        printf("%d%d",c->coluna,c->linha);
-        printf("(%d) ",distancia_a_1(c));
-        L = L->proximo;
-    }
-    printf("\n");
-}
-
 void criaArray_posicoes(COORDENADA a, COORDENADA* array){
     int offset_linha, //usado para calcular as coordenadas à volta de a
     offset_coluna,//usado para calcular as coordenadas à volta de a
@@ -195,9 +184,7 @@ COORDENADA jog (ESTADO  *e, COORDENADA pos){
     JOGADAS_POSSIVEIS = NULL;
     criaArray_posicoes(pos, posicoes);
     JOGADAS_POSSIVEIS = armazena_posicoes(e->tab,JOGADAS_POSSIVEIS,posicoes);
-
     melhor = euristica(e,JOGADAS_POSSIVEIS);
-    print_LISTA(JOGADAS_POSSIVEIS);
     incrementa_num_comandos(e);
     liberta_lista(JOGADAS_POSSIVEIS);
     return *melhor;
@@ -214,7 +201,7 @@ int score_minimax (COORDENADA *c , int maximizingPlayer ){
 int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, int player, int alpha, int beta){
     int Score, bestScore;
     LISTA  JOGADAS_POSSIVEIS = NULL;
-    COORDENADA posicoes[8],*cf,copia_tab[8][8];
+    COORDENADA posicoes[8],*cf;
     criaArray_posicoes(*c,posicoes);
     JOGADAS_POSSIVEIS = armazena_posicoes(tab,JOGADAS_POSSIVEIS,posicoes);
 
@@ -229,15 +216,12 @@ int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, in
         return Score = MAIS_INFINITO;
     else if(verifica_Vitoria_Jog2(*c,1) && maximizingPlayer != 2)
         return Score = MENOS_INFINITO;
-
+    //maximizing player
     if(player == maximizingPlayer){
         bestScore = MENOS_INFINITO;
        //verificar bloqueio
        if(lista_esta_vazia(JOGADAS_POSSIVEIS))
            return Score = MENOS_INFINITO;
-       //verificar vitoria
-
-
        //maximizar o score
        while(JOGADAS_POSSIVEIS != NULL){
            cf = JOGADAS_POSSIVEIS->valor;
@@ -255,7 +239,7 @@ int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, in
            JOGADAS_POSSIVEIS = remove_cabeca(JOGADAS_POSSIVEIS);
        }
        return bestScore;
-    }
+    } //minimizing player
     else{
         bestScore = MAIS_INFINITO;
        //verificar bloqueio
@@ -300,7 +284,7 @@ COORDENADA jog2 (ESTADO *e, COORDENADA last_mov){
         altera_estado_casa(e,last_mov,'#');
         altera_estado_casa(e,*mov,'*');
         jogador = obter_jogador_atual(e);
-        score = minimax(e->tab,mov,14,obter_jogador_atual(e),switch_player(obter_jogador_atual(e)), alpha,beta);  //calcular o score de cada uma das opçoes disponiveis
+        score = minimax(e->tab,mov,14,jogador,switch_player(jogador), alpha,beta);  //calcular o score de cada uma das opçoes disponiveis
         altera_estado_casa(e,last_mov,'*');
         altera_estado_casa(e,*mov,'.');
         if(score > bestScore){

@@ -61,7 +61,7 @@ void printMOVS(ESTADO *e, FILE * f_pointer){
     int num_jogadas = obter_numero_de_jogadas(e); // numero total de jogadas efetuadas
     COORDENADA ultimajogada = obter_ultima_jogada(e); // ultimo movimento efetuado
     JOGADA jogada;
-    char jogada_j1_Coluna, jogada_j1_Linha, jogada_j2_Coluna, jogada_j2_Linha, ultimaJogada_linha,ultimaJogada_coluna;
+    char jogada_j1_Coluna, jogada_j1_Linha, jogada_j2_Coluna, jogada_j2_Linha;
     movimentos_j1 = obter_numero_movimentos(e,1);
     movimentos_j2 = obter_numero_movimentos(e,2);
     if(f_pointer == NULL)
@@ -86,7 +86,6 @@ void printMOVS(ESTADO *e, FILE * f_pointer){
 }
 
 int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
-    CASA tab[8][8];
     char linha[BUF_SIZE];
     char col[2], lin[2],file_name[64];
     int numero_jogada;
