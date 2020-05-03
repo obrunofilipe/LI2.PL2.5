@@ -14,23 +14,6 @@
  \brief Include de stdio.h
  */
 #include <stdio.h>
-/**
- \brief Include de string.h
- */
-#include <string.h>
-/**
- \brief Include de stdlib.h
- */
-#include <stdlib.h>
-/**
- \brief Include de camada_de_dados.h
- */
-#include "camada_de_dados.h"
-
-/**
-\brief Tamanho da string lida
-*/
-#define BUF_SIZE 1024
 
 /**
 \brief Funções dos dados
@@ -73,7 +56,8 @@ JOGADA;
 
 /**
 \brief Tipo de dados para guardar todas as jogadas efetuadas por um determinado jogador, o número máximo de jogadas possíveis são 32
-*/
+ */
+//JOGADAS
 typedef JOGADA JOGADAS[32];
 
 /**
@@ -106,8 +90,6 @@ typedef struct {
     int linha;
 } /** Estado definido */
 ESTADO;
-
-
 
 /**
 \brief Função para criar o estado vazio

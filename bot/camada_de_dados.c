@@ -24,6 +24,7 @@ void inicializar_tabuleiro(CASA tab[8][8]){ //incializa o tabuleiro
     }
     tab [4][4] = BRANCA;
 }
+// retorna a jogada selecionada no array pelo num_jogadas
 JOGADA obter_estado_jogada(ESTADO *e , int num_jogadas){
     return e->jogadas[num_jogadas];
 }
@@ -46,7 +47,7 @@ CASA obter_estado_casa(CASA tab[8][8], COORDENADA c){ // retorna o estado de uma
     return estadoCasa;
 }
 
-ESTADO *inicializar_estado(){
+ESTADO *inicializar_estado(){                                // declarar o tabuleiro
     ESTADO *estadoJogo = (ESTADO *) malloc(sizeof(ESTADO)); // declarar o estado
     inicializar_tabuleiro(estadoJogo->tab);                 // modifica a matriz  tabuleiro
     estadoJogo->jogador_atual = 1;                          // inicializa o jogador_atual
@@ -152,9 +153,8 @@ void grava_dados(ESTADO *e , char * file_name ){
 int ler_tabuleiro(ESTADO *e , FILE * f_pointer){
     for(int l = 7; l >= 0 ; l--){
         char linha[BUF_SIZE];
-        if(fgets(linha,BUF_SIZE,f_pointer) == NULL)
-            return 0;
-        for(int c = 0 ; c < 7 ; c++) {
+        if (fgets(linha,BUF_SIZE,f_pointer) == NULL) return 0;
+        for(int c = 0 ; c <= 7 ; c++) {
             COORDENADA posicao = {c , l};
             altera_estado_casa(e, posicao, linha[c]);
         }
@@ -182,7 +182,7 @@ void ler_movs(ESTADO * e, FILE * f_pointer){
             ++movimentos_j2;
             mudar_jogador_atual(e, 1);
         }
-        else if(strlen(linha) < 10 && sscanf(linha,"%02d: %s",&jogada,movJ1) == 2){
+        if(strlen(linha) < 10 && sscanf(linha,"%02d: %s",&jogada,movJ1) == 2){
             COORDENADA jogada_j1 = {movJ1[0] - 'a', movJ1[1] - '1'};
             altera_array_jogadas(e,jogada_j1,jogada  ,1);
             altera_ultima_jogada(e,jogada_j1);
@@ -238,4 +238,5 @@ int switch_player(int jogador ){
     }
     return 0;
 }
+
 

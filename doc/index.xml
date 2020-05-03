@@ -112,8 +112,8 @@
   </compound>
   <compound refid="listas_8h" kind="file"><name>listas.h</name>
     <member refid="listas_8h_1afa9965a11a9d93f4903d84994d454f27" kind="define"><name>_LISTAS_H</name></member>
-    <member refid="listas_8h_1aac60a2c8df3fa5b96ae2f74afa91c1c7" kind="typedef"><name>NODO</name></member>
-    <member refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kind="typedef"><name>LISTA</name></member>
+    <member refid="listas_8h_1acb77632e7989be1f43d74288d9e8f5db" kind="typedef"><name>NODO</name></member>
+    <member refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kind="typedef"><name>LISTA</name></member>
     <member refid="listas_8h_1ae3b99323b6f8f35d80bb69ff1a27985e" kind="function"><name>criar_lista</name></member>
     <member refid="listas_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kind="function"><name>insere_cabeca</name></member>
     <member refid="listas_8h_1abfcb205f3eb670157be0d1221021714b" kind="function"><name>devolve_cabeca</name></member>

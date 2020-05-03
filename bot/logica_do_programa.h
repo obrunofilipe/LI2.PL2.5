@@ -1,4 +1,3 @@
-
 /**
  @file bot_logica_do_programa.h
  Definições da lógica do programa e das funções que a alteram

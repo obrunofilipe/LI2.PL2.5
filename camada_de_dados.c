@@ -8,9 +8,11 @@
 #include <stdlib.h>
 #include "camada_de_dados.h"
 #include "camada_de_interface.h"
+
 /**
 \brief Tamanho da string lida
 */
+
 #define BUF_SIZE 1024
 
 
@@ -24,6 +26,7 @@ void inicializar_tabuleiro(CASA tab[8][8]){ //incializa o tabuleiro
     }
     tab [4][4] = BRANCA;
 }
+// retorna a jogada selecionada no array pelo num_jogadas
 JOGADA obter_estado_jogada(ESTADO *e , int num_jogadas){
     return e->jogadas[num_jogadas];
 }

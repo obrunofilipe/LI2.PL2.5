@@ -25,7 +25,7 @@
 <parametername>argc</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Número de argumentos que o bot recebe </para></parameterdescription>
+<para>Número de argumentos que a main recebe </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>

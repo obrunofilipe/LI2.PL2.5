@@ -9,44 +9,6 @@
       <node id="82">
         <label>stdlib.h</label>
       </node>
-      <node id="78">
-        <label>main.c</label>
-        <link refid="main_8c"/>
-        <childnode refid="79" relation="include">
-        </childnode>
-        <childnode refid="83" relation="include">
-        </childnode>
-        <childnode refid="81" relation="include">
-        </childnode>
-      </node>
-      <node id="81">
-        <label>string.h</label>
-      </node>
-      <node id="79">
-        <label>camada_de_dados.h</label>
-        <link refid="camada__de__dados_8h"/>
-        <childnode refid="80" relation="include">
-        </childnode>
-        <childnode refid="81" relation="include">
-        </childnode>
-        <childnode refid="82" relation="include">
-        </childnode>
-        <childnode refid="79" relation="include">
-        </childnode>
-      </node>
-      <node id="85">
-        <label>listas.h</label>
-        <link refid="listas_8h"/>
-        <childnode refid="80" relation="include">
-        </childnode>
-        <childnode refid="82" relation="include">
-        </childnode>
-        <childnode refid="85" relation="include">
-        </childnode>
-      </node>
-      <node id="80">
-        <label>stdio.h</label>
-      </node>
       <node id="83">
         <label>camada_de_interface.h</label>
         <link refid="camada__de__interface_8h"/>
@@ -69,6 +31,44 @@
         <childnode refid="84" relation="include">
         </childnode>
       </node>
+      <node id="79">
+        <label>camada_de_dados.h</label>
+        <link refid="camada__de__dados_8h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>string.h</label>
+      </node>
+      <node id="85">
+        <label>listas.h</label>
+        <link refid="listas_8h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>stdio.h</label>
+      </node>
     </incdepgraph>
       <sectiondef kind="func">
       <memberdef kind="function" id="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -83,7 +83,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="main.c" line="11" column="1" bodyfile="main.c" bodystart="11" bodyend="25"/>
+        <location file="main.c" line="10" column="1" bodyfile="main.c" bodystart="10" bodyend="24"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -97,22 +97,21 @@
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
-<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogadas,quit;</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>=<sp/><ref refid="camada__de__dados_8c_1a7e0c7e26fb685d9ab501e19b05e6954f" kindref="member">inicializar_estado</ref>();</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>jogadas<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>quit<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="camada__de__interface_8c_1afe2a53fa312818f465ccd3f4a37b9a40" kindref="member">mostrar_tabuleiro</ref>(e,NULL);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(jogadas<sp/>&lt;<sp/>32<sp/>&amp;&amp;<sp/>quit<sp/>!=<sp/>0){</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__de__interface_8c_1a8c57caa56734ce0b34dcb34f430d39ec" kindref="member">showPrompt</ref>(e);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//showprompt<sp/>que<sp/>irá<sp/>colocar<sp/>o<sp/>prompt<sp/>no<sp/>ecra</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>quit<sp/>=<sp/><ref refid="camada__de__interface_8c_1a24da95ebeede4a540e37790ce8be359b" kindref="member">interpretador</ref>(e);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jogadas<sp/>=<sp/><ref refid="camada__de__dados_8c_1a6cd0b387bdee9e18003c78852394aa63" kindref="member">obter_numero_de_jogadas</ref>(e);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogadas,quit;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>=<sp/><ref refid="camada__de__dados_8c_1a7e0c7e26fb685d9ab501e19b05e6954f" kindref="member">inicializar_estado</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>jogadas<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>quit<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="camada__de__interface_8c_1afe2a53fa312818f465ccd3f4a37b9a40" kindref="member">mostrar_tabuleiro</ref>(e,NULL);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(jogadas<sp/>&lt;<sp/>32<sp/>&amp;&amp;<sp/>quit<sp/>!=<sp/>0){</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="camada__de__interface_8c_1a8c57caa56734ce0b34dcb34f430d39ec" kindref="member">showPrompt</ref>(e);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//showprompt<sp/>que<sp/>irá<sp/>colocar<sp/>o<sp/>prompt<sp/>no<sp/>ecra</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>quit<sp/>=<sp/><ref refid="camada__de__interface_8c_1a24da95ebeede4a540e37790ce8be359b" kindref="member">interpretador</ref>(e);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jogadas<sp/>=<sp/><ref refid="camada__de__dados_8c_1a6cd0b387bdee9e18003c78852394aa63" kindref="member">obter_numero_de_jogadas</ref>(e);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="main.c"/>
   </compounddef>

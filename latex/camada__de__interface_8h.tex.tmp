@@ -1,0 +1,66 @@
+\hypertarget{camada__de__interface_8h}{}\section{camada\+\_\+de\+\_\+interface.\+h File Reference}
+\label{camada__de__interface_8h}\index{camada\+\_\+de\+\_\+interface.\+h@{camada\+\_\+de\+\_\+interface.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for camada\+\_\+de\+\_\+interface.\+h\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{camada__de__interface_8h_afe2a53fa312818f465ccd3f4a37b9a40}{mostrar\+\_\+tabuleiro} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, F\+I\+LE $\ast$f\+\_\+pointer)
+\begin{DoxyCompactList}\small\item\em Funções para alterarem a interface. \end{DoxyCompactList}\item 
+int \hyperlink{camada__de__interface_8h_a24da95ebeede4a540e37790ce8be359b}{interpretador} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e)
+\item 
+void \hyperlink{camada__de__interface_8h_a8c57caa56734ce0b34dcb34f430d39ec}{show\+Prompt} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Função para colocar o prompt no ecrã \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definições dos dados presentes no estado e das funções que o alteram 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{camada__de__interface_8h_a24da95ebeede4a540e37790ce8be359b}\label{camada__de__interface_8h_a24da95ebeede4a540e37790ce8be359b}} 
+\index{camada\+\_\+de\+\_\+interface.\+h@{camada\+\_\+de\+\_\+interface.\+h}!interpretador@{interpretador}}
+\index{interpretador@{interpretador}!camada\+\_\+de\+\_\+interface.\+h@{camada\+\_\+de\+\_\+interface.\+h}}
+\subsubsection{\texorpdfstring{interpretador()}{interpretador()}}
+{\footnotesize\ttfamily int interpretador (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o Estado atual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 se houver algum erro ou terminar o jogo, 1 em caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{camada__de__interface_8h_afe2a53fa312818f465ccd3f4a37b9a40}\label{camada__de__interface_8h_afe2a53fa312818f465ccd3f4a37b9a40}} 
+\index{camada\+\_\+de\+\_\+interface.\+h@{camada\+\_\+de\+\_\+interface.\+h}!mostrar\+\_\+tabuleiro@{mostrar\+\_\+tabuleiro}}
+\index{mostrar\+\_\+tabuleiro@{mostrar\+\_\+tabuleiro}!camada\+\_\+de\+\_\+interface.\+h@{camada\+\_\+de\+\_\+interface.\+h}}
+\subsubsection{\texorpdfstring{mostrar\+\_\+tabuleiro()}{mostrar\_tabuleiro()}}
+{\footnotesize\ttfamily void mostrar\+\_\+tabuleiro (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{F\+I\+LE $\ast$}]{f\+\_\+pointer }\end{DoxyParamCaption})}
+
+
+
+Funções para alterarem a interface. 
+
+Função para mostrar o tabuleiro 
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o Estado atual \\
+\hline
+{\em f\+\_\+pointer} & Apontador de memória para a criação de um ficheiro \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{camada__de__interface_8h_a8c57caa56734ce0b34dcb34f430d39ec}\label{camada__de__interface_8h_a8c57caa56734ce0b34dcb34f430d39ec}} 
+\index{camada\+\_\+de\+\_\+interface.\+h@{camada\+\_\+de\+\_\+interface.\+h}!show\+Prompt@{show\+Prompt}}
+\index{show\+Prompt@{show\+Prompt}!camada\+\_\+de\+\_\+interface.\+h@{camada\+\_\+de\+\_\+interface.\+h}}
+\subsubsection{\texorpdfstring{show\+Prompt()}{showPrompt()}}
+{\footnotesize\ttfamily void show\+Prompt (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e }\end{DoxyParamCaption})}
+
+
+
+Função para colocar o prompt no ecrã 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o Estado atual \\
+\hline
+\end{DoxyParams}

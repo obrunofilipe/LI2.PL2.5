@@ -55,7 +55,6 @@
   </compound>
   <compound refid="camada__de__dados_8h" kind="file"><name>camada_de_dados.h</name>
     <member refid="camada__de__dados_8h_1a06dbd3e6c422674ac0f4ea694c32d200" kind="define"><name>___CAMADA_DE_DADOS_H___</name></member>
-    <member refid="camada__de__dados_8h_1a6821bafc3c88dfb2e433a095df9940c6" kind="define"><name>BUF_SIZE</name></member>
     <member refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kind="enum"><name>CASA</name></member>
     <member refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113" kind="enumvalue"><name>VAZIO</name></member>
     <member refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5" kind="enumvalue"><name>BRANCA</name></member>
@@ -104,7 +103,6 @@
   <compound refid="listas_8c" kind="file"><name>listas.c</name>
     <member refid="listas_8c_1ae3b99323b6f8f35d80bb69ff1a27985e" kind="function"><name>criar_lista</name></member>
     <member refid="listas_8c_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kind="function"><name>insere_cabeca</name></member>
-    <member refid="listas_8c_1abfcb205f3eb670157be0d1221021714b" kind="function"><name>devolve_cabeca</name></member>
     <member refid="listas_8c_1ad9380152361127432c55c1c6067e05ae" kind="function"><name>proximo</name></member>
     <member refid="listas_8c_1a9026a681a68322b5ec7f07137b864cbd" kind="function"><name>remove_cabeca</name></member>
     <member refid="listas_8c_1a4c10928f7acaa4e3de3760cea0dfd9c0" kind="function"><name>lista_esta_vazia</name></member>
@@ -134,6 +132,7 @@
     <member refid="logica__do__programa_8c_1a364b4d622a599f1c739346a45334cb57" kind="function"><name>distancia_a_2</name></member>
     <member refid="logica__do__programa_8c_1a53b707ec54825ec718f23293b62d0793" kind="function"><name>euristica</name></member>
     <member refid="logica__do__programa_8c_1aa09f509bec3d879dd425ef1ce9fd47fd" kind="function"><name>armazena_posicoes</name></member>
+    <member refid="logica__do__programa_8c_1a75a1b71971466c0ff8580331436e1e93" kind="function"><name>print_LISTA</name></member>
     <member refid="logica__do__programa_8c_1a131a18f3cc23681587fa4344ee1e6f40" kind="function"><name>criaArray_posicoes</name></member>
     <member refid="logica__do__programa_8c_1a44cb151933c38edce62b91de8f1eb03d" kind="function"><name>jog</name></member>
     <member refid="logica__do__programa_8c_1ae3af156fcfb85bf6a7fdbe830d9f1cc5" kind="function"><name>score_minimax</name></member>

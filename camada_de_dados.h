@@ -47,7 +47,7 @@ typedef enum {
     /** Casa para a qual não pode jogar */
     PRETA = '#'
 } /** Casa definida */
-  CASA;
+CASA;
 
 /**
 \brief Tipo de dados para definir uma coordenada
@@ -58,7 +58,7 @@ typedef struct {
     /** Número da linha */
     int linha;
 } /** Coordenada definida */
-  COORDENADA;
+COORDENADA;
 
 /**
 \brief Tipo de dados para definir uma jogada
@@ -69,7 +69,7 @@ typedef struct {
     /** Coordenada do jogador 2 */
     COORDENADA jogador2;
 } /** Jogada definida */
-  JOGADA;
+JOGADA;
 
 /**
 \brief Tipo de dados para guardar todas as jogadas efetuadas por um determinado jogador, o número máximo de jogadas possíveis são 32
@@ -105,7 +105,7 @@ typedef struct {
     /** Número da linha */
     int linha;
 } /** Estado definido */
-  ESTADO;
+ESTADO;
 
 
 

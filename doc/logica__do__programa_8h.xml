@@ -13,8 +13,15 @@
       <node id="68">
         <label>stdlib.h</label>
       </node>
-      <node id="70">
-        <label>string.h</label>
+      <node id="65">
+        <label>logica_do_programa.h</label>
+        <link refid="logica__do__programa_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
       </node>
       <node id="69">
         <label>camada_de_dados.h</label>
@@ -27,6 +34,9 @@
         </childnode>
         <childnode refid="69" relation="include">
         </childnode>
+      </node>
+      <node id="70">
+        <label>string.h</label>
       </node>
       <node id="66">
         <label>listas.h</label>
@@ -41,30 +51,8 @@
       <node id="67">
         <label>stdio.h</label>
       </node>
-      <node id="65">
-        <label>logica_do_programa.h</label>
-        <link refid="logica__do__programa_8h"/>
-        <childnode refid="66" relation="include">
-        </childnode>
-        <childnode refid="69" relation="include">
-        </childnode>
-        <childnode refid="65" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="74">
-        <label>main.c</label>
-        <link refid="main_8c"/>
-      </node>
-      <node id="75">
-        <label>main.h</label>
-        <link refid="main_8h"/>
-      </node>
-      <node id="73">
-        <label>camada_de_dados.c</label>
-        <link refid="camada__de__dados_8c"/>
-      </node>
       <node id="76">
         <label>camada_de_interface.c</label>
         <link refid="camada__de__interface_8c"/>
@@ -94,6 +82,18 @@
         </childnode>
         <childnode refid="77" relation="include">
         </childnode>
+      </node>
+      <node id="73">
+        <label>camada_de_dados.c</label>
+        <link refid="camada__de__dados_8c"/>
+      </node>
+      <node id="74">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="75">
+        <label>main.h</label>
+        <link refid="main_8h"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="define">
@@ -378,7 +378,7 @@
           <declname>e</declname>
         </param>
         <param>
-          <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+          <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
           <declname>L</declname>
         </param>
         <briefdescription>
@@ -406,7 +406,7 @@
         <location file="logica_do_programa.h" line="101" column="1" bodyfile="logica_do_programa.c" bodystart="139" bodyend="156"/>
       </memberdef>
       <memberdef kind="function" id="logica__do__programa_8h_1aa09f509bec3d879dd425ef1ce9fd47fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+        <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
         <definition>LISTA armazena_posicoes</definition>
         <argsstring>(CASA tab[8][8], LISTA L, COORDENADA *posicoes)</argsstring>
         <name>armazena_posicoes</name>
@@ -416,7 +416,7 @@
           <array>[8][8]</array>
         </param>
         <param>
-          <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+          <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
           <declname>L</declname>
         </param>
         <param>

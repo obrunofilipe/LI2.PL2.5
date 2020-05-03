@@ -17,7 +17,6 @@
 
 int jogar(ESTADO *e, COORDENADA c) {
     atualiza_estado_jogo (e, c);
-    printf("jogar %d %d\n", c.coluna, c.linha);
     return 1;
 }
 
@@ -164,6 +163,17 @@ LISTA armazena_posicoes(CASA tab[8][8] ,LISTA L, COORDENADA *posicoes){
     return L;
 }
 
+void print_LISTA(LISTA L){
+    COORDENADA *c;
+    while(L != NULL){
+        c = L->valor;
+        printf("%d%d",c->coluna,c->linha);
+        printf("(%d) ",distancia_a_1(c));
+        L = L->proximo;
+    }
+    printf("\n");
+}
+
 void criaArray_posicoes(COORDENADA a, COORDENADA* array){
     int offset_linha, //usado para calcular as coordenadas à volta de a
     offset_coluna,//usado para calcular as coordenadas à volta de a
@@ -293,6 +303,7 @@ COORDENADA jog2 (ESTADO *e, COORDENADA last_mov){
         altera_estado_casa(e,*mov,'*');
         jogador = obter_jogador_atual(e);
         score = minimax(e->tab,mov,14,jogador,switch_player(jogador), alpha,beta);  //calcular o score de cada uma das opçoes disponiveis
+        printf("%d\n", score);
         altera_estado_casa(e,last_mov,'*');
         altera_estado_casa(e,*mov,'.');
         if(score > bestScore){

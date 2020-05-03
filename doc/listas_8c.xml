@@ -35,7 +35,7 @@
     </incdepgraph>
       <sectiondef kind="func">
       <memberdef kind="function" id="listas_8c_1ae3b99323b6f8f35d80bb69ff1a27985e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+        <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
         <definition>LISTA criar_lista</definition>
         <argsstring>()</argsstring>
         <name>criar_lista</name>
@@ -49,12 +49,12 @@
         <location file="listas.c" line="9" column="1" bodyfile="listas.c" bodystart="9" bodyend="13"/>
       </memberdef>
       <memberdef kind="function" id="listas_8c_1a37ba5fc3cfddb6bc94d4b54b00bc696e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+        <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
         <definition>LISTA insere_cabeca</definition>
         <argsstring>(LISTA L, void *valor)</argsstring>
         <name>insere_cabeca</name>
         <param>
-          <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+          <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
           <declname>L</declname>
         </param>
         <param>
@@ -91,7 +91,7 @@
         <argsstring>(LISTA L)</argsstring>
         <name>devolve_cabeca</name>
         <param>
-          <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+          <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
           <declname>L</declname>
         </param>
         <briefdescription>
@@ -111,12 +111,12 @@
         <location file="listas.c" line="31" column="1" bodyfile="listas.c" bodystart="31" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="listas_8c_1ad9380152361127432c55c1c6067e05ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+        <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
         <definition>LISTA proximo</definition>
         <argsstring>(LISTA L)</argsstring>
         <name>proximo</name>
         <param>
-          <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+          <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
           <declname>L</declname>
         </param>
         <briefdescription>
@@ -137,12 +137,12 @@
         <location file="listas.c" line="35" column="1" bodyfile="listas.c" bodystart="35" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="listas_8c_1a9026a681a68322b5ec7f07137b864cbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+        <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
         <definition>LISTA remove_cabeca</definition>
         <argsstring>(LISTA L)</argsstring>
         <name>remove_cabeca</name>
         <param>
-          <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+          <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
           <declname>L</declname>
         </param>
         <briefdescription>
@@ -168,7 +168,7 @@
         <argsstring>(LISTA L)</argsstring>
         <name>lista_esta_vazia</name>
         <param>
-          <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+          <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
           <declname>L</declname>
         </param>
         <briefdescription>
@@ -189,12 +189,12 @@
         <location file="listas.c" line="47" column="1" bodyfile="listas.c" bodystart="47" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="listas_8c_1afd9ab83176ab73a7104b5ef0e23c9d29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+        <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
         <definition>LISTA liberta_lista</definition>
         <argsstring>(LISTA L)</argsstring>
         <name>liberta_lista</name>
         <param>
-          <type><ref refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kindref="member">LISTA</ref></type>
+          <type><ref refid="listas_8h_1a853ddea61d450761bc94933207e4833d" kindref="member">LISTA</ref></type>
           <declname>L</declname>
         </param>
         <briefdescription>

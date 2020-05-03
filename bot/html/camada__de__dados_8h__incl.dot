@@ -5,9 +5,4 @@ digraph "camada_de_dados.h"
   Node0 [label="camada_de_dados.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 [label="stdio.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="string.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="stdlib.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node0 -> Node0 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

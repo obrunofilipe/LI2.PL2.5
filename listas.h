@@ -34,9 +34,9 @@ typedef struct nodo {
     /** Nodos seguintes */
     struct nodo *proximo;
 } /** Nodo definido */
-   NODO,
+NODO,
 /** apontador para o inicio da lista */
-  *LISTA;
+*LISTA;
 
 /**
 \brief Função para criar uma lista

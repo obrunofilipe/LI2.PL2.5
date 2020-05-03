@@ -1,13 +1,8 @@
 \hypertarget{camada__de__dados_8h}{}\section{camada\+\_\+de\+\_\+dados.\+h File Reference}
 \label{camada__de__dados_8h}\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
-{\ttfamily \#include $<$string.\+h$>$}\newline
-{\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}camada\+\_\+de\+\_\+dados.\+h\char`\"{}}\newline
 Include dependency graph for camada\+\_\+de\+\_\+dados.\+h\+:
 % FIG 0
-This graph shows which files directly or indirectly include this file\+:
-% FIG 1
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -17,13 +12,6 @@ struct \hyperlink{structJOGADA}{J\+O\+G\+A\+DA}
 \begin{DoxyCompactList}\small\item\em Tipo de dados para definir uma jogada. \end{DoxyCompactList}\item 
 struct \hyperlink{structESTADO}{E\+S\+T\+A\+DO}
 \begin{DoxyCompactList}\small\item\em Tipo de dados que definem o estado. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \hyperlink{camada__de__dados_8h_a06dbd3e6c422674ac0f4ea694c32d200}{\+\_\+\+\_\+\+\_\+\+C\+A\+M\+A\+D\+A\+\_\+\+D\+E\+\_\+\+D\+A\+D\+O\+S\+\_\+\+H\+\_\+\+\_\+\+\_\+}
-\begin{DoxyCompactList}\small\item\em Definições dos dados presentes no estado e das funções que o alteram. \end{DoxyCompactList}\item 
-\#define \hyperlink{camada__de__dados_8h_a6821bafc3c88dfb2e433a095df9940c6}{B\+U\+F\+\_\+\+S\+I\+ZE}~1024
-\begin{DoxyCompactList}\small\item\em Include de stdio.\+h. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,10 +21,11 @@ typedef \hyperlink{structJOGADA}{J\+O\+G\+A\+DA} \hyperlink{camada__de__dados_8h
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} \{ \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113}{V\+A\+Z\+IO} = \textquotesingle{}.\textquotesingle{}, 
-\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5}{B\+R\+A\+N\+CA} = \textquotesingle{}$\ast$\textquotesingle{}, 
-\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039a007278eb3827d19891b47cdd3ac8846d}{P\+R\+E\+TA} = \textquotesingle{}\#\textquotesingle{}
- \}\begin{DoxyCompactList}\small\item\em Funções dos dados. \end{DoxyCompactList}
+\mbox{\Hypertarget{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}\label{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}} 
+enum \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} \{ {\bfseries V\+A\+Z\+IO}, 
+{\bfseries B\+R\+A\+N\+CA}, 
+{\bfseries P\+R\+E\+TA}
+ \}\begin{DoxyCompactList}\small\item\em Tipos de dados que uma casa pode assumir Uma casa na qual esteja um jogador é B\+R\+A\+N\+CA, na qual já tenha passsado um jogador é P\+R\+E\+TA, se não reunir nenhuma das condições anteriores é V\+A\+Z\+IA. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -50,7 +39,7 @@ int \hyperlink{camada__de__dados_8h_ad6e326e4ffa57ca1ae0c75377ecefc8c}{obter\+\_
 int \hyperlink{camada__de__dados_8h_a6cd0b387bdee9e18003c78852394aa63}{obter\+\_\+numero\+\_\+de\+\_\+jogadas} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$estado)
 \begin{DoxyCompactList}\small\item\em Função para obter o número de jogadas efetuadas (cada jogada tem o movimento de dois jogadores) \end{DoxyCompactList}\item 
 \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} \hyperlink{camada__de__dados_8h_a0ed6b059967a9235fa62c7691203606a}{obter\+\_\+estado\+\_\+casa} (\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
-\begin{DoxyCompactList}\small\item\em Função para obter o estado de uma casa. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Função para obter o estado de uma casa do tabuleiro. \end{DoxyCompactList}\item 
 void \hyperlink{camada__de__dados_8h_a37422da20c66c350333f92bae973a3f2}{atualiza\+\_\+estado\+\_\+jogo} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
 \begin{DoxyCompactList}\small\item\em Função que atualiza o estado de jogo após cada jogada. \end{DoxyCompactList}\item 
 void \hyperlink{camada__de__dados_8h_ade5d6f16f7840c944079b80da9ad5b10}{incrementa\+\_\+num\+\_\+comandos} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e)
@@ -63,6 +52,8 @@ void \hyperlink{camada__de__dados_8h_a1d0036d2753e8f2d79221be69106c62c}{modifica
 \begin{DoxyCompactList}\small\item\em Função para obter a última jogada efetuada. \end{DoxyCompactList}\item 
 void \hyperlink{camada__de__dados_8h_ae0d7061c4156a335fb19d754f9e777d9}{grava\+\_\+dados} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, char $\ast$file\+\_\+name)
 \begin{DoxyCompactList}\small\item\em Função para gravar os dados atuais do tabuleiro (quando utilizado o comando gr) \end{DoxyCompactList}\item 
+void \hyperlink{camada__de__dados_8h_a329ca4ca6a4ac95a0bcbbf4e09500dc7}{ler\+\_\+dados} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, char $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Função para ler um ficheiro e alterar o estado consoante esse ficheiro. \end{DoxyCompactList}\item 
 int \hyperlink{camada__de__dados_8h_a234a404296dbefe6bffde35db541d51f}{obter\+\_\+numero\+\_\+movimentos} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, int jogador)
 \begin{DoxyCompactList}\small\item\em Função para obter uma jogada do Array. \end{DoxyCompactList}\item 
 \hyperlink{structJOGADA}{J\+O\+G\+A\+DA} \hyperlink{camada__de__dados_8h_a2a31e8e2f9cf25c4e5e8a555c81e091c}{obter\+\_\+estado\+\_\+jogada} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, int num\+\_\+jogadas)
@@ -93,56 +84,6 @@ int \hyperlink{camada__de__dados_8h_ae3a752a6ca926f49ceaeb54c96478aa1}{switch\+\
 
 \subsection{Detailed Description}
 Definições dos dados presentes no estado e das funções que o alteram 
-
-\subsection{Macro Definition Documentation}
-\mbox{\Hypertarget{camada__de__dados_8h_a06dbd3e6c422674ac0f4ea694c32d200}\label{camada__de__dados_8h_a06dbd3e6c422674ac0f4ea694c32d200}} 
-\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!\+\_\+\+\_\+\+\_\+\+C\+A\+M\+A\+D\+A\+\_\+\+D\+E\+\_\+\+D\+A\+D\+O\+S\+\_\+\+H\+\_\+\+\_\+\+\_\+@{\+\_\+\+\_\+\+\_\+\+C\+A\+M\+A\+D\+A\+\_\+\+D\+E\+\_\+\+D\+A\+D\+O\+S\+\_\+\+H\+\_\+\+\_\+\+\_\+}}
-\index{\+\_\+\+\_\+\+\_\+\+C\+A\+M\+A\+D\+A\+\_\+\+D\+E\+\_\+\+D\+A\+D\+O\+S\+\_\+\+H\+\_\+\+\_\+\+\_\+@{\+\_\+\+\_\+\+\_\+\+C\+A\+M\+A\+D\+A\+\_\+\+D\+E\+\_\+\+D\+A\+D\+O\+S\+\_\+\+H\+\_\+\+\_\+\+\_\+}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
-\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+\_\+\+C\+A\+M\+A\+D\+A\+\_\+\+D\+E\+\_\+\+D\+A\+D\+O\+S\+\_\+\+H\+\_\+\+\_\+\+\_\+}{\_\_\_CAMADA\_DE\_DADOS\_H\_\_\_}}
-{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+\_\+\+C\+A\+M\+A\+D\+A\+\_\+\+D\+E\+\_\+\+D\+A\+D\+O\+S\+\_\+\+H\+\_\+\+\_\+\+\_\+}
-
-
-
-Definições dos dados presentes no estado e das funções que o alteram. 
-
-Definições dos dados presentes no estado e das funções que o alteram \mbox{\Hypertarget{camada__de__dados_8h_a6821bafc3c88dfb2e433a095df9940c6}\label{camada__de__dados_8h_a6821bafc3c88dfb2e433a095df9940c6}} 
-\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!B\+U\+F\+\_\+\+S\+I\+ZE@{B\+U\+F\+\_\+\+S\+I\+ZE}}
-\index{B\+U\+F\+\_\+\+S\+I\+ZE@{B\+U\+F\+\_\+\+S\+I\+ZE}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
-\subsubsection{\texorpdfstring{B\+U\+F\+\_\+\+S\+I\+ZE}{BUF\_SIZE}}
-{\footnotesize\ttfamily \#define B\+U\+F\+\_\+\+S\+I\+ZE~1024}
-
-
-
-Include de stdio.\+h. 
-
-Include de string.\+h Include de stdlib.\+h Include de \hyperlink{camada__de__dados_8h}{camada\+\_\+de\+\_\+dados.\+h} Tamanho da string lida 
-
-\subsection{Enumeration Type Documentation}
-\mbox{\Hypertarget{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}\label{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}} 
-\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!C\+A\+SA@{C\+A\+SA}}
-\index{C\+A\+SA@{C\+A\+SA}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
-\subsubsection{\texorpdfstring{C\+A\+SA}{CASA}}
-{\footnotesize\ttfamily enum \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA}}
-
-
-
-Funções dos dados. 
-
-Tipos de dados que uma casa pode assumir \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{V\+A\+Z\+IO@{V\+A\+Z\+IO}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!V\+A\+Z\+IO@{V\+A\+Z\+IO}}}\mbox{\Hypertarget{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113}\label{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113}} 
-V\+A\+Z\+IO&Casa vazia \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+R\+A\+N\+CA@{B\+R\+A\+N\+CA}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!B\+R\+A\+N\+CA@{B\+R\+A\+N\+CA}}}\mbox{\Hypertarget{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5}\label{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5}} 
-B\+R\+A\+N\+CA&Casa atual \\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+R\+E\+TA@{P\+R\+E\+TA}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!P\+R\+E\+TA@{P\+R\+E\+TA}}}\mbox{\Hypertarget{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039a007278eb3827d19891b47cdd3ac8846d}\label{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039a007278eb3827d19891b47cdd3ac8846d}} 
-P\+R\+E\+TA&Casa para a qual não pode jogar \\
-\hline
-
-\end{DoxyEnumFields}
-
 
 \subsection{Function Documentation}
 \mbox{\Hypertarget{camada__de__dados_8h_ab14c6cb59b5cbbd9a05f8a471ff44b9d}\label{camada__de__dados_8h_ab14c6cb59b5cbbd9a05f8a471ff44b9d}} 
@@ -182,7 +123,7 @@ Função para alterar o estado que uma determinada casa está
 \hline
 {\em posicao} & Casa a ser alterada \\
 \hline
-{\em estado} & Estado da casa \\
+{\em estado} & \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{camada__de__dados_8h_a3cef1ce5bce2aac553882339c0f742cb}\label{camada__de__dados_8h_a3cef1ce5bce2aac553882339c0f742cb}} 
@@ -216,7 +157,7 @@ Função para alterar o número de movimentos do jogador 2.
 \begin{DoxyParams}{Parameters}
 {\em e} & Apontador para o estado atual \\
 \hline
-{\em mov\+\_\+j2} & Novo número de movimentos do jogador 2 \\
+{\em mov\+\_\+j1} & Novo número de movimentos do jogador 2 \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{camada__de__dados_8h_ac513714cdb4fb130ad6115e4cf4f6564}\label{camada__de__dados_8h_ac513714cdb4fb130ad6115e4cf4f6564}} 
@@ -313,6 +254,26 @@ Função para inicializar o tabuleiro.
 {\em tab} & Tabuleiro \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O Tabuleiro inicial 
+\end{DoxyReturn}
+\mbox{\Hypertarget{camada__de__dados_8h_a329ca4ca6a4ac95a0bcbbf4e09500dc7}\label{camada__de__dados_8h_a329ca4ca6a4ac95a0bcbbf4e09500dc7}} 
+\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!ler\+\_\+dados@{ler\+\_\+dados}}
+\index{ler\+\_\+dados@{ler\+\_\+dados}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
+\subsubsection{\texorpdfstring{ler\+\_\+dados()}{ler\_dados()}}
+{\footnotesize\ttfamily void ler\+\_\+dados (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Função para ler um ficheiro e alterar o estado consoante esse ficheiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado atual \\
+\hline
+{\em file\+\_\+name} & Nome do ficheiro para ser lido \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{camada__de__dados_8h_aed53970f98d13646eb42b86536acd582}\label{camada__de__dados_8h_aed53970f98d13646eb42b86536acd582}} 
 \index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!ler\+\_\+movs@{ler\+\_\+movs}}
 \index{ler\+\_\+movs@{ler\+\_\+movs}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
@@ -384,6 +345,9 @@ Função para mudar para o outro jogador.
 {\em jogador} & Número do jogador \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \mbox{\Hypertarget{camada__de__dados_8h_a2362774c3566a31762c24b44a56b598c}\label{camada__de__dados_8h_a2362774c3566a31762c24b44a56b598c}} 
 \index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!obter\+\_\+array\+\_\+jogadas@{obter\+\_\+array\+\_\+jogadas}}
 \index{obter\+\_\+array\+\_\+jogadas@{obter\+\_\+array\+\_\+jogadas}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
@@ -410,17 +374,17 @@ O array das Jogadas
 
 
 
-Função para obter o estado de uma casa. 
+Função para obter o estado de uma casa do tabuleiro. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em tab} & O tabuleiro \\
+{\em e} & Apontador para o estado atual \\
 \hline
-{\em c} & Coordenada \\
+{\em c} & A coordenada \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-O estado da casa 
+Se a casa está V\+A\+Z\+IA, B\+R\+A\+N\+CA ou P\+R\+E\+TA 
 \end{DoxyReturn}
 \mbox{\Hypertarget{camada__de__dados_8h_a2a31e8e2f9cf25c4e5e8a555c81e091c}\label{camada__de__dados_8h_a2a31e8e2f9cf25c4e5e8a555c81e091c}} 
 \index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!obter\+\_\+estado\+\_\+jogada@{obter\+\_\+estado\+\_\+jogada}}
@@ -553,6 +517,9 @@ Função para reinicir o pos.
 {\em jog} & Array das Jogadas \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O estado depois de aplicado o comando pos 
+\end{DoxyReturn}
 \mbox{\Hypertarget{camada__de__dados_8h_ae3a752a6ca926f49ceaeb54c96478aa1}\label{camada__de__dados_8h_ae3a752a6ca926f49ceaeb54c96478aa1}} 
 \index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!switch\+\_\+player@{switch\+\_\+player}}
 \index{switch\+\_\+player@{switch\+\_\+player}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}

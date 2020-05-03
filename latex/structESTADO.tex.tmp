@@ -27,10 +27,6 @@ int \hyperlink{structESTADO_a261495728744647e618b4e623f5a4b7a}{num\+\_\+jogadas}
 int \hyperlink{structESTADO_a5dd28e2e68b7aef2b6b7ea88e02eff58}{jogador\+\_\+atual}
 \item 
 int \hyperlink{structESTADO_abe6faacdd6111160bf9a354f44b95b38}{num\+\_\+comandos}
-\item 
-int \hyperlink{structESTADO_a48e60cf831e7351c8d0afae433f3c674}{movimentos\+\_\+j1}
-\item 
-int \hyperlink{structESTADO_a21a8bb9b8cb21ffc06256242516f5a67}{movimentos\+\_\+j2}
 \end{DoxyCompactItemize}
 
 
@@ -50,19 +46,7 @@ Armazena a informação sobre as jogadas \mbox{\Hypertarget{structESTADO_a5dd28e
 \subsubsection{\texorpdfstring{jogador\+\_\+atual}{jogador\_atual}}
 {\footnotesize\ttfamily int E\+S\+T\+A\+D\+O\+::jogador\+\_\+atual}
 
-Número do jogador atual \mbox{\Hypertarget{structESTADO_a48e60cf831e7351c8d0afae433f3c674}\label{structESTADO_a48e60cf831e7351c8d0afae433f3c674}} 
-\index{E\+S\+T\+A\+DO@{E\+S\+T\+A\+DO}!movimentos\+\_\+j1@{movimentos\+\_\+j1}}
-\index{movimentos\+\_\+j1@{movimentos\+\_\+j1}!E\+S\+T\+A\+DO@{E\+S\+T\+A\+DO}}
-\subsubsection{\texorpdfstring{movimentos\+\_\+j1}{movimentos\_j1}}
-{\footnotesize\ttfamily int E\+S\+T\+A\+D\+O\+::movimentos\+\_\+j1}
-
-Número de movimento do jogador 1 \mbox{\Hypertarget{structESTADO_a21a8bb9b8cb21ffc06256242516f5a67}\label{structESTADO_a21a8bb9b8cb21ffc06256242516f5a67}} 
-\index{E\+S\+T\+A\+DO@{E\+S\+T\+A\+DO}!movimentos\+\_\+j2@{movimentos\+\_\+j2}}
-\index{movimentos\+\_\+j2@{movimentos\+\_\+j2}!E\+S\+T\+A\+DO@{E\+S\+T\+A\+DO}}
-\subsubsection{\texorpdfstring{movimentos\+\_\+j2}{movimentos\_j2}}
-{\footnotesize\ttfamily int E\+S\+T\+A\+D\+O\+::movimentos\+\_\+j2}
-
-Número de movimentos do jogador 2 \mbox{\Hypertarget{structESTADO_abe6faacdd6111160bf9a354f44b95b38}\label{structESTADO_abe6faacdd6111160bf9a354f44b95b38}} 
+Número do jogador atual \mbox{\Hypertarget{structESTADO_abe6faacdd6111160bf9a354f44b95b38}\label{structESTADO_abe6faacdd6111160bf9a354f44b95b38}} 
 \index{E\+S\+T\+A\+DO@{E\+S\+T\+A\+DO}!num\+\_\+comandos@{num\+\_\+comandos}}
 \index{num\+\_\+comandos@{num\+\_\+comandos}!E\+S\+T\+A\+DO@{E\+S\+T\+A\+DO}}
 \subsubsection{\texorpdfstring{num\+\_\+comandos}{num\_comandos}}

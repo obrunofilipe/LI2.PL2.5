@@ -7,7 +7,6 @@
 #include <string.h>
 
 
-
 int main()
 {
     int jogadas,quit;

@@ -57,7 +57,7 @@ void mostrar_tabuleiro(ESTADO *e, FILE *f_pointer){ // desenha o tabuleiro que e
     if(print_in_stdout)
         printf("  ");                   // este loop escreve em baixo do tabuleiro as letras que identificam a coluna das coordenadas do tabuleiro
     for(int i = 0 ; i < 8 && print_in_stdout ; i++){
-        printf("%c",letras);
+        printf("%c ",letras);
         letras++;
     }
     fprintf(f_pointer ,"\n");

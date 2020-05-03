@@ -1,6 +1,6 @@
 /**
- @file listas.h
- Definições das listas e das funções que trabalham com elas
+@file listas.h
+        Definições das listas e das funções que trabalham com elas
 */
 
 /**
