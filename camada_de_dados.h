@@ -1,7 +1,16 @@
 #ifndef ___CAMADA_DE_DADOS_H___
+/**
+ Definições dos dados presentes no estado e das funções que o alteram
+ */
 #define ___CAMADA_DE_DADOS_H___
-
 #include <stdio.h>
+/**
+Tamanho da string lida
+*/
+#define BUF_SIZE 1024
+/**
+ Definições dos dados presentes no estado e das funções que o alteram
+ */
 /**
  @file camada_de_dados.h
  Definições dos dados presentes no estado e das funções que o alteram
@@ -12,8 +21,11 @@
  Uma casa na qual esteja um jogador é BRANCA, na qual já tenha passsado um jogador é PRETA, se não reunir nenhuma das condições anteriores é VAZIA.
 */
 typedef enum {
+    /** Casa vazia */
     VAZIO = '.',
+    /** Casa atual */
     BRANCA = '*',
+    /** Casa para a qual não pode jogar */
     PRETA = '#'
 } CASA;
 
@@ -21,17 +33,21 @@ typedef enum {
 \brief Tipo de dados para definir uma coordenada
 */
 typedef struct {
+    /** Número da coluna */
     int coluna;
+    /** Número da linha */
     int linha;
-} COORDENADA;
+} /** Coordenada definida */ COORDENADA;
 
 /**
 \brief Tipo de dados para definir uma jogada
 */
 typedef struct {
+    /** Coordenada do jogador 1 */
     COORDENADA jogador1;
+    /** Coordenada do jogador 2 */
     COORDENADA jogador2;
-} JOGADA;
+} /** Jogada definida */ JOGADA;
 
 /**
 \brief Tipo de dados para guardar todas as jogadas efetuadas por um determinado jogador, o número máximo de jogadas possíveis são 32
@@ -41,7 +57,6 @@ typedef JOGADA JOGADAS[32];
 /**
 \brief Tipo de dados que definem o estado
 */
-//ESTADO
 typedef struct {
     /** O tabuleiro */
     CASA tab[8][8];
@@ -59,7 +74,15 @@ typedef struct {
     int movimentos_j1;
     /** Número de movimentos do jogador 2 */
     int movimentos_j2;
-} ESTADO;
+    /** Coordenada do jogador 1 */
+    COORDENADA jogador1;
+    /** Coordenada do jogador 2 */
+    COORDENADA jogador2;
+    /** Número da coluna */
+    int coluna;
+    /** Número da linha */
+    int linha;
+} /** Estado definido */ ESTADO;
 
 
 
@@ -72,7 +95,6 @@ ESTADO *inicializar_estado();
 /**
 \brief Função para inicializar o tabuleiro
 @param tab Tabuleiro
-@returns O Tabuleiro inicial
 */
 void inicializar_tabuleiro(CASA tab[8][8]);
 
@@ -160,7 +182,6 @@ JOGADA obter_estado_jogada(ESTADO *e , int num_jogadas);
 \brief Função para mudar para o outro jogador
 @param e Apontador para o estado atual
 @param jogador Número do jogador
-@return Jogador seguinte
 */
 void mudar_jogador_atual (ESTADO *e, int jogador);
 
@@ -181,7 +202,7 @@ void altera_movimentos_j1 (ESTADO *e, int mov_j1);
 /**
 \brief Função para alterar o número de movimentos do jogador 2
 @param e Apontador para o estado atual
-@param mov_j1 Novo número de movimentos do jogador 2
+@param mov_j2 Novo número de movimentos do jogador 2
 */
 void altera_movimentos_j2 (ESTADO *e, int mov_j2);
 
@@ -222,7 +243,6 @@ void ler_movs(ESTADO * e, FILE * f_pointer);
 @param e Apontador para o estado atual
 @param pos Número fornecido ao pos
 @param jog Array das Jogadas
-@return O estado depois de aplicado o comando pos
 */
 void reinicia_pos (ESTADO *e, int pos, JOGADA *jog);
 

@@ -13,6 +13,10 @@
     <member refid="structESTADO_1abe6faacdd6111160bf9a354f44b95b38" kind="variable"><name>num_comandos</name></member>
     <member refid="structESTADO_1a48e60cf831e7351c8d0afae433f3c674" kind="variable"><name>movimentos_j1</name></member>
     <member refid="structESTADO_1a21a8bb9b8cb21ffc06256242516f5a67" kind="variable"><name>movimentos_j2</name></member>
+    <member refid="structESTADO_1a18e430d344b0af279061c0ef8273ea59" kind="variable"><name>jogador1</name></member>
+    <member refid="structESTADO_1a4fe7d0098c4e4ba7db1998fbc2be7e9f" kind="variable"><name>jogador2</name></member>
+    <member refid="structESTADO_1a1ebc28eba173a8182dfbd568ed2eab4b" kind="variable"><name>coluna</name></member>
+    <member refid="structESTADO_1a271ffaca9d826cce8498a791abcf952a" kind="variable"><name>linha</name></member>
   </compound>
   <compound refid="structJOGADA" kind="struct"><name>JOGADA</name>
     <member refid="structJOGADA_1a93d9306cb0c49b66b7d9a615bffe0149" kind="variable"><name>jogador1</name></member>
@@ -50,6 +54,8 @@
     <member refid="camada__de__dados_8c_1ae3a752a6ca926f49ceaeb54c96478aa1" kind="function"><name>switch_player</name></member>
   </compound>
   <compound refid="camada__de__dados_8h" kind="file"><name>camada_de_dados.h</name>
+    <member refid="camada__de__dados_8h_1a06dbd3e6c422674ac0f4ea694c32d200" kind="define"><name>___CAMADA_DE_DADOS_H___</name></member>
+    <member refid="camada__de__dados_8h_1a6821bafc3c88dfb2e433a095df9940c6" kind="define"><name>BUF_SIZE</name></member>
     <member refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kind="enum"><name>CASA</name></member>
     <member refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113" kind="enumvalue"><name>VAZIO</name></member>
     <member refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5" kind="enumvalue"><name>BRANCA</name></member>
@@ -88,6 +94,8 @@
     <member refid="camada__de__interface_8c_1a8c57caa56734ce0b34dcb34f430d39ec" kind="function"><name>showPrompt</name></member>
   </compound>
   <compound refid="camada__de__interface_8h" kind="file"><name>camada_de_interface.h</name>
+    <member refid="camada__de__interface_8h_1a7974426d6733a3d888a56e9449bbc44e" kind="define"><name>___CAMADA_DE_INTERFACE_H___</name></member>
+    <member refid="camada__de__interface_8h_1a6821bafc3c88dfb2e433a095df9940c6" kind="define"><name>BUF_SIZE</name></member>
     <member refid="camada__de__interface_8h_1afe2a53fa312818f465ccd3f4a37b9a40" kind="function"><name>mostrar_tabuleiro</name></member>
     <member refid="camada__de__interface_8h_1a24da95ebeede4a540e37790ce8be359b" kind="function"><name>interpretador</name></member>
     <member refid="camada__de__interface_8h_1a8c57caa56734ce0b34dcb34f430d39ec" kind="function"><name>showPrompt</name></member>
@@ -103,8 +111,9 @@
     <member refid="listas_8c_1afd9ab83176ab73a7104b5ef0e23c9d29" kind="function"><name>liberta_lista</name></member>
   </compound>
   <compound refid="listas_8h" kind="file"><name>listas.h</name>
+    <member refid="listas_8h_1afa9965a11a9d93f4903d84994d454f27" kind="define"><name>_LISTAS_H</name></member>
     <member refid="listas_8h_1ab74c40cea97ab9b24f68471bb1ded1a2" kind="typedef"><name>NODO</name></member>
-    <member refid="listas_8h_1a2ed03b19209dd10718380b31b09a69f5" kind="typedef"><name>LISTA</name></member>
+    <member refid="listas_8h_1a6725a80fbaeca64d86fd2c3d1f993036" kind="typedef"><name>LISTA</name></member>
     <member refid="listas_8h_1ae3b99323b6f8f35d80bb69ff1a27985e" kind="function"><name>criar_lista</name></member>
     <member refid="listas_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kind="function"><name>insere_cabeca</name></member>
     <member refid="listas_8h_1abfcb205f3eb670157be0d1221021714b" kind="function"><name>devolve_cabeca</name></member>
@@ -132,6 +141,9 @@
     <member refid="logica__do__programa_8c_1a69864e7ab11ea30cd55188522a42467f" kind="function"><name>jog2</name></member>
   </compound>
   <compound refid="logica__do__programa_8h" kind="file"><name>logica_do_programa.h</name>
+    <member refid="logica__do__programa_8h_1a1400b4a927c5062afd29ead8b296d067" kind="define"><name>___LOGICA_DO_PROGRAMA_H___</name></member>
+    <member refid="logica__do__programa_8h_1a612e2667971b09f5a12bb6f31cc79436" kind="define"><name>MENOS_INFINITO</name></member>
+    <member refid="logica__do__programa_8h_1a87722a59574cf02c18222354ae659717" kind="define"><name>MAIS_INFINITO</name></member>
     <member refid="logica__do__programa_8h_1a53472e75f056ceb02b5387193021838a" kind="function"><name>jogar</name></member>
     <member refid="logica__do__programa_8h_1a1a37a3c530ad08eb3f6f5bb0674caa32" kind="function"><name>verificaJogada</name></member>
     <member refid="logica__do__programa_8h_1a316e652f244df13f941c813ae7b4940f" kind="function"><name>verifica_Vitoria_Jog1</name></member>

@@ -1,6 +1,9 @@
 #ifndef INC_50QUESTOES_MAIN_H
 #define INC_50QUESTOES_MAIN_H
 /**
+ Definição da função para o projeto
+ */
+/**
  @file main.h
  Definição da função para o projeto
 */

@@ -59,12 +59,14 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">logica_do_programa.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="listas_8h_source.html">listas.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="camada__de__dados_8h_source.html">camada_de_dados.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for logica_do_programa.h:</div>
 <div class="dyncontent">
@@ -74,6 +76,15 @@ Include dependency graph for logica_do_programa.h:</div>
 </div>
 <p><a href="logica__do__programa_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a1400b4a927c5062afd29ead8b296d067"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a1400b4a927c5062afd29ead8b296d067">___LOGICA_DO_PROGRAMA_H___</a></td></tr>
+<tr class="separator:a1400b4a927c5062afd29ead8b296d067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612e2667971b09f5a12bb6f31cc79436"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a612e2667971b09f5a12bb6f31cc79436">MENOS_INFINITO</a>&#160;&#160;&#160;-10000000</td></tr>
+<tr class="separator:a612e2667971b09f5a12bb6f31cc79436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87722a59574cf02c18222354ae659717"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a87722a59574cf02c18222354ae659717">MAIS_INFINITO</a>&#160;&#160;&#160;10000000</td></tr>
+<tr class="separator:a87722a59574cf02c18222354ae659717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a53472e75f056ceb02b5387193021838a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a53472e75f056ceb02b5387193021838a">jogar</a> (<a class="el" href="structESTADO.html">ESTADO</a> *estado, <a class="el" href="structCOORDENADA.html">COORDENADA</a> c)</td></tr>
@@ -97,9 +108,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a364b4d622a599f1c739346a45334cb57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a364b4d622a599f1c739346a45334cb57">distancia_a_2</a> (<a class="el" href="structCOORDENADA.html">COORDENADA</a> *c)</td></tr>
 <tr class="memdesc:a364b4d622a599f1c739346a45334cb57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função auxiliar para calcular a distância euclidiana até à posição 2.  <a href="#a364b4d622a599f1c739346a45334cb57">More...</a><br /></td></tr>
 <tr class="separator:a364b4d622a599f1c739346a45334cb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53b707ec54825ec718f23293b62d0793"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCOORDENADA.html">COORDENADA</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a53b707ec54825ec718f23293b62d0793">euristica</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, <a class="el" href="structnodo.html">LISTA</a> L)</td></tr>
+<tr class="memitem:a53b707ec54825ec718f23293b62d0793"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCOORDENADA.html">COORDENADA</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a53b707ec54825ec718f23293b62d0793">euristica</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, <a class="el" href="listas_8h.html#a6725a80fbaeca64d86fd2c3d1f993036">LISTA</a> L)</td></tr>
 <tr class="separator:a53b707ec54825ec718f23293b62d0793"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa09f509bec3d879dd425ef1ce9fd47fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnodo.html">LISTA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#aa09f509bec3d879dd425ef1ce9fd47fd">armazena_posicoes</a> (<a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a> tab[8][8], <a class="el" href="structnodo.html">LISTA</a> L, <a class="el" href="structCOORDENADA.html">COORDENADA</a> *posicoes)</td></tr>
+<tr class="memitem:aa09f509bec3d879dd425ef1ce9fd47fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="listas_8h.html#a6725a80fbaeca64d86fd2c3d1f993036">LISTA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#aa09f509bec3d879dd425ef1ce9fd47fd">armazena_posicoes</a> (<a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a> tab[8][8], <a class="el" href="listas_8h.html#a6725a80fbaeca64d86fd2c3d1f993036">LISTA</a> L, <a class="el" href="structCOORDENADA.html">COORDENADA</a> *posicoes)</td></tr>
 <tr class="memdesc:aa09f509bec3d879dd425ef1ce9fd47fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para armazenar as posições possíveis de jogar.  <a href="#aa09f509bec3d879dd425ef1ce9fd47fd">More...</a><br /></td></tr>
 <tr class="separator:aa09f509bec3d879dd425ef1ce9fd47fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a131a18f3cc23681587fa4344ee1e6f40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logica__do__programa_8h.html#a131a18f3cc23681587fa4344ee1e6f40">criaArray_posicoes</a> (<a class="el" href="structCOORDENADA.html">COORDENADA</a> a, <a class="el" href="structCOORDENADA.html">COORDENADA</a> *array)</td></tr>
@@ -120,7 +131,53 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Definições da lógica do programa e das funções que a alteram </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a1400b4a927c5062afd29ead8b296d067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1400b4a927c5062afd29ead8b296d067">&#9670;&nbsp;</a></span>___LOGICA_DO_PROGRAMA_H___</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ___LOGICA_DO_PROGRAMA_H___</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Valor inicial do pior score em minmax </p>
+
+</div>
+</div>
+<a id="a87722a59574cf02c18222354ae659717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87722a59574cf02c18222354ae659717">&#9670;&nbsp;</a></span>MAIS_INFINITO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAIS_INFINITO&#160;&#160;&#160;10000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Valor inicial do pior score em minmax </p>
+
+</div>
+</div>
+<a id="a612e2667971b09f5a12bb6f31cc79436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612e2667971b09f5a12bb6f31cc79436">&#9670;&nbsp;</a></span>MENOS_INFINITO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MENOS_INFINITO&#160;&#160;&#160;-10000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Valor inicial do melhor score em minmax </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="aa09f509bec3d879dd425ef1ce9fd47fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa09f509bec3d879dd425ef1ce9fd47fd">&#9670;&nbsp;</a></span>armazena_posicoes()</h2>
 
@@ -128,7 +185,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnodo.html">LISTA</a> armazena_posicoes </td>
+          <td class="memname"><a class="el" href="listas_8h.html#a6725a80fbaeca64d86fd2c3d1f993036">LISTA</a> armazena_posicoes </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a>&#160;</td>
           <td class="paramname"><em>tab</em>[8][8], </td>
@@ -136,7 +193,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structnodo.html">LISTA</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="listas_8h.html#a6725a80fbaeca64d86fd2c3d1f993036">LISTA</a>&#160;</td>
           <td class="paramname"><em>L</em>, </td>
         </tr>
         <tr>
@@ -272,7 +329,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structnodo.html">LISTA</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="listas_8h.html#a6725a80fbaeca64d86fd2c3d1f993036">LISTA</a>&#160;</td>
           <td class="paramname"><em>L</em>&#160;</td>
         </tr>
         <tr>

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['devolve_5fcabeca',['devolve_cabeca',['../listas_8h.html#abfcb205f3eb670157be0d1221021714b',1,'listas.c']]],
-  ['distancia_5fa_5f1',['distancia_a_1',['../logica__do__programa_8h.html#afb5ac18f8e1659018f8b247d2e708e6f',1,'logica_do_programa.c']]],
-  ['distancia_5fa_5f2',['distancia_a_2',['../logica__do__programa_8h.html#a364b4d622a599f1c739346a45334cb57',1,'logica_do_programa.c']]]
+  ['branca',['BRANCA',['../camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5',1,'camada_de_dados.h']]],
+  ['buf_5fsize',['BUF_SIZE',['../camada__de__dados_8h.html#a6821bafc3c88dfb2e433a095df9940c6',1,'BUF_SIZE():&#160;camada_de_dados.h'],['../camada__de__interface_8h.html#a6821bafc3c88dfb2e433a095df9940c6',1,'BUF_SIZE():&#160;camada_de_interface.h']]]
 ];

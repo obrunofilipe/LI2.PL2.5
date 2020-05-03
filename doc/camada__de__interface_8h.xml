@@ -3,19 +3,51 @@
   <compounddef id="camada__de__interface_8h" kind="file" language="C++">
     <compoundname>camada_de_interface.h</compoundname>
     <includes local="no">stdio.h</includes>
+    <includes refid="camada__de__dados_8h" local="yes">camada_de_dados.h</includes>
     <includedby refid="camada__de__dados_8c" local="yes">camada_de_dados.c</includedby>
     <includedby refid="main_8c" local="yes">main.c</includedby>
     <incdepgraph>
-      <node id="18">
+      <node id="21">
+        <label>camada_de_dados.h</label>
+        <link refid="camada__de__dados_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
         <label>stdio.h</label>
       </node>
-      <node id="17">
+      <node id="19">
         <label>camada_de_interface.h</label>
         <link refid="camada__de__interface_8h"/>
-        <childnode refid="18" relation="include">
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
     </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="camada__de__interface_8h_1a7974426d6733a3d888a56e9449bbc44e" prot="public" static="no">
+        <name>___CAMADA_DE_INTERFACE_H___</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Definições dos dados presentes na interface e das funções que a alteram </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_de_interface.h" line="7" column="9" bodyfile="camada_de_interface.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="camada__de__interface_8h_1a6821bafc3c88dfb2e433a095df9940c6" prot="public" static="no">
+        <name>BUF_SIZE</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tamanho da string lida </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_de_interface.h" line="11" column="9" bodyfile="camada_de_interface.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="camada__de__interface_8h_1afe2a53fa312818f465ccd3f4a37b9a40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -51,7 +83,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_interface.h" line="19" column="1" bodyfile="camada_de_interface.c" bodystart="9" bodyend="58"/>
+        <location file="camada_de_interface.h" line="27" column="1" bodyfile="camada_de_interface.c" bodystart="9" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__interface_8h_1a24da95ebeede4a540e37790ce8be359b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -77,7 +109,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_interface.h" line="26" column="1" bodyfile="camada_de_interface.c" bodystart="87" bodyend="173"/>
+        <location file="camada_de_interface.h" line="34" column="1" bodyfile="camada_de_interface.c" bodystart="87" bodyend="173"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__interface_8h_1a8c57caa56734ce0b34dcb34f430d39ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -102,7 +134,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_interface.h" line="32" column="1" bodyfile="camada_de_interface.c" bodystart="175" bodyend="181"/>
+        <location file="camada_de_interface.h" line="40" column="1" bodyfile="camada_de_interface.c" bodystart="175" bodyend="181"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__interface_8h_1ad2eff303f36ebe7d504e7225227c5b34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -138,7 +170,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_interface.h" line="39" column="1" bodyfile="camada_de_interface.c" bodystart="59" bodyend="85"/>
+        <location file="camada_de_interface.h" line="47" column="1" bodyfile="camada_de_interface.c" bodystart="59" bodyend="85"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -147,18 +179,22 @@
 <para>Definições dos dados presentes na interface e das funções que a alteram </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>___CAMADA_DE_INTERFACE_H___</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>___CAMADA_DE_INTERFACE_H___</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="camada__de__dados_8h" kindref="compound">camada_de_dados.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>___CAMADA_DE_INTERFACE_H___</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__interface_8h_1afe2a53fa312818f465ccd3f4a37b9a40" kindref="member">mostrar_tabuleiro</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/>FILE<sp/>*<sp/>f_pointer);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camada__de__interface_8h_1a24da95ebeede4a540e37790ce8be359b" kindref="member">interpretador</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__interface_8h_1a8c57caa56734ce0b34dcb34f430d39ec" kindref="member">showPrompt</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__interface_8h_1ad2eff303f36ebe7d504e7225227c5b34" kindref="member">printMOVS</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,FILE<sp/>*<sp/>f_pointer);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="7" refid="camada__de__interface_8h_1a7974426d6733a3d888a56e9449bbc44e" refkind="member"><highlight class="preprocessor">#define<sp/>___CAMADA_DE_INTERFACE_H___</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="camada__de__interface_8h_1a6821bafc3c88dfb2e433a095df9940c6" refkind="member"><highlight class="preprocessor">#define<sp/>BUF_SIZE<sp/>1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__interface_8h_1afe2a53fa312818f465ccd3f4a37b9a40" kindref="member">mostrar_tabuleiro</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/>FILE<sp/>*<sp/>f_pointer);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camada__de__interface_8h_1a24da95ebeede4a540e37790ce8be359b" kindref="member">interpretador</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__interface_8h_1a8c57caa56734ce0b34dcb34f430d39ec" kindref="member">showPrompt</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__interface_8h_1ad2eff303f36ebe7d504e7225227c5b34" kindref="member">printMOVS</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,FILE<sp/>*<sp/>f_pointer);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="camada_de_interface.h"/>
   </compounddef>

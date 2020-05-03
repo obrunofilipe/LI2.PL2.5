@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['main',['main',['../main_8h.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.c']]],
-  ['main_2eh',['main.h',['../main_8h.html',1,'']]],
-  ['minimax',['minimax',['../logica__do__programa_8h.html#a9fa14d48bd047750d95ae690394726db',1,'logica_do_programa.c']]],
-  ['modifica_5fnum_5fjogadas',['modifica_num_jogadas',['../camada__de__dados_8h.html#a1d0036d2753e8f2d79221be69106c62c',1,'camada_de_dados.c']]],
-  ['mostrar_5ftabuleiro',['mostrar_tabuleiro',['../camada__de__interface_8h.html#afe2a53fa312818f465ccd3f4a37b9a40',1,'camada_de_interface.c']]],
-  ['movimentos_5fj1',['movimentos_j1',['../structESTADO.html#a48e60cf831e7351c8d0afae433f3c674',1,'ESTADO']]],
-  ['movimentos_5fj2',['movimentos_j2',['../structESTADO.html#a21a8bb9b8cb21ffc06256242516f5a67',1,'ESTADO']]],
-  ['mudar_5fjogador_5fatual',['mudar_jogador_atual',['../camada__de__dados_8h.html#abc69abc6923d55fa24d5d756ee809435',1,'camada_de_dados.c']]]
+  ['jog',['jog',['../logica__do__programa_8h.html#a44cb151933c38edce62b91de8f1eb03d',1,'logica_do_programa.c']]],
+  ['jog2',['jog2',['../logica__do__programa_8h.html#a4203eda4416534176ea72b0b5fd69c88',1,'logica_do_programa.c']]],
+  ['jogada',['JOGADA',['../structJOGADA.html',1,'']]],
+  ['jogadas',['jogadas',['../structESTADO.html#afae43b87a488fad0f2b56a18bad31d18',1,'ESTADO::jogadas()'],['../camada__de__dados_8h.html#a94c221d29a1760f008b7834093259b7d',1,'JOGADAS():&#160;camada_de_dados.h']]],
+  ['jogador1',['jogador1',['../structJOGADA.html#a93d9306cb0c49b66b7d9a615bffe0149',1,'JOGADA::jogador1()'],['../structESTADO.html#a18e430d344b0af279061c0ef8273ea59',1,'ESTADO::jogador1()']]],
+  ['jogador2',['jogador2',['../structJOGADA.html#ab46b16dfbdc7f2af9430c8dcdac0914b',1,'JOGADA::jogador2()'],['../structESTADO.html#a4fe7d0098c4e4ba7db1998fbc2be7e9f',1,'ESTADO::jogador2()']]],
+  ['jogador_5fatual',['jogador_atual',['../structESTADO.html#a5dd28e2e68b7aef2b6b7ea88e02eff58',1,'ESTADO']]],
+  ['jogar',['jogar',['../logica__do__programa_8h.html#a53472e75f056ceb02b5387193021838a',1,'logica_do_programa.c']]]
 ];

@@ -1,7 +1,7 @@
 #ifndef BOT_LISTAS_H
 #define BOT_LISTAS_H
 /**
- @file listas.h
+ @file bot_listas.h
  Definições das listas e das funções que trabalham com elas
 */
 
@@ -9,9 +9,13 @@
 \brief Tipo de dados para definir uma lista
 */
 typedef struct nodo {
+    /** Valor atual */
     void *valor;
+    /** Nodos seguintes */
     struct nodo *proximo;
-} NODO, *LISTA;
+} NODO,
+/** apontador para o inicio da lista */
+*LISTA;
 
 /**
 \brief Função para criar uma lista
@@ -26,6 +30,12 @@ LISTA criar_lista();
 @return A lista com o valor adicionado à cabeça
 */
 LISTA insere_cabeca(LISTA L, void *valor);
+
+/**
+\brief Função que devolve a cabeça de uma lista
+@param L A lista
+*/
+void *devolve_cabeca(LISTA L);
 
 /**
 \brief Função que devolve a cauda de uma lista, ou seja, que devolve a lista sem o seu primeiro elemento

@@ -12,10 +12,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Valor atual </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.h" line="12" column="1" bodyfile="listas.h" bodystart="12" bodyend="-1"/>
+        <location file="listas.h" line="13" column="1" bodyfile="listas.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structnodo_1aaaabdcb6641ddcdac8990402242b154a" prot="public" static="no" mutable="no">
         <type>struct <ref refid="structnodo" kindref="compound">nodo</ref> *</type>
@@ -25,10 +25,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Nodos seguintes </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.h" line="13" column="1" bodyfile="listas.h" bodystart="13" bodyend="-1"/>
+        <location file="listas.h" line="15" column="1" bodyfile="listas.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -44,7 +44,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="listas.h" line="11" column="1" bodyfile="listas.h" bodystart="11" bodyend="14"/>
+    <location file="listas.h" line="11" column="1" bodyfile="listas.h" bodystart="11" bodyend="16"/>
     <listofallmembers>
       <member refid="structnodo_1aaaabdcb6641ddcdac8990402242b154a" prot="public" virt="non-virtual"><scope>nodo</scope><name>proximo</name></member>
       <member refid="structnodo_1ab63adcdb83ea1fdcf4fa10f3cafc4a6a" prot="public" virt="non-virtual"><scope>nodo</scope><name>valor</name></member>

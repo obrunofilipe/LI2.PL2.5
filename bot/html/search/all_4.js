@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['liberta_5flista',['liberta_lista',['../listas_8h.html#afd9ab83176ab73a7104b5ef0e23c9d29',1,'listas.c']]],
-  ['lista_5festa_5fvazia',['lista_esta_vazia',['../listas_8h.html#a4c10928f7acaa4e3de3760cea0dfd9c0',1,'listas.c']]],
-  ['listas_2eh',['listas.h',['../listas_8h.html',1,'']]]
+  ['movimentos_5fj1',['movimentos_j1',['../structESTADO.html#a48e60cf831e7351c8d0afae433f3c674',1,'ESTADO']]],
+  ['movimentos_5fj2',['movimentos_j2',['../structESTADO.html#a21a8bb9b8cb21ffc06256242516f5a67',1,'ESTADO']]]
 ];

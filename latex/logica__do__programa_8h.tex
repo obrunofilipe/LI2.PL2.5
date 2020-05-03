@@ -1,8 +1,18 @@
 \hypertarget{logica__do__programa_8h}{}\section{logica\+\_\+do\+\_\+programa.\+h File Reference}
 \label{logica__do__programa_8h}\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
 {\ttfamily \#include \char`\"{}listas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}camada\+\_\+de\+\_\+dados.\+h\char`\"{}}\newline
 Include dependency graph for logica\+\_\+do\+\_\+programa.\+h\+:
 % FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{logica__do__programa_8h_a1400b4a927c5062afd29ead8b296d067}{\+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+}
+\item 
+\#define \hyperlink{logica__do__programa_8h_a612e2667971b09f5a12bb6f31cc79436}{M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}~-\/10000000
+\item 
+\#define \hyperlink{logica__do__programa_8h_a87722a59574cf02c18222354ae659717}{M\+A\+I\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}~10000000
+\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,9 +30,9 @@ int \hyperlink{logica__do__programa_8h_afb5ac18f8e1659018f8b247d2e708e6f}{distan
 \begin{DoxyCompactList}\small\item\em Função auxiliar para calcular a distância euclidiana até à posição 1. \end{DoxyCompactList}\item 
 int \hyperlink{logica__do__programa_8h_a364b4d622a599f1c739346a45334cb57}{distancia\+\_\+a\+\_\+2} (\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$c)
 \begin{DoxyCompactList}\small\item\em Função auxiliar para calcular a distância euclidiana até à posição 2. \end{DoxyCompactList}\item 
-\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$ \hyperlink{logica__do__programa_8h_a53b707ec54825ec718f23293b62d0793}{euristica} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structnodo}{L\+I\+S\+TA} L)
+\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$ \hyperlink{logica__do__programa_8h_a53b707ec54825ec718f23293b62d0793}{euristica} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} L)
 \item 
-\hyperlink{structnodo}{L\+I\+S\+TA} \hyperlink{logica__do__programa_8h_aa09f509bec3d879dd425ef1ce9fd47fd}{armazena\+\_\+posicoes} (\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}, \hyperlink{structnodo}{L\+I\+S\+TA} L, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$posicoes)
+\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} \hyperlink{logica__do__programa_8h_aa09f509bec3d879dd425ef1ce9fd47fd}{armazena\+\_\+posicoes} (\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}, \hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} L, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$posicoes)
 \begin{DoxyCompactList}\small\item\em Função para armazenar as posições possíveis de jogar. \end{DoxyCompactList}\item 
 void \hyperlink{logica__do__programa_8h_a131a18f3cc23681587fa4344ee1e6f40}{cria\+Array\+\_\+posicoes} (\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} a, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$array)
 \begin{DoxyCompactList}\small\item\em Função para criar um array com as posições à volta da posição atual. \end{DoxyCompactList}\item 
@@ -39,12 +49,33 @@ int \hyperlink{logica__do__programa_8h_a9fa14d48bd047750d95ae690394726db}{minima
 \subsection{Detailed Description}
 Definições da lógica do programa e das funções que a alteram 
 
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{logica__do__programa_8h_a1400b4a927c5062afd29ead8b296d067}\label{logica__do__programa_8h_a1400b4a927c5062afd29ead8b296d067}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!\+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+@{\+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+@{\+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+}{\_\_\_LOGICA\_DO\_PROGRAMA\_H\_\_\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+}
+
+Valor inicial do pior score em minmax \mbox{\Hypertarget{logica__do__programa_8h_a87722a59574cf02c18222354ae659717}\label{logica__do__programa_8h_a87722a59574cf02c18222354ae659717}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!M\+A\+I\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO@{M\+A\+I\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}}
+\index{M\+A\+I\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO@{M\+A\+I\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+I\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}{MAIS\_INFINITO}}
+{\footnotesize\ttfamily \#define M\+A\+I\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO~10000000}
+
+Valor inicial do pior score em minmax \mbox{\Hypertarget{logica__do__programa_8h_a612e2667971b09f5a12bb6f31cc79436}\label{logica__do__programa_8h_a612e2667971b09f5a12bb6f31cc79436}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO@{M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}}
+\index{M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO@{M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}{MENOS\_INFINITO}}
+{\footnotesize\ttfamily \#define M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO~-\/10000000}
+
+Valor inicial do melhor score em minmax 
+
 \subsection{Function Documentation}
 \mbox{\Hypertarget{logica__do__programa_8h_aa09f509bec3d879dd425ef1ce9fd47fd}\label{logica__do__programa_8h_aa09f509bec3d879dd425ef1ce9fd47fd}} 
 \index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!armazena\+\_\+posicoes@{armazena\+\_\+posicoes}}
 \index{armazena\+\_\+posicoes@{armazena\+\_\+posicoes}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
 \subsubsection{\texorpdfstring{armazena\+\_\+posicoes()}{armazena\_posicoes()}}
-{\footnotesize\ttfamily \hyperlink{structnodo}{L\+I\+S\+TA} armazena\+\_\+posicoes (\begin{DoxyParamCaption}\item[{\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA}}]{tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]},  }\item[{\hyperlink{structnodo}{L\+I\+S\+TA}}]{L,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$}]{posicoes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} armazena\+\_\+posicoes (\begin{DoxyParamCaption}\item[{\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA}}]{tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]},  }\item[{\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA}}]{L,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$}]{posicoes }\end{DoxyParamCaption})}
 
 
 
@@ -119,7 +150,7 @@ A distância à posição 2
 \index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!euristica@{euristica}}
 \index{euristica@{euristica}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
 \subsubsection{\texorpdfstring{euristica()}{euristica()}}
-{\footnotesize\ttfamily \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}$\ast$ euristica (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structnodo}{L\+I\+S\+TA}}]{L }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}$\ast$ euristica (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA}}]{L }\end{DoxyParamCaption})}
 
 
 \begin{DoxyParams}{Parameters}

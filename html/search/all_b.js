@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['printmovs',['printMOVS',['../camada__de__interface_8h.html#ad2eff303f36ebe7d504e7225227c5b34',1,'camada_de_interface.c']]],
-  ['proximo',['proximo',['../listas_8h.html#ad9380152361127432c55c1c6067e05ae',1,'listas.c']]]
+  ['nodo',['nodo',['../structnodo.html',1,'nodo'],['../listas_8h.html#ab74c40cea97ab9b24f68471bb1ded1a2',1,'NODO():&#160;listas.h']]],
+  ['num_5fcomandos',['num_comandos',['../structESTADO.html#abe6faacdd6111160bf9a354f44b95b38',1,'ESTADO']]],
+  ['num_5fjogadas',['num_jogadas',['../structESTADO.html#a261495728744647e618b4e623f5a4b7a',1,'ESTADO']]]
 ];

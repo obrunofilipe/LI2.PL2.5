@@ -12,36 +12,44 @@
 /**
 \brief Tipos de dados que uma casa pode assumir
  Uma casa na qual esteja um jogador é BRANCA, na qual já tenha passsado um jogador é PRETA, se não reunir nenhuma das condições anteriores é VAZIA.
- */
-typedef enum {VAZIO, BRANCA, PRETA} CASA;
+*/
+typedef enum {
+    /** Casa vazia */
+    VAZIO = '.',
+    /** Casa atual */
+    BRANCA = '*',
+    /** Casa para a qual não pode jogar */
+    PRETA = '#'
+} CASA;
 
 /**
 \brief Tipo de dados para definir uma coordenada
- */
+*/
 typedef struct {
+    /** Número da coluna */
     int coluna;
+    /** Número da linha */
     int linha;
 } COORDENADA;
 
 /**
 \brief Tipo de dados para definir uma jogada
- */
-//JOGADA
+*/
 typedef struct {
+    /** Coordenada do jogador 1 */
     COORDENADA jogador1;
+    /** Coordenada do jogador 2 */
     COORDENADA jogador2;
 } JOGADA;
 
 /**
 \brief Tipo de dados para guardar todas as jogadas efetuadas por um determinado jogador, o número máximo de jogadas possíveis são 32
- */
-//JOGADAS
+*/
 typedef JOGADA JOGADAS[32];
 
 /**
 \brief Tipo de dados que definem o estado
- */
-//ESTADO
+*/
 typedef struct {
     /** O tabuleiro */
     CASA tab[8][8];
@@ -55,7 +63,9 @@ typedef struct {
     int jogador_atual;
     /** Número do comando atual, utilizado no prompt */
     int num_comandos;
+    /** Número de movimento do jogador 1 */
     int movimentos_j1;
+    /** Número de movimentos do jogador 2 */
     int movimentos_j2;
 } ESTADO;
 
@@ -70,7 +80,6 @@ ESTADO *inicializar_estado();
 /**
 \brief Função para inicializar o tabuleiro
 @param tab Tabuleiro
-@returns O Tabuleiro inicial
 */
 void inicializar_tabuleiro(CASA tab[8][8]);
 
@@ -89,12 +98,11 @@ int obter_jogador_atual(ESTADO *estado);
 int obter_numero_de_jogadas(ESTADO *estado);
 
 /**
-\brief Função para obter o estado de uma casa do tabuleiro
-@param e Apontador para o estado atual
-@param c A coordenada
-@return Se a casa está VAZIA, BRANCA ou PRETA
- */
-//alterei esta funçao
+\brief Função para obter o estado de uma casa
+@param tab O tabuleiro
+@param c Coordenada
+@return O estado da casa
+*/
 CASA obter_estado_casa(CASA tab[8][8], COORDENADA c);
 
 /**
@@ -159,7 +167,6 @@ JOGADA obter_estado_jogada(ESTADO *e , int num_jogadas);
 \brief Função para mudar para o outro jogador
 @param e Apontador para o estado atual
 @param jogador Número do jogador
-@return
 */
 void mudar_jogador_atual (ESTADO *e, int jogador);
 
@@ -180,7 +187,7 @@ void altera_movimentos_j1 (ESTADO *e, int mov_j1);
 /**
 \brief Função para alterar o número de movimentos do jogador 2
 @param e Apontador para o estado atual
-@param mov_j1 Novo número de movimentos do jogador 2
+@param mov_j2 Novo número de movimentos do jogador 2
 */
 void altera_movimentos_j2 (ESTADO *e, int mov_j2);
 
@@ -188,7 +195,7 @@ void altera_movimentos_j2 (ESTADO *e, int mov_j2);
 \brief Função para alterar o estado que uma determinada casa está
 @param e Apontador para o estado atual
 @param posicao Casa a ser alterada
-@param estado
+@param estado Estado da casa
  */
 void altera_estado_casa(ESTADO *e, COORDENADA posicao, char estado);
 
@@ -221,7 +228,6 @@ void ler_movs(ESTADO * e, FILE * f_pointer);
 @param e Apontador para o estado atual
 @param pos Número fornecido ao pos
 @param jog Array das Jogadas
-@return O estado depois de aplicado o comando pos
 */
 void reinicia_pos (ESTADO *e, int pos, JOGADA *jog);
 

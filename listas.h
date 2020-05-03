@@ -1,5 +1,9 @@
 #ifndef _LISTAS_H
+/**
+ Definições das listas e das funções que trabalham com elas
+*/
 #define _LISTAS_H
+
 /**
  @file listas.h
  Definições das listas e das funções que trabalham com elas
@@ -9,9 +13,13 @@
 \brief Tipo de dados para definir uma lista
 */
 typedef struct nodo {
+    /** Valor atual */
     void *valor;
+    /** Nodos seguintes */
     struct nodo *proximo;
-} NODO, *LISTA;
+} /** Nodo definido */ NODO,
+/** apontador para o inicio da lista */
+  *LISTA;
 
 /**
 \brief Função para criar uma lista

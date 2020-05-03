@@ -1,6 +1,19 @@
 #ifndef ___LOGICA_DO_PROGRAMA_H___
+/**
+Valor inicial do pior score em minmax
+ */
 #define ___LOGICA_DO_PROGRAMA_H___
 #include "listas.h"
+#include "camada_de_dados.h"
+/**
+Valor inicial do melhor score em minmax
+ */
+#define MENOS_INFINITO -10000000
+
+/**
+Valor inicial do pior score em minmax
+ */
+#define MAIS_INFINITO 10000000
 /**
  @file logica_do_programa.h
  Definições da lógica do programa e das funções que a alteram

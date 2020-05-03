@@ -1,6 +1,14 @@
 #include <stdio.h>
+#include "camada_de_dados.h"
 #ifndef ___CAMADA_DE_INTERFACE_H___
+/**
+ Definições dos dados presentes na interface e das funções que a alteram
+ */
 #define ___CAMADA_DE_INTERFACE_H___
+/**
+ Tamanho da string lida
+ */
+#define BUF_SIZE 1024
 
 /**
  @file camada_de_interface.h
