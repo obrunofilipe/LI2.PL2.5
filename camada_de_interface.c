@@ -1,7 +1,14 @@
+/**
+ @file camada_de_interface.c
+ Dados presentes na interface e funções que a alteram
+*/
 #include <stdio.h>
 #include <string.h>
 #include "camada_de_dados.h"
 #include "logica_do_programa.h"
+/**
+\brief Tamanho da string lida
+*/
 #define BUF_SIZE 1024
 
 

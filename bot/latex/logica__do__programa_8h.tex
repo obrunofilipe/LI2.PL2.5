@@ -1,0 +1,360 @@
+\hypertarget{logica__do__programa_8h}{}\section{logica\+\_\+do\+\_\+programa.\+h File Reference}
+\label{logica__do__programa_8h}\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+{\ttfamily \#include \char`\"{}listas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}camada\+\_\+de\+\_\+dados.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logica\+\_\+do\+\_\+programa.\+h\char`\"{}}\newline
+Include dependency graph for logica\+\_\+do\+\_\+programa.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{logica__do__programa_8h_a1400b4a927c5062afd29ead8b296d067}{\+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+}
+\begin{DoxyCompactList}\small\item\em Definições da lógica do programa e das funções que a alteram. \end{DoxyCompactList}\item 
+\#define \hyperlink{logica__do__programa_8h_a612e2667971b09f5a12bb6f31cc79436}{M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}~-\/10000000
+\begin{DoxyCompactList}\small\item\em Include de \hyperlink{listas_8h}{listas.\+h}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{logica__do__programa_8h_a87722a59574cf02c18222354ae659717}\label{logica__do__programa_8h_a87722a59574cf02c18222354ae659717}} 
+\#define \hyperlink{logica__do__programa_8h_a87722a59574cf02c18222354ae659717}{M\+A\+I\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}~10000000
+\begin{DoxyCompactList}\small\item\em Valor inicial do pior score em minmax. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{logica__do__programa_8h_a53472e75f056ceb02b5387193021838a}{jogar} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$estado, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Funções relacionadas à lógica do programa. \end{DoxyCompactList}\item 
+int \hyperlink{logica__do__programa_8h_a1a37a3c530ad08eb3f6f5bb0674caa32}{verifica\+Jogada} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Função para verificar se uma jogada é possível. \end{DoxyCompactList}\item 
+int \hyperlink{logica__do__programa_8h_a316e652f244df13f941c813ae7b4940f}{verifica\+\_\+\+Vitoria\+\_\+\+Jog1} (\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c, int \hyperlink{logica__do__programa_8h_a9fa14d48bd047750d95ae690394726db}{minimax})
+\begin{DoxyCompactList}\small\item\em Função que verifica se o jogador 1 venceu. \end{DoxyCompactList}\item 
+int \hyperlink{logica__do__programa_8h_a9283caa7dbdcd81622412d09151babf1}{verifica\+\_\+\+Vitoria\+\_\+\+Jog2} (\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c, int \hyperlink{logica__do__programa_8h_a9fa14d48bd047750d95ae690394726db}{minimax})
+\begin{DoxyCompactList}\small\item\em Função que verifica se o jogador 2 venceu. \end{DoxyCompactList}\item 
+int \hyperlink{logica__do__programa_8h_a8b341510d646820c85b1935d939bd94d}{verifica\+\_\+\+Bloqueio} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Função que verifica se um jogador está bloqueado, ou seja, não existe nenhuma possibilidade de efetuar uma jogada válida. \end{DoxyCompactList}\item 
+int \hyperlink{logica__do__programa_8h_afb5ac18f8e1659018f8b247d2e708e6f}{distancia\+\_\+a\+\_\+1} (\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Função auxiliar para calcular a distância euclidiana até à posição 1. \end{DoxyCompactList}\item 
+int \hyperlink{logica__do__programa_8h_a364b4d622a599f1c739346a45334cb57}{distancia\+\_\+a\+\_\+2} (\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Função auxiliar para calcular a distância euclidiana até à posição 2. \end{DoxyCompactList}\item 
+\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$ \hyperlink{logica__do__programa_8h_a53b707ec54825ec718f23293b62d0793}{euristica} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{listas_8h_a853ddea61d450761bc94933207e4833d}{L\+I\+S\+TA} L)
+\item 
+\hyperlink{listas_8h_a853ddea61d450761bc94933207e4833d}{L\+I\+S\+TA} \hyperlink{logica__do__programa_8h_aa09f509bec3d879dd425ef1ce9fd47fd}{armazena\+\_\+posicoes} (\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}, \hyperlink{listas_8h_a853ddea61d450761bc94933207e4833d}{L\+I\+S\+TA} L, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$posicoes)
+\begin{DoxyCompactList}\small\item\em Função para armazenar as posições possíveis de jogar. \end{DoxyCompactList}\item 
+void \hyperlink{logica__do__programa_8h_a131a18f3cc23681587fa4344ee1e6f40}{cria\+Array\+\_\+posicoes} (\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} a, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$array)
+\begin{DoxyCompactList}\small\item\em Função para criar um array com as posições à volta da posição atual. \end{DoxyCompactList}\item 
+\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} \hyperlink{logica__do__programa_8h_a44cb151933c38edce62b91de8f1eb03d}{jog} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} pos)
+\begin{DoxyCompactList}\small\item\em Função para executar o comando jog. \end{DoxyCompactList}\item 
+int \hyperlink{logica__do__programa_8h_ae3af156fcfb85bf6a7fdbe830d9f1cc5}{score\+\_\+minimax} (\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$c, int maximizing\+Player)
+\begin{DoxyCompactList}\small\item\em Função para calcular a maximização do jogador segundo o minmax. \end{DoxyCompactList}\item 
+int \hyperlink{logica__do__programa_8h_a9fa14d48bd047750d95ae690394726db}{minimax} (\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$c, int depth, int maximizing\+Player, int player, int alpha, int beta)
+\begin{DoxyCompactList}\small\item\em Função para aplicar a heurística minmax. \end{DoxyCompactList}\item 
+\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} \hyperlink{logica__do__programa_8h_a4203eda4416534176ea72b0b5fd69c88}{jog2} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Função para executar o comando jog2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definições da lógica do programa e das funções que a alteram 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{logica__do__programa_8h_a1400b4a927c5062afd29ead8b296d067}\label{logica__do__programa_8h_a1400b4a927c5062afd29ead8b296d067}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!\+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+@{\+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+@{\+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+}{\_\_\_LOGICA\_DO\_PROGRAMA\_H\_\_\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+\_\+\+L\+O\+G\+I\+C\+A\+\_\+\+D\+O\+\_\+\+P\+R\+O\+G\+R\+A\+M\+A\+\_\+\+H\+\_\+\+\_\+\+\_\+}
+
+
+
+Definições da lógica do programa e das funções que a alteram. 
+
+Definições da lógica do programa e das funções que a alteram \mbox{\Hypertarget{logica__do__programa_8h_a612e2667971b09f5a12bb6f31cc79436}\label{logica__do__programa_8h_a612e2667971b09f5a12bb6f31cc79436}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO@{M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}}
+\index{M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO@{M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO}{MENOS\_INFINITO}}
+{\footnotesize\ttfamily \#define M\+E\+N\+O\+S\+\_\+\+I\+N\+F\+I\+N\+I\+TO~-\/10000000}
+
+
+
+Include de \hyperlink{listas_8h}{listas.\+h}. 
+
+Include de \hyperlink{camada__de__dados_8h}{camada\+\_\+de\+\_\+dados.\+h} Valor inicial do melhor score em minmax Include de logica\+\_\+do\+\_\+progama.\+h 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{logica__do__programa_8h_aa09f509bec3d879dd425ef1ce9fd47fd}\label{logica__do__programa_8h_aa09f509bec3d879dd425ef1ce9fd47fd}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!armazena\+\_\+posicoes@{armazena\+\_\+posicoes}}
+\index{armazena\+\_\+posicoes@{armazena\+\_\+posicoes}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{armazena\+\_\+posicoes()}{armazena\_posicoes()}}
+{\footnotesize\ttfamily \hyperlink{listas_8h_a853ddea61d450761bc94933207e4833d}{L\+I\+S\+TA} armazena\+\_\+posicoes (\begin{DoxyParamCaption}\item[{\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA}}]{tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]},  }\item[{\hyperlink{listas_8h_a853ddea61d450761bc94933207e4833d}{L\+I\+S\+TA}}]{L,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$}]{posicoes }\end{DoxyParamCaption})}
+
+
+
+Função para armazenar as posições possíveis de jogar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & O tabuleiro atual \\
+\hline
+{\em L} & Lista para ser alterada com as posições possíveis \\
+\hline
+{\em posicoes} & Array de posições a avaliar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista L com todas as posições possíveis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a131a18f3cc23681587fa4344ee1e6f40}\label{logica__do__programa_8h_a131a18f3cc23681587fa4344ee1e6f40}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!cria\+Array\+\_\+posicoes@{cria\+Array\+\_\+posicoes}}
+\index{cria\+Array\+\_\+posicoes@{cria\+Array\+\_\+posicoes}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{cria\+Array\+\_\+posicoes()}{criaArray\_posicoes()}}
+{\footnotesize\ttfamily void cria\+Array\+\_\+posicoes (\begin{DoxyParamCaption}\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{a,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$}]{array }\end{DoxyParamCaption})}
+
+
+
+Função para criar um array com as posições à volta da posição atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & A coordenada atual \\
+\hline
+{\em array} & Array a ser preenchido \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logica__do__programa_8h_afb5ac18f8e1659018f8b247d2e708e6f}\label{logica__do__programa_8h_afb5ac18f8e1659018f8b247d2e708e6f}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!distancia\+\_\+a\+\_\+1@{distancia\+\_\+a\+\_\+1}}
+\index{distancia\+\_\+a\+\_\+1@{distancia\+\_\+a\+\_\+1}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{distancia\+\_\+a\+\_\+1()}{distancia\_a\_1()}}
+{\footnotesize\ttfamily int distancia\+\_\+a\+\_\+1 (\begin{DoxyParamCaption}\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar para calcular a distância euclidiana até à posição 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A distância à posição 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a364b4d622a599f1c739346a45334cb57}\label{logica__do__programa_8h_a364b4d622a599f1c739346a45334cb57}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!distancia\+\_\+a\+\_\+2@{distancia\+\_\+a\+\_\+2}}
+\index{distancia\+\_\+a\+\_\+2@{distancia\+\_\+a\+\_\+2}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{distancia\+\_\+a\+\_\+2()}{distancia\_a\_2()}}
+{\footnotesize\ttfamily int distancia\+\_\+a\+\_\+2 (\begin{DoxyParamCaption}\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar para calcular a distância euclidiana até à posição 2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A distância à posição 2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a53b707ec54825ec718f23293b62d0793}\label{logica__do__programa_8h_a53b707ec54825ec718f23293b62d0793}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!euristica@{euristica}}
+\index{euristica@{euristica}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{euristica()}{euristica()}}
+{\footnotesize\ttfamily \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}$\ast$ euristica (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{listas_8h_a853ddea61d450761bc94933207e4833d}{L\+I\+S\+TA}}]{L }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado atual \\
+\hline
+{\em L} & Lista de posições possíveis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A posição para a qual se pode mover de modo a ficar mais perto do objetivo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a44cb151933c38edce62b91de8f1eb03d}\label{logica__do__programa_8h_a44cb151933c38edce62b91de8f1eb03d}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!jog@{jog}}
+\index{jog@{jog}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{jog()}{jog()}}
+{\footnotesize\ttfamily \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} jog (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Função para executar o comando jog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado atual \\
+\hline
+{\em pos} & A posição atual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A melhor jogada possível de forma a aproximar-\/se do objetivo segundo o algoritmo da distância euclidiana 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a4203eda4416534176ea72b0b5fd69c88}\label{logica__do__programa_8h_a4203eda4416534176ea72b0b5fd69c88}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!jog2@{jog2}}
+\index{jog2@{jog2}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{jog2()}{jog2()}}
+{\footnotesize\ttfamily \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} jog2 (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Função para executar o comando jog2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado atual \\
+\hline
+{\em c} & Coordenada atual \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A jogada que traz mais benefícios ao jogador atual e menos ao adversário segundo a heurística minmax 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a53472e75f056ceb02b5387193021838a}\label{logica__do__programa_8h_a53472e75f056ceb02b5387193021838a}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!jogar@{jogar}}
+\index{jogar@{jogar}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{jogar()}{jogar()}}
+{\footnotesize\ttfamily int jogar (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{estado,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Funções relacionadas à lógica do programa. 
+
+Função para jogar 
+\begin{DoxyParams}{Parameters}
+{\em estado} & Apontador para o Estado atual \\
+\hline
+{\em c} & Coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O inteiro 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a9fa14d48bd047750d95ae690394726db}\label{logica__do__programa_8h_a9fa14d48bd047750d95ae690394726db}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!minimax@{minimax}}
+\index{minimax@{minimax}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{minimax()}{minimax()}}
+{\footnotesize\ttfamily int minimax (\begin{DoxyParamCaption}\item[{\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA}}]{tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]},  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$}]{c,  }\item[{int}]{depth,  }\item[{int}]{maximizing\+Player,  }\item[{int}]{player,  }\item[{int}]{alpha,  }\item[{int}]{beta }\end{DoxyParamCaption})}
+
+
+
+Função para aplicar a heurística minmax. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & O tabuleiro \\
+\hline
+{\em c} & A coordenada atual \\
+\hline
+{\em depth} & Número de camadas a analisar \\
+\hline
+{\em maximizing\+Player} & Jogador a maximizar, ou seja, o jogador que vai utilizar a heurística \\
+\hline
+{\em player} & Jogador adversário \\
+\hline
+{\em alpha} & A melhor maximização até ao moment \\
+\hline
+{\em beta} & A melhor minimização até ao momento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O melhor resultado obtido na heurística 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_ae3af156fcfb85bf6a7fdbe830d9f1cc5}\label{logica__do__programa_8h_ae3af156fcfb85bf6a7fdbe830d9f1cc5}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!score\+\_\+minimax@{score\+\_\+minimax}}
+\index{score\+\_\+minimax@{score\+\_\+minimax}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{score\+\_\+minimax()}{score\_minimax()}}
+{\footnotesize\ttfamily int score\+\_\+minimax (\begin{DoxyParamCaption}\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$}]{c,  }\item[{int}]{maximizing\+Player }\end{DoxyParamCaption})}
+
+
+
+Função para calcular a maximização do jogador segundo o minmax. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & A coordenada atual \\
+\hline
+{\em maximizing\+Player} & O jogador a ser maximizado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O valor da maximização 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a8b341510d646820c85b1935d939bd94d}\label{logica__do__programa_8h_a8b341510d646820c85b1935d939bd94d}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!verifica\+\_\+\+Bloqueio@{verifica\+\_\+\+Bloqueio}}
+\index{verifica\+\_\+\+Bloqueio@{verifica\+\_\+\+Bloqueio}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{verifica\+\_\+\+Bloqueio()}{verifica\_Bloqueio()}}
+{\footnotesize\ttfamily int verifica\+\_\+\+Bloqueio (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se um jogador está bloqueado, ou seja, não existe nenhuma possibilidade de efetuar uma jogada válida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o estado atual \\
+\hline
+{\em c} & Coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O inteiro 1 caso esteja bloqueado, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a316e652f244df13f941c813ae7b4940f}\label{logica__do__programa_8h_a316e652f244df13f941c813ae7b4940f}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!verifica\+\_\+\+Vitoria\+\_\+\+Jog1@{verifica\+\_\+\+Vitoria\+\_\+\+Jog1}}
+\index{verifica\+\_\+\+Vitoria\+\_\+\+Jog1@{verifica\+\_\+\+Vitoria\+\_\+\+Jog1}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{verifica\+\_\+\+Vitoria\+\_\+\+Jog1()}{verifica\_Vitoria\_Jog1()}}
+{\footnotesize\ttfamily int verifica\+\_\+\+Vitoria\+\_\+\+Jog1 (\begin{DoxyParamCaption}\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c,  }\item[{int}]{minimax }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se o jogador 1 venceu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Coordenada \\
+\hline
+{\em minimax} & 0 ou 1 dependendo se é necessário dar print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O inteiro 1 se venceu, 0 em caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a9283caa7dbdcd81622412d09151babf1}\label{logica__do__programa_8h_a9283caa7dbdcd81622412d09151babf1}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!verifica\+\_\+\+Vitoria\+\_\+\+Jog2@{verifica\+\_\+\+Vitoria\+\_\+\+Jog2}}
+\index{verifica\+\_\+\+Vitoria\+\_\+\+Jog2@{verifica\+\_\+\+Vitoria\+\_\+\+Jog2}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{verifica\+\_\+\+Vitoria\+\_\+\+Jog2()}{verifica\_Vitoria\_Jog2()}}
+{\footnotesize\ttfamily int verifica\+\_\+\+Vitoria\+\_\+\+Jog2 (\begin{DoxyParamCaption}\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c,  }\item[{int}]{minimax }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se o jogador 2 venceu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Coordenada \\
+\hline
+{\em minimax} & 0 ou 1 dependendo se é necessário dar print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O inteiro 1 se venceu, 0 em caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{logica__do__programa_8h_a1a37a3c530ad08eb3f6f5bb0674caa32}\label{logica__do__programa_8h_a1a37a3c530ad08eb3f6f5bb0674caa32}} 
+\index{logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}!verifica\+Jogada@{verifica\+Jogada}}
+\index{verifica\+Jogada@{verifica\+Jogada}!logica\+\_\+do\+\_\+programa.\+h@{logica\+\_\+do\+\_\+programa.\+h}}
+\subsubsection{\texorpdfstring{verifica\+Jogada()}{verificaJogada()}}
+{\footnotesize\ttfamily int verifica\+Jogada (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Função para verificar se uma jogada é possível. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Apontador para o Estado atual \\
+\hline
+{\em c} & Coordenada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O inteiro 1 se a jogada for possível, 0 em caso contrário 
+\end{DoxyReturn}

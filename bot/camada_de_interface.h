@@ -1,16 +1,39 @@
-
-//
-// Created by joao on 30/04/20.
-//
-
-#ifndef BOT_CAMADA_DE_INTERFACE_H
-#define BOT_CAMADA_DE_INTERFACE_H
-#include <stdio.h>
-
 /**
- @file bot_camada_de_interface.h
+ @file camada_de_interface.h
  Definições dos dados presentes na interface e das funções que a alteram
 */
+
+/**
+\brief Definições dos dados presentes na interface e das funções que a alteram
+ */
+#ifndef ___CAMADA_DE_INTERFACE_H___
+/**
+\brief Definições dos dados presentes na interface e das funções que a alteram
+ */
+#define ___CAMADA_DE_INTERFACE_H___
+/**
+ \brief Include de stdio.h
+ */
+#include <stdio.h>
+/**
+ \brief Include de camada_de_dados.h
+ */
+#include "camada_de_dados.h"
+
+/**
+ \brief Include de string.h
+ */
+#include <string.h>
+
+/**
+ \brief Include de logica_do_programa.h
+ */
+#include "logica_do_programa.h"
+
+/**
+\brief Tamanho da string lida
+*/
+#define BUF_SIZE 1024
 
 /**
 \brief Funções para alterarem a interface

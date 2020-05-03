@@ -1,6 +1,9 @@
+/**
+ @file main.c
+ Função para o bot
+*/
 #include <stdio.h>
 #include "camada_de_dados.h"
-#include "camada_de_interface.h"
 #include "logica_do_programa.h"
 
 

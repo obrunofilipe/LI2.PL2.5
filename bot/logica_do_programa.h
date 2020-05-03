@@ -1,6 +1,3 @@
-#ifndef BOT_LOGICA_DO_PROGRAMA_H
-#define BOT_LOGICA_DO_PROGRAMA_H
-#include "listas.h"
 
 /**
  @file bot_logica_do_programa.h
@@ -8,9 +5,44 @@
 */
 
 /**
+ @file logica_do_programa.h
+ Definições da lógica do programa e das funções que a alteram
+*/
+/**
+\brief Definições da lógica do programa e das funções que a alteram
+ */
+#ifndef ___LOGICA_DO_PROGRAMA_H___
+/**
+\brief Definições da lógica do programa e das funções que a alteram
+ */
+#define ___LOGICA_DO_PROGRAMA_H___
+/**
+ \brief Include de listas.h
+ */
+#include "listas.h"
+/**
+ \brief Include de camada_de_dados.h
+ */
+#include "camada_de_dados.h"
+/**
+\brief Valor inicial do melhor score em minmax
+ */
+
+/**
+\brief Include de logica_do_progama.h
+*/
+#include "logica_do_programa.h"
+#define MENOS_INFINITO -10000000
+
+/**
+\brief Valor inicial do pior score em minmax
+ */
+#define MAIS_INFINITO 10000000
+
+
+/**
 \brief Funções relacionadas à lógica do programa
 */
-
 
 /**
 \brief Função para jogar

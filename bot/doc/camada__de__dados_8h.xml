@@ -3,24 +3,121 @@
   <compounddef id="camada__de__dados_8h" kind="file" language="C++">
     <compoundname>camada_de_dados.h</compoundname>
     <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="camada__de__dados_8h" local="yes">camada_de_dados.h</includes>
     <includedby refid="camada__de__dados_8c" local="yes">camada_de_dados.c</includedby>
+    <includedby refid="camada__de__dados_8h" local="yes">camada_de_dados.h</includedby>
+    <includedby refid="camada__de__interface_8h" local="yes">camada_de_interface.h</includedby>
+    <includedby refid="logica__do__programa_8h" local="yes">logica_do_programa.h</includedby>
     <includedby refid="camada__de__interface_8c" local="yes">camada_de_interface.c</includedby>
     <includedby refid="logica__do__programa_8c" local="yes">logica_do_programa.c</includedby>
     <includedby refid="main_8c" local="yes">main.c</includedby>
     <incdepgraph>
-      <node id="7">
+      <node id="12">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>string.h</label>
+      </node>
+      <node id="9">
         <label>camada_de_dados.h</label>
         <link refid="camada__de__dados_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="10">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="18">
+        <label>logica_do_programa.c</label>
+        <link refid="logica__do__programa_8c"/>
+      </node>
+      <node id="16">
+        <label>logica_do_programa.h</label>
+        <link refid="logica__do__programa_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="17">
+        <label>camada_de_interface.c</label>
+        <link refid="camada__de__interface_8c"/>
+      </node>
+      <node id="15">
+        <label>camada_de_interface.h</label>
+        <link refid="camada__de__interface_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>camada_de_dados.c</label>
+        <link refid="camada__de__dados_8c"/>
+      </node>
+      <node id="13">
+        <label>camada_de_dados.h</label>
+        <link refid="camada__de__dados_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <innerclass refid="structCOORDENADA" prot="public">COORDENADA</innerclass>
     <innerclass refid="structJOGADA" prot="public">JOGADA</innerclass>
     <innerclass refid="structESTADO" prot="public">ESTADO</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="camada__de__dados_8h_1a06dbd3e6c422674ac0f4ea694c32d200" prot="public" static="no">
+        <name>___CAMADA_DE_DADOS_H___</name>
+        <briefdescription>
+<para>Definições dos dados presentes no estado e das funções que o alteram. </para>        </briefdescription>
+        <detaileddescription>
+<para>Definições dos dados presentes no estado e das funções que o alteram </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_de_dados.h" line="12" column="9" bodyfile="camada_de_dados.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="camada__de__dados_8h_1a6821bafc3c88dfb2e433a095df9940c6" prot="public" static="no">
+        <name>BUF_SIZE</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+<para>Include de stdio.h. </para>        </briefdescription>
+        <detaileddescription>
+<para>Include de string.h Include de stdlib.h Include de <ref refid="camada__de__dados_8h" kindref="compound">camada_de_dados.h</ref> Tamanho da string lida </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="camada_de_dados.h" line="33" column="9" bodyfile="camada_de_dados.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="enum">
       <memberdef kind="enum" id="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" prot="public" static="no">
         <name>CASA</name>
@@ -49,12 +146,12 @@
 <para>Casa para a qual não pode jogar </para>          </detaileddescription>
         </enumvalue>
         <briefdescription>
-<para>Tipos de dados que uma casa pode assumir Uma casa na qual esteja um jogador é BRANCA, na qual já tenha passsado um jogador é PRETA, se não reunir nenhuma das condições anteriores é VAZIA. </para>        </briefdescription>
+<para>Funções dos dados. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Tipos de dados que uma casa pode assumir </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="16" column="1" bodyfile="camada_de_dados.h" bodystart="16" bodyend="23"/>
+        <location file="camada_de_dados.h" line="42" column="1" bodyfile="camada_de_dados.h" bodystart="42" bodyend="49"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -69,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="48" column="1" bodyfile="camada_de_dados.h" bodystart="48" bodyend="-1"/>
+        <location file="camada_de_dados.h" line="77" column="1" bodyfile="camada_de_dados.h" bodystart="77" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -85,7 +182,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="78" column="1" bodyfile="camada_de_dados.c" bodystart="42" bodyend="52"/>
+        <location file="camada_de_dados.h" line="116" column="1" bodyfile="camada_de_dados.c" bodystart="49" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1a519e038fa40377b08305a4c721453d67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -93,7 +190,7 @@
         <argsstring>(CASA tab[8][8])</argsstring>
         <name>inicializar_tabuleiro</name>
         <param>
-          <type>CASA</type>
+          <type><ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref></type>
           <declname>tab</declname>
           <array>[8][8]</array>
         </param>
@@ -111,7 +208,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="84" column="1" bodyfile="camada_de_dados.c" bodystart="10" bodyend="18"/>
+        <location file="camada_de_dados.h" line="122" column="1" bodyfile="camada_de_dados.c" bodystart="18" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1ad6e326e4ffa57ca1ae0c75377ecefc8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -137,7 +234,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="91" column="1" bodyfile="camada_de_dados.c" bodystart="24" bodyend="26"/>
+        <location file="camada_de_dados.h" line="129" column="1" bodyfile="camada_de_dados.c" bodystart="31" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1a6cd0b387bdee9e18003c78852394aa63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -163,15 +260,15 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="98" column="1" bodyfile="camada_de_dados.c" bodystart="28" bodyend="30"/>
+        <location file="camada_de_dados.h" line="136" column="1" bodyfile="camada_de_dados.c" bodystart="35" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1a0ed6b059967a9235fa62c7691203606a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>CASA</type>
+        <type><ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref></type>
         <definition>CASA obter_estado_casa</definition>
         <argsstring>(CASA tab[8][8], COORDENADA c)</argsstring>
         <name>obter_estado_casa</name>
         <param>
-          <type>CASA</type>
+          <type><ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref></type>
           <declname>tab</declname>
           <array>[8][8]</array>
         </param>
@@ -201,7 +298,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="106" column="1" bodyfile="camada_de_dados.c" bodystart="33" bodyend="40"/>
+        <location file="camada_de_dados.h" line="144" column="1" bodyfile="camada_de_dados.c" bodystart="40" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1a37422da20c66c350333f92bae973a3f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -237,7 +334,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="113" column="1" bodyfile="camada_de_dados.c" bodystart="54" bodyend="74"/>
+        <location file="camada_de_dados.h" line="151" column="1" bodyfile="camada_de_dados.c" bodystart="61" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1ade5d6f16f7840c944079b80da9ad5b10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -262,7 +359,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="119" column="1" bodyfile="camada_de_dados.c" bodystart="86" bodyend="88"/>
+        <location file="camada_de_dados.h" line="157" column="1" bodyfile="camada_de_dados.c" bodystart="93" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1a38d349b0eab9c1249c89d3d03c6e1269" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -288,7 +385,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="126" column="1" bodyfile="camada_de_dados.c" bodystart="90" bodyend="92"/>
+        <location file="camada_de_dados.h" line="164" column="1" bodyfile="camada_de_dados.c" bodystart="97" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1a1d0036d2753e8f2d79221be69106c62c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -324,7 +421,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="133" column="1" bodyfile="camada_de_dados.c" bodystart="94" bodyend="96"/>
+        <location file="camada_de_dados.h" line="171" column="1" bodyfile="camada_de_dados.c" bodystart="101" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1a40555aff97afc67bd1866f2785111310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
@@ -350,7 +447,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="140" column="1" bodyfile="camada_de_dados.c" bodystart="98" bodyend="100"/>
+        <location file="camada_de_dados.h" line="178" column="1" bodyfile="camada_de_dados.c" bodystart="105" bodyend="107"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1ae0d7061c4156a335fb19d754f9e777d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -386,7 +483,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="147" column="1" bodyfile="camada_de_dados.c" bodystart="136" bodyend="143"/>
+        <location file="camada_de_dados.h" line="185" column="1" bodyfile="camada_de_dados.c" bodystart="143" bodyend="150"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1a234a404296dbefe6bffde35db541d51f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -423,7 +520,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="156" column="1" bodyfile="camada_de_dados.c" bodystart="75" bodyend="80"/>
+        <location file="camada_de_dados.h" line="194" column="1" bodyfile="camada_de_dados.c" bodystart="82" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1a2a31e8e2f9cf25c4e5e8a555c81e091c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structJOGADA" kindref="compound">JOGADA</ref></type>
@@ -460,7 +557,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="164" column="1" bodyfile="camada_de_dados.c" bodystart="20" bodyend="22"/>
+        <location file="camada_de_dados.h" line="202" column="1" bodyfile="camada_de_dados.c" bodystart="27" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1abc69abc6923d55fa24d5d756ee809435" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -496,7 +593,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="171" column="1" bodyfile="camada_de_dados.c" bodystart="82" bodyend="84"/>
+        <location file="camada_de_dados.h" line="209" column="1" bodyfile="camada_de_dados.c" bodystart="89" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1ac513714cdb4fb130ad6115e4cf4f6564" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -532,7 +629,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="178" column="1" bodyfile="camada_de_dados.c" bodystart="102" bodyend="104"/>
+        <location file="camada_de_dados.h" line="216" column="1" bodyfile="camada_de_dados.c" bodystart="109" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1a3cef1ce5bce2aac553882339c0f742cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -568,7 +665,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="185" column="1" bodyfile="camada_de_dados.c" bodystart="106" bodyend="108"/>
+        <location file="camada_de_dados.h" line="223" column="1" bodyfile="camada_de_dados.c" bodystart="113" bodyend="115"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1a2c11be2891bb52a9b920415bbc4fbd36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -604,7 +701,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="192" column="1" bodyfile="camada_de_dados.c" bodystart="110" bodyend="112"/>
+        <location file="camada_de_dados.h" line="230" column="1" bodyfile="camada_de_dados.c" bodystart="117" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1af287c2f9d23418e7b38168dcbd7222ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -651,7 +748,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="200" column="1" bodyfile="camada_de_dados.c" bodystart="114" bodyend="128"/>
+        <location file="camada_de_dados.h" line="238" column="1" bodyfile="camada_de_dados.c" bodystart="121" bodyend="135"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1ab14c6cb59b5cbbd9a05f8a471ff44b9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -709,7 +806,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="209" column="1" bodyfile="camada_de_dados.c" bodystart="129" bodyend="134"/>
+        <location file="camada_de_dados.h" line="247" column="1" bodyfile="camada_de_dados.c" bodystart="136" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1ae2ba0aa85a3e065ef292e1f666ece8b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -746,7 +843,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="217" column="1" bodyfile="camada_de_dados.c" bodystart="145" bodyend="155"/>
+        <location file="camada_de_dados.h" line="255" column="1" bodyfile="camada_de_dados.c" bodystart="152" bodyend="163"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1aed53970f98d13646eb42b86536acd582" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -782,7 +879,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="224" column="1" bodyfile="camada_de_dados.c" bodystart="157" bodyend="188"/>
+        <location file="camada_de_dados.h" line="262" column="1" bodyfile="camada_de_dados.c" bodystart="165" bodyend="196"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1aaf81766175bc061ea1deb4b4d5bcf016" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -829,7 +926,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="232" column="1" bodyfile="camada_de_dados.c" bodystart="190" bodyend="216"/>
+        <location file="camada_de_dados.h" line="270" column="1" bodyfile="camada_de_dados.c" bodystart="198" bodyend="224"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1a2362774c3566a31762c24b44a56b598c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structJOGADA" kindref="compound">JOGADA</ref> *</type>
@@ -855,7 +952,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="239" column="1" bodyfile="camada_de_dados.c" bodystart="219" bodyend="221"/>
+        <location file="camada_de_dados.h" line="277" column="1" bodyfile="camada_de_dados.c" bodystart="227" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="camada__de__dados_8h_1ae3a752a6ca926f49ceaeb54c96478aa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -881,100 +978,114 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="camada_de_dados.h" line="246" column="1" bodyfile="camada_de_dados.c" bodystart="222" bodyend="232"/>
+        <location file="camada_de_dados.h" line="284" column="1" bodyfile="camada_de_dados.c" bodystart="230" bodyend="240"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Definições dos dados presentes no estado e das funções que o alteram </para>    </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BOT_CAMADA_DE_DADOS_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BOT_CAMADA_DE_DADOS_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>VAZIO<sp/>=<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>BRANCA<sp/>=<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>PRETA<sp/>=<sp/></highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal">}<sp/>CASA;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28" refid="structCOORDENADA" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="30" refid="structCOORDENADA_1adfbc8d4856ce807139fdf62e00aed29a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structCOORDENADA_1adfbc8d4856ce807139fdf62e00aed29a" kindref="member">coluna</ref>;</highlight></codeline>
-<codeline lineno="32" refid="structCOORDENADA_1aefe14bcc5a066ac3b21500cc3d28c06f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structCOORDENADA_1aefe14bcc5a066ac3b21500cc3d28c06f" kindref="member">linha</ref>;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal">}<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>;</highlight></codeline>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>___CAMADA_DE_DADOS_H___</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="camada__de__dados_8h_1a06dbd3e6c422674ac0f4ea694c32d200" refkind="member"><highlight class="preprocessor">#define<sp/>___CAMADA_DE_DADOS_H___</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="camada__de__dados_8h" kindref="compound">camada_de_dados.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="camada__de__dados_8h_1a6821bafc3c88dfb2e433a095df9940c6" refkind="member"><highlight class="preprocessor">#define<sp/>BUF_SIZE<sp/>1024</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="structJOGADA" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="40" refid="structJOGADA_1a93d9306cb0c49b66b7d9a615bffe0149" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="structJOGADA_1a93d9306cb0c49b66b7d9a615bffe0149" kindref="member">jogador1</ref>;</highlight></codeline>
-<codeline lineno="42" refid="structJOGADA_1ab46b16dfbdc7f2af9430c8dcdac0914b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="structJOGADA_1ab46b16dfbdc7f2af9430c8dcdac0914b" kindref="member">jogador2</ref>;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}<sp/><ref refid="structJOGADA" kindref="compound">JOGADA</ref>;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structJOGADA" kindref="compound">JOGADA</ref><sp/>JOGADAS[32];</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="structESTADO" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="55" refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CASA<sp/>tab[8][8];</highlight></codeline>
-<codeline lineno="57" refid="structESTADO_1a4896a5c5c1f40b43fb795623327e3f47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="structESTADO_1a4896a5c5c1f40b43fb795623327e3f47" kindref="member">ultima_jogada</ref>;</highlight></codeline>
-<codeline lineno="59" refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>JOGADAS<sp/><ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>;</highlight></codeline>
-<codeline lineno="61" refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" kindref="member">num_jogadas</ref>;</highlight></codeline>
-<codeline lineno="63" refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kindref="member">jogador_atual</ref>;</highlight></codeline>
-<codeline lineno="65" refid="structESTADO_1abe6faacdd6111160bf9a354f44b95b38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structESTADO_1abe6faacdd6111160bf9a354f44b95b38" kindref="member">num_comandos</ref>;</highlight></codeline>
-<codeline lineno="67" refid="structESTADO_1a48e60cf831e7351c8d0afae433f3c674" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structESTADO_1a48e60cf831e7351c8d0afae433f3c674" kindref="member">movimentos_j1</ref>;</highlight></codeline>
-<codeline lineno="69" refid="structESTADO_1a21a8bb9b8cb21ffc06256242516f5a67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structESTADO_1a21a8bb9b8cb21ffc06256242516f5a67" kindref="member">movimentos_j2</ref>;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal">}<sp/><ref refid="structESTADO" kindref="compound">ESTADO</ref>;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="44" refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113" kindref="member">VAZIO</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="46" refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5" kindref="member">BRANCA</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="48" refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039a007278eb3827d19891b47cdd3ac8846d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039a007278eb3827d19891b47cdd3ac8846d" kindref="member">PRETA</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structCOORDENADA" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57" refid="structCOORDENADA_1adfbc8d4856ce807139fdf62e00aed29a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structCOORDENADA_1adfbc8d4856ce807139fdf62e00aed29a" kindref="member">coluna</ref>;</highlight></codeline>
+<codeline lineno="59" refid="structCOORDENADA_1aefe14bcc5a066ac3b21500cc3d28c06f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structCOORDENADA_1aefe14bcc5a066ac3b21500cc3d28c06f" kindref="member">linha</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="structJOGADA" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68" refid="structJOGADA_1a93d9306cb0c49b66b7d9a615bffe0149" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="structJOGADA_1a93d9306cb0c49b66b7d9a615bffe0149" kindref="member">jogador1</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structJOGADA_1ab46b16dfbdc7f2af9430c8dcdac0914b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="structJOGADA_1ab46b16dfbdc7f2af9430c8dcdac0914b" kindref="member">jogador2</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="structJOGADA" kindref="compound">JOGADA</ref>;</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*inicializar_estado();</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>inicializar_tabuleiro(CASA<sp/>tab[8][8]);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>obter_jogador_atual(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*estado);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>obter_numero_de_jogadas(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*estado);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal">CASA<sp/>obter_estado_casa(CASA<sp/>tab[8][8],<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>atualiza_estado_jogo<sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>incrementa_num_comandos(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>obter_num_comandos(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>modifica_num_jogadas<sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numJogadas);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>obter_ultima_jogada(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>);</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>grava_dados(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*file_name<sp/>);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>obter_numero_movimentos(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador);</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><ref refid="structJOGADA" kindref="compound">JOGADA</ref><sp/>obter_estado_jogada(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_jogadas);</highlight></codeline>
+<codeline lineno="77" refid="camada__de__dados_8h_1a94c221d29a1760f008b7834093259b7d" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structJOGADA" kindref="compound">JOGADA</ref><sp/><ref refid="camada__de__dados_8h_1a94c221d29a1760f008b7834093259b7d" kindref="member">JOGADAS</ref>[32];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="structESTADO" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84" refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref><sp/>tab[8][8];</highlight></codeline>
+<codeline lineno="86" refid="structESTADO_1a4896a5c5c1f40b43fb795623327e3f47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="structESTADO_1a4896a5c5c1f40b43fb795623327e3f47" kindref="member">ultima_jogada</ref>;</highlight></codeline>
+<codeline lineno="88" refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="camada__de__dados_8h_1a94c221d29a1760f008b7834093259b7d" kindref="member">JOGADAS</ref><sp/><ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>;</highlight></codeline>
+<codeline lineno="90" refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" kindref="member">num_jogadas</ref>;</highlight></codeline>
+<codeline lineno="92" refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kindref="member">jogador_atual</ref>;</highlight></codeline>
+<codeline lineno="94" refid="structESTADO_1abe6faacdd6111160bf9a354f44b95b38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structESTADO_1abe6faacdd6111160bf9a354f44b95b38" kindref="member">num_comandos</ref>;</highlight></codeline>
+<codeline lineno="96" refid="structESTADO_1a48e60cf831e7351c8d0afae433f3c674" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structESTADO_1a48e60cf831e7351c8d0afae433f3c674" kindref="member">movimentos_j1</ref>;</highlight></codeline>
+<codeline lineno="98" refid="structESTADO_1a21a8bb9b8cb21ffc06256242516f5a67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structESTADO_1a21a8bb9b8cb21ffc06256242516f5a67" kindref="member">movimentos_j2</ref>;</highlight></codeline>
+<codeline lineno="100" refid="structESTADO_1a18e430d344b0af279061c0ef8273ea59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="structESTADO_1a18e430d344b0af279061c0ef8273ea59" kindref="member">jogador1</ref>;</highlight></codeline>
+<codeline lineno="102" refid="structESTADO_1a4fe7d0098c4e4ba7db1998fbc2be7e9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="structESTADO_1a4fe7d0098c4e4ba7db1998fbc2be7e9f" kindref="member">jogador2</ref>;</highlight></codeline>
+<codeline lineno="104" refid="structESTADO_1a1ebc28eba173a8182dfbd568ed2eab4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structESTADO_1a1ebc28eba173a8182dfbd568ed2eab4b" kindref="member">coluna</ref>;</highlight></codeline>
+<codeline lineno="106" refid="structESTADO_1a271ffaca9d826cce8498a791abcf952a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structESTADO_1a271ffaca9d826cce8498a791abcf952a" kindref="member">linha</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><ref refid="structESTADO" kindref="compound">ESTADO</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*<ref refid="camada__de__dados_8h_1a7e0c7e26fb685d9ab501e19b05e6954f" kindref="member">inicializar_estado</ref>();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1a519e038fa40377b08305a4c721453d67" kindref="member">inicializar_tabuleiro</ref>(<ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref><sp/>tab[8][8]);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1ad6e326e4ffa57ca1ae0c75377ecefc8c" kindref="member">obter_jogador_atual</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*estado);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1a6cd0b387bdee9e18003c78852394aa63" kindref="member">obter_numero_de_jogadas</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*estado);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref><sp/><ref refid="camada__de__dados_8h_1a0ed6b059967a9235fa62c7691203606a" kindref="member">obter_estado_casa</ref>(<ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref><sp/>tab[8][8],<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1a37422da20c66c350333f92bae973a3f2" kindref="member">atualiza_estado_jogo</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1ade5d6f16f7840c944079b80da9ad5b10" kindref="member">incrementa_num_comandos</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1a38d349b0eab9c1249c89d3d03c6e1269" kindref="member">obter_num_comandos</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
 <codeline lineno="165"><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>mudar_jogador_atual<sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador);</highlight></codeline>
+<codeline lineno="171"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1a1d0036d2753e8f2d79221be69106c62c" kindref="member">modifica_num_jogadas</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numJogadas);</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"></highlight></codeline>
-<codeline lineno="178"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>altera_ultima_jogada(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*<sp/>e<sp/>,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="camada__de__dados_8h_1a40555aff97afc67bd1866f2785111310" kindref="member">obter_ultima_jogada</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>);</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"></highlight></codeline>
-<codeline lineno="185"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>altera_movimentos_j1<sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mov_j1);</highlight></codeline>
+<codeline lineno="185"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1ae0d7061c4156a335fb19d754f9e777d9" kindref="member">grava_dados</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*file_name<sp/>);</highlight></codeline>
 <codeline lineno="186"><highlight class="normal"></highlight></codeline>
-<codeline lineno="192"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>altera_movimentos_j2<sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mov_j2);</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"></highlight></codeline>
-<codeline lineno="200"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>altera_estado_casa(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>posicao,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>estado);</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"></highlight></codeline>
-<codeline lineno="209"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>altera_array_jogadas(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*<sp/>e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>mov,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogada,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1a234a404296dbefe6bffde35db541d51f" kindref="member">obter_numero_movimentos</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><ref refid="structJOGADA" kindref="compound">JOGADA</ref><sp/><ref refid="camada__de__dados_8h_1a2a31e8e2f9cf25c4e5e8a555c81e091c" kindref="member">obter_estado_jogada</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_jogadas);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1abc69abc6923d55fa24d5d756ee809435" kindref="member">mudar_jogador_atual</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador);</highlight></codeline>
 <codeline lineno="210"><highlight class="normal"></highlight></codeline>
-<codeline lineno="217"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ler_tabuleiro(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>,<sp/>FILE<sp/>*<sp/>f_pointer);</highlight></codeline>
-<codeline lineno="218"><highlight class="normal"></highlight></codeline>
-<codeline lineno="224"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ler_movs(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*<sp/>e,<sp/>FILE<sp/>*<sp/>f_pointer);</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"></highlight></codeline>
-<codeline lineno="232"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reinicia_pos<sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos,<sp/><ref refid="structJOGADA" kindref="compound">JOGADA</ref><sp/>*jog);</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"></highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><ref refid="structJOGADA" kindref="compound">JOGADA</ref><sp/>*obter_array_jogadas<sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
-<codeline lineno="240"><highlight class="normal"></highlight></codeline>
-<codeline lineno="246"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>switch_player(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador<sp/>);</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="216"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1ac513714cdb4fb130ad6115e4cf4f6564" kindref="member">altera_ultima_jogada</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*<sp/>e<sp/>,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1a3cef1ce5bce2aac553882339c0f742cb" kindref="member">altera_movimentos_j1</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mov_j1);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1a2c11be2891bb52a9b920415bbc4fbd36" kindref="member">altera_movimentos_j2</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mov_j2);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1af287c2f9d23418e7b38168dcbd7222ed" kindref="member">altera_estado_casa</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>posicao,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>estado);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1ab14c6cb59b5cbbd9a05f8a471ff44b9d" kindref="member">altera_array_jogadas</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*<sp/>e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>mov,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogada,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1ae2ba0aa85a3e065ef292e1f666ece8b6" kindref="member">ler_tabuleiro</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e<sp/>,<sp/>FILE<sp/>*<sp/>f_pointer);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1aed53970f98d13646eb42b86536acd582" kindref="member">ler_movs</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*<sp/>e,<sp/>FILE<sp/>*<sp/>f_pointer);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1aaf81766175bc061ea1deb4b4d5bcf016" kindref="member">reinicia_pos</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos,<sp/><ref refid="structJOGADA" kindref="compound">JOGADA</ref><sp/>*<ref refid="logica__do__programa_8c_1a44cb151933c38edce62b91de8f1eb03d" kindref="member">jog</ref>);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><ref refid="structJOGADA" kindref="compound">JOGADA</ref><sp/>*<ref refid="camada__de__dados_8h_1a2362774c3566a31762c24b44a56b598c" kindref="member">obter_array_jogadas</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="camada__de__dados_8h_1ae3a752a6ca926f49ceaeb54c96478aa1" kindref="member">switch_player</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jogador<sp/>);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="camada_de_dados.h"/>
   </compounddef>

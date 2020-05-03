@@ -1,14 +1,30 @@
-#ifndef _LISTAS_H
-/**
- Definições das listas e das funções que trabalham com elas
-*/
-#define _LISTAS_H
-
 /**
  @file listas.h
  Definições das listas e das funções que trabalham com elas
 */
 
+/**
+\brief Definições das listas e das funções que trabalham com elas
+ */
+#ifndef _LISTAS_H
+/**
+\brief Definições das listas e das funções que trabalham com elas
+ */
+#define _LISTAS_H
+/**
+ \brief Include de stdio.h
+ */
+#include <stdio.h>
+
+/**
+ \brief Include de stdlib.h
+ */
+#include <stdlib.h>
+
+/**
+ \brief Include de listas.h
+ */
+#include "listas.h"
 /**
 \brief Tipo de dados para definir uma lista
 */
@@ -17,7 +33,8 @@ typedef struct nodo {
     void *valor;
     /** Nodos seguintes */
     struct nodo *proximo;
-} /** Nodo definido */ NODO,
+} /** Nodo definido */
+   NODO,
 /** apontador para o inicio da lista */
   *LISTA;
 

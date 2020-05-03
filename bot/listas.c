@@ -1,3 +1,7 @@
+/**
+ @file listas.c
+ Listas e funções que trabalham com elas
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "listas.h"
@@ -22,6 +26,10 @@ LISTA insere_cabeca(LISTA L, void *valor){
         L->proximo = NULL;
         return L;
     }
+}
+
+void *devolve_cabeca(LISTA L){
+    return L->valor;
 }
 
 LISTA proximo(LISTA L){

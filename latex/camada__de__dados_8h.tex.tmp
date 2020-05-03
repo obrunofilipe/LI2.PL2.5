@@ -1,6 +1,9 @@
 \hypertarget{camada__de__dados_8h}{}\section{camada\+\_\+de\+\_\+dados.\+h File Reference}
 \label{camada__de__dados_8h}\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}camada\+\_\+de\+\_\+dados.\+h\char`\"{}}\newline
 Include dependency graph for camada\+\_\+de\+\_\+dados.\+h\+:
 % FIG 0
 This graph shows which files directly or indirectly include this file\+:
@@ -18,9 +21,9 @@ struct \hyperlink{structESTADO}{E\+S\+T\+A\+DO}
 \begin{DoxyCompactItemize}
 \item 
 \#define \hyperlink{camada__de__dados_8h_a06dbd3e6c422674ac0f4ea694c32d200}{\+\_\+\+\_\+\+\_\+\+C\+A\+M\+A\+D\+A\+\_\+\+D\+E\+\_\+\+D\+A\+D\+O\+S\+\_\+\+H\+\_\+\+\_\+\+\_\+}
-\item 
+\begin{DoxyCompactList}\small\item\em Definições dos dados presentes no estado e das funções que o alteram. \end{DoxyCompactList}\item 
 \#define \hyperlink{camada__de__dados_8h_a6821bafc3c88dfb2e433a095df9940c6}{B\+U\+F\+\_\+\+S\+I\+ZE}~1024
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Include de stdio.\+h. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,7 +36,7 @@ typedef \hyperlink{structJOGADA}{J\+O\+G\+A\+DA} \hyperlink{camada__de__dados_8h
 enum \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} \{ \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113}{V\+A\+Z\+IO} = \textquotesingle{}.\textquotesingle{}, 
 \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5}{B\+R\+A\+N\+CA} = \textquotesingle{}$\ast$\textquotesingle{}, 
 \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039a007278eb3827d19891b47cdd3ac8846d}{P\+R\+E\+TA} = \textquotesingle{}\#\textquotesingle{}
- \}\begin{DoxyCompactList}\small\item\em Tipos de dados que uma casa pode assumir Uma casa na qual esteja um jogador é B\+R\+A\+N\+CA, na qual já tenha passsado um jogador é P\+R\+E\+TA, se não reunir nenhuma das condições anteriores é V\+A\+Z\+IA. \end{DoxyCompactList}
+ \}\begin{DoxyCompactList}\small\item\em Funções dos dados. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -89,8 +92,6 @@ int \hyperlink{camada__de__dados_8h_ae3a752a6ca926f49ceaeb54c96478aa1}{switch\+\
 
 
 \subsection{Detailed Description}
-Definições dos dados presentes no estado e das funções que o alteram
-
 Definições dos dados presentes no estado e das funções que o alteram 
 
 \subsection{Macro Definition Documentation}
@@ -100,13 +101,21 @@ Definições dos dados presentes no estado e das funções que o alteram
 \subsubsection{\texorpdfstring{\+\_\+\+\_\+\+\_\+\+C\+A\+M\+A\+D\+A\+\_\+\+D\+E\+\_\+\+D\+A\+D\+O\+S\+\_\+\+H\+\_\+\+\_\+\+\_\+}{\_\_\_CAMADA\_DE\_DADOS\_H\_\_\_}}
 {\footnotesize\ttfamily \#define \+\_\+\+\_\+\+\_\+\+C\+A\+M\+A\+D\+A\+\_\+\+D\+E\+\_\+\+D\+A\+D\+O\+S\+\_\+\+H\+\_\+\+\_\+\+\_\+}
 
+
+
+Definições dos dados presentes no estado e das funções que o alteram. 
+
 Definições dos dados presentes no estado e das funções que o alteram \mbox{\Hypertarget{camada__de__dados_8h_a6821bafc3c88dfb2e433a095df9940c6}\label{camada__de__dados_8h_a6821bafc3c88dfb2e433a095df9940c6}} 
 \index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!B\+U\+F\+\_\+\+S\+I\+ZE@{B\+U\+F\+\_\+\+S\+I\+ZE}}
 \index{B\+U\+F\+\_\+\+S\+I\+ZE@{B\+U\+F\+\_\+\+S\+I\+ZE}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
 \subsubsection{\texorpdfstring{B\+U\+F\+\_\+\+S\+I\+ZE}{BUF\_SIZE}}
 {\footnotesize\ttfamily \#define B\+U\+F\+\_\+\+S\+I\+ZE~1024}
 
-Tamanho da string lida 
+
+
+Include de stdio.\+h. 
+
+Include de string.\+h Include de stdlib.\+h Include de \hyperlink{camada__de__dados_8h}{camada\+\_\+de\+\_\+dados.\+h} Tamanho da string lida 
 
 \subsection{Enumeration Type Documentation}
 \mbox{\Hypertarget{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}\label{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}} 
@@ -117,9 +126,9 @@ Tamanho da string lida
 
 
 
-Tipos de dados que uma casa pode assumir Uma casa na qual esteja um jogador é B\+R\+A\+N\+CA, na qual já tenha passsado um jogador é P\+R\+E\+TA, se não reunir nenhuma das condições anteriores é V\+A\+Z\+IA. 
+Funções dos dados. 
 
-\begin{DoxyEnumFields}{Enumerator}
+Tipos de dados que uma casa pode assumir \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{V\+A\+Z\+IO@{V\+A\+Z\+IO}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!V\+A\+Z\+IO@{V\+A\+Z\+IO}}}\mbox{\Hypertarget{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113}\label{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113}} 
 V\+A\+Z\+IO&Casa vazia \\
 \hline

@@ -15,7 +15,7 @@
 <para>Valor atual </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.h" line="13" column="1" bodyfile="listas.h" bodystart="13" bodyend="-1"/>
+        <location file="listas.h" line="33" column="1" bodyfile="listas.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structnodo_1aaaabdcb6641ddcdac8990402242b154a" prot="public" static="no" mutable="no">
         <type>struct <ref refid="structnodo" kindref="compound">nodo</ref> *</type>
@@ -28,13 +28,13 @@
 <para>Nodos seguintes </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.h" line="15" column="1" bodyfile="listas.h" bodystart="15" bodyend="-1"/>
+        <location file="listas.h" line="35" column="1" bodyfile="listas.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Tipo de dados para definir uma lista. </para>    </briefdescription>
+<para>Include de stdio.h. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Include de stdlib.h Include de <ref refid="listas_8h" kindref="compound">listas.h</ref> Tipo de dados para definir uma lista </para>    </detaileddescription>
     <collaborationgraph>
       <node id="10">
         <label>nodo</label>
@@ -44,7 +44,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="listas.h" line="11" column="1" bodyfile="listas.h" bodystart="11" bodyend="16"/>
+    <location file="listas.h" line="31" column="1" bodyfile="listas.h" bodystart="31" bodyend="36"/>
     <listofallmembers>
       <member refid="structnodo_1aaaabdcb6641ddcdac8990402242b154a" prot="public" virt="non-virtual"><scope>nodo</scope><name>proximo</name></member>
       <member refid="structnodo_1ab63adcdb83ea1fdcf4fa10f3cafc4a6a" prot="public" virt="non-virtual"><scope>nodo</scope><name>valor</name></member>

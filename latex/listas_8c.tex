@@ -1,0 +1,150 @@
+\hypertarget{listas_8c}{}\section{listas.\+c File Reference}
+\label{listas_8c}\index{listas.\+c@{listas.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}listas.\+h\char`\"{}}\newline
+Include dependency graph for listas.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} \hyperlink{listas_8c_ae3b99323b6f8f35d80bb69ff1a27985e}{criar\+\_\+lista} ()
+\begin{DoxyCompactList}\small\item\em Função para criar uma lista. \end{DoxyCompactList}\item 
+\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} \hyperlink{listas_8c_a37ba5fc3cfddb6bc94d4b54b00bc696e}{insere\+\_\+cabeca} (\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} L, void $\ast$valor)
+\begin{DoxyCompactList}\small\item\em Função para adicionar elementos à cabeça de uma lista. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{listas_8c_abfcb205f3eb670157be0d1221021714b}{devolve\+\_\+cabeca} (\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} L)
+\begin{DoxyCompactList}\small\item\em Função que devolve a cabeça de uma lista. \end{DoxyCompactList}\item 
+\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} \hyperlink{listas_8c_ad9380152361127432c55c1c6067e05ae}{proximo} (\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} L)
+\begin{DoxyCompactList}\small\item\em Função que devolve a cauda de uma lista, ou seja, que devolve a lista sem o seu primeiro elemento. \end{DoxyCompactList}\item 
+\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} \hyperlink{listas_8c_a9026a681a68322b5ec7f07137b864cbd}{remove\+\_\+cabeca} (\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} L)
+\begin{DoxyCompactList}\small\item\em Função para retirar a cabeça de uma lista e esvaziar o espaço previamente ocupado pela cabeça. \end{DoxyCompactList}\item 
+int \hyperlink{listas_8c_a4c10928f7acaa4e3de3760cea0dfd9c0}{lista\+\_\+esta\+\_\+vazia} (\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} L)
+\begin{DoxyCompactList}\small\item\em Função para verificar se uma lista é vazia, isto é, não tem nenhum elemento. \end{DoxyCompactList}\item 
+\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} \hyperlink{listas_8c_afd9ab83176ab73a7104b5ef0e23c9d29}{liberta\+\_\+lista} (\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} L)
+\begin{DoxyCompactList}\small\item\em Função para libertar a memória alocada para uma lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Listas e funções que trabalham com elas 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{listas_8c_ae3b99323b6f8f35d80bb69ff1a27985e}\label{listas_8c_ae3b99323b6f8f35d80bb69ff1a27985e}} 
+\index{listas.\+c@{listas.\+c}!criar\+\_\+lista@{criar\+\_\+lista}}
+\index{criar\+\_\+lista@{criar\+\_\+lista}!listas.\+c@{listas.\+c}}
+\subsubsection{\texorpdfstring{criar\+\_\+lista()}{criar\_lista()}}
+{\footnotesize\ttfamily \hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} criar\+\_\+lista (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função para criar uma lista. 
+
+\begin{DoxyReturn}{Returns}
+A lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8c_abfcb205f3eb670157be0d1221021714b}\label{listas_8c_abfcb205f3eb670157be0d1221021714b}} 
+\index{listas.\+c@{listas.\+c}!devolve\+\_\+cabeca@{devolve\+\_\+cabeca}}
+\index{devolve\+\_\+cabeca@{devolve\+\_\+cabeca}!listas.\+c@{listas.\+c}}
+\subsubsection{\texorpdfstring{devolve\+\_\+cabeca()}{devolve\_cabeca()}}
+{\footnotesize\ttfamily void$\ast$ devolve\+\_\+cabeca (\begin{DoxyParamCaption}\item[{\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA}}]{L }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a cabeça de uma lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & A lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{listas_8c_a37ba5fc3cfddb6bc94d4b54b00bc696e}\label{listas_8c_a37ba5fc3cfddb6bc94d4b54b00bc696e}} 
+\index{listas.\+c@{listas.\+c}!insere\+\_\+cabeca@{insere\+\_\+cabeca}}
+\index{insere\+\_\+cabeca@{insere\+\_\+cabeca}!listas.\+c@{listas.\+c}}
+\subsubsection{\texorpdfstring{insere\+\_\+cabeca()}{insere\_cabeca()}}
+{\footnotesize\ttfamily \hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} insere\+\_\+cabeca (\begin{DoxyParamCaption}\item[{\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA}}]{L,  }\item[{void $\ast$}]{valor }\end{DoxyParamCaption})}
+
+
+
+Função para adicionar elementos à cabeça de uma lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & A lista inicial \\
+\hline
+{\em valor} & O valor para adicionar à lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista com o valor adicionado à cabeça 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8c_afd9ab83176ab73a7104b5ef0e23c9d29}\label{listas_8c_afd9ab83176ab73a7104b5ef0e23c9d29}} 
+\index{listas.\+c@{listas.\+c}!liberta\+\_\+lista@{liberta\+\_\+lista}}
+\index{liberta\+\_\+lista@{liberta\+\_\+lista}!listas.\+c@{listas.\+c}}
+\subsubsection{\texorpdfstring{liberta\+\_\+lista()}{liberta\_lista()}}
+{\footnotesize\ttfamily \hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} liberta\+\_\+lista (\begin{DoxyParamCaption}\item[{\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA}}]{L }\end{DoxyParamCaption})}
+
+
+
+Função para libertar a memória alocada para uma lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & A lista para se libertar a memória \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uma lista vazia 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8c_a4c10928f7acaa4e3de3760cea0dfd9c0}\label{listas_8c_a4c10928f7acaa4e3de3760cea0dfd9c0}} 
+\index{listas.\+c@{listas.\+c}!lista\+\_\+esta\+\_\+vazia@{lista\+\_\+esta\+\_\+vazia}}
+\index{lista\+\_\+esta\+\_\+vazia@{lista\+\_\+esta\+\_\+vazia}!listas.\+c@{listas.\+c}}
+\subsubsection{\texorpdfstring{lista\+\_\+esta\+\_\+vazia()}{lista\_esta\_vazia()}}
+{\footnotesize\ttfamily int lista\+\_\+esta\+\_\+vazia (\begin{DoxyParamCaption}\item[{\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA}}]{L }\end{DoxyParamCaption})}
+
+
+
+Função para verificar se uma lista é vazia, isto é, não tem nenhum elemento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & A lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O inteiro 1 caso a lista seja vazia, o inteiro 0 em caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8c_ad9380152361127432c55c1c6067e05ae}\label{listas_8c_ad9380152361127432c55c1c6067e05ae}} 
+\index{listas.\+c@{listas.\+c}!proximo@{proximo}}
+\index{proximo@{proximo}!listas.\+c@{listas.\+c}}
+\subsubsection{\texorpdfstring{proximo()}{proximo()}}
+{\footnotesize\ttfamily \hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} proximo (\begin{DoxyParamCaption}\item[{\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA}}]{L }\end{DoxyParamCaption})}
+
+
+
+Função que devolve a cauda de uma lista, ou seja, que devolve a lista sem o seu primeiro elemento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & A lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista sem o seu o primeiro elemento 
+\end{DoxyReturn}
+\mbox{\Hypertarget{listas_8c_a9026a681a68322b5ec7f07137b864cbd}\label{listas_8c_a9026a681a68322b5ec7f07137b864cbd}} 
+\index{listas.\+c@{listas.\+c}!remove\+\_\+cabeca@{remove\+\_\+cabeca}}
+\index{remove\+\_\+cabeca@{remove\+\_\+cabeca}!listas.\+c@{listas.\+c}}
+\subsubsection{\texorpdfstring{remove\+\_\+cabeca()}{remove\_cabeca()}}
+{\footnotesize\ttfamily \hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA} remove\+\_\+cabeca (\begin{DoxyParamCaption}\item[{\hyperlink{listas_8h_a6725a80fbaeca64d86fd2c3d1f993036}{L\+I\+S\+TA}}]{L }\end{DoxyParamCaption})}
+
+
+
+Função para retirar a cabeça de uma lista e esvaziar o espaço previamente ocupado pela cabeça. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & A lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista sem o primeiro elemento 
+\end{DoxyReturn}

@@ -1,8 +1,16 @@
+/**
+ @file camada_de_dados.c
+ Dados presentes no estado e funções que o alteram
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include "camada_de_dados.h"
 #include "camada_de_interface.h"
+/**
+\brief Tamanho da string lida
+*/
 #define BUF_SIZE 1024
 
 

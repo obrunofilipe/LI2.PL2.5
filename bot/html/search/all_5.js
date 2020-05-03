@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['nodo',['nodo',['../structnodo.html',1,'']]],
-  ['num_5fcomandos',['num_comandos',['../structESTADO.html#abe6faacdd6111160bf9a354f44b95b38',1,'ESTADO']]],
-  ['num_5fjogadas',['num_jogadas',['../structESTADO.html#a261495728744647e618b4e623f5a4b7a',1,'ESTADO']]]
+  ['estado',['ESTADO',['../structESTADO.html',1,'']]],
+  ['euristica',['euristica',['../logica__do__programa_8c.html#a53b707ec54825ec718f23293b62d0793',1,'euristica(ESTADO *e, LISTA L):&#160;logica_do_programa.c'],['../logica__do__programa_8h.html#a53b707ec54825ec718f23293b62d0793',1,'euristica(ESTADO *e, LISTA L):&#160;logica_do_programa.c']]]
 ];

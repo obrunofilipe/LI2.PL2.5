@@ -1,17 +1,43 @@
-#ifndef BOT_CAMADA_DE_DADOS_H
-#define BOT_CAMADA_DE_DADOS_H
-
-
+/**
+ @file camada_de_dados.h
+ Definições dos dados presentes no estado e das funções que o alteram
+*/
+/**
+ \brief Definições dos dados presentes no estado e das funções que o alteram
+ */
+#ifndef ___CAMADA_DE_DADOS_H___
+/**
+ \brief Definições dos dados presentes no estado e das funções que o alteram
+ */
+#define ___CAMADA_DE_DADOS_H___
+/**
+ \brief Include de stdio.h
+ */
 #include <stdio.h>
+/**
+ \brief Include de string.h
+ */
+#include <string.h>
+/**
+ \brief Include de stdlib.h
+ */
+#include <stdlib.h>
+/**
+ \brief Include de camada_de_dados.h
+ */
+#include "camada_de_dados.h"
 
 /**
- @file bot_camada_de_dados.h
- Definições dos dados presentes no estado e das funções que o alteram
+\brief Tamanho da string lida
+*/
+#define BUF_SIZE 1024
+
+/**
+\brief Funções dos dados
 */
 
 /**
 \brief Tipos de dados que uma casa pode assumir
- Uma casa na qual esteja um jogador é BRANCA, na qual já tenha passsado um jogador é PRETA, se não reunir nenhuma das condições anteriores é VAZIA.
 */
 typedef enum {
     /** Casa vazia */
@@ -20,7 +46,8 @@ typedef enum {
     BRANCA = '*',
     /** Casa para a qual não pode jogar */
     PRETA = '#'
-} CASA;
+} /** Casa definida */
+CASA;
 
 /**
 \brief Tipo de dados para definir uma coordenada
@@ -30,7 +57,8 @@ typedef struct {
     int coluna;
     /** Número da linha */
     int linha;
-} COORDENADA;
+} /** Coordenada definida */
+COORDENADA;
 
 /**
 \brief Tipo de dados para definir uma jogada
@@ -40,7 +68,8 @@ typedef struct {
     COORDENADA jogador1;
     /** Coordenada do jogador 2 */
     COORDENADA jogador2;
-} JOGADA;
+} /** Jogada definida */
+JOGADA;
 
 /**
 \brief Tipo de dados para guardar todas as jogadas efetuadas por um determinado jogador, o número máximo de jogadas possíveis são 32
@@ -67,13 +96,22 @@ typedef struct {
     int movimentos_j1;
     /** Número de movimentos do jogador 2 */
     int movimentos_j2;
-} ESTADO;
+    /** Coordenada do jogador 1 */
+    COORDENADA jogador1;
+    /** Coordenada do jogador 2 */
+    COORDENADA jogador2;
+    /** Número da coluna */
+    int coluna;
+    /** Número da linha */
+    int linha;
+} /** Estado definido */
+ESTADO;
 
 
 
 /**
 \brief Função para criar o estado vazio
-@returns O novo estado
+@return O novo estado
 */
 ESTADO *inicializar_estado();
 

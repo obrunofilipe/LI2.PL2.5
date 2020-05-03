@@ -1,10 +1,18 @@
+/**
+ @file logica_do_programa.c
+ Lógica do programa e funções que a alteram
+*/
 #include <stdio.h>
-#include <math.h>
 #include "camada_de_dados.h"
 #include "listas.h"
 #include "logica_do_programa.h"
-#include <stdlib.h>
+/**
+\brief Valor inicial do melhor score em minmax
+ */
 #define MENOS_INFINITO -10000000
+/**
+\brief Valor inicial do pior score em minmax
+ */
 #define MAIS_INFINITO 10000000
 
 int jogar(ESTADO *e, COORDENADA c) {

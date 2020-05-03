@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['jogada',['JOGADA',['../structJOGADA.html',1,'']]],
-  ['jogadas',['jogadas',['../structESTADO.html#afae43b87a488fad0f2b56a18bad31d18',1,'ESTADO']]],
-  ['jogador1',['jogador1',['../structJOGADA.html#a93d9306cb0c49b66b7d9a615bffe0149',1,'JOGADA']]],
-  ['jogador2',['jogador2',['../structJOGADA.html#ab46b16dfbdc7f2af9430c8dcdac0914b',1,'JOGADA']]],
-  ['jogador_5fatual',['jogador_atual',['../structESTADO.html#a5dd28e2e68b7aef2b6b7ea88e02eff58',1,'ESTADO']]]
+  ['branca',['BRANCA',['../camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5',1,'camada_de_dados.h']]],
+  ['buf_5fsize',['BUF_SIZE',['../camada__de__dados_8c.html#a6821bafc3c88dfb2e433a095df9940c6',1,'BUF_SIZE():&#160;camada_de_dados.c'],['../camada__de__dados_8h.html#a6821bafc3c88dfb2e433a095df9940c6',1,'BUF_SIZE():&#160;camada_de_dados.h'],['../camada__de__interface_8c.html#a6821bafc3c88dfb2e433a095df9940c6',1,'BUF_SIZE():&#160;camada_de_interface.c'],['../camada__de__interface_8h.html#a6821bafc3c88dfb2e433a095df9940c6',1,'BUF_SIZE():&#160;camada_de_interface.h']]]
 ];
