@@ -99,7 +99,6 @@
 <para>A lista </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A cabeça da lista, ou seja, o primeiro elemento da lista </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>

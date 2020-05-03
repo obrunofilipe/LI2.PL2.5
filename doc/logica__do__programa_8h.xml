@@ -315,10 +315,10 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>e</parametername>
+<parametername>tab</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Apontador para o estado atual </para></parameterdescription>
+<para>O tabuleiro atual </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>

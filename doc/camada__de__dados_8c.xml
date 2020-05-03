@@ -330,7 +330,7 @@
 <para>Número do jogador </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para></para></simplesect>
+<simplesect kind="return"><para>Jogador seguinte </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -596,7 +596,7 @@
 <parametername>estado</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para></parameterdescription>
+<para>Estado da casa </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>

@@ -47,7 +47,7 @@
         <briefdescription>
 <para>Função do projeto. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>O inteiro 1 </para></simplesect>
+<para><simplesect kind="return"><para>O inteiro 0 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>

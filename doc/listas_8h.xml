@@ -118,11 +118,10 @@
 <para>A lista </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A cabeça da lista, ou seja, o primeiro elemento da lista </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.h" line="35" column="1" bodyfile="listas.c" bodystart="27" bodyend="29"/>
+        <location file="listas.h" line="34" column="1" bodyfile="listas.c" bodystart="27" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="listas_8h_1ad9380152361127432c55c1c6067e05ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structnodo" kindref="compound">LISTA</ref></type>
@@ -148,7 +147,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.h" line="42" column="1" bodyfile="listas.c" bodystart="31" bodyend="33"/>
+        <location file="listas.h" line="41" column="1" bodyfile="listas.c" bodystart="31" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="listas_8h_1a9026a681a68322b5ec7f07137b864cbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structnodo" kindref="compound">LISTA</ref></type>
@@ -174,7 +173,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.h" line="49" column="1" bodyfile="listas.c" bodystart="35" bodyend="42"/>
+        <location file="listas.h" line="48" column="1" bodyfile="listas.c" bodystart="35" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="listas_8h_1a4c10928f7acaa4e3de3760cea0dfd9c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -200,7 +199,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.h" line="56" column="1" bodyfile="listas.c" bodystart="43" bodyend="48"/>
+        <location file="listas.h" line="55" column="1" bodyfile="listas.c" bodystart="43" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="listas_8h_1afd9ab83176ab73a7104b5ef0e23c9d29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structnodo" kindref="compound">LISTA</ref></type>
@@ -226,7 +225,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="listas.h" line="63" column="1" bodyfile="listas.c" bodystart="50" bodyend="58"/>
+        <location file="listas.h" line="62" column="1" bodyfile="listas.c" bodystart="50" bodyend="58"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -246,17 +245,17 @@
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal">LISTA<sp/><ref refid="listas_8h_1a37ba5fc3cfddb6bc94d4b54b00bc696e" kindref="member">insere_cabeca</ref>(LISTA<sp/>L,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*valor);</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="listas_8h_1abfcb205f3eb670157be0d1221021714b" kindref="member">devolve_cabeca</ref>(LISTA<sp/>L);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">LISTA<sp/>proximo(LISTA<sp/>L);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">LISTA<sp/><ref refid="listas_8h_1a9026a681a68322b5ec7f07137b864cbd" kindref="member">remove_cabeca</ref>(LISTA<sp/>L);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="listas_8h_1a4c10928f7acaa4e3de3760cea0dfd9c0" kindref="member">lista_esta_vazia</ref>(LISTA<sp/>L);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal">LISTA<sp/><ref refid="listas_8h_1afd9ab83176ab73a7104b5ef0e23c9d29" kindref="member">liberta_lista</ref><sp/>(LISTA<sp/>L);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="34"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="listas_8h_1abfcb205f3eb670157be0d1221021714b" kindref="member">devolve_cabeca</ref>(LISTA<sp/>L);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">LISTA<sp/>proximo(LISTA<sp/>L);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">LISTA<sp/><ref refid="listas_8h_1a9026a681a68322b5ec7f07137b864cbd" kindref="member">remove_cabeca</ref>(LISTA<sp/>L);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="listas_8h_1a4c10928f7acaa4e3de3760cea0dfd9c0" kindref="member">lista_esta_vazia</ref>(LISTA<sp/>L);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">LISTA<sp/><ref refid="listas_8h_1afd9ab83176ab73a7104b5ef0e23c9d29" kindref="member">liberta_lista</ref><sp/>(LISTA<sp/>L);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="listas.h"/>
   </compounddef>
