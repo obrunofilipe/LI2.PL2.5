@@ -10,12 +10,12 @@
 /**
 \brief Tipos de dados que uma casa pode assumir
  Uma casa na qual esteja um jogador é BRANCA, na qual já tenha passsado um jogador é PRETA, se não reunir nenhuma das condições anteriores é VAZIA.
- */
+*/
 typedef enum {VAZIO, BRANCA, PRETA} CASA;
 
 /**
 \brief Tipo de dados para definir uma coordenada
- */
+*/
 typedef struct {
     int coluna;
     int linha;
@@ -23,7 +23,7 @@ typedef struct {
 
 /**
 \brief Tipo de dados para definir uma jogada
- */
+*/
 //JOGADA
 typedef struct {
     COORDENADA jogador1;
@@ -32,13 +32,13 @@ typedef struct {
 
 /**
 \brief Tipo de dados para guardar todas as jogadas efetuadas por um determinado jogador, o número máximo de jogadas possíveis são 32
- */
+*/
 //JOGADAS
 typedef JOGADA JOGADAS[32];
 
 /**
 \brief Tipo de dados que definem o estado
- */
+*/
 //ESTADO
 typedef struct {
     /** O tabuleiro */
@@ -87,12 +87,11 @@ int obter_jogador_atual(ESTADO *estado);
 int obter_numero_de_jogadas(ESTADO *estado);
 
 /**
-\brief Função para obter o estado de uma casa do tabuleiro
-@param e Apontador para o estado atual
-@param c A coordenada
-@return Se a casa está VAZIA, BRANCA ou PRETA
- */
-//alterei esta funçao
+\brief Função para obter o estado de uma casa
+@param tab O tabuleiro
+@param c Coordenada
+@return O estado da casa
+*/
 CASA obter_estado_casa(CASA tab[8][8], COORDENADA c);
 
 /**

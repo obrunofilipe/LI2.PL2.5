@@ -33,8 +33,6 @@ int verificaJogada (ESTADO *e, COORDENADA c);
 @param minimax 0 ou 1 dependendo se é necessário dar print
 @return O inteiro 1 se venceu, 0 em caso contrário
  */
-//alter
-
 int verifica_Vitoria_Jog1 (COORDENADA c, int minimax);
 
 /**
@@ -43,7 +41,6 @@ int verifica_Vitoria_Jog1 (COORDENADA c, int minimax);
 @param minimax 0 ou 1 dependendo se é necessário dar print
 @return O inteiro 1 se venceu, 0 em caso contrário
  */
-//alterei esta funçao
 int verifica_Vitoria_Jog2 (COORDENADA c, int minimax);
 
 /**
