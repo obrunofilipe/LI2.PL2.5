@@ -35,7 +35,7 @@ int main(int argc, char *f_name[]) {
         jogada = jog(e, c);
     }
     else {
-        jogada = jog(e, c);
+        jogada = jog2(e, c);
     }
     jogar(e, jogada);
 
