@@ -30,7 +30,6 @@ LISTA insere_cabeca(LISTA L, void *valor);
 /**
 \brief Função que devolve a cabeça de uma lista
 @param L A lista
-@return A cabeça da lista, ou seja, o primeiro elemento da lista
 */
 void *devolve_cabeca(LISTA L);
 

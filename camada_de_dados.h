@@ -160,7 +160,7 @@ JOGADA obter_estado_jogada(ESTADO *e , int num_jogadas);
 \brief Função para mudar para o outro jogador
 @param e Apontador para o estado atual
 @param jogador Número do jogador
-@return
+@return Jogador seguinte
 */
 void mudar_jogador_atual (ESTADO *e, int jogador);
 
@@ -189,7 +189,7 @@ void altera_movimentos_j2 (ESTADO *e, int mov_j2);
 \brief Função para alterar o estado que uma determinada casa está
 @param e Apontador para o estado atual
 @param posicao Casa a ser alterada
-@param estado
+@param estado Estado da casa
  */
 void altera_estado_casa(ESTADO *e, COORDENADA posicao, char estado);
 

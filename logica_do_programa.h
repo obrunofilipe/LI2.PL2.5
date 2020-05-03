@@ -75,7 +75,7 @@ COORDENADA* euristica (ESTADO *e, LISTA L);
 
 /**
 \brief Função para armazenar as posições possíveis de jogar
-@param e Apontador para o estado atual
+@param tab O tabuleiro atual
 @param L Lista para ser alterada com as posições possíveis
 @param posicoes Array de posições a avaliar
 @return A lista L com todas as posições possíveis

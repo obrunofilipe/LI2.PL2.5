@@ -121,7 +121,7 @@ Função para alterar o estado que uma determinada casa está
 \hline
 {\em posicao} & Casa a ser alterada \\
 \hline
-{\em estado} & \\
+{\em estado} & Estado da casa \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{camada__de__dados_8h_a3cef1ce5bce2aac553882339c0f742cb}\label{camada__de__dados_8h_a3cef1ce5bce2aac553882339c0f742cb}} 
@@ -327,7 +327,7 @@ Função para mudar para o outro jogador.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+Jogador seguinte 
 \end{DoxyReturn}
 \mbox{\Hypertarget{camada__de__dados_8h_a2362774c3566a31762c24b44a56b598c}\label{camada__de__dados_8h_a2362774c3566a31762c24b44a56b598c}} 
 \index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!obter\+\_\+array\+\_\+jogadas@{obter\+\_\+array\+\_\+jogadas}}

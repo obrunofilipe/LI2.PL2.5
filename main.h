@@ -7,7 +7,7 @@
 
 /**
 \brief Função do projeto
-@return O inteiro 1
+@return O inteiro 0
 */
 int main();
 #endif
