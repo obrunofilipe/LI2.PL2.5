@@ -6,9 +6,10 @@
 #ifndef BOT_CAMADA_DE_INTERFACE_H
 #define BOT_CAMADA_DE_INTERFACE_H
 #include <stdio.h>
+
 /**
- @file camada_de_interface.h
- Definições dos dados presentes no estado e das funções que o alteram
+ @file bot_camada_de_interface.h
+ Definições dos dados presentes na interface e das funções que a alteram
 */
 
 /**
@@ -42,4 +43,4 @@ void showPrompt (ESTADO *e);
 */
 void printMOVS(ESTADO *e,FILE * f_pointer);
 
-#endif //BOT_CAMADA_DE_INTERFACE_H
+#endif

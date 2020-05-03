@@ -52,8 +52,6 @@ void \hyperlink{camada__de__dados_8h_a1d0036d2753e8f2d79221be69106c62c}{modifica
 \begin{DoxyCompactList}\small\item\em Função para obter a última jogada efetuada. \end{DoxyCompactList}\item 
 void \hyperlink{camada__de__dados_8h_ae0d7061c4156a335fb19d754f9e777d9}{grava\+\_\+dados} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, char $\ast$file\+\_\+name)
 \begin{DoxyCompactList}\small\item\em Função para gravar os dados atuais do tabuleiro (quando utilizado o comando gr) \end{DoxyCompactList}\item 
-void \hyperlink{camada__de__dados_8h_a329ca4ca6a4ac95a0bcbbf4e09500dc7}{ler\+\_\+dados} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, char $\ast$file\+\_\+name)
-\begin{DoxyCompactList}\small\item\em Função para ler um ficheiro e alterar o estado consoante esse ficheiro. \end{DoxyCompactList}\item 
 int \hyperlink{camada__de__dados_8h_a234a404296dbefe6bffde35db541d51f}{obter\+\_\+numero\+\_\+movimentos} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, int jogador)
 \begin{DoxyCompactList}\small\item\em Função para obter uma jogada do Array. \end{DoxyCompactList}\item 
 \hyperlink{structJOGADA}{J\+O\+G\+A\+DA} \hyperlink{camada__de__dados_8h_a2a31e8e2f9cf25c4e5e8a555c81e091c}{obter\+\_\+estado\+\_\+jogada} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, int num\+\_\+jogadas)
@@ -257,23 +255,6 @@ Função para inicializar o tabuleiro.
 \begin{DoxyReturn}{Returns}
 O Tabuleiro inicial 
 \end{DoxyReturn}
-\mbox{\Hypertarget{camada__de__dados_8h_a329ca4ca6a4ac95a0bcbbf4e09500dc7}\label{camada__de__dados_8h_a329ca4ca6a4ac95a0bcbbf4e09500dc7}} 
-\index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!ler\+\_\+dados@{ler\+\_\+dados}}
-\index{ler\+\_\+dados@{ler\+\_\+dados}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}
-\subsubsection{\texorpdfstring{ler\+\_\+dados()}{ler\_dados()}}
-{\footnotesize\ttfamily void ler\+\_\+dados (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{e,  }\item[{char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
-
-
-
-Função para ler um ficheiro e alterar o estado consoante esse ficheiro. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em e} & Apontador para o estado atual \\
-\hline
-{\em file\+\_\+name} & Nome do ficheiro para ser lido \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{camada__de__dados_8h_aed53970f98d13646eb42b86536acd582}\label{camada__de__dados_8h_aed53970f98d13646eb42b86536acd582}} 
 \index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!ler\+\_\+movs@{ler\+\_\+movs}}
 \index{ler\+\_\+movs@{ler\+\_\+movs}!camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}}

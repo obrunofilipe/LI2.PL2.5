@@ -86,12 +86,6 @@ COORDENADA* euristica (ESTADO *e, LISTA L);
 LISTA armazena_posicoes(CASA tab[8][8],LISTA L, COORDENADA *posicoes);
 
 /**
-\brief Função para colocar no ecrã as diversas componentes de uma lista
-@param L A lista que deve ser reproduzida
-*/
-void print_LISTA(LISTA L);
-
-/**
 \brief Função para criar um array com as posições à volta da posição atual
 @param a A coordenada atual
 @param array Array a ser preenchido

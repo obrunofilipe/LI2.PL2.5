@@ -1,14 +1,11 @@
-//
-// Created by joao on 30/04/20.
-//
-
 #ifndef BOT_CAMADA_DE_DADOS_H
 #define BOT_CAMADA_DE_DADOS_H
 
 
 #include <stdio.h>
+
 /**
- @file camada_de_dados.h
+ @file bot_camada_de_dados.h
  Definições dos dados presentes no estado e das funções que o alteram
 */
 
@@ -141,12 +138,6 @@ COORDENADA obter_ultima_jogada(ESTADO *e );
 */
 void grava_dados(ESTADO *e ,char  *file_name );
 
-/**
-\brief Função para ler um ficheiro e alterar o estado consoante esse ficheiro
-@param e Apontador para o estado atual
-@param file_name Nome do ficheiro para ser lido
-*/
-void ler_dados(ESTADO *e , char * file_name);
 
 /**
 \brief Função para obter uma jogada do Array
@@ -240,6 +231,11 @@ void reinicia_pos (ESTADO *e, int pos, JOGADA *jog);
 @return O array das Jogadas
  */
 JOGADA *obter_array_jogadas (ESTADO *e);
-int switch_player(int jogador );
 
-#endif //BOT_CAMADA_DE_DADOS_H
+/**
+\brief Função para alterar o jogador para o próximo
+@param jogador O número do jogador atual
+@return O número do próximo jogador
+*/
+int switch_player(int jogador );
+#endif

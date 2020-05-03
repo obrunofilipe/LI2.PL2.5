@@ -136,12 +136,6 @@ COORDENADA obter_ultima_jogada(ESTADO *e );
 */
 void grava_dados(ESTADO *e ,char  *file_name );
 
-/**
-\brief Função para ler um ficheiro e alterar o estado consoante esse ficheiro
-@param e Apontador para o estado atual
-@param file_name Nome do ficheiro para ser lido
-*/
-void ler_dados(ESTADO *e , char * file_name);
 
 /**
 \brief Função para obter uma jogada do Array

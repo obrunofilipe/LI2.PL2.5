@@ -341,31 +341,6 @@
         </inbodydescription>
         <location file="logica_do_programa.h" line="86" column="1" bodyfile="logica_do_programa.c" bodystart="150" bodyend="157"/>
       </memberdef>
-      <memberdef kind="function" id="logica__do__programa_8h_1a75a1b71971466c0ff8580331436e1e93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void print_LISTA</definition>
-        <argsstring>(LISTA L)</argsstring>
-        <name>print_LISTA</name>
-        <param>
-          <type><ref refid="structnodo" kindref="compound">LISTA</ref></type>
-          <declname>L</declname>
-        </param>
-        <briefdescription>
-<para>Função para colocar no ecrã as diversas componentes de uma lista. </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>L</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>A lista que deve ser reproduzida </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="logica_do_programa.h" line="92" column="1" bodyfile="logica_do_programa.c" bodystart="159" bodyend="168"/>
-      </memberdef>
       <memberdef kind="function" id="logica__do__programa_8h_1a131a18f3cc23681587fa4344ee1e6f40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void criaArray_posicoes</definition>
@@ -400,7 +375,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logica_do_programa.h" line="99" column="1" bodyfile="logica_do_programa.c" bodystart="170" bodyend="188"/>
+        <location file="logica_do_programa.h" line="93" column="1" bodyfile="logica_do_programa.c" bodystart="159" bodyend="177"/>
       </memberdef>
       <memberdef kind="function" id="logica__do__programa_8h_1a44cb151933c38edce62b91de8f1eb03d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
@@ -437,7 +412,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logica_do_programa.h" line="107" column="1" bodyfile="logica_do_programa.c" bodystart="191" bodyend="204"/>
+        <location file="logica_do_programa.h" line="101" column="1" bodyfile="logica_do_programa.c" bodystart="180" bodyend="191"/>
       </memberdef>
       <memberdef kind="function" id="logica__do__programa_8h_1ae3af156fcfb85bf6a7fdbe830d9f1cc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -474,7 +449,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logica_do_programa.h" line="115" column="1" bodyfile="logica_do_programa.c" bodystart="205" bodyend="212"/>
+        <location file="logica_do_programa.h" line="109" column="1" bodyfile="logica_do_programa.c" bodystart="192" bodyend="199"/>
       </memberdef>
       <memberdef kind="function" id="logica__do__programa_8h_1a9fa14d48bd047750d95ae690394726db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -567,7 +542,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logica_do_programa.h" line="128" column="1" bodyfile="logica_do_programa.c" bodystart="214" bodyend="284"/>
+        <location file="logica_do_programa.h" line="122" column="1" bodyfile="logica_do_programa.c" bodystart="201" bodyend="268"/>
       </memberdef>
       <memberdef kind="function" id="logica__do__programa_8h_1a4203eda4416534176ea72b0b5fd69c88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
@@ -604,7 +579,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="logica_do_programa.h" line="137" column="1" bodyfile="logica_do_programa.c" bodystart="287" bodyend="317"/>
+        <location file="logica_do_programa.h" line="131" column="1" bodyfile="logica_do_programa.c" bodystart="271" bodyend="301"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -636,20 +611,18 @@
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><ref refid="structnodo" kindref="compound">LISTA</ref><sp/><ref refid="logica__do__programa_8h_1aa09f509bec3d879dd425ef1ce9fd47fd" kindref="member">armazena_posicoes</ref>(<ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref><sp/>tab[8][8],<ref refid="structnodo" kindref="compound">LISTA</ref><sp/>L,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*posicoes);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logica__do__programa_8h_1a75a1b71971466c0ff8580331436e1e93" kindref="member">print_LISTA</ref>(<ref refid="structnodo" kindref="compound">LISTA</ref><sp/>L);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logica__do__programa_8h_1a131a18f3cc23681587fa4344ee1e6f40" kindref="member">criaArray_posicoes</ref>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>a,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>*<sp/>array);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="logica__do__programa_8h_1a44cb151933c38edce62b91de8f1eb03d" kindref="member">jog</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>pos);</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="logica__do__programa_8h_1ae3af156fcfb85bf6a7fdbe830d9f1cc5" kindref="member">score_minimax</ref><sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maximizingPlayer<sp/>);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="logica__do__programa_8h_1a9fa14d48bd047750d95ae690394726db" kindref="member">minimax</ref><sp/>(<ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref><sp/>tab[8][8]<sp/>,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maximizingPlayer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>alpha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>beta);</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="logica__do__programa_8h_1a4203eda4416534176ea72b0b5fd69c88" kindref="member">jog2</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="93"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="logica__do__programa_8h_1a131a18f3cc23681587fa4344ee1e6f40" kindref="member">criaArray_posicoes</ref>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>a,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref>*<sp/>array);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="logica__do__programa_8h_1a44cb151933c38edce62b91de8f1eb03d" kindref="member">jog</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>pos);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="logica__do__programa_8h_1ae3af156fcfb85bf6a7fdbe830d9f1cc5" kindref="member">score_minimax</ref><sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c<sp/>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maximizingPlayer<sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="logica__do__programa_8h_1a9fa14d48bd047750d95ae690394726db" kindref="member">minimax</ref><sp/>(<ref refid="camada__de__dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref><sp/>tab[8][8]<sp/>,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maximizingPlayer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>alpha,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>beta);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="logica__do__programa_8h_1a4203eda4416534176ea72b0b5fd69c88" kindref="member">jog2</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*e,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="logica_do_programa.h"/>
   </compounddef>

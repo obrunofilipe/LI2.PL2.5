@@ -66,7 +66,6 @@
     <member refid="camada__de__dados_8h_1a1d0036d2753e8f2d79221be69106c62c" kind="function"><name>modifica_num_jogadas</name></member>
     <member refid="camada__de__dados_8h_1a40555aff97afc67bd1866f2785111310" kind="function"><name>obter_ultima_jogada</name></member>
     <member refid="camada__de__dados_8h_1ae0d7061c4156a335fb19d754f9e777d9" kind="function"><name>grava_dados</name></member>
-    <member refid="camada__de__dados_8h_1a329ca4ca6a4ac95a0bcbbf4e09500dc7" kind="function"><name>ler_dados</name></member>
     <member refid="camada__de__dados_8h_1a234a404296dbefe6bffde35db541d51f" kind="function"><name>obter_numero_movimentos</name></member>
     <member refid="camada__de__dados_8h_1a2a31e8e2f9cf25c4e5e8a555c81e091c" kind="function"><name>obter_estado_jogada</name></member>
     <member refid="camada__de__dados_8h_1abc69abc6923d55fa24d5d756ee809435" kind="function"><name>mudar_jogador_atual</name></member>
@@ -126,7 +125,6 @@
     <member refid="logica__do__programa_8c_1a364b4d622a599f1c739346a45334cb57" kind="function"><name>distancia_a_2</name></member>
     <member refid="logica__do__programa_8c_1a53b707ec54825ec718f23293b62d0793" kind="function"><name>euristica</name></member>
     <member refid="logica__do__programa_8c_1aa09f509bec3d879dd425ef1ce9fd47fd" kind="function"><name>armazena_posicoes</name></member>
-    <member refid="logica__do__programa_8c_1a75a1b71971466c0ff8580331436e1e93" kind="function"><name>print_LISTA</name></member>
     <member refid="logica__do__programa_8c_1a131a18f3cc23681587fa4344ee1e6f40" kind="function"><name>criaArray_posicoes</name></member>
     <member refid="logica__do__programa_8c_1a44cb151933c38edce62b91de8f1eb03d" kind="function"><name>jog</name></member>
     <member refid="logica__do__programa_8c_1ae3af156fcfb85bf6a7fdbe830d9f1cc5" kind="function"><name>score_minimax</name></member>
@@ -143,7 +141,6 @@
     <member refid="logica__do__programa_8h_1a364b4d622a599f1c739346a45334cb57" kind="function"><name>distancia_a_2</name></member>
     <member refid="logica__do__programa_8h_1a53b707ec54825ec718f23293b62d0793" kind="function"><name>euristica</name></member>
     <member refid="logica__do__programa_8h_1aa09f509bec3d879dd425ef1ce9fd47fd" kind="function"><name>armazena_posicoes</name></member>
-    <member refid="logica__do__programa_8h_1a75a1b71971466c0ff8580331436e1e93" kind="function"><name>print_LISTA</name></member>
     <member refid="logica__do__programa_8h_1a131a18f3cc23681587fa4344ee1e6f40" kind="function"><name>criaArray_posicoes</name></member>
     <member refid="logica__do__programa_8h_1a44cb151933c38edce62b91de8f1eb03d" kind="function"><name>jog</name></member>
     <member refid="logica__do__programa_8h_1ae3af156fcfb85bf6a7fdbe830d9f1cc5" kind="function"><name>score_minimax</name></member>
