@@ -121,7 +121,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a6cd0b387bdee9e18003c78852394aa63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para obter o número de jogadas efetuadas (cada jogada tem o movimento de dois jogadores)  <a href="#a6cd0b387bdee9e18003c78852394aa63">More...</a><br /></td></tr>
 <tr class="separator:a6cd0b387bdee9e18003c78852394aa63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ed6b059967a9235fa62c7691203606a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#a0ed6b059967a9235fa62c7691203606a">obter_estado_casa</a> (<a class="el" href="camada__de__dados_8h.html#aba91601f16d4c485b2d9b8c429f27039">CASA</a> tab[8][8], <a class="el" href="structCOORDENADA.html">COORDENADA</a> c)</td></tr>
-<tr class="memdesc:a0ed6b059967a9235fa62c7691203606a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para obter o estado de uma casa do tabuleiro.  <a href="#a0ed6b059967a9235fa62c7691203606a">More...</a><br /></td></tr>
+<tr class="memdesc:a0ed6b059967a9235fa62c7691203606a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para obter o estado de uma casa.  <a href="#a0ed6b059967a9235fa62c7691203606a">More...</a><br /></td></tr>
 <tr class="separator:a0ed6b059967a9235fa62c7691203606a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37422da20c66c350333f92bae973a3f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="camada__de__dados_8h.html#a37422da20c66c350333f92bae973a3f2">atualiza_estado_jogo</a> (<a class="el" href="structESTADO.html">ESTADO</a> *e, <a class="el" href="structCOORDENADA.html">COORDENADA</a> c)</td></tr>
 <tr class="memdesc:a37422da20c66c350333f92bae973a3f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que atualiza o estado de jogo após cada jogada.  <a href="#a37422da20c66c350333f92bae973a3f2">More...</a><br /></td></tr>
@@ -740,15 +740,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Função para obter o estado de uma casa do tabuleiro. </p>
+<p>Função para obter o estado de uma casa. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">e</td><td>Apontador para o estado atual </td></tr>
-    <tr><td class="paramname">c</td><td>A coordenada </td></tr>
+    <tr><td class="paramname">tab</td><td>O tabuleiro </td></tr>
+    <tr><td class="paramname">c</td><td>Coordenada </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Se a casa está VAZIA, BRANCA ou PRETA </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>O estado da casa </dd></dl>
 
 </div>
 </div>

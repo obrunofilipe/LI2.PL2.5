@@ -189,24 +189,24 @@
           <declname>c</declname>
         </param>
         <briefdescription>
-<para>Função para obter o estado de uma casa do tabuleiro. </para>        </briefdescription>
+<para>Função para obter o estado de uma casa. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>e</parametername>
+<parametername>tab</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Apontador para o estado atual </para></parameterdescription>
+<para>O tabuleiro </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>c</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A coordenada </para></parameterdescription>
+<para>Coordenada </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Se a casa está VAZIA, BRANCA ou PRETA </para></simplesect>
+<simplesect kind="return"><para>O estado da casa </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>

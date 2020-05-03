@@ -39,7 +39,7 @@ int \hyperlink{camada__de__dados_8h_ad6e326e4ffa57ca1ae0c75377ecefc8c}{obter\+\_
 int \hyperlink{camada__de__dados_8h_a6cd0b387bdee9e18003c78852394aa63}{obter\+\_\+numero\+\_\+de\+\_\+jogadas} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$estado)
 \begin{DoxyCompactList}\small\item\em Função para obter o número de jogadas efetuadas (cada jogada tem o movimento de dois jogadores) \end{DoxyCompactList}\item 
 \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} \hyperlink{camada__de__dados_8h_a0ed6b059967a9235fa62c7691203606a}{obter\+\_\+estado\+\_\+casa} (\hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]}, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
-\begin{DoxyCompactList}\small\item\em Função para obter o estado de uma casa do tabuleiro. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Função para obter o estado de uma casa. \end{DoxyCompactList}\item 
 void \hyperlink{camada__de__dados_8h_a37422da20c66c350333f92bae973a3f2}{atualiza\+\_\+estado\+\_\+jogo} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
 \begin{DoxyCompactList}\small\item\em Função que atualiza o estado de jogo após cada jogada. \end{DoxyCompactList}\item 
 void \hyperlink{camada__de__dados_8h_ade5d6f16f7840c944079b80da9ad5b10}{incrementa\+\_\+num\+\_\+comandos} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$e)
@@ -355,17 +355,17 @@ O array das Jogadas
 
 
 
-Função para obter o estado de uma casa do tabuleiro. 
+Função para obter o estado de uma casa. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em e} & Apontador para o estado atual \\
+{\em tab} & O tabuleiro \\
 \hline
-{\em c} & A coordenada \\
+{\em c} & Coordenada \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Se a casa está V\+A\+Z\+IA, B\+R\+A\+N\+CA ou P\+R\+E\+TA 
+O estado da casa 
 \end{DoxyReturn}
 \mbox{\Hypertarget{camada__de__dados_8h_a2a31e8e2f9cf25c4e5e8a555c81e091c}\label{camada__de__dados_8h_a2a31e8e2f9cf25c4e5e8a555c81e091c}} 
 \index{camada\+\_\+de\+\_\+dados.\+h@{camada\+\_\+de\+\_\+dados.\+h}!obter\+\_\+estado\+\_\+jogada@{obter\+\_\+estado\+\_\+jogada}}

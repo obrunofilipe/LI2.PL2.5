@@ -150,6 +150,9 @@
   <compound refid="main_8c" kind="file"><name>main.c</name>
     <member refid="main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
+  <compound refid="main_8h" kind="file"><name>main.h</name>
+    <member refid="main_8h_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
   <compound refid="README_8md" kind="file"><name>README.md</name>
   </compound>
   <compound refid="md_README" kind="page"><name>md_README</name>
