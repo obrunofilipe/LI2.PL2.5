@@ -22,9 +22,9 @@ typedef \hyperlink{structJOGADA}{J\+O\+G\+A\+DA} \hyperlink{camada__de__dados_8h
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}\label{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}} 
-enum \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} \{ {\bfseries V\+A\+Z\+IO}, 
-{\bfseries B\+R\+A\+N\+CA}, 
-{\bfseries P\+R\+E\+TA}
+enum \hyperlink{camada__de__dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} \{ {\bfseries V\+A\+Z\+IO} = \textquotesingle{}.\textquotesingle{}, 
+{\bfseries B\+R\+A\+N\+CA} = \textquotesingle{}$\ast$\textquotesingle{}, 
+{\bfseries P\+R\+E\+TA} = \textquotesingle{}\#\textquotesingle{}
  \}\begin{DoxyCompactList}\small\item\em Tipos de dados que uma casa pode assumir Uma casa na qual esteja um jogador é B\+R\+A\+N\+CA, na qual já tenha passsado um jogador é P\+R\+E\+TA, se não reunir nenhuma das condições anteriores é V\+A\+Z\+IA. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
