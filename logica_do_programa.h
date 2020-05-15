@@ -1,15 +1,5 @@
-/**
- @file logica_do_programa.h
- Definições da lógica do programa e das funções que a alteram
-*/
-/**
-\brief Definições da lógica do programa e das funções que a alteram
- */
-#ifndef ___LOGICA_DO_PROGRAMA_H___
-/**
-\brief Definições da lógica do programa e das funções que a alteram
- */
-#define ___LOGICA_DO_PROGRAMA_H___
+#ifndef ZIPPROJETO_LOGICA_DO_PROGRAMA_H
+#define ZIPPROJETO_LOGICA_DO_PROGRAMA_H
 /**
  \brief Include de listas.h
  */
@@ -153,5 +143,4 @@ int minimax (CASA tab[8][8] , COORDENADA *c, int depth, int maximizingPlayer, in
 @return A jogada que traz mais benefícios ao jogador atual e menos ao adversário segundo a heurística minmax
 */
 COORDENADA jog2 (ESTADO *e, COORDENADA c);
-
-#endif
+#endif //ZIPPROJETO_LOGICA_DO_PROGRAMA_H

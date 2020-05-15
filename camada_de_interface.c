@@ -138,9 +138,9 @@ int interpretador(ESTADO *e) { // interpretador que estava no guiao 5
         printMOVS(e,NULL);
     if(sscanf(linha,"pos %d",&numero_jogada) == 1){
         altera_estado_casa(e, obter_ultima_jogada(e), '.');
-            JOGADA *array_jog = obter_array_jogadas(e);
-            reinicia_pos(e, numero_jogada, array_jog);
-            mostrar_tabuleiro(e, NULL);
+        JOGADA *array_jog = obter_array_jogadas(e);
+        reinicia_pos(e, numero_jogada, array_jog);
+        mostrar_tabuleiro(e, NULL);
     }
     if(strlen(linha) == 4 && strcmp(linha,"jog\n") == 0){
         COORDENADA jogada;

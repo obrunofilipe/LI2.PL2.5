@@ -1,16 +1,5 @@
-/**
- @file camada_de_interface.h
- Definições dos dados presentes na interface e das funções que a alteram
-*/
-
-/**
-\brief Definições dos dados presentes na interface e das funções que a alteram
- */
-#ifndef ___CAMADA_DE_INTERFACE_H___
-/**
-\brief Definições dos dados presentes na interface e das funções que a alteram
- */
-#define ___CAMADA_DE_INTERFACE_H___
+#ifndef ZIPPROJETO_CAMADA_DE_INTERFACE_H
+#define ZIPPROJETO_CAMADA_DE_INTERFACE_H
 /**
  \brief Include de stdio.h
  */
@@ -66,4 +55,4 @@ void showPrompt (ESTADO *e);
 */
 void printMOVS(ESTADO *e,FILE * f_pointer);
 
-#endif
+#endif //ZIPPROJETO_CAMADA_DE_INTERFACE_H

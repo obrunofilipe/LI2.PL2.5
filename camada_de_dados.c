@@ -157,7 +157,7 @@ int ler_tabuleiro(ESTADO *e , FILE * f_pointer){
         char linha[BUF_SIZE];
         if(fgets(linha,BUF_SIZE,f_pointer) == NULL)
             return 0;
-        for(int c = 0 ; c < 7 ; c++) {
+        for(int c = 0 ; c <= 7 ; c++) {
             COORDENADA posicao = {c , l};
             altera_estado_casa(e, posicao, linha[c]);
         }
@@ -241,4 +241,3 @@ int switch_player(int jogador ){
     }
     return 0;
 }
-

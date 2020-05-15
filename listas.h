@@ -1,16 +1,6 @@
-/**
- @file listas.h
- Definições das listas e das funções que trabalham com elas
-*/
+#ifndef ZIPPROJETO_LISTAS_H
+#define ZIPPROJETO_LISTAS_H
 
-/**
-\brief Definições das listas e das funções que trabalham com elas
- */
-#ifndef _LISTAS_H
-/**
-\brief Definições das listas e das funções que trabalham com elas
- */
-#define _LISTAS_H
 /**
  \brief Include de stdio.h
  */
@@ -86,4 +76,4 @@ int lista_esta_vazia(LISTA L);
 */
 LISTA liberta_lista (LISTA L);
 
-#endif
+#endif //ZIPPROJETO_LISTAS_H

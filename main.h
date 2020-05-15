@@ -1,16 +1,6 @@
-/**
- @file main.h
- Definição da função para o projeto
-*/
+#ifndef ZIPPROJETO_MAIN_H
+#define ZIPPROJETO_MAIN_H
 
-/**
-\brief Definição da função para o projeto
-*/
-#ifndef INC_50QUESTOES_MAIN_H
-/**
-\brief Definição da função para o projeto
-*/
-#define INC_50QUESTOES_MAIN_H
 /**
  \brief Include de camada_de_dados.h
  */
@@ -34,4 +24,5 @@
 @return O inteiro 0
 */
 int main();
-#endif
+
+#endif //ZIPPROJETO_MAIN_H
